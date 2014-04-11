@@ -1,0 +1,1236 @@
+<schedule created='2014-04-12T00:24:33.656001'>
+<day date='2014-07-22'>
+<entry id='4'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Best Practices</topic></topics>
+<start>1100</start>
+<duration>30</duration>
+<room id='room0'>C01</room>
+<speakers>
+<speaker id='178'>
+<name>Kenneth Reitz</name>
+<profile>Software Engineer, Photographer, and Artist. Author of Python Requests.  </profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='7'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Testing</topic></topics>
+<start>1100</start>
+<duration>45</duration>
+<room id='room1'>B05/B06</room>
+<speakers>
+<speaker id='164'>
+<name>Philip Brechler</name>
+<profile>iOS developer with a hear for python by chance.
+Creator of OwnTube, a video CMS based on Django.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='17'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Other</topic></topics>
+<start>1145</start>
+<duration>45</duration>
+<room id='room1'>B05/B06</room>
+<speakers>
+<speaker id='228'>
+<name>Alexey Malashkevich</name>
+<profile>Co-author of Pony Object-Relational Mapper
+Alexey has more than 15 years of practical experience in building enterprise-class software in various roles.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='18'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Gaming</topic></topics>
+<start>1100</start>
+<duration>45</duration>
+<room id='room2'>B07/B08</room>
+<speakers>
+<speaker id='224'>
+<name>Andreas Klostermann</name>
+<profile>I'm a freelance programmer, mostly web application development and student of veterinary medicine.
+
+My main "computing" interests are in data analysis, genomics, bayesian statistics and web development.
+
+My main "medical" interest are small animal medicine and "all animal" genetics.
+
+As a self-help junkie I took an interest to mindfulness based meditation and general mental training. I also developed a guide to memory techniques and mnemonics for use in practical situations.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+20 135
+<entry id='20'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Best Practices</topic></topics>
+<start>1130</start>
+<duration>30</duration>
+<room id='room0'>C01</room>
+<speakers>
+<speaker id='40'>
+<name>Victor Farazdagi</name>
+<profile>- Graduate student at Georgia Tech
+- ACM Professional Member</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+23 74
+<entry id='23'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Python Core</topic></topics>
+<start>1145</start>
+<duration>45</duration>
+<room id='room2'>B07/B08</room>
+<speakers>
+<speaker id='239'>
+<name>Stefan Behnel</name>
+<profile>Stefan is an active member of the German speaking Python community and a major core developer of the widely used Open Source Python tools lxml and Cython. He works for the European ebook flatrate service Skoobe, and as a freelance Python trainer and consultant.
+</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+25 66
+<entry id='25'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Best Practices</topic></topics>
+<start>1200</start>
+<duration>30</duration>
+<room id='room0'>C01</room>
+<speakers>
+<speaker id='151'>
+<name>Honza Král</name>
+<profile>Python engineer for Elasticsearch</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='28'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Science</topic></topics>
+<start>1100</start>
+<duration>30</duration>
+<room id='room3'>B09</room>
+<speakers>
+<speaker id='58'>
+<name>Javier Jair Trejo García</name>
+<profile>Web project developer, manager and consultant. I have been developing software professionally for the past four years, mostly on the web, but my interest in programming is a life-long affair</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+35 93
+<entry id='35'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Education</topic></topics>
+<start>1130</start>
+<duration>30</duration>
+<room id='room3'>B09</room>
+<speakers>
+<speaker id='258'>
+<name>Maurizio Boscaini</name>
+<profile>I love programming and I love learn and teach computer science. I'm teacher in a high school, adjunct professor at the University of Verona and I teach Scratch and Robotics in the primary and secondary school.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='43'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Testing</topic></topics>
+<start>1200</start>
+<duration>30</duration>
+<room id='room3'>B09</room>
+<speakers>
+<speaker id='203'>
+<name>Julian Berman</name>
+<profile>Hey. I'm the Lead Developer of the media platform at Magnetic, a frequent contributor and visitor of the NYC Python Meetup group and a testing lover.
+
+I can also be found most hours of the day as tos9 on Freenode in more channels than I can count, including #python.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='46'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Web</topic></topics>
+<start>1100</start>
+<duration>45</duration>
+<room id='room4'>A08</room>
+<speakers>
+<speaker id='290'>
+<name>Muhammad Yasoob Ullah Khalid</name>
+<profile></profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='61'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Python Core</topic></topics>
+<start>1145</start>
+<duration>45</duration>
+<room id='room4'>A08</room>
+<speakers>
+<speaker id='340'>
+<name>Dmitry Trofimov</name>
+<profile>PyCharm Project Lead</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='71'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Other</topic></topics>
+<start>1400</start>
+<duration>30</duration>
+<room id='room0'>C01</room>
+<speakers>
+<speaker id='363'>
+<name>Austin Bingham</name>
+<profile>Austin is a founding director of Sixty North, a software consulting, training, and application development company. A native of Texas, in 2008 Austin moved to Stavanger, Norway where he helped develop industry-leading oil reservoir modeling software in C++ and Python. Prior to that he worked at National Instruments developing LabVIEW, at Applied Research Labs (Univ. of Texas at Austin) developing sonar systems for the U.S. Navy, and at a number of telecommunications companies. He is an experienced presenter and teacher, having spoken at numerous conferences, software groups, and internal corporate venues. Austin is also an active member of the open source community, contributing regularly to various Python and Emacs projects, and he’s the founder of Stavanger Software Developers, one of the largest and most active social software groups in Stavanger. Austin holds a Master of Science in Computer Engineering from the University of Texas at Austin.
+</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='72'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Best Practices</topic></topics>
+<start>1400</start>
+<duration>45</duration>
+<room id='room1'>B05/B06</room>
+<speakers>
+<speaker id='274'>
+<name>holger krekel</name>
+<profile>Founder of PyPy, main author  of pytest, tox, devpi and execnet projects.  Trainer and conference speaker. Likes playing Go, listening to DnB and Electro Swing and caring for his son. </profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+75 110
+<entry id='75'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Other</topic></topics>
+<start>1445</start>
+<duration>45</duration>
+<room id='room1'>B05/B06</room>
+<speakers>
+<speaker id='57'>
+<name>Nicholas Tollervey</name>
+<profile>Classically trained musician, philosophy graduate, teacher, writer and software developer. I'm just like this biography: concise, honest and full of useful information. Everything I say is false...</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+80 72
+<entry id='80'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Other</topic></topics>
+<start>1430</start>
+<duration>30</duration>
+<room id='room0'>C01</room>
+<speakers>
+<speaker id='214'>
+<name>Prashant Agrawal</name>
+<profile>I am a software developer at Enthought India in Mumbai. Working with Enthought for almost 2 years. Graduated from IIT Bombay in 2011 in Aerospace Engineering. </profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='83'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Science</topic></topics>
+<start>1500</start>
+<duration>30</duration>
+<room id='room0'>C01</room>
+<speakers>
+<speaker id='189'>
+<name>Robert Metzger</name>
+<profile>Core developer at stratosphere.eu</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+86 96
+<entry id='86'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Other</topic></topics>
+<start>1400</start>
+<duration>30</duration>
+<room id='room2'>B07/B08</room>
+<speakers>
+<speaker id='391'>
+<name>Michael König</name>
+<profile></profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+87 86
+<entry id='87'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Other</topic></topics>
+<start>1400</start>
+<duration>45</duration>
+<room id='room3'>B09</room>
+<speakers>
+<speaker id='404'>
+<name>Mark Smith</name>
+<profile>I'm a Python developer and trainer working in Edinburgh for FanDuel.com.
+
+I've been a Python developer 14 years, mostly in the areas of Web development, dev-ops, and hardware testing.
+
+In my spare time I drink beer, crochet and run the Python Edinburgh user group - but never all at the same time!</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='89'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Best Practices</topic></topics>
+<start>1430</start>
+<duration>30</duration>
+<room id='room2'>B07/B08</room>
+<speakers>
+<speaker id='411'>
+<name>Felix Wick</name>
+<profile></profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='92'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Gaming</topic></topics>
+<start>1500</start>
+<duration>30</duration>
+<room id='room2'>B07/B08</room>
+<speakers>
+<speaker id='245'>
+<name>Darko Ronić</name>
+<profile>Team Leader and Senior Server Developer at Nanobit Ltd. Nanobit Ltd is one of the leading and fastest growing Croatian mobile game development companies. 
+We are currently in process of developing several new iOS games accompanied by our Python game stack..</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='96'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Other</topic></topics>
+<start>1445</start>
+<duration>45</duration>
+<room id='room3'>B09</room>
+<speakers>
+<speaker id='485'>
+<name>Alex Brasetvik</name>
+<profile>Alex Brasetvik is a founder and senior software engineer at Found AS - a company whose primary product is a hosted Elasticsearch service. Before working for Found, Alex earned his Master in Computer Science at NTNU, with an emphasis on database- and search engines. He has spent the past eight years on problem solving and solutions related to search, focusing on Elasticsearch in the last three years. </profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='107'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Web</topic></topics>
+<start>1400</start>
+<duration>30</duration>
+<room id='room4'>A08</room>
+<speakers>
+<speaker id='652'>
+<name>Matt Makai</name>
+<profile>Matt Makai is a Python web developer based in Washington, D.C. He was a DjangoCon 2013 speaker on "Making Django Play Nicely with Third Party Services" as well as a speaker throughout the past year at San Francisco Django, Memphis Python, Omaha Python, Django Boston, DC Python, DC Continuous Integration, and Django District. Matt's been working with Django since 0.96 and writes Full Stack Python (http://www.fullstackpython.com/) to help new developers understand how to deploy their Python-powered web applications. </profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+109 143
+</day>
+<day date='2014-07-23'>
+<entry id='109'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Web</topic></topics>
+<start>1100</start>
+<duration>45</duration>
+<room id='room0'>C01</room>
+<speakers>
+<speaker id='98'>
+<name>Konark Modi</name>
+<profile>Working as an engineer with MakeMyTrip.com (Online travel company based out of India). Python comes as the default language for me for tasks of any length, breadth and depth be it DevOps, Automation, Distributed task processing, Data Analysis, BigData ecosystem.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+</day>
+<day date='2014-07-22'>
+<entry id='111'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Science</topic></topics>
+<start>1430</start>
+<duration>30</duration>
+<room id='room4'>A08</room>
+<speakers>
+<speaker id='350'>
+<name>Stefan Scherfke</name>
+<profile></profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='112'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Best Practices</topic></topics>
+<start>1500</start>
+<duration>30</duration>
+<room id='room4'>A08</room>
+<speakers>
+<speaker id='350'>
+<name>Stefan Scherfke</name>
+<profile></profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+113 54
+</day>
+<day date='2014-07-23'>
+<entry id='113'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Science</topic></topics>
+<start>1100</start>
+<duration>30</duration>
+<room id='room1'>B05/B06</room>
+<speakers>
+<speaker id='350'>
+<name>Stefan Scherfke</name>
+<profile></profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='118'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Other</topic></topics>
+<start>1145</start>
+<duration>45</duration>
+<room id='room0'>C01</room>
+<speakers>
+<speaker id='676'>
+<name>Francesc Alted</name>
+<profile>Francesc Alted is a Python and C hacker.  He works for Continuum Analytics and enjoys squeezing the last drop of performance out of systems.
+
+Creator of PyTables, Blosc, BLZ and developer of numexpr and Blaze.
+
+He also enjoys good movies.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='119'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Other</topic></topics>
+<start>1130</start>
+<duration>30</duration>
+<room id='room1'>B05/B06</room>
+<speakers>
+<speaker id='676'>
+<name>Francesc Alted</name>
+<profile>Francesc Alted is a Python and C hacker.  He works for Continuum Analytics and enjoys squeezing the last drop of performance out of systems.
+
+Creator of PyTables, Blosc, BLZ and developer of numexpr and Blaze.
+
+He also enjoys good movies.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='121'>
+<category>Talk</category>
+<audience>Expert</audience>
+<topics><topic>Best Practices</topic></topics>
+<start>1100</start>
+<duration>45</duration>
+<room id='room2'>B07/B08</room>
+<speakers>
+<speaker id='677'>
+<name>Schlomo Schapiro</name>
+<profile>Schlomo Schapiro works as a Systems Architect and Open Source Evangelist at ImmobilienScout24, the leading German real estate market place. Core areas of interest are open source solutions and web operations.
+
+The ImmobilienScout24 web platform is based on Linux, Apache, Tomcat and open standards. We are currently creating a new deployment and management solution for our data center based on RPM packages. The solution is written in Python and Bash and published at http://yadt-project.org.
+
+Schlomo maintains several successful open source projects and is a regular speaker at various conferences. Schlomo is a strong DevOps and web operations advocate and writes regularly for German IT magazines and his BLOG (http://blog.schlomo.schapiro.org). See the homepage on http://www.schapiro.org/schlomo or the profile on http://go.schapiro.org/schlomo for more information.
+</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='127'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Python Core</topic></topics>
+<start>1145</start>
+<duration>45</duration>
+<room id='room2'>B07/B08</room>
+<speakers>
+<speaker id='118'>
+<name>Armin Rigo</name>
+<profile>Armin Rigo is one of the founders and lead developers of the PyPy project, which began in 2003. He has taken part in all areas, from the Python language definition to the RPython translation framework, including the garbage collector, the tracing just-in-time compiler, and now the Software Transactional Memory part.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='128'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Python Core</topic></topics>
+<start>1200</start>
+<duration>30</duration>
+<room id='room1'>B05/B06</room>
+<speakers>
+<speaker id='118'>
+<name>Armin Rigo</name>
+<profile>Armin Rigo is one of the founders and lead developers of the PyPy project, which began in 2003. He has taken part in all areas, from the Python language definition to the RPython translation framework, including the garbage collector, the tracing just-in-time compiler, and now the Software Transactional Memory part.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+129 104
+<entry id='129'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Embedded Devices</topic></topics>
+<start>1100</start>
+<duration>30</duration>
+<room id='room3'>B09</room>
+<speakers>
+<speaker id='683'>
+<name>Stefano Cotta Ramusino</name>
+<profile>Software Engineer in embedded software solutions and hw/sw integrations, he is a GNU/Linux developer for the openmamba distribution.
+
+Stefano is an Open Source supporter and tries to bring more people to this world, also with the laboratories of the GNU/Linux course he leads from the beginning at the Polytechnic University of Turin.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='131'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Education</topic></topics>
+<start>1130</start>
+<duration>30</duration>
+<room id='room3'>B09</room>
+<speakers>
+<speaker id='692'>
+<name>Kushal Das</name>
+<profile>Python developer.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+135 206
+<entry id='135'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Science</topic></topics>
+<start>1200</start>
+<duration>30</duration>
+<room id='room3'>B09</room>
+<speakers>
+<speaker id='580'>
+<name>Josef Heinen</name>
+<profile>Josef Heinen is the head of the group "Scientific IT-Systems" at the Peter Grünberg Institute / Jülich Centre for Neutron Science, both institutes at Forschungszentrum Jülich, a leading research centre in Germany. The design and development of visualization systems have been an essential part of his activities over the last twenty years. He is involved in several Open Source projects like GLI or GKS. Most recently his team is engaged with the further development of a universal framework for cross-platform visualization applications (GR Framework).</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+136 184
+<entry id='136'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Gaming</topic></topics>
+<start>1100</start>
+<duration>30</duration>
+<room id='room4'>A08</room>
+<speakers>
+<speaker id='54'>
+<name>Celia Cintas</name>
+<profile>PhD student in Computer Science working at CENPAT on "Diversity, Systemic and Evolution" group. Focused on 2 and 3D landmarking, reconstruction and visualization.
+Co organizer of SciPyCon Argentina 2013 and 2014.
+Free software advocate.
+Python instructor for scientists and researchers at CENPAT.
+Assistant Professor at UNPSJB in Fundamentals of Computer Science and Business Intelligence.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+139 120
+<entry id='139'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Science</topic></topics>
+<start>1130</start>
+<duration>30</duration>
+<room id='room4'>A08</room>
+<speakers>
+<speaker id='82'>
+<name></name>
+<profile>Core developer of Shogun Machine Learning Toolbox, PhD student in computational Neuroscience/Machine Learning in London.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+142 211
+<entry id='142'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Best Practices</topic></topics>
+<start>1200</start>
+<duration>30</duration>
+<room id='room4'>A08</room>
+<speakers>
+<speaker id='249'>
+<name>Valerio Maggio</name>
+<profile>Valerio Maggio has a PhD. in Computational Science from the University of Naples “Federico II” and he is currently a Postdoc researcher at the University of Salerno. His research interests are mainly focused on Unsupervised Machine Learning and Software Engineering, recently combined with Semantic Web technologies for linked data and big data analysis. 
+
+Valerio started developing open source software in 2004, when he was a bachelor degree student. In 2006, he wrote his first lines of Python in his favourite Vim-based developing environment. From then on, he contributed to several open source projects in this language. Currently he uses Python as the mainstream language for his machine learning code, making an intensive use of Scikit-learn and Matplotlib to crunch, munge, and analyse experimental data.
+
+He presented two talks at EuroPython 2012, and recently reviewed a book on Matplotlib that is going to be published.
+Valerio is also a member of the Italian Python community, who enjoys a lot playing chess and drinking tea.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+143 5
+<entry id='143'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Science</topic></topics>
+<start>1400</start>
+<duration>45</duration>
+<room id='room0'>C01</room>
+<speakers>
+<speaker id='249'>
+<name>Valerio Maggio</name>
+<profile>Valerio Maggio has a PhD. in Computational Science from the University of Naples “Federico II” and he is currently a Postdoc researcher at the University of Salerno. His research interests are mainly focused on Unsupervised Machine Learning and Software Engineering, recently combined with Semantic Web technologies for linked data and big data analysis. 
+
+Valerio started developing open source software in 2004, when he was a bachelor degree student. In 2006, he wrote his first lines of Python in his favourite Vim-based developing environment. From then on, he contributed to several open source projects in this language. Currently he uses Python as the mainstream language for his machine learning code, making an intensive use of Scikit-learn and Matplotlib to crunch, munge, and analyse experimental data.
+
+He presented two talks at EuroPython 2012, and recently reviewed a book on Matplotlib that is going to be published.
+Valerio is also a member of the Italian Python community, who enjoys a lot playing chess and drinking tea.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='147'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Python Core</topic></topics>
+<start>1400</start>
+<duration>30</duration>
+<room id='room1'>B05/B06</room>
+<speakers>
+<speaker id='251'>
+<name>Anselm Kruis</name>
+<profile>Anselm Kruis works as a Senior Solution Architect for science + computing ag, a Bull subsidiary. He started software development 25 years ago and enjoys the simplicity of Python since over 10 years, mostly using Jython and nowadays Stackless Python. If allowed by professional constraints, he is happy to utilise and contribute to open software projects.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+152 215
+<entry id='152'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Science</topic></topics>
+<start>1445</start>
+<duration>45</duration>
+<room id='room0'>C01</room>
+<speakers>
+<speaker id='249'>
+<name>Valerio Maggio</name>
+<profile>Valerio Maggio has a PhD. in Computational Science from the University of Naples “Federico II” and he is currently a Postdoc researcher at the University of Salerno. His research interests are mainly focused on Unsupervised Machine Learning and Software Engineering, recently combined with Semantic Web technologies for linked data and big data analysis. 
+
+Valerio started developing open source software in 2004, when he was a bachelor degree student. In 2006, he wrote his first lines of Python in his favourite Vim-based developing environment. From then on, he contributed to several open source projects in this language. Currently he uses Python as the mainstream language for his machine learning code, making an intensive use of Scikit-learn and Matplotlib to crunch, munge, and analyse experimental data.
+
+He presented two talks at EuroPython 2012, and recently reviewed a book on Matplotlib that is going to be published.
+Valerio is also a member of the Italian Python community, who enjoys a lot playing chess and drinking tea.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='155'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Python Core</topic></topics>
+<start>1430</start>
+<duration>30</duration>
+<room id='room1'>B05/B06</room>
+<speakers>
+<speaker id='134'>
+<name>Marc-Andre Lemburg</name>
+<profile>Marc-Andre is the CEO and founder of eGenix.com, a Python-focused project and consulting company based in Germany. He has a degree in mathematics from the University of Düsseldorf. His work with and for Python started in Winter 1993. In 1997, he became a Python Core Developer. He designed and implemented the Unicode support in Python and continued to maintain the Python Unicode implementation for more than a decade, after it first appeared in Python 1.6 in 2000.
+
+Marc-Andre is a founding member of the Python Software Foundation (PSF) and has served on the PSF Board several times. He is also board member of the EuroPython Society (EPS) which organizes the EuroPython conference series and the author of the well-known mx Extensions, e.g. mxTextTools, mxDateTime and mxODBC, which are now distributed and maintained through eGenix.com.
+
+Today Marc-Andre spends most of his time managing large-scale customer projects heavily relying on Python and databases.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='156'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Embedded Devices</topic></topics>
+<start>1500</start>
+<duration>30</duration>
+<room id='room1'>B05/B06</room>
+<speakers>
+<speaker id='134'>
+<name>Marc-Andre Lemburg</name>
+<profile>Marc-Andre is the CEO and founder of eGenix.com, a Python-focused project and consulting company based in Germany. He has a degree in mathematics from the University of Düsseldorf. His work with and for Python started in Winter 1993. In 1997, he became a Python Core Developer. He designed and implemented the Unicode support in Python and continued to maintain the Python Unicode implementation for more than a decade, after it first appeared in Python 1.6 in 2000.
+
+Marc-Andre is a founding member of the Python Software Foundation (PSF) and has served on the PSF Board several times. He is also board member of the EuroPython Society (EPS) which organizes the EuroPython conference series and the author of the well-known mx Extensions, e.g. mxTextTools, mxDateTime and mxODBC, which are now distributed and maintained through eGenix.com.
+
+Today Marc-Andre spends most of his time managing large-scale customer projects heavily relying on Python and databases.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='161'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Web</topic></topics>
+<start>1400</start>
+<duration>45</duration>
+<room id='room2'>B07/B08</room>
+<speakers>
+<speaker id='25'>
+<name>adam</name>
+<profile></profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='163'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Other</topic></topics>
+<start>1400</start>
+<duration>30</duration>
+<room id='room3'>B09</room>
+<speakers>
+<speaker id='395'>
+<name>Jim Baker</name>
+<profile>Jim is a committer on Jython, for which he has worked on nearly every aspect from compilation to Unicode, and a co-author of the Definitive Guide to Jython. Jim is a senior software developer at Rackspace, where he works at the intersection of big data and cloud computing. He is also a lecturer in computer science at the University of Colorado at Boulder, where he teaches Principles of Programming Languages. He is a graduate of Harvard College and Brown University and is a nominated member of the Python Software Foundation.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+165 115
+<entry id='165'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Web</topic></topics>
+<start>1430</start>
+<duration>30</duration>
+<room id='room3'>B09</room>
+<speakers>
+<speaker id='30'>
+<name>Tarashish Mishra</name>
+<profile>3rd year undergraduate student from Bhubaneswar, India.
+Participated Google Summer of Code 2013 under Python Software Foundation.
+Contributes to Openhatch, Oppia, Mozilla, MoinMoin wiki</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+167 181
+<entry id='167'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Science</topic></topics>
+<start>1445</start>
+<duration>45</duration>
+<room id='room2'>B07/B08</room>
+<speakers>
+<speaker id='711'>
+<name>Dr. Yves J. Hilpisch</name>
+<profile>The Python Quant
+
+Managing Director Europe of Continuum Analytics
+
+Lecturer for Mathematical Finance at Saarland University</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='171'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Science</topic></topics>
+<start>1500</start>
+<duration>30</duration>
+<room id='room3'>B09</room>
+<speakers>
+<speaker id='667'>
+<name></name>
+<profile></profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='181'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Science</topic></topics>
+<start>1400</start>
+<duration>30</duration>
+<room id='room4'>A08</room>
+<speakers>
+<speaker id='674'>
+<name>Matt Williams</name>
+<profile></profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='185'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Education</topic></topics>
+<start>1430</start>
+<duration>30</duration>
+<room id='room4'>A08</room>
+<speakers>
+<speaker id='715'>
+<name>Leonardo Giordani</name>
+<profile>I'm currently working in the field of satellite remote sensing, developing industrial data processing chains and related tools in C/Python. Other relevant technologies we use are Django and RabbitMQ.
+
+I'm mainly interested in operating systems programming, concurrency and messaging solutions. I love both the theoretical aspects and the implementation of many topics. Among them OOP, Design Patterns and Versioning.
+
+I use Python since 1999 and from 2013 I started to blog some thoughts at lgiordani.github.io</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+194 199
+</day>
+<day date='2014-07-24'>
+<entry id='194'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Python Core</topic></topics>
+<start>1100</start>
+<duration>45</duration>
+<room id='room0'>C01</room>
+<speakers>
+<speaker id='174'>
+<name>Francisco Fernández Castaño</name>
+<profile>I work as software engineer at biicode in Madrid, Python is my main programming language but I also program in other languages like Erlang, Haskell, Clojure... My main interests are distributed systems, functional programming and graph databases. </profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='196'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Other</topic></topics>
+<start>1145</start>
+<duration>45</duration>
+<room id='room0'>C01</room>
+<speakers>
+<speaker id='174'>
+<name>Francisco Fernández Castaño</name>
+<profile>I work as software engineer at biicode in Madrid, Python is my main programming language but I also program in other languages like Erlang, Haskell, Clojure... My main interests are distributed systems, functional programming and graph databases. </profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+</day>
+<day date='2014-07-23'>
+<entry id='210'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Other</topic></topics>
+<start>1500</start>
+<duration>30</duration>
+<room id='room4'>A08</room>
+<speakers>
+<speaker id='354'>
+<name>Jozef van Eenbergen</name>
+<profile>With a degree in computer science and VFX and a year as an artist Jozef decided to rejoin
+the world of programming and picked up Amanda at MPC 3 years ago. As his first professional project in Python it exposed him to a lot of the different aspects of the language  (concurrency, databases, web, protocols). Working on Amanda brought back his passion and joy working on highly available and scaleable systems as he worked 
+ and a new passion for monitoring.
+
+Currently the principal developer on Amanda he loves the challenges the system and the many film projects throw him as the system grows bigger and bigger.
+
+Next to his work as a developer he likes movies, playing the drums and, when he gets a chance, work on CG/art projects.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+</day>
+<day date='2014-07-24'>
+<entry id='215'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Best Practices</topic></topics>
+<start>1100</start>
+<duration>45</duration>
+<room id='room1'>B05/B06</room>
+<speakers>
+<speaker id='654'>
+<name>Stefan Schwarzer</name>
+<profile>Stefan Schwarzer uses Python since 1999. He's written articles and a book on Python and given talks at several Python and Linux conferences. Although Stefan studied chemical engineering and has a doctor's degree in it, he's been working in software development since 2000. Nowadays Stefan is a freelancer in software development [1], mostly with Python. He's also the maintainer of the FTP client library ftputil [2].
+
+[1] http://sschwarzer.com
+[2] http://ftputil.sschwarzer.net</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='216'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Best Practices</topic></topics>
+<start>1100</start>
+<duration>30</duration>
+<room id='room2'>B07/B08</room>
+<speakers>
+<speaker id='383'>
+<name>Carl Crowder</name>
+<profile>A sporadic career has seen me creating internal tools for one of the largest MMORPGs around, creating both the frontend web interface and a backend statistics system for a mobile-phone search engine, as well as laying the groundwork for a micropayment company.
+
+I currently work as a "DevOps" engineer at akvo.org (ie, I do sysadmin with puppet and tell everyone else to be more DevOps!),
+and as a side project I started https://landscape.io - aiming to provoke people into using static analysis for their Python code by making it super easy.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='220'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Other</topic></topics>
+<start>1130</start>
+<duration>30</duration>
+<room id='room2'>B07/B08</room>
+<speakers>
+<speaker id='134'>
+<name>Marc-Andre Lemburg</name>
+<profile>Marc-Andre is the CEO and founder of eGenix.com, a Python-focused project and consulting company based in Germany. He has a degree in mathematics from the University of Düsseldorf. His work with and for Python started in Winter 1993. In 1997, he became a Python Core Developer. He designed and implemented the Unicode support in Python and continued to maintain the Python Unicode implementation for more than a decade, after it first appeared in Python 1.6 in 2000.
+
+Marc-Andre is a founding member of the Python Software Foundation (PSF) and has served on the PSF Board several times. He is also board member of the EuroPython Society (EPS) which organizes the EuroPython conference series and the author of the well-known mx Extensions, e.g. mxTextTools, mxDateTime and mxODBC, which are now distributed and maintained through eGenix.com.
+
+Today Marc-Andre spends most of his time managing large-scale customer projects heavily relying on Python and databases.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='223'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Science</topic></topics>
+<start>1200</start>
+<duration>30</duration>
+<room id='room2'>B07/B08</room>
+<speakers>
+<speaker id='38'>
+<name>Stefan</name>
+<profile>from Data Brewery</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='226'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Testing</topic></topics>
+<start>1100</start>
+<duration>30</duration>
+<room id='room3'>B09</room>
+<speakers>
+<speaker id='738'>
+<name>Andreas Pelme</name>
+<profile></profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+229 133
+<entry id='229'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Python Core</topic></topics>
+<start>1145</start>
+<duration>45</duration>
+<room id='room1'>B05/B06</room>
+<speakers>
+<speaker id='637'>
+<name>Christian Tismer</name>
+<profile>I stumbled over Python in 1996.
+This changed my life:
+
+- created the Starship Python in 1997 (because I had nothing else to share)
+- learned C and C++ in order to
+- became a core developer
+
+I invented Stackless Python in 1998 and tried to change the world ;-)
+Co-founded PyPy in 2003 and worked full-time on it during EU funding.
+
+Now my main focus is again on Stackless.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+230 150
+<entry id='230'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Other</topic></topics>
+<start>1130</start>
+<duration>30</duration>
+<room id='room3'>B09</room>
+<speakers>
+<speaker id='735'>
+<name>Simon Cross</name>
+<profile>PyConZA and CTPUG organizer. Vumi developer. Habitual Pyweek entrant. </profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+231 34
+<entry id='231'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Science</topic></topics>
+<start>1200</start>
+<duration>30</duration>
+<room id='room3'>B09</room>
+<speakers>
+<speaker id='335'>
+<name>Magdalena Rother</name>
+<profile>During my PhD I developed a software on 3D RNA modeling (www.genesilico.pl/moderna/) that resulted in 7 published articles. I am coauthor on a paper on bioinformatic software development. Currently I am actively developing a system biology software in Python at the Humboldt University Berlin (www.rxncon.org).</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='233'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Science</topic></topics>
+<start>1100</start>
+<duration>45</duration>
+<room id='room4'>A08</room>
+<speakers>
+<speaker id='742'>
+<name>Thomas Wiecki</name>
+<profile>I'm interested in the intersection of science (Quantitative Finance and Computational Psychiatry), technology (Python and HPC) and statistics (Bayesian Inference and Machine Learning).</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='235'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Web</topic></topics>
+<start>1400</start>
+<duration>30</duration>
+<room id='room0'>C01</room>
+<speakers>
+<speaker id='109'>
+<name>Federico Frenguelli</name>
+<profile>None is better than Null</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+238 216
+<entry id='238'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Science</topic></topics>
+<start>1430</start>
+<duration>30</duration>
+<room id='room0'>C01</room>
+<speakers>
+<speaker id='206'>
+<name>Nikit Saraf</name>
+<profile>I am Computer Science Undergraduate and Machine Learning enthusiast. I just love lots and lots of data. I have worked and contributed to the open source project dedupe https://github.com/open-city/dedupe when I was selected for Google Summer of Code 2013. I worked for "Code for America" organization. The project involved developing data matching tools in python using machine learning algorithms. I have also published a paper in LNCS in the field of Natural Language Processing (again data). I have also attended PyData London this year. Since last year I have regularly been organizing local Scientific Python Meetup on weekends in my college. We hack on projects and work with libraries not limited to scikit-learn, pandas, nltk, scipy. I am very enthusiastic about Python in education.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+239 47
+<entry id='239'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Other</topic></topics>
+<start>1500</start>
+<duration>30</duration>
+<room id='room0'>C01</room>
+<speakers>
+<speaker id='727'>
+<name>David Halter</name>
+<profile></profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='252'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Education</topic></topics>
+<start>1400</start>
+<duration>30</duration>
+<room id='room1'>B05/B06</room>
+<speakers>
+<speaker id='5'>
+<name>Reimar Bauer</name>
+<profile>
+
+Reimar Bauer is a long-term MoinMoin Wiki developer.
+
+He likes FOSS projects and is a member of the pyCologne (http://pycologne.de) Usergroup. Since five years he organizes Python Barcamps (http://pythoncamp.de) in Cologne. Since 2012-11-01 he is a board member of the Python Software Verband e.V. (http://pysv.org) and become elected as PSF Fellow in 2013.
+
+Reimar Bauer (PySV) is responsible for the competition (http://pymove3d.pysv.org): Python moves the world - Attractive programming for young people . A short summary at speakerdeck.
+
+For living he works at the Forschungszentrum Jülich GmbH, IEK. His fields of work/research development of data acquisition and analysis software, and system administration.
+</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='257'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Web</topic></topics>
+<start>1430</start>
+<duration>30</duration>
+<room id='room1'>B05/B06</room>
+<speakers>
+<speaker id='802'>
+<name>Erik van Zijst</name>
+<profile>Erik has been a passionate software professional for 15 years, who considers software to be a craft, not science.
+
+Launching his career in his native Amsterdam in 1999, he served as architect for a financial market data startup from its inception until acquisition. He then co-founded a not so successful Palo-Alto based online real-time video streaming startup. In a deliberate move back to more hands-on coding, Erik joined Atlassian in 2008 and relocated to Sydney, Australia. After having worked on various product teams, he joined the newly formed team to run Bitbucket after its acquisition since 2010.
+
+Currently based out of San Francisco Erik continues to work on Bitbucket.
+</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='276'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Security</topic></topics>
+<start>1500</start>
+<duration>30</duration>
+<room id='room1'>B05/B06</room>
+<speakers>
+<speaker id='829'>
+<name></name>
+<profile></profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+277 99
+<entry id='277'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Python Core</topic></topics>
+<start>1400</start>
+<duration>30</duration>
+<room id='room2'>B07/B08</room>
+<speakers>
+<speaker id='829'>
+<name></name>
+<profile></profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+288 144
+<entry id='288'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Other</topic></topics>
+<start>1430</start>
+<duration>30</duration>
+<room id='room2'>B07/B08</room>
+<speakers>
+<speaker id='130'>
+<name>Dougal Matthews</name>
+<profile>Python enthusiast. Relishes hard problems. Loves skiing and organises @pythonglasgow. OpenStack Engineer at Red Hat.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+291 35
+<entry id='291'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Python Core</topic></topics>
+<start>1500</start>
+<duration>30</duration>
+<room id='room2'>B07/B08</room>
+<speakers>
+<speaker id='452'>
+<name>Tomasz Paczkowski</name>
+<profile></profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='299'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Other</topic></topics>
+<start>1145</start>
+<duration>45</duration>
+<room id='room4'>A08</room>
+<speakers>
+<speaker id='322'>
+<name>Wes Mason</name>
+<profile>Wes is a polyglot developer with over 15 years of experience programming large scale networked applications.
+
+Currently works as an engineer for Canonical, releases lots of open source goodness via the Internets, and lives in Yorkshire, England with wife and mischievous 3 year old son.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+</day>
+</schedule>
