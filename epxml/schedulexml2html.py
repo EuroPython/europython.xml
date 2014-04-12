@@ -29,6 +29,8 @@ def conv(xml_in, html_out='out.html', template_name='standard.pt', xpath_filter=
 def get_entries(xml_in, xpath_filter):
 
     entries = list()
+
+    # fix this
     id2title = dict()
     with open('msg.csv', 'rb') as csvfile:
         reader = csv.reader(csvfile, delimiter=';', quotechar='"')
