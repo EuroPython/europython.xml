@@ -1,7 +1,7 @@
 <table class="schedule">
     <tbody>
       {% for entry in entries %}
-        <tr>
+        <tr class="entry" data-entry-id="{{ entry.attrib['id']}}">
             <td class="categories"> {{ entry.category }} </td>
             <td class="audience"> {{ entry.audience }} </td>
             <td class="title"> {{ entry.title }} </td>
@@ -12,7 +12,7 @@
             </td>
             <td class="speakers"> 
                 {% for speaker in  entry.speakers %} 
-                    <div class="speaker">
+                   <div class="speaker" data-speaker-id="{{ speaker.speaker.attrib['id'] }}">
                         <span class="name">{{ speaker.speaker.name }}</span>
                         <span class="profile">{{ speaker.speaker.profile}}</span>
                     </div>
