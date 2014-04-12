@@ -1,0 +1,23 @@
+<table class="schedule">
+    <tbody>
+      {% for entry in entries %}
+        <tr>
+            <td class="categories"> {{ entry['category'] }} </td>
+            <td class="title"> {{ entry['title'] }} </td>
+            <td class="topics"> 
+                {% for topic in  entry['topics'] %} 
+                    <span class="topic">{{ topic }}</span>
+                {% endfor %}
+            </td>
+            <td class="speakers"> 
+                {% for speaker in  entry['speakers'] %} 
+                    <div class="speaker">
+                        <span class="name">{{ speaker.speaker.name }}</span>
+                        <span class="profile">{{ speaker.speaker.profile}}</span>
+                    </div>
+                {% endfor %}
+            </td>
+        </tr>  
+      {% endfor %}
+  </tbody>
+</table>
