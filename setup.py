@@ -6,7 +6,6 @@ here = os.path.abspath(os.path.dirname(__file__))
 
 requires = [
     'setuptools',
-    'xmltodict',
     'jinja2',
     'lxml',
     'plac',

@@ -3,17 +3,29 @@
 import sys
 import csv
 import plac
-import xmltodict
+from lxml import objectify
 from lxml.etree import fromstring, tostring
+from lxml.etree import Element
+from jinja2 import Environment, PackageLoader
 
 
-def p(s):
-    print >>sys.stdout, s.encode('utf-8')
+env = Environment(loader=PackageLoader('epxml', 'templates'))
+
 
 @plac.annotations(
-    xml_in=('Schedule XML file',)
+    xml_in=('Schedule XML file',),
+    template_name=('Name of rendering template',),
 )
-def conv(xml_in):
+def conv(xml_in, html_out='out.html', template_name='standard.pt'):
+    entries = get_entries(xml_in)
+    template = env.get_template(template_name)
+    html = template.render(entries=entries)
+    with open(html_out, 'wb') as fp:
+        fp.write(html.encode('utf8'))
+
+def get_entries(xml_in):
+
+    entries = list()
 
     id2title = dict()
     with open('msg.csv', 'rb') as csvfile:
@@ -25,52 +37,13 @@ def conv(xml_in):
         xml = fp.read()
 
     root = fromstring(xml)
-
-    p(u'<table id="talks" border="1">')
-    p(u'<tbody>')
-
     for num, entry in enumerate(root.xpath('//entry')):
-
-        print '-'*80
-        print tostring(entry)
-
-        entry_d = xmltodict.parse(tostring(entry))
-        entry_id = entry_d['entry']['@id']
-
-        p(u'<tr>')
-
-        p(u'<td>')
-        p(u'{}'.format(num+1))
-        p(u'</td>')
-
-        # Topic(s)
-        p(u'<td>')
-        for topic in entry.xpath('topics/topic'):
-            name = topic.xpath('text()')
-            if name: 
-                p(u'<div>{}</div>'.format(name[0]))
-        p(u'</td>')
-
-        # Speaker(s)
-        p(u'<td>')
-        for speaker in entry.xpath('speakers/speaker'):
-            name = speaker.xpath('name/text()')
-            if name: 
-                p(u'<div class="name">{}</<div>'.format(name[0]))
-                profile = speaker.xpath('profile/text()')
-#            if profile:
-#                p(u'<div class="profile">{}</<div>'.format(profile[0]))
-        p(u'</td>')
-
-        # Title
-        p(u'<td>')
-        p(u'{}'.format(id2title[entry_id]))
-        p(u'</td>')
-
-        p(u'</tr>')
-
-    p(u'</tbody>')
-    p(u'</table>')
+        title = Element('title')
+        title.text = id2title[entry.attrib['id']]
+        entry.append(title)
+        entry_d = objectify.fromstring(tostring(entry))
+        entries.append(entry_d)
+    return entries
 
 def main():
     plac.call(conv)
