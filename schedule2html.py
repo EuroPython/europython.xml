@@ -1,11 +1,18 @@
 # -*- coding: utf-8 -*-
 
 import sys
+import csv
 from lxml.etree import fromstring, tostring
 from lxml import objectify
 
 def p(s):
     print >>sys.stdout, s.encode('utf-8')
+
+id2title = dict()
+with open('msg.csv', 'rb') as csvfile:
+    reader = csv.reader(csvfile, delimiter=';', quotechar='"')
+    for row in reader:
+        id2title[row[0]] = row[1]
 
 xml = open('accepted.xml', 'rb').read()
 root = fromstring(xml)
@@ -16,6 +23,8 @@ p(u'<tbody>')
 
 for num, entry in enumerate(root.xpath('//entry')):
 
+    entry_id = entry.attrib['id']
+
     p(u'<tr>')
 
     p(u'<td>')
@@ -24,27 +33,26 @@ for num, entry in enumerate(root.xpath('//entry')):
 
     # Topic(s)
     p(u'<td>')
-    p(u'<ul>')
     for topic in entry.xpath('topics/topic'):
         name = topic.xpath('text()')
         if name: 
-            p(u'<li>{}</li>'.format(name[0]))
-    p(u'</ul>')
+            p(u'<div>{}</div>'.format(name[0]))
     p(u'</td>')
 
     # Speaker(s)
     p(u'<td>')
-    p(u'<ul>')
     for speaker in entry.xpath('speakers/speaker'):
         name = speaker.xpath('name/text()')
         if name: 
-            p(u'<li>')
             p(u'<div class="name">{}</<div>'.format(name[0]))
             profile = speaker.xpath('profile/text()')
-            if profile:
-                p(u'<div class="profile">{}</<div>'.format(profile[0]))
-            p(u'</li>')
-    p(u'</ul>')
+#            if profile:
+#                p(u'<div class="profile">{}</<div>'.format(profile[0]))
+    p(u'</td>')
+
+    # Title
+    p(u'<td>')
+    p(u'{}'.format(id2title[entry_id]))
     p(u'</td>')
 
     p(u'</tr>')
