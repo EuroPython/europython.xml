@@ -37,14 +37,16 @@ class View(object):
     pdf_converter=('Generate PDF output using prince or pdfreactor', 'option', 'p')
     )
 def conv(xml_in, html_out='brochure.html', pdf_converter=None):
-    entries_d1 = util.get_entries(xml_in, '//day[@date="2014-07-22"]/entry')
-    entries_d2 = util.get_entries(xml_in, '//day[@date="2014-07-23"]/entry')
-    entries_d3 = util.get_entries(xml_in, '//day[@date="2014-07-24"]/entry')
+
+    entries = list()
+    for day in range(22, 25):
+        date_str = '2014-07-{}'.format(day)
+        entries.append(dict(entries=util.get_entries(xml_in, '//day[@date="{}"]/entry'.format(date_str)),
+                            date_str=date_str))
+
     template = env.get_template('brochure.pt')
     html = template.render(
-            d1=dict(entries=entries_d1, date_str='22/07/2014'),
-            d2=dict(entries=entries_d2, date_str='23/07/2014'),
-            d3=dict(entries=entries_d3, date_str='24/07/2014'),
+            day_entries=entries,
             view=View())
     with open(html_out, 'wb') as fp:
         print 'HTML output written to "{}"'.format(html_out)
@@ -62,10 +64,10 @@ def conv(xml_in, html_out='brochure.html', pdf_converter=None):
         print 'Exit code: {}'.format(status)
         print 'PDF written to "{}"'.format(out_pdf)
 
+
 def main():
     plac.call(conv)
 
 
 if __name__ == '__main__':
     main()
-

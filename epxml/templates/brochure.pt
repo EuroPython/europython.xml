@@ -61,7 +61,7 @@
     </head>
     <body>
         <div class="schedule">
-          {% for d in (d1, d2, d2) %}
+          {% for d in day_entries %}
             <div class="schedule-day">
                 <div class="schedule-heading">{{ d.date_str }}</div>
                 {% for entry in d.entries %}
