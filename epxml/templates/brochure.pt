@@ -6,10 +6,17 @@
             }
 
             @page :left {
+                padding-bottom: 8cm;
             }
 
             @page :right {
                 padding-left: 10em;
+            }
+
+            .schedule-heading {
+                font-size: 1.6em;
+                font-weight: bold;
+                column-span: 2;
             }
 
             .schedule-day {
@@ -29,6 +36,7 @@
 
             .entry .heading {
                 page-break-inside: never;
+                column-break-before: auto;
             }    
 
             .audience {
@@ -55,7 +63,7 @@
         <div class="schedule">
           {% for d in (d1, d2, d2) %}
             <div class="schedule-day">
-                <div class="heading">{{ d.date_str }}</div>
+                <div class="schedule-heading">{{ d.date_str }}</div>
                 {% for entry in d.entries %}
                 <div class="entry">
                       <div class="heading">
