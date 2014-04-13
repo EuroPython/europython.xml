@@ -4,7 +4,10 @@ import os
 import sys
 import plac
 import subprocess
+from datetime import timedelta
+from datetime import datetime
 import loremipsum
+import markdown2
 from jinja2 import Environment, PackageLoader
 import util
 
@@ -15,6 +18,17 @@ class View(object):
 
     def demo(self):
         return (u'/'.join([p[2] for p in loremipsum.Generator().generate_paragraphs(1)]))
+
+    def time(self, entry):
+        hours_start = int(entry.start / 100 )
+        minutes_start = int(entry.start % 100)
+        duration = int(entry.duration)
+        start = datetime(2000, 1, 1, hours_start, minutes_start)
+        end = start + timedelta(minutes=duration)
+        return '{:02d}:{:02d} - {:02d}:{:02d}h'.format(start.hour, start.minute, end.hour, end.minute)
+
+    def markdown(self, text):
+        return markdown2.markdown(unicode(text))
 
 
 @plac.annotations(
@@ -39,7 +53,7 @@ def conv(xml_in, html_out='brochure.html', pdf_converter=None):
     if pdf_converter in ('prince', 'pdfreactor'):
         out_pdf = '{}.pdf'.format(os.path.splitext(html_out)[0])
         if pdf_converter == 'prince':
-            cmd = 'prince9 "{}" -o "{}"'.format(html_out, out_pdf)
+            cmd = 'prince9 -v "{}" -o "{}"'.format(html_out, out_pdf)
         elif pdf_converter == 'pdfreactor':
             cmd = 'pdfreactor "{}" "{}"'.format(html_out, out_pdf)
         print 'Running: {}'.format(cmd)

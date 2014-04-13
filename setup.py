@@ -7,6 +7,7 @@ here = os.path.abspath(os.path.dirname(__file__))
 requires = [
     'setuptools',
     'jinja2',
+    'markdown2',
     'lxml',
     'loremipsum',
     'plac',

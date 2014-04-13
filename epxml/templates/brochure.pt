@@ -71,18 +71,20 @@
                           <div class="audience">{{ entry.audience }}</div>
                           <div class="category">{{ entry.category }}</div>
                           <div class="room">{{ entry.room }}</div>
+                          <div class="time">{{ view.time(entry) }}</div>
                           <div class="topics"> 
                                 {% for topic in  entry.topics %} 
                                     <span class="topic">{{ topic.topic }}</span>
                                 {% endfor %}
                           </div>
                       </div>
-                      <div class="text">
+                      <div class="text entry-text">
                           {{ view.demo() }}
                       </div>    
                       <div class="speakers">
                         {% for speaker in entry.speakers%}  
                           <div class="speaker">{{ speaker.speaker.name }}</div>
+                          <div class="text speaker-profile">{{ view.markdown(speaker.speaker.profile) }}</div>
                         {% endfor %}
                       </div>
                   </div>
