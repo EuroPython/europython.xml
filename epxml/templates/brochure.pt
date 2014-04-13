@@ -1,4 +1,4 @@
-<html>
+<html lang="en">
     <head>
         <style type="text/css">
             @page {
@@ -27,6 +27,10 @@
                 margin-bottom: 1em;
             }    
 
+            .entry .heading {
+                page-break-inside: never;
+            }    
+
             .audience {
                 color: blue;
             }
@@ -37,6 +41,13 @@
             }
             .text {  
                 text-align: justify;
+                hyphens: auto;
+                hyphenate-before: 4;
+                hyphenate-after: 2;
+                margin-bottom: 0.5em;
+            }
+            .entry .speaker {
+                font-style: italic;
             }
         </style>
     </head>
@@ -46,25 +57,26 @@
             <div class="schedule-day">
                 <div class="heading">{{ d.date_str }}</div>
                 {% for entry in d.entries %}
-                  <div class="entry">
-                      <div class="title">{{ loop.index }}</div>
-                      <div class="title">{{ entry.title }}</div>
-                      <div class="audience">{{ entry.audience }}</div>
-                      <div class="category">{{ entry.category }}</div>
-                      <div class="room">{{ entry.room }}</div>
-                      <div class="topics"> 
-                            {% for topic in  entry.topics %} 
-                                <span class="topic">{{ topic.topic }}</span>
-                            {% endfor %}
+                <div class="entry">
+                      <div class="heading">
+                          <div class="title">{{ entry.title }}</div>
+                          <div class="audience">{{ entry.audience }}</div>
+                          <div class="category">{{ entry.category }}</div>
+                          <div class="room">{{ entry.room }}</div>
+                          <div class="topics"> 
+                                {% for topic in  entry.topics %} 
+                                    <span class="topic">{{ topic.topic }}</span>
+                                {% endfor %}
+                          </div>
                       </div>
+                      <div class="text">
+                          {{ view.demo() }}
+                      </div>    
                       <div class="speakers">
                         {% for speaker in entry.speakers%}  
                           <div class="speaker">{{ speaker.speaker.name }}</div>
                         {% endfor %}
                       </div>
-                      <div class="text">
-                          {{ view.demo() }}
-                      </div>    
                   </div>
                 {% endfor %}
             </div>
