@@ -1,10 +1,25 @@
 <html>
     <head>
         <style type="text/css">
+            @page {
+                size: a4;
+            }
+
+            @page :left {
+            }
+
+            @page :right {
+                padding-left: 10em;
+            }
+
             .schedule-day {
                 page-break-after: always;
-                -ro-column-count: 2;
-                font-family: Arial;
+                -ro-column-count: 3;
+                column-count: 3;
+                -column-width: 4cm;
+                column-width: 4cm;
+                font-family: Arial; 
+                font-size: 10px;
             }
 
             .entry {
@@ -20,6 +35,9 @@
                 font-size: 1.2em;
                 font-weight: bold;
             }
+            .text {  
+                text-align: justify;
+            }
         </style>
     </head>
     <body>
@@ -29,6 +47,7 @@
                 <div class="heading">{{ d.date_str }}</div>
                 {% for entry in d.entries %}
                   <div class="entry">
+                      <div class="title">{{ loop.index }}</div>
                       <div class="title">{{ entry.title }}</div>
                       <div class="audience">{{ entry.audience }}</div>
                       <div class="category">{{ entry.category }}</div>
