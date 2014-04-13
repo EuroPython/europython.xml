@@ -79,7 +79,7 @@
                           </div>
                       </div>
                       <div class="text entry-text">
-                          {{ view.demo() }}
+                          {{ view.markdown(view.demo()) }}
                       </div>    
                       <div class="speakers">
                         {% for speaker in entry.speakers%}  
