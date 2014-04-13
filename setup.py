@@ -8,6 +8,7 @@ requires = [
     'setuptools',
     'jinja2',
     'lxml',
+    'loremipsum',
     'plac',
 ]
 
@@ -31,5 +32,6 @@ setup(name='europython.xml',
       entry_points="""\
       [console_scripts]
       schedulexml2html=epxml.schedulexml2html:main
+      schedulexml2brochure=epxml.schedulexml2brochure:main
       """,
       )

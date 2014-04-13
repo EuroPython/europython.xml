@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <style type="text/css">
+            .schedule-day {
+                page-break-after: always;
+                -ro-column-count: 2;
+                font-family: Arial;
+            }
+
+            .entry {
+                border: 1px solid blue;
+                margin-bottom: 1em;
+            }    
+
+            .audience {
+                color: blue;
+            }
+
+            .title {
+                font-size: 1.2em;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="schedule">
+          {% for d in (d1, d2, d2) %}
+            <div class="schedule-day">
+                <div class="heading">{{ d.date_str }}</div>
+                {% for entry in d.entries %}
+                  <div class="entry">
+                      <div class="title">{{ entry.title }}</div>
+                      <div class="audience">{{ entry.audience }}</div>
+                      <div class="category">{{ entry.category }}</div>
+                      <div class="room">{{ entry.room }}</div>
+                      <div class="topics"> 
+                            {% for topic in  entry.topics %} 
+                                <span class="topic">{{ topic.topic }}</span>
+                            {% endfor %}
+                      </div>
+                      <div class="speakers">
+                        {% for speaker in entry.speakers%}  
+                          <div class="speaker">{{ speaker.speaker.name }}</div>
+                        {% endfor %}
+                      </div>
+                      <div class="text">
+                          {{ view.demo() }}
+                      </div>    
+                  </div>
+                {% endfor %}
+            </div>
+          {% endfor %}
+        </div>
+    </body>
+</html>
