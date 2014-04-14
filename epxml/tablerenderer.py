@@ -48,7 +48,16 @@ class HTMLSchedule(object):
             for minute in range(0, 60, self.resolution):
                 print '<tr>'
                 print '<td>{:02d}:{:02d}</td>'.format(hour, minute)
+
+                hm_str = '{:02}:{:02}'.format(hour, minute)
                 for room in self.rooms:
+                    for event in self.events:
+                        if event['start']<= hm_str <= event['end']:
+                            print '<td>{}</td'.format(event.name)
+
+
+                    
+
 #                    print room.id
                     pass
 
@@ -67,7 +76,6 @@ if __name__ == '__main__':
     schedule.addEvent(Event(u'breakfast', u'Breakfast'), '08:00', '09:00', u'hall')
     schedule.addEvent(Event(u'talk1', u'Talk1'), '09:00', '10:00', u'meeting1')
     schedule.addEvent(Event(u'talk2', u'Talk2'), '09:00', '10:00', u'meeting2')
-
     schedule.renderTable()
 
 
