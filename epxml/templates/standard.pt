@@ -1,20 +1,25 @@
-<table class="schedule">
+<table class="schedule" border="1">
     <tbody>
       {% for entry in entries %}
         <tr class="entry" data-entry-id="{{ entry.attrib['id']}}">
-            <td class="categories"> {{ entry.category }} </td>
-            <td class="audience"> {{ entry.audience }} </td>
-            <td class="title"> {{ entry.title }} </td>
-            <td class="topics"> 
-                {% for topic in  entry.topics %} 
-                    <span class="topic">{{ topic.topic }}</span>
-                {% endfor %}
+            <td class="metadata"> 
+                <div class="category">{{ entry.category }} </div>
+                <div class="audience"> {{ entry.audience }} </div>
+                <div class="topics"> 
+                    {% for topic in  entry.topics %} 
+                        <span class="topic">{{ topic.topic }}</span>
+                    {% endfor %}
+                </div>
+            </td>
+            <td class="information"> 
+                <div class="title">{{ entry.title }} 
+                <div class="description">{{ entry.description}} 
             </td>
             <td class="speakers"> 
                 {% for speaker in  entry.speakers %} 
                    <div class="speaker" data-speaker-id="{{ speaker.speaker.attrib['id'] }}">
-                        <span class="name">{{ speaker.speaker.name }}</span>
-                        <span class="profile">{{ speaker.speaker.profile}}</span>
+                        <div class="name">{{ speaker.speaker.name }}</div>
+                        <div class="profile">{{ speaker.speaker.profile}}</div>
                     </div>
                 {% endfor %}
             </td>
