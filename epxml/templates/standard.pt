@@ -13,7 +13,7 @@
             </td>
             <td class="information"> 
                 <div class="title">{{ entry.title }} 
-                <div class="description">{{ entry.description}} 
+                <div class="description">{{ view.markdown(entry.description)}} 
             </td>
             <td class="speakers"> 
                 {% for speaker in  entry.speakers %} 

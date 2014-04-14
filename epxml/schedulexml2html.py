@@ -2,6 +2,7 @@
 
 import sys
 import plac
+import markdown2
 from jinja2 import Environment, PackageLoader
 import util
 
@@ -9,6 +10,10 @@ import util
 
 env = Environment(loader=PackageLoader('epxml', 'templates'))
 
+class View(object):
+
+    def markdown(self, text):
+        return markdown2.markdown(unicode(text))
 
 @plac.annotations(
     xml_in=('Schedule XML file', 'option', 'i'),
@@ -19,7 +24,8 @@ env = Environment(loader=PackageLoader('epxml', 'templates'))
 def conv(xml_in, html_out='out.html', template_name='standard.pt', xpath_filter='//entry'):
     entries = util.get_entries(xml_in, xpath_filter)
     template = env.get_template(template_name)
-    html = template.render(entries=entries)
+    html = template.render(entries=entries,
+            view=View())
     with open(html_out, 'wb') as fp:
         fp.write(html.encode('utf8'))
 
