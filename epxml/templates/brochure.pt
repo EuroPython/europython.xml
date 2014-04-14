@@ -39,6 +39,22 @@
                 column-break-before: auto;
             }    
 
+            .entry .text li {
+                margin-left: -3em;
+            }
+
+            .entry .text h1 {
+                font-size: 1em;
+            }
+
+            .entry .text h2 {
+                font-size: 0.9em;
+            }
+
+            .entry .text h3 {
+                font-size: 0.8em;
+            }
+
             .audience {
                 color: blue;
             }
@@ -50,7 +66,7 @@
             .text {  
                 text-align: justify;
                 hyphens: auto;
-                hyphenate-before: 4;
+                hyphenate-before: 2;
                 hyphenate-after: 2;
                 margin-bottom: 0.5em;
             }
@@ -79,12 +95,14 @@
                           </div>
                       </div>
                       <div class="text entry-text">
-                          {{ view.markdown(view.demo()) }}
+                          {{ view.markdown(entry.description) }}
                       </div>    
                       <div class="speakers">
                         {% for speaker in entry.speakers%}  
                           <div class="speaker">{{ speaker.speaker.name }}</div>
+                          <!--
                           <div class="text speaker-profile">{{ view.markdown(speaker.speaker.profile) }}</div>
+                          -->
                         {% endfor %}
                       </div>
                   </div>
