@@ -36,6 +36,8 @@ class Table(object):
         self.rows = rows
         self.cols = cols
         self.cells = []
+        self.col_headers = list()
+        self.row_headers = list()
 
         for row_index in range(0, rows):
             row = []
@@ -53,8 +55,22 @@ class Table(object):
     def render(self):
         io = cStringIO.StringIO()
         print >>io, u'<table border="1">'
-        for row in self.cells:
+        if self.col_headers:
+            print >>io, u'<thead>'
             print >>io, u'<tr>'
+            if self.row_headers:
+                print >>io, u'<th></th>'
+            for hd in self.col_headers:
+                print >>io, u'<th>{}</th>'.format(hd)
+            print >>io, u'</tr>'
+            print >>io, u'</thead>'
+
+
+        print >>io, '<tbody>'
+        for row_index, row in enumerate(self.cells):
+            print >>io, u'<tr>'
+            if self.row_headers:
+                print >>io, u'<th>{}</th>'.format(self.row_headers[row_index])
             for cell in row:
                 if isinstance(cell, SpanCell):
                     pass
@@ -64,6 +80,7 @@ class Table(object):
                     print >>io, u'<td width="100" class="cell" rowspan="{}" colspan="{}">{}</td>'.format(cell.rowspan, cell.colspan, cell.event)
 
             print >>io, u'</tr>'
+        print >>io, '</tbody>'
         print >>io, u'</table>'
         return io.getvalue()
 
@@ -71,6 +88,8 @@ class Table(object):
 if __name__ == '__main__':
 
     table = Table(5, 5)
+    table.col_headers = [u'Room {}'.format(i+1) for i in range(5)]
+    table.row_headers = [u'{}'.format(i+1) for i in range(5)]
     table.addCell(1, 1, event='Meeting1')
     table.addCell(2, 1, event='Meeting2')
     table.addCell(3, 2, rowspan=2, event='Long Meeting1')
