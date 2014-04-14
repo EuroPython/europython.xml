@@ -23,11 +23,38 @@ class HTMLSchedule(object):
         self.start_hour, self.start_minute  = map(int, start.split(':'))
         self.end_hour, self.end_minute  = map(int, end.split(':'))
         self.resolution = resolution
+        self.events = list()
 
-    def addEvent(self, event, start, end, room_id):
+    def addEvent(self, event, start, end, room):
         if not isinstance(event, Event):
             raise TypeError('"event" must be Event instance')
 
+        self.events.append(dict(event=event,
+                                start=start,
+                                end=end,
+                                room=room))
+
+    def renderTable(self):
+        print '<table border="1">'
+        print '<thead>'
+        print '<tr>'
+        print '<th>Time</th>'
+        for room in self.rooms:
+            print '<th>{}</th>'.format(room.name)
+        print '</tr>'
+        print '</thead>'
+        print '<tbody>'
+        for hour in range(self.start_hour, self.end_hour):
+            for minute in range(0, 60, self.resolution):
+                print '<tr>'
+                print '<td>{:02d}:{:02d}</td>'.format(hour, minute)
+                for room in self.rooms:
+#                    print room.id
+                    pass
+
+                print '</tr>'
+        print '</tbody>'
+        print '</table>'
 
 
 if __name__ == '__main__':
@@ -40,5 +67,7 @@ if __name__ == '__main__':
     schedule.addEvent(Event(u'breakfast', u'Breakfast'), '08:00', '09:00', u'hall')
     schedule.addEvent(Event(u'talk1', u'Talk1'), '09:00', '10:00', u'meeting1')
     schedule.addEvent(Event(u'talk2', u'Talk2'), '09:00', '10:00', u'meeting2')
+
+    schedule.renderTable()
 
 
