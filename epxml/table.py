@@ -87,15 +87,27 @@ class Table(object):
 
 if __name__ == '__main__':
 
-    table = Table(5, 5)
-    table.col_headers = [u'Room {}'.format(i+1) for i in range(5)]
-    table.row_headers = [u'{}'.format(i+1) for i in range(5)]
+    rooms = [u'C01',
+             u'B05/06',
+             u'B07/08',
+             u'B09',
+             u'A08']
+
+    hour_start = 7
+    hour_end = 24
+    resolution = 5
+
+    row_headers = list()
+    for hour in range(hour_start, hour_end + 1):
+        for minute in range(0, 60, resolution):
+            row_headers.append('{:02}:{:02}h'.format(hour, minute))
+    table = Table(60/resolution * (hour_end - hour_start) , len(rooms))
+    table.col_headers = rooms
+    table.row_headers = row_headers
     table.addCell(1, 1, event='Meeting1')
     table.addCell(2, 1, event='Meeting2')
     table.addCell(3, 2, rowspan=2, event='Long Meeting1')
-    table.addCell(0, 2, colspan=3, event='Futter')
-#    for row_index, row in enumerate(table.cells):
-#        print row_index, row
+    table.addCell(0, 2, colspan=2, event='Futter')
 
     print table.render()
     

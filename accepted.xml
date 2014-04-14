@@ -1,0 +1,3495 @@
+<schedule created='2014-04-14T19:34:09.037588'>
+<day date='2014-07-22'>
+<entry id='4'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Best Practices</topic></topics>
+<start>1100</start>
+<duration>30</duration>
+<room id='room0'>C01</room>
+<title>Growing Open Source Seeds</title>
+<description>In addition to the abstract above,  here's the full slide deck:
+https://speakerdeck.com/kennethreitz/growing-open-source-seeds
+
+This talk is also based on a blog post, which should give you a great idea of what the talk is about:
+
+http://kennethreitz.org/growing-open-source-seeds/</description>
+<speakers>
+<speaker id='178'>
+<name>Kenneth Reitz</name>
+<profile>Software Engineer, Photographer, and Artist. Author of Python Requests.  </profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='7'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Testing</topic></topics>
+<start>1100</start>
+<duration>45</duration>
+<room id='room1'>B05/B06</room>
+<title>Don't fear our new robot overlords!</title>
+<description>GoldenEye is our solution for mobile front end tests. Testing on mobile devices can be quite devastating: On iOS you can write front test in JavaScript in Instruments but it is quite impossible to connect Instruments to you CI solution of choice. On Android the situation isn't much better.
+Other front end test frameworks can work with mobile devices (or simulators) but they lack the ability to see. Of course you can check if a color is set correctly, if a frame has the right x and y coordinates but in a world of different screen sizes writing these tests can be quite challenging as well.
+In the end you will always need to look on your screen again and again trying to spot any issues. 
+
+GoldenEye takes a different approach. It does not need to run on your development computer, you don't need a Mac for running tests on iOS devices and you can have real touches on your controls. This is archived by using openCV and it's python bindings, Pythons's unittest module and the Tapsterbot, an OpenSource delta robot made with 3D printing and an Arduino controller. To write a test you just take some screenshots on your device, cut out the icons you need to tap or inspect and write a very simple unit test using a high-level API that takes away the hard parts.
+
+WARNING: This talk features a real robot. In case of machine world-domination: RUN!</description>
+<speakers>
+<speaker id='164'>
+<name>Philip Brechler</name>
+<profile>iOS developer with a hear for python by chance.
+Creator of OwnTube, a video CMS based on Django.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='17'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Other</topic></topics>
+<start>1145</start>
+<duration>45</duration>
+<room id='room1'>B05/B06</room>
+<title>How Pony ORM translates Python generators to SQL queries</title>
+<description>[Pony ORM](http://ponyorm.com) is an object-relational mapper implemented in Python. It allows writing advanced queries to a database using plain Python in the form of a generator expression. This way queries look very concise.
+
+The main feature of Pony is to provide a method to write declarative queries to databases in pure Python using generators. For this purpose Pony analyzes the abstract syntax tree of a generator and translates it to its SQL equivalent.
+
+Following is a sample of a query in Pony:
+
+    select(p for p in Product if "iPad" in p.name and p.price &gt;= 500)
+
+This query translates to SQL using a specific database dialect. Currently Pony works with SQLite, MySQL, PostgreSQL and Oracle databases.
+
+In this talk one of Pony ORM authors will go through the process of the query translation and dig into the implementation details.
+
+Attendees are going to walk away with the understanding of: 
+
+1. Principles of building a programming language translator
+2. Python to SQL translator implementation details 
+3. Approaches for creating a pluggable translator architecture 
+
+The presentation outline:
+
+- Why Python generators are good for representing SQL queries
+- Main stages of Python to SQL translation overview
+- Decompiling Python bytecode into Python AST
+- Translating Python AST to database-independent SQL representation
+- Generating SQL for specific database
+- Pluggable translator architecture
+- Performance concerns: is such way of building SQL slower or faster then Django's and SQLAlchemy's?</description>
+<speakers>
+<speaker id='228'>
+<name>Alexey Malashkevich</name>
+<profile>Co-author of Pony Object-Relational Mapper
+Alexey has more than 15 years of practical experience in building enterprise-class software in various roles.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='18'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Gaming</topic></topics>
+<start>1100</start>
+<duration>45</duration>
+<room id='room2'>B07/B08</room>
+<title>Brain Waves for Hackers</title>
+<description>This talk will present how to use the "Neurosky Mindwave" headset with python software, and lay out the basic scientific and technical background.
+
+The Mindwave Mobile is a device that can be easily talked to using bluetooth, and it talks a binary protocol which is specifically designed to be useful without  much computing power in the receiving device or advanced knowledge of signal processing. In fact, an Arduino with a few lines of code is perfectly capable of parsing some of the byte stream and reacting to the mental state of the user, while fully-featured python software can do advanced analysis using PyEEG and Pandas.
+
+The same hardware module and protocol is used in the Nekomimi headset (mind-controlled cat ears for cosplay) and some Boardgames (MindFlex).
+
+A python library for interfacing with the headset is presented and will be demonstrated on stage. Mostly kivy applications will be used.
+
+Also I will present some data analysis you can perform with pandas and scipy.
+
+Neurofeedback is a type of mental exercise where a computer uses the EEG data to direct the user towards certain mental states. In the easiest configuration a program would display a bar with the "concentration" level, and the user would learn how to tilt this bar upwards. In more complicated setups a game could react favorably towards states like relaxation or concentration. Using Gamification, Neurofeedback can provide a more engaging experience for children or adults, than other techniques with similar goals, like mindfulness meditation, and the more immediate feedback should enhance the effectiveness of mental training, though that has not been investigated scientifically yet.
+
+Neurofeedback has been shown to be effective (albeit not recommended as sole treatment) in Patients with Attention Deficit Hyperactivity Disorder (ADHD), Epilepsy and Dementia. Some background about these conditions and applications of Neurofeedback to them will be given. The first use of Neurofeedback was done in Cats, during early experiments with EEG electrodes in the 60ies. Cats where conditioned to exhibit certain wave patterns, and later, due to a coincidence, the researchers noticed that the conditioned cats where more resistant to epilepsy-inducing medications. The effect has since been reproduced in humans, in cases where medications did not work sufficiently.
+
+Ample hints on not to treat any of this information as medical advice will be provided.
+
+The goal of this talk is to promote Neurofeedback as a useful mental training and to encourage development of applications around Neurofeedback and the analysis of EEG data, from the perspective of a python hacker.
+
+I gave a similar talk at PyConDe 2013 in Cologne. The new talk will be in English, show some improvements on the software, and more advanced demonstrations.</description>
+<speakers>
+<speaker id='224'>
+<name>Andreas Klostermann</name>
+<profile>I'm a freelance programmer, mostly web application development and student of veterinary medicine.
+
+My main "computing" interests are in data analysis, genomics, bayesian statistics and web development.
+
+My main "medical" interest are small animal medicine and "all animal" genetics.
+
+As a self-help junkie I took an interest to mindfulness based meditation and general mental training. I also developed a guide to memory techniques and mnemonics for use in practical situations.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+20 135
+<entry id='20'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Best Practices</topic></topics>
+<start>1130</start>
+<duration>30</duration>
+<room id='room0'>C01</room>
+<title>The ideal REST API for the AngularJS applications</title>
+<description>## Motivation
+
+I became interested in AngularJS framework about a year ago, as a part of my graduate studies at Georgia Tech. I have been following this amazing technology development ever since.
+
+With a recent trend of Single Page Apps (SPAs) becoming more and more sophisticated and more widely accepted, it is necessary to revisit our REST API design and implementation strategies. 
+
+While REST style has been around for quite some time, it is still considered informal and only vaguely understood, which is probably because not many of us developers have actually spent time reading Fielding's dissertation (including me, until some time ago). 
+
+Recently I have finished designing backend specifications for relatively complex AngularJS application (it deals with event management, and is scheduled for beta later on this year). 
+
+In this talk, I want to share my insights on designing and implementing non-trivial REST API to fully utilize AngularJS stack.
+
+## Format
+
+The talk will not be a REST 101, as I will concentrate on specific *practical* problems that arise when implementing backend API.
+
+During the talk, I will walkthrough the audience through the process of building simple AngularJS app, with all necessary REST backend implemented on top of the Flask framework.
+
+Each topic, that we will discuss, will be presented as a three section block: 
+
+- a) Problem Postulation 
+- b) Proposed Implementation 
+- c) Pitfalls, Gotchas and Tips.
+
+**Note:** Flask is used as illustration, therefore techniques I present are almost framework-agnostic, as the micro-framework imposes quite a few requirements on a developer. My aim is to make sure that examples are easily adaptable to your framework of choice.
+
+## Topic Covered
+
+Here is a rough outline of topics/themes that I will cover (it is what I am working on now, list can probably be expanded, but only slightly):
+
+- CRUD (emphasis on integration with Form processing facilities of AngularJS)
+- Designing URLs (Interconnecting with AngularJS navigation)
+- Content Negotiation (language, representation format)
+- Security (both Authentication and Authorization)
+- Caching
+- API Testing (including load testing)
+- API Extension and Versioning
+- Beyond CRUD: Collections + Querying
+
+## Target Audience
+
+I expect people be familiar with Python (obviously). Additionally, I expect people to have basic knowledge of the REST architecture style (to get most out of the talk)
+
+No prior familiarity with AngularJS is expected (I will provide some quick overview of the framework w/i talk).
+
+Anyone interested in exploring what AngularJS framework has to offer, should benefit from this talk.
+
+## Extra notes
+
+I can present the talk as 180min. tutorial or as a long talk. The former will have more hands-on approach in it. 
+
+It will be same when it comes to topics covered, but we will have more time to actually practice creating sample AngularJS application and necessary backend API in real-time.
+
+Additionally, if it is better to present the topic as tutorial, we will cover some best practices of AngularJS application creation too e.g. using conventional toolset (yeoman, grunt, bower etc).</description>
+<speakers>
+<speaker id='40'>
+<name>Victor Farazdagi</name>
+<profile>- Graduate student at Georgia Tech
+- ACM Professional Member</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+23 74
+<entry id='23'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Python Core</topic></topics>
+<start>1145</start>
+<duration>45</duration>
+<room id='room2'>B07/B08</room>
+<title>The Cython Compiler for Python</title>
+<description>The Cython compiler is the most widely used static compiler for Python. The code it generates is used in countless critical applications that process huge amounts of data world wide. Cython has two major use cases: to compile Python code into fast native extension modules, and to connect native code to the CPython runtime. The main goal of the Cython project is to make it easy for users to manually optimise their Python code to make it run at C speed. This talk by one of the core developers will give an intro to using the compiler and an overview of its major features.
+
+Outline will be more or less as follows:
+
+*   Cython: intro to the project and the compiler (4 min.)
+*   compiling Python code
+    -   how to do it and what you get (3 min.)
+    -   a tiny bit of distutils (2 min.)
+*   static typing and Cython extensions to the Python language
+    -   static typing in Cython language syntax (3 min.)
+    -   static typing in pure Python syntax (2 min.)
+    -   why Cython's type system is cool and what users need to know about it (8 min.)
+    -   Cython for optimising Python code (5 min.)
+*   quick intro: talking to native C/C++ code in Cython
+    -   using external C APIs (4 min.)
+    -   using external C++ APIs (3 min.)
+    -   how to build and link in distutils (2 min.)
+    -   notes on ways to wrap large C-APIs (1 min.)
+*   quick overview: special features for high-performance code
+    -   NumPy integration and memory views, fused types, parallel loops in all brevity (3 min.)
+</description>
+<speakers>
+<speaker id='239'>
+<name>Stefan Behnel</name>
+<profile>Stefan is an active member of the German speaking Python community and a major core developer of the widely used Open Source Python tools lxml and Cython. He works for the European ebook flatrate service Skoobe, and as a freelance Python trainer and consultant.
+</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+25 66
+<entry id='25'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Best Practices</topic></topics>
+<start>1200</start>
+<duration>30</duration>
+<room id='room0'>C01</room>
+<title>Lessons learned from building Elasticsearch client</title>
+<description>Last year we decided to create official clients for the most popular languages, Python included.
+
+Some of the goals were:
+
+* support the complete API of elasticsearch including all parameters
+* provide a 1-to-1 mapping to the rest API to avoid having opinions and provide a familiar interface to our users consistent across languages and evironments
+* degrade gracefully when the es cluster is changing (nodes dropping out or being added)
+* flexibility - allow users to customize and extend the clients easily to suit their, potentially unique, environment
+
+In this talk I would like to take you through the process of designing said client, the challenges we faced and the solutions we picked. Amongst other things I will touch on the difference between languages (and their respective communities), the architecture of the client itself, mapping out the API and making sure it stays up to date and integrating with existing tools.
+</description>
+<speakers>
+<speaker id='151'>
+<name>Honza Král</name>
+<profile>Python engineer for Elasticsearch</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='28'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Science</topic></topics>
+<start>1100</start>
+<duration>30</duration>
+<room id='room3'>B09</room>
+<title>Non Sequitur: An exploration of Python's random module</title>
+<description># Audience
+Non mathematical people who wants a better understanding of Python's random module.
+
+# Objectives
+The audience will understand pseudorandom number generators, the properties of Python's Mersenne Twister and the differences and possible use cases between the distributions provided by the `random` module. 
+
+# The talk
+I will start by talking about what randomness means and then about how we try to achieve it in computing through pseudorandom number generators (5 min.)
+
+I will give a brief overview of pseudorandom number generation techniques, show how their quality can be assessed and finally talk about Python's Mersenne Twister and why it is a fairly good choice. (10 min.)
+
+Finally I will talk about how from randomness we can build generators with interesting probability distributions. I'll compare through visualizations thos provided in Python's `random` module and show examples of when they can be useful in real-life. (10 min.)</description>
+<speakers>
+<speaker id='58'>
+<name>Javier Jair Trejo García</name>
+<profile>Web project developer, manager and consultant. I have been developing software professionally for the past four years, mostly on the web, but my interest in programming is a life-long affair</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+35 93
+<entry id='35'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Education</topic></topics>
+<start>1130</start>
+<duration>30</duration>
+<room id='room3'>B09</room>
+<title>VPython goes to School</title>
+<description>My presentation is focused mainly on my teaching experience in a high school using VPython. I've posed some problems to my students to solve with VPython: from basic static building representations like castle to more complex dynamic models like bouncing balls.
+This approach seems a good way to get in touch with computer programming concepts and to link computer science with other disciplines like Math, Geometry, Physics, Chemistry</description>
+<speakers>
+<speaker id='258'>
+<name>Maurizio Boscaini</name>
+<profile>I love programming and I love learn and teach computer science. I'm teacher in a high school, adjunct professor at the University of Verona and I teach Scratch and Robotics in the primary and secondary school.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='43'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Testing</topic></topics>
+<start>1200</start>
+<duration>30</duration>
+<room id='room3'>B09</room>
+<title>Design Your Tests</title>
+<description>* Life span of a test
+    * 5 minute - why does this fail?
+    * 5 day - what is this missing?
+    * 5 week - do I have coverage for this?
+    * 5 month - what's *not* causing this bug?
+
+* Transparent simplicity
+    * one or two "iceberg" layers for meaning
+        * Higher-order assertions - build collections of state that have meaning for the domain in the tests
+        * bulk of the details are in the code itself
+
+        * show an example
+
+    * grouping for organization
+        * Mixins
+
+        * show an example
+
+* unittest issues
+    * assertion/mixin clutter
+    * setUp/tearDown tie grouping to the class layer or to inheritance via super
+        * addCleanup
+    * weak association / lookup-ability between code and its tests
+        * package layout
+        * other conventions
+
+* Alternative approaches
+    * testtools' matchers
+    * py.test `assert` magic</description>
+<speakers>
+<speaker id='203'>
+<name>Julian Berman</name>
+<profile>Hey. I'm the Lead Developer of the media platform at Magnetic, a frequent contributor and visitor of the NYC Python Meetup group and a testing lover.
+
+I can also be found most hours of the day as tos9 on Freenode in more channels than I can count, including #python.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='46'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Web</topic></topics>
+<start>1100</start>
+<duration>45</duration>
+<room id='room4'>A08</room>
+<title>Web Scraping in Python 101</title>
+<description>Who am I ?
+=========
+* a programmer
+* a high school student
+* a blogger
+* Pythonista
+* and tea lover
+- Creator of freepythontips.wordpress.com
+- I made soundcloud-dl.appspot.com
+- I am a main contributor of youtube-dl.
+- I teach programming at my school to my friends.
+- It's my first programming  related conference.
+- The life of a python programmer in Pakistan
+
+What this talk is about ?
+==================
+- What is Web Scraping  and its usefulness
+- Which libraries are available for the job
+- Open Source vs proprietary alternatives
+- Whaich library is best for which job
+- When and when not to use Scrapy
+
+What is Web Scraping ?
+==================
+Web scraping (web harvesting or web data extraction) is a 
+computer software technique of extracting information from 
+websites.  - Wikipedia
+
+###In simple words :
+It is a method to extract data from a website that does not 
+have an API or we want to extract a LOT of data which we 
+can not do through an API due to rate limiting.
+
+We can extract any data through web scraping which we can 
+see while browsing the web.
+
+Usage of web scraping in real life.
+============================
+- to extract product information
+- to extract job postings and internships
+- extract offers and discounts from deal-of-the-day websites
+- Crawl forums and social websites
+- Extract data to make a search engine
+- Gathering weather data etc
+
+Advantages of Web scraping over using an API 
+========================
+- Web Scraping is not rate limited
+- Anonymously access the website and gather data
+- Some websites do not have an API
+- Some data is not accessible through an API etc
+
+Which libraries are available for the job ?
+================================
+There are numerous libraries available for web scraping in 
+python. Each library has its own weaknesses and plus points.
+
+Some of the most widely known libraries used for web scraping are:
+
+- BeautifulSoup
+- html5lib
+- lxml
+- re ( not really for web scraping, I will explain later )
+- scrapy ( a complete framework )
+
+A comparison between these libraries
+==============================
+- speed
+- ease of use
+- what do i prefer
+- which library is best for which purpose
+
+Proprietary alternatives
+==================
+- a list of proprietary scrapers
+- their price
+- are they really useful for you ?
+
+Working of proprietary alternatives
+===========================
+- how they work (render javascript)
+- why they are not suitable for you
+- how custom scrapers beat proprietary alternatives
+
+Scrapy
+=======
+- what is it
+- why is it useful
+- asynchronous support
+- an example scraper
+
+Question
+=======
+- Questions from the viewers</description>
+<speakers>
+<speaker id='290'>
+<name>Muhammad Yasoob Ullah Khalid</name>
+<profile></profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='61'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Python Core</topic></topics>
+<start>1145</start>
+<duration>45</duration>
+<room id='room4'>A08</room>
+<title>Python Debugger Uncovered</title>
+<description>Presentation describes how to implement debugger for Python and has 4 parts:
+
+* Tracing Python code
+
+    Explains how to use trace function
+
+* Debugger Architecture
+
+    Explains which parts consists of a modern full-fledged debugger.
+
+* A Bit of Details
+
+    Explains how to make code to work for all python versions and implementations, survive gevent monkey-patching etc.
+
+* Cool Features
+
+    Explains how to implement exception handling and multiprocess debugging
+</description>
+<speakers>
+<speaker id='340'>
+<name>Dmitry Trofimov</name>
+<profile>PyCharm Project Lead</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='71'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Other</topic></topics>
+<start>1400</start>
+<duration>30</duration>
+<room id='room0'>C01</room>
+<title>Python refactoring with Rope and Traad</title>
+<description>Python is a modern, dynamic language which is growing in popularity, but tool support for it is sometime lacking or only available in specific environments. For refactoring and other common IDE functions, however, the powerful open-source rope library provides a set of tools which are designed to be integrated into almost any programming environment. Rope supports most common refactorings, such as renaming and method extraction, but also more Python-specific refactorings, such as import organization. Rope’s underlying code analysis engine also allows it to do things like locating method definitions and generating auto-completion suggestions.
+
+While rope is designed to be used from many environments, it’s not always easy or ideal to integrate rope directly into other programs. Traad  (Norwegian for “thread”) is another open-source project that addresses this problem by wrapping rope into a simple client-server model so that client programs (IDEs, editors, etc.) can perform refactorings without needing to embed rope directly. This simplifies dependencies, makes clients more robust in the face of errors, eases traad client development, and even allows clients to do things like switch between Python 2 and 3 refactoring in the same session.
+
+In this session we’ll look at how rope operates, and we’ll see how traad wraps it to provide an easier integration interface. The audience will get enough information to start using rope themselves, either directly or via traad, and they’ll see how to use traad for integrating rope into their own environments. More generally, we’ll look at why client-server refactoring tools might be preferable to the more standard approach of direct embedding. 
+</description>
+<speakers>
+<speaker id='363'>
+<name>Austin Bingham</name>
+<profile>Austin is a founding director of Sixty North, a software consulting, training, and application development company. A native of Texas, in 2008 Austin moved to Stavanger, Norway where he helped develop industry-leading oil reservoir modeling software in C++ and Python. Prior to that he worked at National Instruments developing LabVIEW, at Applied Research Labs (Univ. of Texas at Austin) developing sonar systems for the U.S. Navy, and at a number of telecommunications companies. He is an experienced presenter and teacher, having spoken at numerous conferences, software groups, and internal corporate venues. Austin is also an active member of the open source community, contributing regularly to various Python and Emacs projects, and he’s the founder of Stavanger Software Developers, one of the largest and most active social software groups in Stavanger. Austin holds a Master of Science in Computer Engineering from the University of Texas at Austin.
+</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='72'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Best Practices</topic></topics>
+<start>1400</start>
+<duration>45</duration>
+<room id='room1'>B05/B06</room>
+<title>packaging and testing with devpi and tox</title>
+<description>The talk discusses the following tools:
+
+- devpi-server for running an in-house or per-laptop python package server
+
+- inheritance between package indexes and from pypi.python.org public packages
+
+- the "devpi" client tool for uploading docs and running tests 
+
+- running of tests through tox 
+
+- summary view with two work flows: open source releases and in-house per-company developments 
+
+- roadmap and in-development features of devpi and tox 
+
+(The presenter is the main author of the tools in question). </description>
+<speakers>
+<speaker id='274'>
+<name>holger krekel</name>
+<profile>Founder of PyPy, main author  of pytest, tox, devpi and execnet projects.  Trainer and conference speaker. Likes playing Go, listening to DnB and Electro Swing and caring for his son. </profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+75 110
+<entry id='75'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Other</topic></topics>
+<start>1445</start>
+<duration>45</duration>
+<room id='room1'>B05/B06</room>
+<title>The Return of "The Return of Peer to Peer Computing".</title>
+<description>This talk introduces, describes and demonstrates concepts and code created during sprints and via online collaboration by a distributed group of Pythonistas under the working title p4p2p (http://p4p2p.net).
+
+We asked ourselves, as frameworks such as Zope/Plone, Django, Pyramid or Flask are to web development what would the equivalent sort of framework look like for peer-to-peer application development?
+
+We've tackled several different technical issues: remote execution of code among peers, distributed hash tables as a mechanism for peer discovery and data storage, various cryptographic requirements and the nuts and bolts of punching holes in firewalls.
+
+Work is ongoing (we have another sprint at the end of March) and the final content of the talk will depend on progress made. However, we expect to touch upon the following (subject to the caveat above):
+
+* What is the problem we're trying to solve?
+* Why P2P?
+* The story of how we ended up asking the questions outlined in the abstract.
+* What we've done to address these questions.
+* An exploration of the sorts of application that could be built using P2P.
+* A call for helpers and collaboration.
+
+Happy to answer any questions!</description>
+<speakers>
+<speaker id='57'>
+<name>Nicholas Tollervey</name>
+<profile>Classically trained musician, philosophy graduate, teacher, writer and software developer. I'm just like this biography: concise, honest and full of useful information. Everything I say is false...</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+80 72
+<entry id='80'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Other</topic></topics>
+<start>1430</start>
+<duration>30</duration>
+<room id='room0'>C01</room>
+<title>Jigna: a seamless Python-JS bridge to create rich HTML UIs for Python apps</title>
+<description>[Jigna][7] is an HTML based solution to create rich user interfaces for standalone Python applications. The HTML view for your Python model is rendered via Qt's [QtWebkit][3] browser widget where Jigna creates automatic two-way data binding between the underlying Python model and the view so that the view is always in sync with the model and can interact with it.
+
+Let us say we have a nice model written in Python (specifically, in [Traits][1]):
+
+    from traits.api import HasTraits, Str, on_trait_change
+    
+    class Model(HasTraits):
+        name = Str
+        greeting = Str
+    
+        @on_trait_change('name')
+        def update_greeting(self):
+            self.greeting = "Hello " + self.name
+
+        def clear(self):
+            self.name = ""
+    
+    model = Model(name='Fred')
+
+We would like to write simple HTML to visualize this and have the model and view 
+be fully connected. Here is a sample HTML (an [AngularJS][2] template):
+
+    body_html = """
+        Name: &lt;input ng-model="model.name"&gt; &lt;br&gt;
+        Greeting:
+        &lt;h1&gt;{{model.greeting}}&lt;/h1&gt; &lt;br&gt;
+
+        &lt;button ng-click="model.clear()"&gt;Clear&lt;/button&gt;
+    """
+
+Notice how the HTML is directly referencing Python model attributes via `model.name` 
+and `model.greeting`, and calling its method via `model.clear()`. We bind this declarative view to the model and create a Qt based UI:
+
+    from jigna.api import View
+    view = View(body_html=body_html)
+    
+    from PySide import QtGui
+    app = QtGui.QApplication([])
+    view.show(model=model)
+    app.exec_()
+
+This produces an HTML UI which responds automatically to any changes in the 
+model and vice-versa. It can optionally be styled with CSS and made interactive 
+with Javascript. Clearly the above example is a toy example, but this shows a 
+nice way of easily building rich, live user interfaces for Python apps. 
+
+This is nice for several reasons:
+
+* The view code is declarative and hence easy to read.
+* The binding between the model and the view is automatic.
+* HTML/CSS/JS today is very powerful 
+    * there are many JS libraries for a variety of tasks.
+    * it is much easier to find people who know HTML/CSS/JS than Qt or a native 
+    toolkit.
+    * your development team doesn't have to worry about creating widgets or the 
+    limitations in the toolkit's widget set as there are thousands of developers 
+    worldwide creating awesome CSS/JS widgets for you.
+* There is a complete separation of view from the model and this allows us to 
+hand off the entire UI to an HTML/CSS/JS guru.
+
+And if this were not enough, the view can also be easily served on a regular web browser 
+if we just did the following:
+
+    view.serve(model=model)
+
+This starts up a web server to which one can connect multiple browsers to see 
+and interact with the model.
+
+You can check out the source code for Jigna [here][7].
+
+### How is this different from existing options?
+
+For a simple Python desktop application, it is relatively easy to create an HTML 
+view using a webkit browser widget.  However, the connection between the model 
+and the HTML UI can be tricky resulting in fairly complicated code.  Most web 
+frameworks provide this functionality but are web-centric, and are centered 
+around building web applications, not desktop applications. One of the implications of this is that the template is usually static and does not respond to changes on the server side immediately.
+
+Our goal is to be able to build a desktop UI completely in HTML where the HTML 
+template always remains live by referring directly to Python object attributes 
+and methods. Changes on the Python side should update the UI and user inputs on 
+the UI should be able to update the model.
+
+### How does it work?
+
+It turns out that Qt's [QtWebkit][3] browser has support for in-process 
+communication between its Javascript engine and the running Python application. 
+We use this communication channel to create lazily loaded Javascript proxies for Python 
+models.
+
+The other nice piece in this story is [AngularJS][2], which provides good model-view 
+separation between its HTML template and the corresponding Javascript model. 
+AngularJS has great support for two-way data binding between the template and 
+the model, which keeps the template expressions always in sync with the JS 
+model. This makes sure that the HTML you need to write is terse and simple.
+
+We combine these two pieces to create a lightweight Python-JS bridge which 
+provides us the two-way data binding we needed between the Python model and the 
+HTML view. We use [Traits][1] to write models in Python. Traits lets us define 
+attributes of an object statically, and supports notifications when the 
+attributes change. Jigna integrates well with traits so that these notifications automatically 
+update the UI. Similarly, user inputs on the UI change model attributes, call 
+public methods on the model as well.
+
+Note however that you don’t need traits to 
+use Jigna as you can bind it to your plain old Python objects too - you would 
+just need to add your own events *if* you want your models to be updated outside 
+of the UI.
+
+### More about the presentation
+
+In the presentation, I will talk about the basic philosophy of Jigna and then 
+move on to show some interesting demos. The demos will most likely include the 
+following:
+
+* Simple data binding between HTML and traits model
+* A dummy app store UI created using Jigna - It demonstrates multiple 
+capabilities of Jigna like: templating lists and objects, calling methods on the 
+model, catching events fired on the Python side over in JS side etc.
+* Embedding Qt widgets inside Jigna HTML - we embed [Chaco][4] and [Mayavi][5] 
+widgets (Chaco and Mayavi are 2D and 3D visualization libraries respectively) 
+which update live as we move HTML sliders.
+* A demo of the web version of Jigna, in which you can view the HTML UI on a web 
+browser and execute public methods of the model remotely.
+* WebGL backend working with Jigna (embedding Mayavi in the web version via 
+webgl)
+* Embedding Jigna in an [IPython notebook][6] to have interactive plots in 
+IPython notebooks.
+
+[1]: http://code.enthought.com/projects/traits/ "Traits"
+[2]: http://angularjs.org/ "AngularJS"
+[3]: http://qt-project.org/wiki/QtWebKit "QtWebkit"
+[4]: http://code.enthought.com/chaco/ "Chaco"
+[5]: http://code.enthought.com/projects/mayavi/ "Mayavi"
+[6]: http://ipython.org/notebook.html "IPython notebook"
+[7]: https://github.com/enthought/jigna "Jigna"</description>
+<speakers>
+<speaker id='214'>
+<name>Prashant Agrawal</name>
+<profile>I am a software developer at Enthought India in Mumbai. Working with Enthought for almost 2 years. Graduated from IIT Bombay in 2011 in Aerospace Engineering. </profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='83'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Science</topic></topics>
+<start>1500</start>
+<duration>30</duration>
+<room id='room0'>C01</room>
+<title>Big Data Analytics with Python using Stratosphere</title>
+<description>[Stratosphere](http://stratosphere.eu/) is implemented in Java. In 2013 we introduced support for writing Stratosphere programs in Scala. Since Scala also runs in the Java JVM the language integration was easy for Scala.
+
+In late 2013, we started to develop a generic language binding framework for Stratosphere to support non-JVM languages such as Python, JavaScript, Ruby but also compiled languages such as C++. The language binding framework uses [Google’s Protocol Buffers](https://code.google.com/p/protobuf/) for efficient data serialization and transportation between the languages.
+
+Since many “Data Scientists” and machine learning experts are using Python on a daily basis, we decided to use Python as the reference implementation for Stratosphere’s language binding feature.
+Our talk at the EuroPython 2014 will present how Python developers can leverage the Stratosphere Platform to solve their big data problems.
+
+We introduce the most important concepts of Stratosphere such as the operators, connectors to data sources, data flows, the compiler, iterative algorithms and more.
+Stratosphere is a mature, next generation big-data analytics platform developed by a vibrant [open-source community](https://github.com/stratosphere/stratosphere). The system is available under the Apache 2.0 license. 
+
+The project started in 2009 as a joint research project of multiple universities in the Berlin area (Technische Universität, Humboldt Universität and Hasso-Plattner Institut). Nowadays it is an award winning system that has gained worldwide attention in both research and industry.
+
+A note to the program committee: As mentioned, the development of the Python language binding of Stratosphere has started a few months ago, therefore, the code is not yet in the main development branch. However, we are already able to execute the “Hello World” of big data, the “Word Count” example using the Python interface. See this example in the development branch: https://github.com/filiphaase/stratosphere/blob/langbinding/stratosphere-addons/stratosphere-language-binding/src/main/python/eu/stratosphere/language/binding/wordcountexample/WordCountPlan.py
+
+
+Please contact us if you have any questions!</description>
+<speakers>
+<speaker id='189'>
+<name>Robert Metzger</name>
+<profile>Core developer at stratosphere.eu</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+86 96
+<entry id='86'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Other</topic></topics>
+<start>1400</start>
+<duration>30</duration>
+<room id='room2'>B07/B08</room>
+<title>Embedding Python: Charming the Snake with C++</title>
+<description>Python with its huge standard library and sophisticated packages developed by its thriving community has become an incredibly useful tool for data scientists. At Blue Yonder, we value Python for the ease with which we can access and combine machine learning algorithms to build accurate prediction models.
+
+To get the most business value out of the use of Python, we strive to rid our model developers from all burdens outside their core expertise, i.e., developing statistical models. To leverage our existing infrastructure, essentially a distributed scheduling system written in C++, we decided to embed a Python interpreter in our application. The goal was to let developers use the language best suited for their problem, and to let them incorporate code created by others even if it is not written in the same language.
+
+In this presentation, I will talk about a few obstacles which we had to overcome in integrating the (C)Python interpreter in our C++ program, e.g., clean resource management, error handling, and broken features in the interpreter's API. I will show how we employed features from the Boost Python C++ library [1] not only for simple data exchange, but also for more powerful concepts such as data sources. Finally, I will demonstrate how C++ objects can be used to seamlessly interact with Python, for example to use Python's logging package as usual while the actual logging is handled by our C++ application.
+
+With this combination of both worlds, we achieved a desirable mix of virtues: safe, reliable operations; good run-time performance; fast development; and highly expressive, unit testable core domain logic.
+
+[1]: See http://www.boost.org/doc/libs/1_55_0/libs/python/</description>
+<speakers>
+<speaker id='391'>
+<name>Michael König</name>
+<profile></profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+87 86
+<entry id='87'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Other</topic></topics>
+<start>1400</start>
+<duration>45</duration>
+<room id='room3'>B09</room>
+<title>Writing Awesome Command-Line Programs in Python</title>
+<description>Python is a great language for writing command-line tools - which is why so much of Linux is secretly written in Python these days. Unfortunately, what starts as a simple script can quickly get out of hand as more features are added and more people start using it!
+
+The talk will consist of a tour through various useful libraries and practical code showing how each can be used, and include advice on how to best structure simple and complex command-line tools.
+
+Things to consider when writing command-line apps:
+
+* Single-file vs Multiple-file
+* Standard library only vs. 3rd party requirements
+* Installation - setup.py vs. native packaging
+
+The different parts of a command-line program:
+
+* Option Parsing:
+    * Libraries: getopt, optparse, argparse, docopt
+    * Sub-commands
+* Configuration:
+    * Formats: Ini file, JSON, YAML
+    * Where should it be stored (cross-platform);
+    * Having multiple configuration files, and allowing user config to override global config
+* Output:
+    * Colour - colorama
+    * Formatting output for the user
+    * Formatting output for other programs
+    * How do you know when your output is being piped to another program?
+    * Managing logging and verbosity
+* Managing streamed input
+* Exit values: What are the conventions?
+* Interactive apps - REPL
+* Structuring a bunch of programs/commands around a shared codebase.
+* Command-line frameworks: clint, compago &amp; cliff
+* Testing command-line apps
+* Writing command-line tools in Python 3 vs Python 2</description>
+<speakers>
+<speaker id='404'>
+<name>Mark Smith</name>
+<profile>I'm a Python developer and trainer working in Edinburgh for FanDuel.com.
+
+I've been a Python developer 14 years, mostly in the areas of Web development, dev-ops, and hardware testing.
+
+In my spare time I drink beer, crochet and run the Python Edinburgh user group - but never all at the same time!</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='89'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Best Practices</topic></topics>
+<start>1430</start>
+<duration>30</duration>
+<room id='room2'>B07/B08</room>
+<title>How to Setup a new Python Project</title>
+<description>Whenever a Python beginner starts with its own project he or she is confronted with the same technical questions. Questions about a well thought out directory structure to hold all the files. How setup.py needs to be configured and even what it is capable of like specifying entry_points and other goodies. We show from the experience of our yearslong work with Python how to structure your Python project in terms of folders, files, modules and packages. How to configure setup.py to specify your requirements, to use it with nosetests, with Sphinx and so on. We also elaborate on the usage of Git and Versioneer (https://github.com/warner/python-versioneer) to help you version your package.</description>
+<speakers>
+<speaker id='411'>
+<name>Felix Wick</name>
+<profile></profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='92'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Gaming</topic></topics>
+<start>1500</start>
+<duration>30</duration>
+<room id='room2'>B07/B08</room>
+<title>Mobile Games to the Cloud With Python</title>
+<description>#### The Talk
+
+This talk has two goals. Showing the audience the lessons we learned during a project which moved a simple mobile game to a server backend is our first intention. In addition to that we want to describe how such a system works in a real life example, to show which problems and which requirements arise in its creation. When the audience leaves the talk they will know how a real-life mobile game uses Python for powering the backend servers.
+
+ 
+#### The Problem
+
+Most of the game development for mobile devices is focused on running the game on the device. The game designers and game developers play a primary role in creating the product. The server backend plays a supporting role providing a multiplayer or social experience to the users. Indeed, at Nanobit Ltd., things were also done that way. We had a small Python infrastructure built around Django which provided a small portion of multiplayer experience for the players. The majority of development was still focused on playing the game on the device. That way of thinking was put to test when we decided to center our future games around the multiplayer experience. Due to the fact that our infrastructure at the time was not enough for what we had in mind, we had to start from scratch. The decision was made to use Python as the center of our new infrastructure.
+
+In order to achieve it, a server backend was needed that would allow the game to be played “in the cloud” with the device only being a terminal to the player. Most of the game logic would have to be processed in the cloud which meant that each player required a constant connection to the backend and with over 100.000 players in our previous games that presented a challenge. How to build an infrastructure which can support that? Since every user action had to be sent to the backend how to process thousands of them quick enough? Those problems were big and were just the start.
+
+
+#### The Solution
+
+The design of the backend lasted for a couple of months and produced a scalable infrastructure based on “workers” developed in Python, “web servers” that use Tornado and a custom message queue which connected the two. The storage part is a combination of Riak and Redis. Since the backend is scalable new workers and new web servers had to be deployed easily so an orchestration module was build using Fabric. The scalability and launching of new workers and web servers was achieved using Docker for creation and deployment of containers. Each container presents one module of the system (worker, web server, queue). The end result can now support all of our future games and only requires the game logic of each game to be added to the workers.
+
+
+#### The Technologies
+
+* Python for coding the game logic, web servers. More than 90% of the system was written in Python.
+* Fabric
+* SQLAlchemy
+* Riak
+* Redis
+* ZeroMQ
+* nginx
+* Docker
+* Websockets
+* AWS
+
+
+#### The Lessons Learned
+
+* How to tune the backend to handle the increasing number of active players.
+* How to tackle the problem of frequent connection dropping and reachability issues of poor mobile device Internet connection in Tornado with a little help of Redis.
+* How to prevent users from trying to outsmart the system by denying illegal moves.
+* How to enable game profile syncing and live updating.
+* Improving the performance of workers by prioritizing data being stored to databases (Riak, SQL).
+* New issues and lessons show up all the time so there will definitely be more of them by the time of the conference.
+
+
+#### Basic Outline
+
+1. Intro (5 min)
+    1. Who are we?
+    2. How was Python used in our previous games
+    3. Why we decided to change it all
+2. Requirements (6 min)
+    1. What was the goal of creating the game backend
+    2. Why was Python our first choice
+3. Python backend (14 min)
+    1. The architecture of the backend
+    2. Which technologies did we use and how were they connected together
+    3. How the backend handles the game logic
+    4. Lessons learned
+4. Questions &amp; Answers (5 min)</description>
+<speakers>
+<speaker id='245'>
+<name>Darko Ronić</name>
+<profile>Team Leader and Senior Server Developer at Nanobit Ltd. Nanobit Ltd is one of the leading and fastest growing Croatian mobile game development companies. 
+We are currently in process of developing several new iOS games accompanied by our Python game stack..</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='96'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Other</topic></topics>
+<start>1445</start>
+<duration>45</duration>
+<room id='room3'>B09</room>
+<title>Elasticsearch from the bottom up</title>
+<description>## Who I am and motivation
+I work with hosted Elasticsearch and have interacted with lots of developers. We see what many struggle with.
+
+Some relevant theory helps a lot. What follows has already lead to many "Aha!"-moments and developers piecing things together herself.
+
+## The inverted index
+The most important index structure is actually very simple. It is essentially a sorted dictionary of terms, with a list of postings per term.
+
+We show three simple sample documents and the resulting inverted index.
+
+## The index term
+The index term is the "unit of search", and the terms we make decide how we can search.
+
+With the inverted index and its sorted dictionary, we can quickly search for terms given their prefix.
+
+## Importance of text analysis
+Thus, we need to transform our search problems into string prefix problems.
+
+This is done with text analysis, which is the process of making of index terms. It is highly important when implementing search.
+
+## Building indexes
+The way indexes are built must balance how compact an index is, how easily we can search in it, how fast we can index documents - and the time it takes for changes to be visible.
+
+Lucene, and thus Elasticsearch, builds them in segments.
+
+## Index segments
+A Lucene index consists of index segments, i.e. immutable mini-indexes.
+
+A search on an index is done by doing the search on all segments and merging the results.
+
+Segments are immutable:
+
+This enables important compression techniques.
+Deletes are not immediate, just a marker.
+Segments are occasionally merged to larger segments. Then documents are finally deleted.
+New segments are made by buffering changes in memory, and written when flushing happens. Flushes are largely caused by refreshing every second, due to real time needs.
+
+## Caches
+Caches like filter- and field caches are managed per segment. They are essential for performance.
+
+Immutable segments make for simple reasoning about caches. New segments only cause partial cache invalidations.
+
+## Elasticsearch indexes
+Much like a Lucene index is made up of many segments, an Elasticsearch index is made up of many Lucene indexes.
+
+Two Elasticsearch indexes with 1 shard is essentially the same as one Elasticsearch index with 2 shards.
+
+Search all shards and merge. Much like segments, but this time possibly across machines.
+
+Shard / Index routing enables various partitioning strategies. Simpler than it sounds, so one important example:
+
+Essential for time based data, like logs: can efficiently skip searching entire indexes - and roll out old data by deleting the entire index.
+
+## Common pitfalls
+We must design our indexing for how we search - not the searches for how things are indexed. Be careful with wildcards and regexes.
+
+Since segments are immutable, deleting documents is expensive while deleting an entire index is cheap.
+
+Updating documents is essentially a delete and re-index. Heavy updating might cause problems.
+
+Have enough memory and then some. Elasticsearch is very reliant on its caches.
+
+## Summary
+We've seen how index structures are used, and why proper text processing is essential for performant searches.
+
+Also, you now know what index segments are, and how they affect both indexing and searching strategies.
+
+## Questions</description>
+<speakers>
+<speaker id='485'>
+<name>Alex Brasetvik</name>
+<profile>Alex Brasetvik is a founder and senior software engineer at Found AS - a company whose primary product is a hosted Elasticsearch service. Before working for Found, Alex earned his Master in Computer Science at NTNU, with an emphasis on database- and search engines. He has spent the past eight years on problem solving and solutions related to search, focusing on Elasticsearch in the last three years. </profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='107'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Web</topic></topics>
+<start>1400</start>
+<duration>30</duration>
+<room id='room4'>A08</room>
+<title>Full Stack Python</title>
+<description>This talk distills information from the open source guide [Full Stack Python](http://www.fullstackpython.com/) I wrote into a 30 minute talk on web stack layers. An approximate timeline for this talk would be:
+
+* 5 min: intro story
+* 5 min: what the web developers need to know about virtual servers, web servers, and WSGI servers
+* 5 min: what do web frameworks provide?
+* 5 min: what are the most important parts of your web application to analyze and monitor?
+* 5 min: static files and execution on the user's browser
+* 5 min: concluding story and resources to learn more
+
+This is a high level overview intended for developers who are new to Python web development and need to understand what the web stack layers are and how they fit together.</description>
+<speakers>
+<speaker id='652'>
+<name>Matt Makai</name>
+<profile>Matt Makai is a Python web developer based in Washington, D.C. He was a DjangoCon 2013 speaker on "Making Django Play Nicely with Third Party Services" as well as a speaker throughout the past year at San Francisco Django, Memphis Python, Omaha Python, Django Boston, DC Python, DC Continuous Integration, and Django District. Matt's been working with Django since 0.96 and writes Full Stack Python (http://www.fullstackpython.com/) to help new developers understand how to deploy their Python-powered web applications. </profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+109 143
+</day>
+<day date='2014-07-23'>
+<entry id='109'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Web</topic></topics>
+<start>1100</start>
+<duration>45</duration>
+<room id='room0'>C01</room>
+<title>Design considerations while Evaluating,Developing and deploying a distributed task processing system</title>
+<description>Most of us have our own set of application which require tasks to happen in a distributed fashion or in an asynchronous manner.This talk is going to focus on key aspects of a distributed task processing system, the functionalities, the command and control centre is should offer.
+Every design consideration that I am planning to discuss, will follow with how it is done in Celery.
+
+Along with What Celery is and it's architecture few design choices I am looking forward to discuss are as following :
+
+* Celery and It's architecture.
+	* What is celery ?.
+	* Ridiculously simple to get started with.
+	* Configuration and Extensible.
+	* Everything is message passing.
+* Few use-cases.
+* Task Management:
+	* Routing of tasks:
+		* Based on priority of execution
+		* Based on OS
+		* Based on hardware-capabilities
+	* Conflict Management
+	* Retries:
+		* Exception handling and Expiration
+	* Tracking state of task:
+		* Sent / Received / Started / Succeeded / Failed / Revoked / Retired
+	* Controlling tasks:
+		* Pause / Kill /Delete
+	* Retrying tasks
+	* Exception handling
+		
+* Scheduling capabilities:
+	* Scheduling not just based on time but nature of task too.
+	* Cronbased or Humanized form of entries
+	* Interval based
+	* Immediate execution
+	* Countdown Based
+
+* Worker Management: 
+	* Basic functionality in terms of start / shutdown
+	* Inspection of workers
+	* Time-Limits
+	* Auto Scale-up and Scale-Out and also shrink to normal]
+	* Fanout workload to multiple systems
+	* Broadcast message to workers
+
+* Admin and Reporting
+* Monitoring and performance trends of workers
+* Canvas : Designing work flows in Celery
+	* Chains
+	* Groups
+	* Chord
+	* Chunks
+	* Task - Trees
+
+We will also evaluate few other alternatives to understand few missing features that are not yet present in Celery, systems like:
+* ReTask
+* DagoBah </description>
+<speakers>
+<speaker id='98'>
+<name>Konark Modi</name>
+<profile>Working as an engineer with MakeMyTrip.com (Online travel company based out of India). Python comes as the default language for me for tasks of any length, breadth and depth be it DevOps, Automation, Distributed task processing, Data Analysis, BigData ecosystem.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+</day>
+<day date='2014-07-22'>
+<entry id='111'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Science</topic></topics>
+<start>1430</start>
+<duration>30</duration>
+<room id='room4'>A08</room>
+<title>Event discrete simulation with SimPy</title>
+<description>Simulation is important for the analysis of complex systems or the analysis of
+the impact of certain actions on that systems. They are especially useful if
+the actions are potentially harmful or expensive.
+
+Simulation is used in various natural scientific and economic areas, e.g., for
+the modeling and study of biological or physical systems, for resource
+scheduling and optimization or at the research for the integration of renewable
+energies into the power grid (my personal background). The simulated time can
+thereby be seen as continuous or discrete (discrete time or discrete event).
+
+In this talk, I want to show why Python is a good choice for implementing
+simulation models and how SimPy can help here.
+
+Structure of the talk (20min talking + 5min discussion + 5min buffer):
+
+- Why simulation? (5min)
+- History of SimPy (3min)
+- How does SimPy work? (9min)
+- Conclusion (3min)
+
+In the introduction, I’ll briefly explain what simulation is and motivate, why
+it is a useful tool.
+
+The main part will consist of an introduction and demonstration of SimPy. Since
+SimPy is now more then ten years old, I’ll first give a quick overview about
+its history and development. Afterwards, I’ll explain SimPy’s concepts and
+features by means of simple examples.
+
+In the conclusion, I’ll give a short outlook on the future development of
+SimPy.
+
+The main goal of this talk is to create awareness that simulation is a powerful
+tool in a lot of domains and to give the audience enough information to ease
+their first steps.</description>
+<speakers>
+<speaker id='350'>
+<name>Stefan Scherfke</name>
+<profile></profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='112'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Best Practices</topic></topics>
+<start>1500</start>
+<duration>30</duration>
+<room id='room4'>A08</room>
+<title>ZeroMQ – Zero Problems?</title>
+<description>PyZMQ is easy to use and very powerful. But this doesn’t make networking or
+writing distributed applications easy (easier, but not easy). There are still
+many things to consider when you want to create a large, robust distributed
+application. Unfortunately, the documentations and tutorials I read when I
+learned PyZMQ didn’t tell me this.
+
+In this presentation, I want to talk about the things that I learned and how
+I solved common problems during the development of *mosaik*, a distributed
+co-simulation framework.
+
+Structure of the talk (20min talking + 5min discussion + 5min buffer):
+
+* Introduction and motivation (2min)
+* PyZMQ (6min)
+   * What is it?
+   * What makes it different from plain sockets?
+   * ZMQ socket types
+   * Blocking recv() vs. polling vs. Event loop
+* Things to note when designing larger applications (5min)
+    * Communication protocols (and their documentation)
+    * Serializing (PyZMQ built-ins and alternatives)
+    * Architectural decomposition
+* Testing (6min)
+    * What? Why?
+    * unittest vs. nose vs. pytest
+    * Kinds of tests: Unit tests, process tests and system tests
+    * Common testing problems
+* Conclusion (1min)
+
+The goal of this talk to raise awareness for common problems with networking in
+general and especially with PyZMQ and how to mitigate or circumvent them.</description>
+<speakers>
+<speaker id='350'>
+<name>Stefan Scherfke</name>
+<profile></profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+113 54
+</day>
+<day date='2014-07-23'>
+<entry id='113'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Science</topic></topics>
+<start>1100</start>
+<duration>30</duration>
+<room id='room1'>B05/B06</room>
+<title>Storing scientific data with HDF5</title>
+<description>As a scientist (or system administrator) you usually generate a lot of data
+with your experiments or when you monitor simulated or real systems. Python
+offers a great variety of options to store that data.
+
+In this talk, I’m going to explore sme of them and demonstrate them with small
+examples. 
+
+The main part will be about HDF5 and its Python interface h5py (which
+I’ll briefly compare to PyTables). “HDF5 is a data model, library, and file format for storing and managing data.“ (http://www.hdfgroup.org/HDF5/) Unlike relational databases, datasets are stored hierarically (like files in nested folders). HDF5 supports large a mounts of data, many datatypes and many platforms/languages making it a very versatile and useful tool.
+
+Finally, I’ll compare the different
+approaches in terms of ease of use, writing performance, disk usage, memory
+consumption and reading/analysis. I’ll also try to give advice which technique
+works best in which situation.
+
+Structure of the talk (20min talking + 5min discussion + 5min buffer):
+
+* Motivation (2min)
+* Brief examples: (5min)
+    * Trivial: Store (CSV) files
+    * "Real" database with SQL, e.g. Sqlite (built-in)
+    * Management-friendly: Writing Excel files
+    * Dumping NumPy arrays to disk
+* The scientist’s way: Using HDF5 (8min)
+    * Brief comparison between h5py and PyTables
+    * Introduction to h5py
+* Comparison of all approaches (easy of use, writing performance, reading
+  performance, memory consumption, disk usage) (3min)
+* Conclusion (2min)
+
+The overall goal of this talk is to give an overview over the various
+techniques to enable the audience to make an educated decision next time they
+need to store a bigger amount of data. I hope to show that HDF5 is usually a
+good choice if the requirements don’t demand something else.</description>
+<speakers>
+<speaker id='350'>
+<name>Stefan Scherfke</name>
+<profile></profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='118'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Other</topic></topics>
+<start>1145</start>
+<duration>45</duration>
+<room id='room0'>C01</room>
+<title>Compress Me, Stupid!</title>
+<description>Compression is a technique to reduce the number of bits needed to
+represent a given dataset. A very common use-case in the distributed
+digital age is to reduce the size of files in order to reduce the time
+and bandwidth requirements of sending a file from one location to
+another.
+
+There are a large variety of different algorithms and implementations of
+so called "codecs" - a term is derived from the fact that programs that
+implement a compression algorithm commonly constitute of both a
+compressor and a corresponding decompressor. There are many different
+special purpose compressors that exploit specifics in the structure of the
+input data, for example: MP3, Ogg and FLAC for audio data such as music,
+GIF, JPEG and PNG for images and  MPEG for encoding video. Also, there
+are many general purpose codecs that make no assumptions about the
+structure of the data, for example: Zlib(DEFLATE), Bzip2(BWT) and LZMA.
+
+However, and due to the ever growing divide between memory access latency and CPU clock
+speed a new use-case beyond faster file transfers and more efficient use
+of disk-space has emerged: "in-memory compression".
+
+
+Keeping data in RAM that is compressed also means that the CPU has to
+do more work in order to make use of it.  However, if the compressor
+is fast enough, this decompression overhead could pay off, and
+applications could work with compressed data transparently, and so not
+even noticing the slowdown due to the extra effort for
+compression/decompression.
+
+This technique can be very beneficial in a variety of scenarios where
+RAM availability is critical.  For example, in-memory caching systems
+like Memcached or Redis could store more data using the same resources
+thereby optimizing resource usage.  Another use case is to use
+compression for in-memory data containers, à la NumPy's ndarray or
+Pandas' DataFrame, allowing for improved memory usage and potentially
+allow for accelerated computations.
+
+In our talk, we will explain first why we are in a moment of computer
+history that [in-memory compression can be beneficial for modern
+applications] [1].
+
+Then, we will introduce [Blosc] [2], a high speed
+meta-compressor, allowing other existing compressors (BloscLZ, LZ4,
+Snappy or even Zlib) to leverage the SIMD and multithreading framework
+that it provides and help achieving extremely fast operation
+(frequently faster than a plain memcpy() system call).
+
+Finally, we will show some existing data handling libraries ([Bloscpack] [3], [PyTables] [4], [BLZ] [5]) -- all written in Python -- that
+already use Blosc today for fulfilling the promise of faster operations by
+doing in-memory compressing.
+
+[1]: http://www.pytables.org/docs/CISE-12-2-ScientificPro.pdf
+[2]: http://www.blosc.org
+[3]: https://github.com/Blosc/bloscpack
+[4]: http://www.pytables.org
+[5]: http://continuum.io/blog/blz-format</description>
+<speakers>
+<speaker id='676'>
+<name>Francesc Alted</name>
+<profile>Francesc Alted is a Python and C hacker.  He works for Continuum Analytics and enjoys squeezing the last drop of performance out of systems.
+
+Creator of PyTables, Blosc, BLZ and developer of numexpr and Blaze.
+
+He also enjoys good movies.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='119'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Other</topic></topics>
+<start>1130</start>
+<duration>30</duration>
+<room id='room1'>B05/B06</room>
+<title>Out-of-Core Columnar Datasets</title>
+<description>It is a fact: we just entered in the Big Data era.  More sensors, more
+computers, and being more evenly distributed throughout space and time
+than ever, are forcing data analyists to navigate through oceans of
+data before getting insights on what this data means.
+
+Tables are a very handy and spreadly used data structure to store
+datasets so as to perform data analysis (filters, groupings, sortings,
+alignments...).  However, the actual table implementation, and
+especially, whether data in tables is stored row-wise or column-wise,
+whether the data is chunked or sequential, whether data is compressed or not,
+among other factors, can make a lot of difference depending on the
+analytic operations to be done.
+
+My talk will provide an overview of different libraries/systems in the
+Python ecosystem that are designed to cope with tabular data, and how
+the different implementations perform for different operations.  The
+libraries or systems discussed are designed to operate either with
+on-disk data ([PyTables] [1], [relational databases] [2], [BLZ] [3],
+[Blaze] [4]...) as well as in-memory data containers ([NumPy] [5],
+[DyND] [6], [Pandas] [7], [BLZ] [3], [Blaze] [4]...).
+
+A special emphasis will be put in the on-disk (also called
+out-of-core) databases, which are the most commonly used ones for
+handling extremely large tables.
+
+The hope is that, after this lecture, the audience will get a better
+insight and a more informed opinion on the different solutions for
+handling tabular data in the Python world, and most especially, which
+ones adapts better to their needs.
+
+[1]: http://www.pytables.org
+[2]: http://en.wikipedia.org/wiki/Relational_database
+[3]: http://blz.pydata.org
+[4]: http://blaze.pydata.org
+[5]: http://www.numpy.org/
+[6]: https://github.com/ContinuumIO/dynd-python
+[7]: http://pandas.pydata.org/
+</description>
+<speakers>
+<speaker id='676'>
+<name>Francesc Alted</name>
+<profile>Francesc Alted is a Python and C hacker.  He works for Continuum Analytics and enjoys squeezing the last drop of performance out of systems.
+
+Creator of PyTables, Blosc, BLZ and developer of numexpr and Blaze.
+
+He also enjoys good movies.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='121'>
+<category>Talk</category>
+<audience>Expert</audience>
+<topics><topic>Best Practices</topic></topics>
+<start>1100</start>
+<duration>45</duration>
+<room id='room2'>B07/B08</room>
+<title>Test Driven Infrastructure</title>
+<description>Common wisdom has it that the test effort should be related to the risk of a change. However, the reality is different: Developers build elaborate automated test chains to test every single commit of their application. Admins regularly “test” changes on the live platform in production. But which change carries a higher risk of taking the live platform down?
+
+What about the software that runs at the “lower levels” of your platform, e.g. systems automation, provisioning, proxy configuration, mail server configuration, database systems etc. An outage of any of those systems can have a financial impact that is as severe as a bug in the “main” software!
+One of the biggest learnings that any Ops person can learn from a Dev person is Test Driven Development. Easy to say - difficult to apply is my personal experience with the TDD challenge.
+
+This talk throws some light on recent developments at ImmobilienScout24 that help us to develop the core of our infrastructure services with a test driven approach:
+
+* How to do unit tests, integration tests and systems tests for infrastructure services?
+* How to automatically verify Proxy, DNS, Postfix configurations before deploying them on live servers?
+* How to test “dangerous” services like our PXE boot environment or the automated SAN mounting scripts?
+* How to add a little bit of test coverage to everything we do.
+* Test Driven: First write a failing test and then the code that fixes it.
+
+The tools that we use are Bash, Python, Unit Test frameworks and Teamcity for build and test automation.
+
+See http://blog.schlomo.schapiro.org/2013/12/test-driven-infrastructure.html for more about this topic.
+</description>
+<speakers>
+<speaker id='677'>
+<name>Schlomo Schapiro</name>
+<profile>Schlomo Schapiro works as a Systems Architect and Open Source Evangelist at ImmobilienScout24, the leading German real estate market place. Core areas of interest are open source solutions and web operations.
+
+The ImmobilienScout24 web platform is based on Linux, Apache, Tomcat and open standards. We are currently creating a new deployment and management solution for our data center based on RPM packages. The solution is written in Python and Bash and published at http://yadt-project.org.
+
+Schlomo maintains several successful open source projects and is a regular speaker at various conferences. Schlomo is a strong DevOps and web operations advocate and writes regularly for German IT magazines and his BLOG (http://blog.schlomo.schapiro.org). See the homepage on http://www.schapiro.org/schlomo or the profile on http://go.schapiro.org/schlomo for more information.
+</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='127'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Python Core</topic></topics>
+<start>1145</start>
+<duration>45</duration>
+<room id='room2'>B07/B08</room>
+<title>Using All These Cores: Transactional Memory in PyPy</title>
+<description>PyPy is a fast alternative Python implementation.  Software Transactional Memory (STM) is a current academic research topic.  Put the two together --brew for a couple of years-- and we get a version of PyPy that runs on multiple cores, without the infamous Global Interpreter Lock (GIL).
+
+The current research is based on a recent new insight that promises to give really good performance.  The speed of STM is generally measured by two factors: the ability to scale with the number of CPUs, and the amount of overhead when compared with other approaches in a single CPU (in this case, with the regular PyPy with the GIL).  Scaling is not really a problem here, but single-CPU performance is --or used to be. This new approach gives a single-threaded overhead that should be very low, maybe 20%, which would definitely be news for STM systems.  Right now (February 2014) we are still implementing it, so we cannot give final numbers yet, but early results on a small interpreter for a custom language are around 15%.  This looks like a deal-changer for STM.
+
+In the talk, I will describe our progress, hopefully along with real numbers and demos.  I will then dive under the hood of PyPy to give an idea about how it works.  I will conclude with a picture of how the future of multi-threaded programming might looks like, for high-level languages like Python.  I will also mention CPython: how hard (or not) it would be to change the CPython source code to use the same approach.</description>
+<speakers>
+<speaker id='118'>
+<name>Armin Rigo</name>
+<profile>Armin Rigo is one of the founders and lead developers of the PyPy project, which began in 2003. He has taken part in all areas, from the Python language definition to the RPython translation framework, including the garbage collector, the tracing just-in-time compiler, and now the Software Transactional Memory part.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='128'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Python Core</topic></topics>
+<start>1200</start>
+<duration>30</duration>
+<room id='room1'>B05/B06</room>
+<title>PyPy status talk (a.k.a.: no no, PyPy is not dead)</title>
+<description>In this talk we will present the current status of PyPy, with a particular focus on what happened in the last two years, since the last EuroPython PyPy talk.  We will give an overview of the current speed and the on-going development efforts, including but not limited to:
+
+- the status of the Just-in-Time Compiler (JIT) and PyPy performance in general;
+- the improvements on the Garbage Collector (GC);
+- the status of the NumPy and Python 3 compatibility subprojects;
+- CFFI, which aims to be a general C interface mechanism for both CPython and PyPy;
+- a quick overview of the STM (Software Transactional Memory) research project, which aims at solving the GIL problem.
+
+This is the "general PyPy status talk" that we give every year at EuroPython (except last year; hence the "no no, PyPy is not dead" part of the title of this talk).</description>
+<speakers>
+<speaker id='118'>
+<name>Armin Rigo</name>
+<profile>Armin Rigo is one of the founders and lead developers of the PyPy project, which began in 2003. He has taken part in all areas, from the Python language definition to the RPython translation framework, including the garbage collector, the tracing just-in-time compiler, and now the Software Transactional Memory part.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+129 104
+<entry id='129'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Embedded Devices</topic></topics>
+<start>1100</start>
+<duration>30</duration>
+<room id='room3'>B09</room>
+<title>GNU/Linux Hardware Emulation with Python</title>
+<description>With the kernel [inotify](http://en.wikipedia.org/wiki/Inotify "inotify") feature, the [D-Bus mocker library](https://launchpad.net/python-dbusmock "D-Bus mocker library") and the [udev monitoring](http://pyudev.readthedocs.org/en/latest/api/pyudev.html#pyudev.Monitor "udev monitoring") we try to detect the different events that occours when you're using a specific set of connected devices.
+
+Then we try to mimic these devices investigating also the kernel drivers if necessary.
+
+At the end we're ready to connect the simulation routines to our testing procedure.</description>
+<speakers>
+<speaker id='683'>
+<name>Stefano Cotta Ramusino</name>
+<profile>Software Engineer in embedded software solutions and hw/sw integrations, he is a GNU/Linux developer for the openmamba distribution.
+
+Stefano is an Open Source supporter and tries to bring more people to this world, also with the laboratories of the GNU/Linux course he leads from the beginning at the Polytechnic University of Turin.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='131'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Education</topic></topics>
+<start>1130</start>
+<duration>30</duration>
+<room id='room3'>B09</room>
+<title>Teaching Python: To infinity and beyond</title>
+<description>Abstract
+--------
+Back in 2004, when I founded "Durgapur Linux Users Group", I chose a motto in Bengali, "Learn yourself and teach others".
+We are following the same rules today and one major program which helped to keep it going is the summer training.
+
+Just before summer 2008, with help from Shakthi Kannan (well known FOSS developer and mentor from India), we sent a mail
+to the various lists announcing an online summer training over IRC. The same training is now going on for the sixth year.
+Every year we see an increase of interest in the students and we started getting students from other countries too. The duration the training
+is around 3 months on #dgplug channel in irc.freenode.net 
+
+This [presentation][1] was the primary announcement this year, opensource.com also covered the [story][2]. In 2013 around 20+ students are working on various
+projects (upstream and ideas from scratch), half of the students are girls and we had a very good diversity in last years too. 
+Among the students this year, we have engineering college students, new hires in different IT companies, primary school English language teacher, a musician who loves to play his piano, system administrators from far corners of world.
+
+[1]: http://dgplug.org/summertraining/
+[2]: http://opensource.com/life/13/6/learning-program-open-source-way
+
+Course Outline
+---------------
+- Soft skill training (online communications)
+- Tools and basic command line training for using the computer in a simpler way
+- Making sure that people use a search engine as the first place to ask a question.
+- Teaching how to Read The Fine Manual nicely.
+- Teaching text editors
+- Git
+- How to do documentation and why it is important.
+- Introduction to programming / Python.
+- Solving more and more complex real life problems using Python
+- Becoming a contributor to another upstream project
+- Become the community
+  
+Anyone with a decent Internet connection and any latest Linux distribution can join in this training. It is a free course, open to all.
+
+Another very special part of the training is sessions by upstream contributors. Students get a chance to meet and listen to many
+upstream contributors. They share their stories, how they started contributors and many technical talks too.
+
+
+Talk Outline
+--------------
+
+- Introducing the Summer training
+- History behind the training     
+- Massive online + offline campaign , talked with each college student we knew and asked them to come online for a day and see how it goes.
+
+^^ 5 minutes
+
+- How we got the diversity? Short answer: It takes time. Long answer: We always had good number of girls participating but as time went on, we found successful participants and asked them to talk about their life story in the local colleges and to friends. Which surely showed in the way everyone participated. 2013 at the beginning we had more number girls than boys in the program. One more major point, the work never ends with the summer training ending. We keep in touch with the students years after years, even after they started working. It is the part of becoming the community rather than few days talking over IRC.
+- Course details
+
+^^ 5 minutes
+
+- Old session logs are very important. Old session logs always help the students while revising or quickly looking into some particular matter.
+- Why starting from zero knowledge is important? A session should be based on its slowest students, not the opposite way. Identifying the target audience for the sessions is very important, you should choose the pace of your training program based on that, but you should also be able to change the pace as required.
+- Tips on how to manage 40+ newbies on a IRC channel when everyone wants to ask questions.
+- Most common problems beginners have with Python? Indentation, we solved this by teaching how to use a good text editor at the beginning of the session.
+- Why solving real life problems which is part of the students' life is important? They can see the changes reflecting in someway in their life. Like a student this year wrote a subtitle finder command line tool, one student previously wrote a desktop application using Qt which managed his movie collection and fetches all required information from IMDB. One person wrote system monitoring tool which his friends started adopting very fast.
+- Giving them hope, giving them heros. Showcasing how the interaction with upstream developers encourage and motivate students. Try to get speakers from different background. We had awesome inspirational talks from core python developers and also purely technical guest sessions. Other topics included from writing docs to creative common licenses to It is also very important to keep in mind that changes will not come in day, you have to repeat the actions with an honest feedback system.
+- Use of the home task submission system (written purely  in python). Keeping the solutions public help the students to make an habit of reading. 
+- Outcome: How Python changed so many lives. People started contributed different upstream projects like Fedora, Transifex. Many got placed in the startups or old companies like Yahoo!, Red Hat. College final year projects suddenly started changing from Railways reservation system to submitting patches to upstream projects. One more personal example: my wife, a lawyer by profession (who never liked computer much), now using Vim and Sphinx to create all kinds of reports/documents for her work and started poking into Python :)
+
+^^ 15 minutes
+
+Quick recap points
+------------------
+
+- Keep in touch with your students.
+- Do guest lectures outside from primary course.
+- Try to do project work where they can see the output fast. Build up from small projects to bigger ones.
+ 
+ ^^ 1 minute</description>
+<speakers>
+<speaker id='692'>
+<name>Kushal Das</name>
+<profile>Python developer.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+135 206
+<entry id='135'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Science</topic></topics>
+<start>1200</start>
+<duration>30</duration>
+<room id='room3'>B09</room>
+<title>Scientific Visualization with GR</title>
+<description>Python has long been established in software development departments of research and industry, not least because of the proliferation of libraries such as *SciPy* and *Matplotlib*. However, when processing large amounts of data, in particular in combination with GUI toolkits (*Qt*) or three-dimensional visualizations (*OpenGL*), it seems that Python as an interpretative programming language may be reaching its limits.
+
+---
+
+*Outline*
+
+- Introduction (1 min)
+    - motivation
+- GR framework (2 mins)
+    - layer structure
+    - output devices and capabilities
+- GR3 framework (1 min)
+    - layer structure
+    - output capabilities (3 mins)
+        - high-resolution images
+        - POV-Ray scenes
+        - OpenGL drawables
+        - HTML5 / WebGL
+- Simple 2D / 3D examples (2 min)
+- Interoperability (PyQt/PySide, 3 min)
+- How to speed up Python scripts (4 mins)
+    - Numpy
+    - Numba (Pro) 
+- Animated visualization examples (live demos, 6 mins)
+    - physics simulations
+    - surfaces / meshes
+    - molecule viewer
+    - MRI voxel data
+- Outlook (1 min)
+
+*Notes*
+
+Links to similar talks, tutorials or presentations can be found [here][1]. Unfortunately, most of them are in German language.
+
+The GR framework has already been presented in a talk at PyCon DE [2012][2] and [2013][3], during a [poster session][4] at PyCon US 2013, and at [PythonCamps 2013][5] in Cologne. The slides for the PyCon.DE 2013 talk can be found [here][6].
+
+As part of a collaboration the GR framework has been integrated into [NICOS][7] (a network-based control system completely written in Python) as a replacement for PyQwt.
+
+  [1]: http://gr-framework.org/
+  [2]: https://2012.de.pycon.org/programm/schedule/sessions/54
+  [3]: https://2013.de.pycon.org/schedule/sessions/45/
+  [4]: https://us.pycon.org/2013/schedule/presentation/158/
+  [5]: http://josefheinen.de/rasberry-pi.html
+  [6]: http://iffwww.iff.kfa-juelich.de/pub/doc/PyCon_DE_2013
+  [7]: http://cdn.frm2.tum.de/fileadmin/stuff/services/ITServices/nicos-2.0/dirhtml/
+</description>
+<speakers>
+<speaker id='580'>
+<name>Josef Heinen</name>
+<profile>Josef Heinen is the head of the group "Scientific IT-Systems" at the Peter Grünberg Institute / Jülich Centre for Neutron Science, both institutes at Forschungszentrum Jülich, a leading research centre in Germany. The design and development of visualization systems have been an essential part of his activities over the last twenty years. He is involved in several Open Source projects like GLI or GKS. Most recently his team is engaged with the further development of a universal framework for cross-platform visualization applications (GR Framework).</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+136 184
+<entry id='136'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Gaming</topic></topics>
+<start>1100</start>
+<duration>30</duration>
+<room id='room4'>A08</room>
+<title>3D sensors and Python: A space odyssey</title>
+<description>This talk will start with a brief introduction to 3D Sensors and OpenNI. Then we’ll surf into PyOpenNI,  features such as the skeleton, hand and gesture tracking, RGB and depth video. Every topic will be presented with practical demos. The talk will end with a demo integrating WebGL (THREE.JS), 3D sensors, Flask and ZMQ to produce a simple fully open source based NUI game.
+
+Some simple demos of PyOpenNI and PyGame can be found at [1](http://www.youtube.com/watch?v=wI2ktioiPY8) and [2](http://youtu.be/3e8jibGUQ2Q)
+
+Attendees will not only learn about game related technologies but also about innovative ways of doing domotics, cinema &amp; art, Interactive visualization, scientific research, educations, etc.
+
+3D Sensors will be available for testing during the event - you can get yours for about 80 to 140 Euros (depending on the brand). Slides and demo code will be available at Github.
+
+Talk structure:
+
+* Introduction: hardware and OpenNI goodies and a tale of PCL (5’)
+* Hands On PyOpenNI
+    * Normal and Depth camera - basics concepts and small demo (5’)
+    * Skeleton - basics concepts and small demo. (5’)
+	* Hand &amp; gesture - basics concepts and small demo. (5’)
+* Final Demo
+	* What we’re going to use? Flask, ZMQ, THREE.JS, PyOpenNI. (6’)
+* Q&amp;A. (4’)</description>
+<speakers>
+<speaker id='54'>
+<name>Celia Cintas</name>
+<profile>PhD student in Computer Science working at CENPAT on "Diversity, Systemic and Evolution" group. Focused on 2 and 3D landmarking, reconstruction and visualization.
+Co organizer of SciPyCon Argentina 2013 and 2014.
+Free software advocate.
+Python instructor for scientists and researchers at CENPAT.
+Assistant Professor at UNPSJB in Fundamentals of Computer Science and Business Intelligence.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+139 120
+<entry id='139'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Science</topic></topics>
+<start>1130</start>
+<duration>30</duration>
+<room id='room4'>A08</room>
+<title>The Shogun Machine Learning Toolbox</title>
+<description>We present the Shogun Machine Learning Toolbox, a unified framework for Machine Learning  algorithms. Machine Learning (ML) is the art of finding structure in data in an automated way and has given rise to a wide range of applications such as recommendation systems, object recognition, brain-computer interfaces, robotics, predicting stock prices, etc.
+
+Our toolbox offers extensive bindings with other software and computing languages, Python being the major target. The library was initiated in 1999 and remained under heavy development henceforth. In addition to its mature core-framework, Shogun offers state-of-the-art techniques based on latest ML research. This is partly made possible by the 21 Google Summer of Code projects (5+8+8 since 2011) that our students successfully completed. Shogun's codebase has &gt;20k commits made by &gt;100 contributors representing &gt;500k lines of code. While its core is written in C++, a unique of technique for generating interfaces allows usage from a wide range of target languages -- under the same syntax. This includes in particular Python, but also Matlab/Octave, Java, C#, R, ruby, and more. We believe that users should be able to choose their favourite language rather than us dictating this choice. The same applies for supported OS (Linux, Mac, Win). Shogun is part of Debian Linux.
+
+Features of Shogun include most classical ML methods such as classification, regression, dimensionality reduction, clustering, etc, most of them in different flavours. All implemented algorithms in Shogun work on a modular data representation, which allows to easily switch between different sorts of objects as for example strings or matrices. Common ML-tasks and data IO can be carried under a unified interface. This is also true for the various external open-source libraries that are embedded within Shogun.
+
+Code examples are provided for all implemented algorithms. The main and most complete set of examples is in the Python language. In addition, in order to push usage of Shogun in education at universities, we recently started adding more illustrative IPython notebooks. A growing list of statically rendered versions are readily available from our [website](http://www.shogun-toolbox.org/page/documentation/notebook) and implement a cross-over of tutorial-style explanations, code, and visualization examples. We even took this up a notch and started building our own IPython-notebook server with Shogun installed in the cloud at (try cloud button in notebook view) . This allows users to try Shogun without installation via the IPython notebook web interface. All example notebooks can be loaded, interactively modified, and executed. In addition, using the Python Django framework, we built a collection of interactive web-demos where users can play around with basic ML algorithms, [demos](http://www.shogun-toolbox.org/page/documentation/demo)
+
+In the proposed talk, we will give a gentle and general introduction to ML and the core functionality of Shogun, with a focus on its Python interface. This includes solving basic ML tasks such as classification and regression and some of the more recent features, such as last year's GSoC projects and their IPython notebook writeups. ML material will be presented with a focus on intuition and visualisation and no previous familiarity with ML methods is required.
+
+## Key points in the talk
+
+ * What are the goals in ML?
+ * Example problems in ML (classification, regression, clustering)
+ * Some basic algorithm ideas
+ * Focus on Visualisation, not Maths
+
+## Intended Audience
+
+* All people dealing with data (data scientists, big-data hackers) who are looking for tools to deal with it
+ * People with a general interest but no education in Machine Learning
+ * People interested in the technology behind Shogun (swig, cloud notebook server, web-demos)
+ * People from the ML community (scipy-stack)
+ * ML scientists/Statisticians
+
+## Code examples
+
+ * [Classification](https://github.com/shogun-toolbox/shogun/blob/develop/examples/undocumented/python_modular/classifier_libsvm_modular.py)
+ * [Clustering](https://github.com/shogun-toolbox/shogun/blob/develop/examples/undocumented/python_modular/graphical/em_2d_gmm.py)
+ * [Source seperation](https://github.com/shogun-toolbox/shogun/blob/develop/examples/undocumented/python_modular/graphical/converter_jade_bss.py)
+ * [IPython notebook examples](http://www.shogun-toolbox.org/page/documentation/notebook)
+
+### Slide examples
+See our Europython 2010 [slides](https://www.dropbox.com/sh/jvl4ra885usu4ii/WIoJccXA5r/talk.pdf). Although we aim for more pictures and less formulas this year. </description>
+<speakers>
+<speaker id='82'>
+<name></name>
+<profile>Core developer of Shogun Machine Learning Toolbox, PhD student in computational Neuroscience/Machine Learning in London.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+142 211
+<entry id='142'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Best Practices</topic></topics>
+<start>1200</start>
+<duration>30</duration>
+<room id='room4'>A08</room>
+<title>Traversing Mazes the pythonic way and other Algorithmic Adventures</title>
+<description>Programming isn't just about software architectures and object-oriented design;
+it is also about solving algorithmic problems *efficiently*, some of which 
+are really *hard* [[Hetland, 2010]][0].
+
+The way we decide to *represent* and to *solve* our problems 
+(i.e., the *data structure* and the *algorithm* we use, respectively)
+has a great impact on the overall *complexity* of our solution.
+
+In this scenario, **graphs** define a powerful mental (and mathematical)
+model to deal with many algorithmic problems: "if we can formulate a problem as 
+one dealing with graphs, even if it doesn't *look* like a graph problem, we 
+are probably one step closer to solving it." [[Hetland, 2010]][0].
+
+Indeed, graphs constitute the building blocks for many (*hard*) problems. 
+Thus, mastering graphs and graph algorithms (e.g., graph traversals) provides a 
+jump start to deal with many other problems, such as *The Traveling Salesman* problem 
+(a.k.a. `TSP`), or *finding the shortest path to get out from a dungeon in a `D&amp;D` 
+story* [^1].	
+
+With particular considerations to the authoritative books on this subject (such 
+as the classics by *T. Cormen* and *R. Sedgewick*) for the theoretical 
+part (actually intended to be very limited and mostly referenced), this talk 
+aims at providing an overview of graphs and main graph-based algorithms for 
+Python programmers.
+
+The general outline of the talk will cover the following topics:
+
+*    Implementing Graphs and Trees;
+*    "DRY" Algorithms
+    *    "Memoization" and "Dynamic Programming"
+*    "Mazes" Traversals and Search
+    *    Graph Traversals
+    *    Shortest Path Algorithms
+*    "Hard" Graph Problems
+    *    TSP
+    *    Graph Colouring and Vertex Cover
+
+The main goal of the talk is to analyse how one of the most fundamental (data)
+structure of "ADS" university classes, may be handled (and implemented) in a 
+**very pythonic way**, in accordance with the [Zen of Python][1] (e.g., 
+*beautiful is better than ugly*, *simple is better than complex*, *readability counts*).
+
+Moreover, since the Python ecosystem now offers several libraries and tools to deal
+with graph representations and manipulations, e.g., [`networkx`](http://networkx.github.io)
+or [`PADS`](http://www.ics.uci.edu/~eppstein/PADS/), references and comparisons with existing 
+implementations will be provided in order to analyse and compare existing solutions, while
+*avoiding re-inventing the wheel*.
+
+To this end, code examples and case studies will be presented during the talk
+to encourage the discussion and to stimulate the attendees to come up with 
+different solutions.
+
+Very basic math skills are required, together with familiarity with programming
+in general and with Python in particular.
+
+[0]: http://goo.gl/ZeuDNc "Hetland, M. L., Python Algorithms, Mastering the Basic Algorithms in the Python Language, Apress 2010"
+[1]: http://www.python.org/dev/peps/pep-0020/ "PEP20: The Zen of Python"
+
+[^1]: "Please replace D&amp;D with your favourite RPG. D&amp;D may sound old fashioned :)"</description>
+<speakers>
+<speaker id='249'>
+<name>Valerio Maggio</name>
+<profile>Valerio Maggio has a PhD. in Computational Science from the University of Naples “Federico II” and he is currently a Postdoc researcher at the University of Salerno. His research interests are mainly focused on Unsupervised Machine Learning and Software Engineering, recently combined with Semantic Web technologies for linked data and big data analysis. 
+
+Valerio started developing open source software in 2004, when he was a bachelor degree student. In 2006, he wrote his first lines of Python in his favourite Vim-based developing environment. From then on, he contributed to several open source projects in this language. Currently he uses Python as the mainstream language for his machine learning code, making an intensive use of Scikit-learn and Matplotlib to crunch, munge, and analyse experimental data.
+
+He presented two talks at EuroPython 2012, and recently reviewed a book on Matplotlib that is going to be published.
+Valerio is also a member of the Italian Python community, who enjoys a lot playing chess and drinking tea.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+143 5
+<entry id='143'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Science</topic></topics>
+<start>1400</start>
+<duration>45</duration>
+<room id='room0'>C01</room>
+<title>(Big) Data-intensive computation with Python</title>
+<description>In recent years, the popularity of the so-called *dynamic languages* has 
+increased and *Python* is one of the most popular one, along with Ruby and 
+others. 
+However, among these languages, Python is distinguished by its large and active 
+*scientific computing* community, that considerably increased the adoption of
+Python in many research and academic applications [[McKinney, 2013]][0].
+
+These applications usually require the definition of computational effective
+algorithms that are able to process and to manipulate huge amount of data.
+
+Python offers extremely interesting solutions for these kind of problems, 
+combining the benefits of a general purpose programming language with a large 
+set of tools and libraries specifically designed for *scientific computation*.
+These libraries have to be used in combination with parallel 
+computational frameworks (e.g., Map Reduce) when the amount of data to 
+process is "*Big*".
+
+This talk provides introductory examples to scientific computing in Python, 
+specifically tailored for the so-called *data-intensive* applications.
+In particular, different data analysis tasks will be presented, together with
+a description of the specific Python library to be used.
+
+In more details, the talk provides examples of tasks for 
+
+*   *data cleaning and munging* using `numpy`, `scipy` 
+    and `pandas` (for *time series data*); 
+
+*   *data storage* with `pytables`, `hdf5` and `mongodb`; 
+
+*   *data visualisation* using `matplotlib`;
+
+*   *big data computation* using `hadoop streaming API` and the new `spark` 
+    library;
+
+Moreover, in case multiple solutions will be presented for a single data 
+analysis task (e.g., data storage with `mongodb` and `pytables`), the different
+examples will be cleverly analysed and compared to emphasise pros 
+and cons of each of them.
+
+This talk assumes a good knowledge of the Python language. 
+A basic knowledge of `numpy` and `scipy` is a plus.
+
+[0]: http://goo.gl/AuWGZa "McKinney, W., "Python for Data Analysis", O'Reilly, 2013"</description>
+<speakers>
+<speaker id='249'>
+<name>Valerio Maggio</name>
+<profile>Valerio Maggio has a PhD. in Computational Science from the University of Naples “Federico II” and he is currently a Postdoc researcher at the University of Salerno. His research interests are mainly focused on Unsupervised Machine Learning and Software Engineering, recently combined with Semantic Web technologies for linked data and big data analysis. 
+
+Valerio started developing open source software in 2004, when he was a bachelor degree student. In 2006, he wrote his first lines of Python in his favourite Vim-based developing environment. From then on, he contributed to several open source projects in this language. Currently he uses Python as the mainstream language for his machine learning code, making an intensive use of Scikit-learn and Matplotlib to crunch, munge, and analyse experimental data.
+
+He presented two talks at EuroPython 2012, and recently reviewed a book on Matplotlib that is going to be published.
+Valerio is also a member of the Italian Python community, who enjoys a lot playing chess and drinking tea.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='147'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Python Core</topic></topics>
+<start>1400</start>
+<duration>30</duration>
+<room id='room1'>B05/B06</room>
+<title>Post-Mortem Debugging with Heap-Dumps</title>
+<description>Post-Mortem Debugging with Heap-Dumps
+=====================================
+
+UNIX core-dumps, Windows minidumps and analogous solutions of other operating systems are well established technologies for 
+post-mortem defect analysis of native-code processes. In principle those dumps can be used to analyse „interpreted“ 
+programs running within a native-code interpreter-process. However in practise this approach is tedious and not always successful \[1\].
+Therefore operating system independent dump methods were developed for some „interpreted“ languages \[2\]. 
+A prominent example are Java heap dumps \[3\]. 
+
+Unfortunately up to now there was no practically usable dump-method for Python. Various attempts were made 
+to utilise OS-level dump methods \[4, 5\]. In 2012 Eli Finer published the Python module *pydump* \[6\].
+This module pickles the traceback of an exception and subsequently uses the pdb debugger to analyse the unpickled traceback.
+Unfortunately *pydump* fails on PicklingErrors.
+
+In my talk I'll present the Python package [*pyheapdump*](https://pypi.python.org/pypi/pyheapdump). It has the same operation principle as Eli's *pydump*, but 
+is an independent implementation. *pyheapdump* uses an extended pickler 
+([sPickle](https://pypi.python.org/pypi/sPickle)) to serialise all relevant objects 
+of a Python process to a file. Later on a fault tolerant unpickler recreates the objects and a common Python
+debugger can be used to analyse the dump. The pickler extensions make it possible to:
+
+ * pickle and unpickle many commonly not pickleable objects [7].
+ * replace the remaining not pickleable objects by surrogate objects so that the resulting object graph is
+   almost isomorphic to the original object graph.
+   
+Which objects are relevant? In its default operation mode *pyheapdump* 
+uses the frame-stacks of all threads as start point for pickling. Following the 
+usual rules for pickling the dump includes all local variables and all objects 
+reachable from a local variable and so on. That is usually enough for a successful defect analysis.
+
+Compared with other Python post-mortem debugging methods *pyheapdump* has several advantages:
+
+ * It is a pure Python solution and independent from the operation system.
+ * Creation of the pyheapdump and fault analysis can be performed different computers.
+ * It is not obstructive. It does not modify / monkey-patch or disturb the dumped 
+   process in any way, with the exception of loading additional modules.
+ * If used with the Pydev-debugger, it supports multi-threaded applications.
+ * If used with the Pydev-debugger and Stackless Python, it supports tasklets. 
+
+The implementation of *pyheapdump* is fairly small, because it draws most of its functionality 
+from the underlying sPickle package and from the new Stackless-Support \[8\] of the
+Pydev-Debugger. Therefore it is - despite of its short history - already a useful piece of software.
+
+Outline of the talk
+-------------------
+
+1.	Introduction to the problem
+2.	Previous works
+3.	The concept of *pyheapdump*
+4.	Live demonstration
+5.	Open problems and further development
+6.	Questions and Answers
+
+References
+----------
+
+1. Andraz Tori, Python, 2011-01-16: *gdb and a very large core dump*, blog at &lt;http://www.zemanta.com/blog/python-gdb-large-core-dump/&gt;
+2. David Pacheco, ACM Queue - Programming Languages Volume 9 Issue 10, October 2011: 
+   *Postmortem Debugging in Dynamic Environments*, 
+   PDF &lt;http://dl.acm.org/ft_gateway.cfm?id=2039361&amp;ftid=1050739&amp;dwn=1&amp;CFID=290171300&amp;CFTOKEN=95099236&gt;
+3. Chris Bailey, Andrew Johnson, Kevin Grigorenko, IBM developerWorks, 2011-03-15: 
+   *Debugging from dumps - Diagnose more than memory leaks with Memory Analyzer*, 
+   PDF &lt;http://www.ibm.com/developerworks/library/j-memoryanalyzer/j-memoryanalyzer-pdf.pdf&gt;
+4. Brian Curtin, 2011-09-29: *minidumper - Python crash dumps on Windows*, 
+   blog at &lt;http://blog.briancurtin.com/posts/20110929minidumper-python-crash-dumps-on-windows.html&gt;
+5. David Malcolm, Fedora Feature, 2010-04-06: *Easier Python Debugging* 
+   at &lt;http://fedoraproject.org/wiki/Features/EasierPythonDebugging&gt;
+6. Eli Finer, Github-Project, 2012: *pydump* at &lt;https://github.com/gooli/pydump&gt;
+7. Anselm Kruis, EuroPython 2011: *Advanced Pickling with Stackless Python and sPickle*,
+   archived talk at &lt;https://ep2013.europython.eu/conference/talks/advanced-pickling-with-stackless-python-and-spickle&gt;
+8. Fabio Zadrozny, 2013-12-12: *PyDev 3.1.0 released*, 
+   blog at &lt;http://pydev.blogspot.de/2013/12/pydev-310-released.html&gt;
+
+</description>
+<speakers>
+<speaker id='251'>
+<name>Anselm Kruis</name>
+<profile>Anselm Kruis works as a Senior Solution Architect for science + computing ag, a Bull subsidiary. He started software development 25 years ago and enjoys the simplicity of Python since over 10 years, mostly using Jython and nowadays Stackless Python. If allowed by professional constraints, he is happy to utilise and contribute to open software projects.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+152 215
+<entry id='152'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Science</topic></topics>
+<start>1445</start>
+<duration>45</duration>
+<room id='room0'>C01</room>
+<title>Scikit-learn to "learn them all"</title>
+<description>**Machine Learning** is about *using the right features, to build the right 
+models, to achieve the right tasks* [[Flach, 2012]][0]
+However, to come up with a definition of what actually means **right** for 
+the problem at the hand, it is required to analyse 
+huge amounts of data, and to evaluate the performance of different algorithms 
+on these data.
+
+However, deriving a working machine learning solution for a given problem 
+is far from being a *waterfall* process. 
+It is an iterative process where continuous refinements are required for the 
+data to be used (i.e., the *right features*), and the algorithms to apply 
+(i.e., the *right models*).
+
+In this scenario, Python has been found very useful for practitioners and 
+researchers: its high-level nature, in combination with available tools and 
+libraries, allows to rapidly implement working machine learning code 
+without *reinventing the wheel*.
+
+[**Scikit-learn**](http://scikit-learn.org/stable/) is an actively 
+developing Python library, built on top of the solid `numpy` and `scipy` 
+packages.
+
+Scikit-learn (`sklearn`) is an *all-in-one* software solution, providing 
+implementations for several machine learning methods, along with datasets and 
+(performance) evaluation algorithms.
+
+These "batteries" included in the library, in combination with a nice and intuitive
+software API, have made scikit-learn to become one of the most popular Python 
+package to write machine learning code.
+
+In this talk, a general overview of scikit-learn will be presented, along with 
+brief explanations of the techniques provided out-of-the-box by the library.
+
+These explanations will be supported by working code examples, and insights on 
+algorithms' implementations aimed at providing hints on 
+how to extend the library code.
+
+Moreover, advantages and limitations of the `sklearn` package will be discussed 
+according to other existing machine learning Python libraries
+(e.g., [`shogun`](http://shogun-toolbox.org "Shogun Toolbox"), 
+[`pyML`](http://pyml.sourceforge.net "PyML"), 
+[`mlpy`](http://mlpy.sourceforge.net "MLPy")).
+
+In conclusion, (examples of) applications of scikit-learn to big data and 
+computational intensive tasks will be also presented.
+
+The general outline of the talk is reported as follows (the order of the topics may vary):
+
+*   Intro to Machine Learning
+    *   Machine Learning in Python
+    *   Intro to Scikit-Learn
+*   Overview of Scikit-Learn
+    *   Comparison with other existing ML Python libraries
+*   Supervised Learning with `sklearn`
+    *   Text Classification with SVM and Kernel Methods
+*   Unsupervised Learning with `sklearn`
+    *   Partitional and Model-based Clustering (i.e., k-means and Mixture Models)
+*   Scaling up Machine Learning
+    *   Parallel and Large Scale ML with `sklearn`
+
+The talk is intended for an intermediate level audience (i.e., Advanced).
+It requires basic math skills and a good knowledge of the Python language.
+
+Good knowledge of the `numpy` and `scipy` packages is also a plus.
+
+[0]: http://goo.gl/BnhoHa "Machine Learning: The Art and Science of Algorithms that Make Sense of Data, *Peter Flach, 2012*"</description>
+<speakers>
+<speaker id='249'>
+<name>Valerio Maggio</name>
+<profile>Valerio Maggio has a PhD. in Computational Science from the University of Naples “Federico II” and he is currently a Postdoc researcher at the University of Salerno. His research interests are mainly focused on Unsupervised Machine Learning and Software Engineering, recently combined with Semantic Web technologies for linked data and big data analysis. 
+
+Valerio started developing open source software in 2004, when he was a bachelor degree student. In 2006, he wrote his first lines of Python in his favourite Vim-based developing environment. From then on, he contributed to several open source projects in this language. Currently he uses Python as the mainstream language for his machine learning code, making an intensive use of Scikit-learn and Matplotlib to crunch, munge, and analyse experimental data.
+
+He presented two talks at EuroPython 2012, and recently reviewed a book on Matplotlib that is going to be published.
+Valerio is also a member of the Italian Python community, who enjoys a lot playing chess and drinking tea.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='155'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Python Core</topic></topics>
+<start>1430</start>
+<duration>30</duration>
+<room id='room1'>B05/B06</room>
+<title>Advanced Database Programming with Python</title>
+<description>The Python DB-API 2.0 provides a direct interface to
+many popular database backends. It makes interaction with
+relational database very straight forward and allows tapping
+into the full set of features these databases provide.
+
+The talk will cover advanced database topics which are
+relevant in production environments such as locks, distributed
+transactions and transaction isolation.
+
+----
+
+The talk will give an in-depth discussion of advanced database
+programming topics based on the Python DB-API 2.0: locks and
+dead-locks, two-phase commits, transaction isolation, result
+set scrolling, schema introspection and handling
+multiple result sets.
+
+Talks slides are available on request.</description>
+<speakers>
+<speaker id='134'>
+<name>Marc-Andre Lemburg</name>
+<profile>Marc-Andre is the CEO and founder of eGenix.com, a Python-focused project and consulting company based in Germany. He has a degree in mathematics from the University of Düsseldorf. His work with and for Python started in Winter 1993. In 1997, he became a Python Core Developer. He designed and implemented the Unicode support in Python and continued to maintain the Python Unicode implementation for more than a decade, after it first appeared in Python 1.6 in 2000.
+
+Marc-Andre is a founding member of the Python Software Foundation (PSF) and has served on the PSF Board several times. He is also board member of the EuroPython Society (EPS) which organizes the EuroPython conference series and the author of the well-known mx Extensions, e.g. mxTextTools, mxDateTime and mxODBC, which are now distributed and maintained through eGenix.com.
+
+Today Marc-Andre spends most of his time managing large-scale customer projects heavily relying on Python and databases.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='156'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Embedded Devices</topic></topics>
+<start>1500</start>
+<duration>30</duration>
+<room id='room1'>B05/B06</room>
+<title>Home Automation with Kivy, Raspberry Pi and MQTT</title>
+<description>Home automation is a nice way to get into the field of
+the "Internet of Things".
+
+The talk will demonstrate how Python can be put to good
+use to connect mobile phones, Raspberry Pis and remote
+control switches to build your own little Internet of
+Things.
+
+----
+
+The project was initiated at the Python Meeting Düsseldorf
+(PyDDF) sprint in 2013. In two days, we built the basic
+infrastructure to connect mobile phones via Kivy to an MQTT
+server as central communication hub. An MQTT client provided
+the interface to the remote control switches via a USB
+software radio called Tellstick DUO.
+
+The talk will discuss the setup, the possibilities the
+design offers and show case how easy it is to use Python
+as integration language on mobile devices, small embedded
+devices such as the Raspberry Pi and how to use it to
+communicate with external hardware both for sending
+and receiving event signals.
+
+Talk slides of a short version of this talk and a video
+from the presentation given at the PyDDF meeting after
+the sprint are available on request.
+</description>
+<speakers>
+<speaker id='134'>
+<name>Marc-Andre Lemburg</name>
+<profile>Marc-Andre is the CEO and founder of eGenix.com, a Python-focused project and consulting company based in Germany. He has a degree in mathematics from the University of Düsseldorf. His work with and for Python started in Winter 1993. In 1997, he became a Python Core Developer. He designed and implemented the Unicode support in Python and continued to maintain the Python Unicode implementation for more than a decade, after it first appeared in Python 1.6 in 2000.
+
+Marc-Andre is a founding member of the Python Software Foundation (PSF) and has served on the PSF Board several times. He is also board member of the EuroPython Society (EPS) which organizes the EuroPython conference series and the author of the well-known mx Extensions, e.g. mxTextTools, mxDateTime and mxODBC, which are now distributed and maintained through eGenix.com.
+
+Today Marc-Andre spends most of his time managing large-scale customer projects heavily relying on Python and databases.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='161'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Web</topic></topics>
+<start>1400</start>
+<duration>45</duration>
+<room id='room2'>B07/B08</room>
+<title>How Disqus is using Django as the basis of our Service Oriented Architecture</title>
+<description># The talk!
+## ~10 min: Introduce what a SOA is
+- What is a Service Oriented Arcitecture (SOA)?
+    - Separation of concerns makes deployments faster and smaller.
+    - Doing one thing well is better than doing two things kinda ok.
+    - Development speed
+        - SOA enables us to ship code FAST
+        - Code commit to production is &lt; 2 minutes
+
+    - What are the basic kinds of services?
+        - RPC: function calls over the network
+        - REST: Basic/bulk data access over the network
+        - Evented/Queue: Respond to data broadcasts in realtime
+        - Why I personally think (Evented + REST) &gt; RPC.
+- Why is Disqus moving towards a SOA? (Hint, it is for #webscale)
+
+## ~10 min: breaking up an existing application
+- How Disqus is migrating from a monolithic django app to many smaller django apps.
+    - We wanted to leverage our existing know-how of django
+        - This includes all of our tooling
+        - Products like sentry (https://github.com/getsentry/sentry)
+        - And other monitoring/deployment infrastructure
+    - We didn't plan well for growing, so there are a lot of lessons here)
+    - How will authorization be done in services that can't access the user table?
+
+- How are we still leveraging Django in our services that are not wsgi apps
+    - When we use management commands? (A lot)
+    - When to use celery tasks? (Less than we anticipated)
+
+## ~20 min: Case study of the Disqus Ad Server
+- migrate the functionality to a new service
+    - Broke the Ad Server out from the monolithic app
+    - Broke out the data portion into another service
+    - Code structure of how we use multiple services
+        - wsgi entry points
+        - management commands
+
+- what went wrong
+    - original code was not a well formed stand alone django app
+    - still can't remove old code due to poor separation of concerns
+
+- what went right
+    - average ship time of a feature went from days to hours
+    - leveraged Django so new employees have a super fast learning curve
+
+# bonus material if there is time
+(could possibly a 5-10 minute lightning talk too)
+
+## how we do experimentation to make more $€£!
+- A/B testing in the Disqus Ad Server
+    - we use switches, but gargoyle wasn't working well
+        - https://github.com/disqus/gargoyle
+    - enter gutter!
+        - https://github.com/disqus/gutter
+    - switches in Django (or flask, or anything!)
+    - zookeeper or redis backed
+    - super fast
+    - how we report decisions to the client, and how we track that data</description>
+<speakers>
+<speaker id='25'>
+<name>adam</name>
+<profile></profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='163'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Other</topic></topics>
+<start>1400</start>
+<duration>30</duration>
+<room id='room3'>B09</room>
+<title>Scalable Realtime Architectures in Python</title>
+<description>Increasingly we are interested in implementing highly scalable and
+fault tolerant realtime architectures such as the following:
+
+* Realtime aggregation. This is the realtime analogue of working with
+  batched map-reduce in systems like Hadoop.
+
+* Realtime dashboards. Continuously updated views on all your
+  customers, systems, and the like, without breaking a sweat.
+
+* Realtime decision making. Given a set of input streams, policy on
+  what you like to do, and models learned by machine learning, optimize a
+  business process. One example includes autoscaling a set of servers.
+
+(We use realtime in the soft sense: systems that are continuously
+computing on input streams of data and make a best effort to keep up;
+it certainly does not imply hard realtime systems that strictly
+bound their computation times.)
+
+Obvious tooling for such implementations include Storm (for event
+processing), Kafka (for queueing), and ZooKeeper (for tracking and
+configuration). Such components, written respectively in Clojure
+(Storm), Scala (Kafka), and Java (ZooKeeper), provide the desired
+scalability and reliability. But what may not be so obvious at first
+glance is that we can work with other languages, including Python, for
+the application level of such architectures. (If so inclined, you can
+also try reimplementing such components in Python, but why not use
+something that's been proven to be robust?)
+
+In fact Python is likely a better language for the app level, given
+that it is concise, high level, dynamically typed, and has great
+libraries. Not to mention fun to write code in! This is especially
+true when we consider the types of tasks we need to write: they are
+very much like the data transformations and analyses we would have
+written of say a standard Unix pipeline. And no one is going to argue
+that writing such a filter in say Java is fun, concise, or even
+considerably faster in running time.
+
+So let's look at how you might solve such larger problems. Given that
+it was straightforward to solve a small problem, we might approach as
+follows. Simply divide up larger problems in small one. For example,
+perhaps work with one customer at a time. And if failure is an ever
+present reality, then simply ensure your code retries, just like you
+might have re-run your pipeline against some input files.
+
+Unfortunately both require distributed coordination at scale. And
+distributed coordination is challenging, especially for real systems,
+that will break at scale. Just putting a box in your architecture
+labeled **"ZooKeeper"** doesn't magically solve things, even if
+ZooKeeper can be a very helpful part of an actual solution.
+
+Enter the Storm framework. While Storm certainly doesn't solve all
+problems in this space, it can support many different types of
+realtime architectures and works well with Python. In particular,
+Storm solves two key problems for you.
+
+**Partitioning**. Storm lets you partition streams, so you can break
+down the size of your problem. But if the a node running your code
+fails, Storm will restart it. Storm also ensures such topology
+invariants as the number of nodes (spouts and bolts in Storm's lingo)
+that are running, making it very easy to recover from such failures.
+
+This is where the cleverness really begins. What can you do if you can
+ensure that **all the data** you need for a given continuously updated
+computation - what is the state of this customer's account?  - can be
+put in **exactly one place**, then flow the supporting data through it
+over time? We will look at how you can readily use such locality in
+your own Python code.
+
+**Retries**. Storm tracks success and failure of events being
+processed efficiently through a batching scheme and other
+cleverness. Your code can then choose to retry as necessary. Although
+Storm also supports exactly-once event processing semantics, we will
+focus on the simpler model of at-least-once semantics. This means your
+code must tolerate retry, or in a word, is idempotent. But this is
+straightforward. We have often written code like the following:
+
+    seen = set()
+    for record in stream:
+        k = uniquifier(record)
+        if k not in seen:
+           seen.add(k)
+           process(record)
+
+Except of course that any such real usage has to ensure it doesn't
+attempt to store all observations (first, download the Internet! ;),
+but removes them by implementing some sort of window or uses data
+structures like HyperLogLog, as we will discuss.
+
+One more aspect of reliability we will discuss is how to compose
+reliable systems out of reliable components; we will show how this
+can be readily done with a real example of consuming Kafka and
+tracking consumption progress in ZooKeeper.</description>
+<speakers>
+<speaker id='395'>
+<name>Jim Baker</name>
+<profile>Jim is a committer on Jython, for which he has worked on nearly every aspect from compilation to Unicode, and a co-author of the Definitive Guide to Jython. Jim is a senior software developer at Rackspace, where he works at the intersection of big data and cloud computing. He is also a lecturer in computer science at the University of Colorado at Boulder, where he teaches Principles of Programming Languages. He is a graduate of Harvard College and Brown University and is a nominated member of the Python Software Foundation.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+165 115
+<entry id='165'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Web</topic></topics>
+<start>1430</start>
+<duration>30</duration>
+<room id='room3'>B09</room>
+<title>Building Realtime Web Applications with WebRTC and Python</title>
+<description>Introduction
+===========
+This talk will first introduce the audience to WebRTC and then discuss about how to implement the server side logic of a WebRTC app using Python. 
+
+WebRTC is a free, open project that enables web browsers with plugin-less Real-Time Communications (RTC) capabilities via simple JavaScript APIs. What makes WebRTC special is that the data travels from one client to another without going through the server. 
+
+The main functions of WebRTC can be broadly categorized into three types. 
+
+- Access and acquire video and audio streams
+- Establish a connection between peers and stream audio/video.
+- Communicate arbitrary data.
+
+WebRTC uses three different JavaScript APIs to perform these three functions. These APIs are:
+
+- MediaStream (aka getUserMedia)
+- RTCPeerConnection
+- RTCDataChannel
+
+MediaStream API performs the task of accessing the webcam and/or microphone of the device and acquire the video and/or audio stream from them. RTCPeerConnection API establishes connection between peers and streams audio and video data. This API also does all the encoding and decoding of audio/video data. The third API, RTCDataChannel helps to communicate arbitrary data from one client to the other.
+
+There will be short demos to demonstrate the functionalities of these APIs.
+
+Signaling and Session Control
+========================
+
+WebRTC uses RTCPeerConnection to communicate streaming data between browsers, but some sort of mechanism is needed to coordinate this communication and to send control messages. This process is known as signaling.
+
+Signaling is used to exchange three types of information.
+
+- Session control messages: to initialize or close communication and report errors.
+- Network configuration: to the outside world, what's my computer's IP address and port?
+- Media capabilities: what codecs and resolutions can be handled by my browser and the browser it wants to communicate with?
+
+This can be implemented using any appropriate two way communication channel.
+
+Implementing signaling in Python
+==========================
+
+Next, we will have a look at how to implement this signaling mechanism in Python. ( Demonstration with annotated code and live application.)
+
+### Google AppEngine and the Channel API ###
+Google AppEngine has a channel API which offers persistent connections between your application and Google servers, allowing your application to send messages to JavaScript clients in real time without the use of polling. We'll use this Channel API to build the signaling system of our WebRTC app on top of webapp2 and flask framework. 
+
+### Flask and gevent ###
+We'll implement the same signaling system again, this time on top of Flask using gevent for the persistent connection between the browser and our application. 
+
+Outline of the talk
+===============
+### Intro (5 min) ###
+- Who are we?
+- What is WebRTC?
+- Functions of WebRTC.
+
+### WebRTC APIs and Demos (3 min) ###
+- MediaStream (getUserMedia) API
+- RTCPeerConnection API
+- RTCDataChannel API
+
+### Signaling in WebRTC Applications (3 min) ###
+- What is signaling?
+- Why is it needed?
+- How to implement it?
+
+### Implementation of signaling (16 min) ###
+- Implementation using Google AppEngine and Channel API
+- Implementation using Flask and gevent
+
+### Questions (3 min) ###
+</description>
+<speakers>
+<speaker id='30'>
+<name>Tarashish Mishra</name>
+<profile>3rd year undergraduate student from Bhubaneswar, India.
+Participated Google Summer of Code 2013 under Python Software Foundation.
+Contributes to Openhatch, Oppia, Mozilla, MoinMoin wiki</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+167 181
+<entry id='167'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Science</topic></topics>
+<start>1445</start>
+<duration>45</duration>
+<room id='room2'>B07/B08</room>
+<title>Performance Python for Numerical Algorithms</title>
+<description>This talk is about several approaches to implement high performing numerical algorithms and applications in Python. It introduces into approaches like multi-threading, parallelization (CPU/GPU), dynamic compiling, high throughput IO operations.
+
+The approach is a practical one in that every approach is illustrated by specific Python examples.
+
+The talk uses, among others, the following libraries:
+
+* NumPy
+* numexpr
+* IPython.Parallel
+* Numba
+* NumbaPro
+* PyTables</description>
+<speakers>
+<speaker id='711'>
+<name>Dr. Yves J. Hilpisch</name>
+<profile>The Python Quant
+
+Managing Director Europe of Continuum Analytics
+
+Lecturer for Mathematical Finance at Saarland University</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='171'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Science</topic></topics>
+<start>1500</start>
+<duration>30</duration>
+<room id='room3'>B09</room>
+<title>Combining the powerful worlds of Python and R</title>
+<description>pyRserve is a small open source project originally developed to fulfill the needs of a German biotech company to do statistical analysis in a large Python-based Lab Information Management System (LIMS). In contrast to other R-related libraries like RPy where Python and R run on the same host, pyRserve allows the distribution of complex operations and calculations over multiple R servers across the network. 
+
+The aim of this talk is to show how easily Python can be connected to R, and to present a number of selected (simple) code examples which demonstrate the power of this setup.</description>
+<speakers>
+<speaker id='667'>
+<name></name>
+<profile></profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='181'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Science</topic></topics>
+<start>1400</start>
+<duration>30</duration>
+<room id='room4'>A08</room>
+<title>Ganga: an interface to the LHC computing grid</title>
+<description>[Ganga](https://cern.ch/ganga) is a tool, designed and used by the large particle physics experiments at CERN. Written in pure Python, it delivers a clean, usable interface to allow thousands of physicists to interact with the huge computing resources available to them. It provides a single platform with which data analysis tasks can be run on anything from a local machine to being distributed seamlessly to computing centres around the world.
+
+The talk will cover the problems faced by physicists when dealing with the computer infrastructure and how Ganga helps to solve this problem. It will focus on how Python has helped create such a tool through its advanced features such as metaclasses and integration into IPython.</description>
+<speakers>
+<speaker id='674'>
+<name>Matt Williams</name>
+<profile></profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='185'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Education</topic></topics>
+<start>1430</start>
+<duration>30</duration>
+<room id='room4'>A08</room>
+<title>Python Generators from Scratch</title>
+<description>The talk starts from iterators and iterables, showing the differences and the relations between the two concepts, and describing the loop protocol of the Python language. 
+
+Here I want to introduce the concept of sequence types and a very quick mention to the innate polymorphism of Python functions due to the dynamic typing system.
+
+Next topic will be the yield keyword and generator objects. The generator behaviour is presented in depth, being this the most important concept of the whole topic.
+
+If there is enough time I would also introduce an advanced use of generators, i.e. microthreads.
+
+(The talk structure is that of this series of three posts http://lgiordani.github.io/blog/2013/03/25/python-generators-from-iterators-to-cooperative-multitasking/)</description>
+<speakers>
+<speaker id='715'>
+<name>Leonardo Giordani</name>
+<profile>I'm currently working in the field of satellite remote sensing, developing industrial data processing chains and related tools in C/Python. Other relevant technologies we use are Django and RabbitMQ.
+
+I'm mainly interested in operating systems programming, concurrency and messaging solutions. I love both the theoretical aspects and the implementation of many topics. Among them OOP, Design Patterns and Versioning.
+
+I use Python since 1999 and from 2013 I started to blog some thoughts at lgiordani.github.io</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+194 199
+</day>
+<day date='2014-07-24'>
+<entry id='194'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Python Core</topic></topics>
+<start>1100</start>
+<duration>45</duration>
+<room id='room0'>C01</room>
+<title>Extending Python, what is the best option for me?</title>
+<description>In this talk we will explore all the alternatives in cpython ecosystem to load external libraries. In first place we'll study the principles and how shared libraries work. After that we will look into the internals of CPython to understand how extensions work and how modules are loaded. Then we will study the main three alternatives to extend CPython: Native Extensions, Ctypes and CFFI and how to automate the process. 
+Furthermore we will take a look to other python implementations and how we can extend it.</description>
+<speakers>
+<speaker id='174'>
+<name>Francisco Fernández Castaño</name>
+<profile>I work as software engineer at biicode in Madrid, Python is my main programming language but I also program in other languages like Erlang, Haskell, Clojure... My main interests are distributed systems, functional programming and graph databases. </profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='196'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Other</topic></topics>
+<start>1145</start>
+<duration>45</duration>
+<room id='room0'>C01</room>
+<title>Graph Databases, a little connected tour</title>
+<description>There are many kinds of NoSQL databases like, document databases, key-value, column databases and graph databases.
+In some scenarios is more convenient to store our data as a graph, because we want to extract and study information relative to these connections. In this scenario, graph databases are the ideal, they are designed and implemented to deal with connected information in a efficient way.
+In this talk I'll explain why NoSQL is necessary in some contexts as an alternative to traditional relational databases. How graph databases allow developers model their domains in a natural way without translating these domain models to an relational model with some artificial data like foreign keys and why is more efficient a graph database than a relational one or even a document database in a high connected environment. Then I'll explain specific characteristics of Neo4J as well as how to use Cypher the neo4j query language through python.</description>
+<speakers>
+<speaker id='174'>
+<name>Francisco Fernández Castaño</name>
+<profile>I work as software engineer at biicode in Madrid, Python is my main programming language but I also program in other languages like Erlang, Haskell, Clojure... My main interests are distributed systems, functional programming and graph databases. </profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+</day>
+<day date='2014-07-23'>
+<entry id='210'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Other</topic></topics>
+<start>1500</start>
+<duration>30</duration>
+<room id='room4'>A08</room>
+<title>Amanda: A New Generation of Distributed Services Framework</title>
+<description>Presentation outline
+====================
+
+We'll start off with a quick overview of a movie production pipeline which will set the stage
+for how Amanda provides artists with the tools they need to develop and streamline the production process
+as well as Amanda's crucial function as a robust framework for the support and development teams.
+Going over some stats, up to 250.000 service calls a minute during World War Z for example (for frame of reference this is
+twice the average rate of stackoverflow.com), I'll highlight some of the problems encountered with the 1st generation.
+Initially developed in 2007 and replaced last year it had several flaws in regards to scalability, maintainability and future proofing.
+From there I'll introduce the 2nd generation which is build on the principle of componentisation and building blocks. Every part of the system
+needs to be replaceable and this needs to be possible from the configuration.
+
+During the presentation we will be stepping through the different building blocks, how they have been set up, how they slot together
+and how we monitor, trace and test the system from the ground up. Starting at the lowest level with services we'll slowly
+step through the different blocks necessary to build a fault tolerant, distributed and scalable platform.
+We made sure that the platform is not tied into any specific technology but allows the use of the best technologies
+depending on the type of work being undertaken and changing business needs and technological advances.
+
+Service development and testing
+-------------------------------
+
+Our development teams build applications for artists creating visual effects through to management teams coordinating productions.
+A service-based architecture was chosen to provide consistent interfaces across the many different environments where this is required.
+We provide an ecosystem where developers of any level can safely write a service (a set of instructions regarding a
+specific topic) that are presented to developers and technical artists globally.
+To write a service the developer doesn't need any knowledge in regards to building large concurrent systems.
+The service is implemented through a simple Python API and the provided ecosystem allows services to exist in a standalone manner.
+The service concept was separated from the platform hosting it. This allows hosting in any application that provides a
+standard container (a service provider). Extracting this allowed for more rigorous and simple testing of services;
+it also allows developers to provide fake versions of their services publicly against which client code can be tested.
+The adage Ê»everything as a serviceÊ¼ was applied to the development of internal facilities.
+This includes our management tools and the developer console, which presents the documentation of services and methods
+available to developers through a web interface.
+Infrastructure services were introduced to present an interface to facilities provided to a regular service, for example
+databases, configuration and centralized logging.
+Services can call other services and, similarly to infrastructures, services can be replaced with different services depending on the configuration.
+Services are exposed to a service (or client as we will see later) via a service provider just like in applications.
+Setting services up with the above patterns allows developers to iterate quickly and to include services within testing frameworks.
+It has also provided a standardized form across projects allowing developers to support and add to unfamiliar code easily.
+And last but not least it has given us full abstractions at all levels, users of services do not need to know the code underneath the hood
+be it at a service level or at an infrastructure level.
+
+
+Building the cluster
+--------------------
+
+Rather than building a single system, the new architecture defines a set of building blocks for constructing a
+distributed service platform. These can provide adapters for best of breed third party tools or, where necessary,
+custom implementations of functionality. Configuration is used to determine the number and types of modules to use
+and the parameters with which to initialize them. This allows the same platform to be used for small instances at
+a developerÊ¼s desk up to a production environment of many nodes. The design enables improved components to be
+swapped into the existing system whilst forming the basis for an entirely new design.
+
+Most practical applications require the service provider to handle multiple requests at the same time.
+Amanda provides a set of interchangeable concurrency modules. This allows the most appropriate Python model
+for parallel processing to be chosen. For work involving heavy I/O work we choose approaches that avoid waiting
+for the GIL, for example multiple processes and greenlets/coroutines, whilst for CPU bound work we can use threads
+which may prove more performant.  Having the option to choose between mechanisms is important since there is not a
+solution that neatly fits all use cases. A pluggable concurrency abstraction also allows integration of new libraries
+as they become available. In future this might include the new asyncio (formerly Tulip) core library for Python 3.3+.
+
+To benefit from concurrency, resource pooling, caching etc. we don't always want to execute the service locally to the service provider.
+Service proxies implement this behavior; they take the service, method and arguments of a request as their input
+and return the result. The proxy should be transparent to the service and service provider components. By chaining
+proxies, complex routing schemes can be built or analysis performed on the results returned. Some similarity can be
+drawn with middle-ware in the Web Services Gateway Interface (WSGI) specification.
+Communication between proxy and service provider is served by the transport. This abstraction provides an
+asynchronous interface to underlying technologies â€“ Current implementations include queue based AMQP, ontop of
+RabbitMQ, and Ã˜MQ and more naÃ¯ve communications with standard UDP and TCP sockets. Most transports define both client
+and server parts of the system â€“ however some, particularly HTTP-based transports, are designed to accept requests directly from external clients.
+Requests from external applications commonly use XMLRPC, JSONRPC or straight JSON. Transport implementations can be
+interchanged without impacting other components of Amanda or service developers.
+
+In production, a request gateway implemented as a WSGI application fronts the HTTP protocols. Using the standard
+web components NGINX and Î¼WSGI we can build a very scalable front end which internally uses the service provider, proxy, transport
+pattern to offload the requests to a backend. The gateway can also provide standard web facilities such as template rendering
+(through the Jinja2 library1) for general web clients. The gateway was a requirement as requests originate from applications
+written in many languages including C++, Python, JavaScript and domain specific languages such as mel. For us it was
+important that the client used across all those languages was a proven standard and lightweight. Most requests are served
+in near realtime (6ms round trip times) and are presented to the client in a synchronous way so using a frontend that supports a large number
+of HTTP like protocols allowed us to keep the clients simple and present the platform to an extremely wide variety of
+languages. Additionally, through the frontend, we can render a web page and present that directly if the requests was made
+from a browser.
+
+The final behavior of the platform is defined in configuration. This allows the platform to be tuned to suit
+the work that a particular service is performing (I/O vs CPU bound). It is important to remember that every single
+component mentioned above be it the concurrency, transport, proxies or frontend can be changed, removed, updated without
+it impacting the service, the developer or any of the other components that make up the platform.
+
+Also important to mention that internally and externally everything is a queue and presented as a queue. Going from the client
+to the frontend there is a queue, from the frontend onto the backend there is a queue etc. all the way down to a request
+being read of the transport and stored inside a queue until a concurrency object is ready to handle the request with the
+service provider.
+
+This is where we think our platform might take a different approach. Rather than building the platform on top of a single
+great technology we didn't want to limit ourselves and be able to use all the other great technologies out there.
+There is no perfect solution for all problems but allowing to fine tune the platform according to different problems.
+The setup can now evolve in line with technological advancements and changes to the industry.
+
+
+Maintenance and Monitoring (5 mins)
+-----------------------------------
+
+We will walk through how we are using the same setup with services, service providers, proxies and transports to manage
+clusters around the globe. Once again for our maintenance and monitoring we made sure everything is done as a service so
+that if there is a better tool in the future we could adopt it.
+
+Through leveraging the configuration management and remote execute platform Salt, a new cluster can now be provisioned quickly.
+Management is itself provided as a service. Through this system, the current state is available and configuration changed across
+all servers globally. This has reduced routine maintenance tasks from a half day to a five-minute task, with less
+chance of human error. Monitoring and introspection are provided, as a service, to aid in day-to-day support, tuning and to help
+support analysis for future development.
+
+Developers of services can trace requests from when they enter the system, producing a report of the sequence of
+methods being called, with the supplied arguments. For each call the time spent to fulfill each request is presented.
+Care was taken to minimize the impact of this on return result of the request. Due to everything being a queue we
+can collect the metrics after the result has been put back onto the transport and send to the user and thus minimize the impact
+of this collection on returning the result of the request
+This means that there is no requirement to put the system into a debug mode in order to obtain execution metrics.
+
+With logging being a service we can dynamically change the logging configuration on a per service basis by making a
+request to the logging service taking away the need of changing configuration and restarting the service which
+often means a problem might have disappeared due to the reset.
+
+Future/Conclusion (1 min)
+-------------------------
+
+Whilst developing the new generation of the platform there have been a number of possible applications that have
+emerged. The way in which we are able to scale the system would be suitable to run in a cloud environment â€“
+ especially with the improvements to management allowing new nodes to be provisioned quickly. The ease of writing
+and integrating new components would allow integration with infrastructure provided by third-party cloud vendors.
+Other areas of interest include a smaller version of the platform running locally on a userÊ¼s workstation and
+services for management of generic processes.
+
+Main technologies and libraries currently used:
+------------------------------------------
+
+* Threading
+* Gevent
+* Eventlet
+* Multiprocessing
+* ZeroMQ
+* RabbitMQ
+* uwsgi
+* Flask
+* Salt
+* nginx
+</description>
+<speakers>
+<speaker id='354'>
+<name>Jozef van Eenbergen</name>
+<profile>With a degree in computer science and VFX and a year as an artist Jozef decided to rejoin
+the world of programming and picked up Amanda at MPC 3 years ago. As his first professional project in Python it exposed him to a lot of the different aspects of the language  (concurrency, databases, web, protocols). Working on Amanda brought back his passion and joy working on highly available and scaleable systems as he worked 
+ and a new passion for monitoring.
+
+Currently the principal developer on Amanda he loves the challenges the system and the many film projects throw him as the system grows bigger and bigger.
+
+Next to his work as a developer he likes movies, playing the drums and, when he gets a chance, work on CG/art projects.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+</day>
+<day date='2014-07-24'>
+<entry id='215'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Best Practices</topic></topics>
+<start>1100</start>
+<duration>45</duration>
+<room id='room1'>B05/B06</room>
+<title>Support Python 2 and 3 with the same code</title>
+<description>Your library supports only Python 2, - but your users keep nagging you about Python 3 support?
+
+As Python 3 gets adopted more and more, users ask for Python 3 support in existing libraries for Python 2. This talk mentions some approaches for giving users a Python 3 version, but will quickly focus on using the very same code for a Python 2 and a Python 3 version.
+
+This is much easier if you require Python 2.6 and up, and yet a bit easier if you require Python 3.3 as the minimum Python 3 version.
+
+The talk discusses main problems when supporting Python 3 (some are easily solved):
+
+* `print` is a function.
+
+* More Python APIs return iterators that used to return lists.
+
+* There's now a clear distinction between bytes and unicode (text) strings.
+
+* Files are opened as text by default, requiring an encoding to apply on reading and writing.
+
+
+The talk also explains some best practices:
+
+* Start with a good automatic test coverage.
+
+* Deal with many automatic conversions with a one-time 2to3 run.
+
+* Think about how your library should handle bytes and unicode strings. (Rule of thumb: Decode bytes as early as possible; encode unicode text as late as possible.)
+
+* Should you break compatibility with your existing Python 2 API? (Yes, if there's no other way to design a sane API for Python 2 and 3. If you do it, raise the first part of the version number.)
+
+* Try to keep code that's different for Python 2 and 3 minimal. Put code that needs to be different for Python 2 and 3 into a `compat` module. Or use third-party libraries like `six` or `future`.
+
+
+Finally, the talk will mention some helpful resources on the web.</description>
+<speakers>
+<speaker id='654'>
+<name>Stefan Schwarzer</name>
+<profile>Stefan Schwarzer uses Python since 1999. He's written articles and a book on Python and given talks at several Python and Linux conferences. Although Stefan studied chemical engineering and has a doctor's degree in it, he's been working in software development since 2000. Nowadays Stefan is a freelancer in software development [1], mostly with Python. He's also the maintainer of the FTP client library ftputil [2].
+
+[1] http://sschwarzer.com
+[2] http://ftputil.sschwarzer.net</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='216'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Best Practices</topic></topics>
+<start>1100</start>
+<duration>30</duration>
+<room id='room2'>B07/B08</room>
+<title>Automatic code reviews</title>
+<description>Overview
+----
+
+Static analysis tools are a great idea in theory, but are not often really used in practice. These tools usually require quite a lot of initial effort to get set up in a way which produces meaningful output for you or your organisation's particular coding style and values. As a result, it's common to see initial enthusiasm replaced by ignoring the tools.
+
+I believe that such tools can be incredibly beneficial however, and even go so far as to provide an automatic code review, and with this talk I want to show people how to get the best out of the tools, as well as address the shortcomings and explain what you can and cannot expect. 
+
+This talk is aimed at experienced developers who are interested in improving their coding practices but who have either never tried static analysis tools, or who have not seen the upsides. It will hopefully also be useful to people who do use the tools, perhaps introducing them to new tools or concepts they were not aware of yet.
+
+At the end of the talk, I hope people leave with a good idea of what advantages introducing these tools into their coding practices would bring, and know where to start in order to fit the tools into their practices in a way which will match their coding style.
+
+Outline 
+---
+
+* Intro
+    * Who am I, and what do I know that enables me to do this talk?
+
+* What makes a good code review?
+    * Preventing technical debt and ensuring future maintainability
+    * Catching incorrect assumptions
+    * Finding stale or unused code
+
+* The parts of a code review, and what tools exist to automate this, and what kind of things the tools are useful for
+    * Catching out-and-out errors
+        * `pylint`, `pyflakes`
+        * Incorrect arguments to functions, incorrect types etc
+        * Difficulties specific to Python, and how this can be mitigated or improved
+    * Code smells - warning about possible problems
+        * `pylint`, `pyflakes`
+        * Code smells (what are they?)
+        * The job of tools is to highlight possible errors, not be 100% correct. It's better to overwarn than to underwarn.
+    * Style conventions
+        * Having a coding style reduces the 'ramp-up' time for developers new to a piece of code
+        * PEP8 and `pep8.py`
+    * Suggestions for code to refector
+        * Complexity - what is it, and what does it tell us?
+        * `mccabe` tool
+    * Code duplication
+        * possibly talk about `pysimilar`, although this may not be mature enough by EuroPython
+
+* Problems of the above tools, and what to do about it
+    * On existing codebases, they can produce hundreds or thousands of errors, many of which are not interesting or useful
+        * Lots of false positives especially due to the dynamic nature of Python
+        * There are some quick wins - some default warnings are a bit overly strict
+        * use `pylint` plugins, or create your own
+        * (possible addition about `python-skeletons`, which is currently a proposal)
+    * Differing configuration styles, argument styles, output formats...
+    * They require a lot of tweaking in order to fit your coding style
+    * Generally configuration is too specific to particular companies or organisations, and there's not much value to get from using someone else's configuration
+    * Is it worth it then? Absolutely! A day of setting up the tools will save you more than a day some time in the future, either by keeping your codebase easy to maintain, or by telling you of a problem you hadn't noticed.
+
+* `prospector`, and how it aims to help
+    * Default (opinionated!) settings to hide as much noise as possible and focus on very bad errors
+    * Unified output format
+    * Composable configuration, to aid sharing of the "hard work"
+
+* Summary
+    * It's hard at first but worth it! (what isn't?)</description>
+<speakers>
+<speaker id='383'>
+<name>Carl Crowder</name>
+<profile>A sporadic career has seen me creating internal tools for one of the largest MMORPGs around, creating both the frontend web interface and a backend statistics system for a mobile-phone search engine, as well as laying the groundwork for a micropayment company.
+
+I currently work as a "DevOps" engineer at akvo.org (ie, I do sysadmin with puppet and tell everyone else to be more DevOps!),
+and as a side project I started https://landscape.io - aiming to provoke people into using static analysis for their Python code by making it super easy.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='220'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Other</topic></topics>
+<start>1130</start>
+<duration>30</duration>
+<room id='room2'>B07/B08</room>
+<title>EuroPython 2015 - Let's build it together</title>
+<description>The EuroPython Society has announced that it will change the organizational setup for the upcoming 2015 conference to a model based on distributed work groups rather than having a local organizer manage the whole event.
+
+We would like to invite everyone who's interested in making EuroPython 2015 happen to this session.
+
+----
+
+The presentation will present the new work group setup and provide a forum for questions and answers.</description>
+<speakers>
+<speaker id='134'>
+<name>Marc-Andre Lemburg</name>
+<profile>Marc-Andre is the CEO and founder of eGenix.com, a Python-focused project and consulting company based in Germany. He has a degree in mathematics from the University of Düsseldorf. His work with and for Python started in Winter 1993. In 1997, he became a Python Core Developer. He designed and implemented the Unicode support in Python and continued to maintain the Python Unicode implementation for more than a decade, after it first appeared in Python 1.6 in 2000.
+
+Marc-Andre is a founding member of the Python Software Foundation (PSF) and has served on the PSF Board several times. He is also board member of the EuroPython Society (EPS) which organizes the EuroPython conference series and the author of the well-known mx Extensions, e.g. mxTextTools, mxDateTime and mxODBC, which are now distributed and maintained through eGenix.com.
+
+Today Marc-Andre spends most of his time managing large-scale customer projects heavily relying on Python and databases.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='223'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Science</topic></topics>
+<start>1200</start>
+<duration>30</duration>
+<room id='room2'>B07/B08</room>
+<title>Bubbles – Data Processing with Dynamic Dispatch</title>
+<description>The talk will be about principal parts of Bubbles: data objects, operations and the dynamic dispatch.
+
+The data objects have their physical representation, such as a SQL table, a CSV file or a remote API data source. The operations perform transformations or computations on top of those objects. The concrete operation used is decided during runtime based on the representation of data objects. The dispatch decides which concrete implementation of an operation is used: compose a SQL query, use a python iterator or issue a special API call. Moreover, the result of an operation is computed as necessary. Data are not pulled into the script when not necessary. 
+
+Bubbles is performance agnostic at the low level of physical data implementation. Performance is assured by the data technology and appropriate use of operations.
+
+Bubbles is and will be Python 3 only.
+
+* [Project Home](http://www.slideshare.net/Stiivi/data-brewery-2-data-objects)
+* [Introduction](http://www.slideshare.net/Stiivi/data-brewery-2-data-objects) – slides</description>
+<speakers>
+<speaker id='38'>
+<name>Stefan</name>
+<profile>from Data Brewery</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='226'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Testing</topic></topics>
+<start>1100</start>
+<duration>30</duration>
+<room id='room3'>B09</room>
+<title>Introduction to pytest</title>
+<description>This talk will show introduce pytest and show some unique and innovative features. It will show how to get started using it and some of the most important features.
+
+One of these features is the ability to write tests in a more “pythonic” way by using the assert statement for assertions. Another feature in pytest is fixtures – a way to handle test dependencies in a structured way. This talk will introduce the concept of fixtures and show how they can be used.
+
+No previous knowledge of pytest is required – this talk is for people who are new to testing or has experience with other Python testing tools such as unittest or Nose.</description>
+<speakers>
+<speaker id='738'>
+<name>Andreas Pelme</name>
+<profile></profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+229 133
+<entry id='229'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Python Core</topic></topics>
+<start>1145</start>
+<duration>45</duration>
+<room id='room1'>B05/B06</room>
+<title>Stackless: Recent advancements and future goals</title>
+<description>Stackless: Recent advancements and future goals
+-------------------------------------------------------
+
+Since Python release 1.5 Stackless Python is an enhanced variant of C-Python.
+Stackless is best known for its addition of lightweight microthreads (tasklets) and 
+channels.
+
+Less known are the recent enhancements that became available with Stackless 2.7.6. 
+In this talk core Stackless developers demonstrate
+
+ * The improved multi-threading support
+ * How to build custom scheduling primitives based on atomic tasklet operations
+ * The much improved debugger support
+ * ...
+ 
+Stackless recently switched the new master repository from hg.python.org/stackless to bitbucket to 
+allow for a more open development process. We'll summarise our experience and discuss our
+plans for the future development of Stackless.
+
+The talk will be help by Anselm Kruis and Christian Tismer.
+If we are lucky, we will also welcome Kristján Valur Jónsson from Iceland.
+</description>
+<speakers>
+<speaker id='637'>
+<name>Christian Tismer</name>
+<profile>I stumbled over Python in 1996.
+This changed my life:
+
+- created the Starship Python in 1997 (because I had nothing else to share)
+- learned C and C++ in order to
+- became a core developer
+
+I invented Stackless Python in 1998 and tried to change the world ;-)
+Co-founded PyPy in 2003 and worked full-time on it during EU funding.
+
+Now my main focus is again on Stackless.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+230 150
+<entry id='230'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Other</topic></topics>
+<start>1130</start>
+<duration>30</duration>
+<room id='room3'>B09</room>
+<title>Conversing with people living in poverty</title>
+<description>43% of the world's population live on less than €1.5 per day.
+
+The United Nations defines poverty as a "lack of basic capacity to
+participate effectively in society".  While we often think of the poor
+as lacking primarily food and shelter, the UN definition highlights
+their isolation. They have the least access to society's knowledge and
+services and the most difficulty making themselves and their needs
+heard in our democracies.
+
+While smart phones and an exploding ability to collect and process
+information are transforming our access to knowledge and the way we
+organize and participate in our societies, those living in poverty
+have largely been left out. This has to change.
+
+Basic mobile phones present an opportunity to effect this change
+[3]. Only three countries in the world have fewer than 65 mobile
+phones per 100 people [4]. The majority of these phones are not
+Android or iPhones, but they do nevertheless provide a means of
+communication -- via voice calls, SMSes [6], USSD [7] and instant
+messaging.
+
+By comparison, 25 countries have less than 5% internet penetration
+[5].
+
+Vumi [1] is an open source text messaging system designed to reach out
+to those in poverty on a massive scale via their mobile phones. It's
+written in Python using Twisted.
+
+Vumi is already used to:
+
+  * provide Wikipedia access over USSD and SMS in Kenya [8].
+  * register a million voters in Libya [10].
+  * deliver health information to mothers in South Africa [9].
+  * prevent election violence in Kenya [11].
+
+This talk will cover:
+
+  * a brief overview of mobile networking and cellphone use in Africa
+  * why we built Vumi
+  * the challenges of operating in unreliable environments
+  * an overview of Vumi's features and architecture
+  * how you can help!
+
+Vumi features some cutting edge design choices:
+
+  * horizontally scalable Twisted processes communicating using RabbitMQ.
+  * declarative data models backed by Riak.
+  * sharing common data models between Django and Twisted.
+  * sandboxing hosted Javascript code from Python.
+
+Overview of challenges Vumi addresses:
+
+*Scalability*: Vumi needs to support both small scale applications (demos, pilot projects, applications tailored for a particular community) and large ones (things that everyone within a country might use). We address this using Twisted workers that exchange messages via RabbitMQ and store data in Riak. Having projects share RabbitMQ and Riak instances significantly reduces the overhead for small projects (e.g. its not cost effective to launch the recommended minimum of 5 Riak servers for a small project).
+
+*Barriers to entry*: Often the people with good ideas don't have access to one of many things needed to run a production system themselves, e.g. capital, time, stable infrastructure. We address this by providing a hosted Vumi instance that runs sandboxed Javascript applications. All the application author needs is their idea, the ability to write Javascript and upload it to our servers. The target audience here is African entrepreneurs at incubator spaces like iHub (Nairobi), kLab (Kigali), BongoHive (Lusaka) and JoziHub (Johannesburg).
+
+*Unreliable third-party systems*: It's one thing for parts of ones own system to go down, it's another for crucial third-party systems to go down. Vumi takes an SMTP-like approach to solving this and uses persistent queues so that messages can back up in the queue while third-party systems are down and be processed when they become available again. We also feedback information on whether third-party messaging systems have accepted or reject messages to the application that initiated them.
+
+Vumi is developed by the Praekelt Foundation [2] (and individual contributors!).
+
+  [1]: &lt;http://vumi.org/&gt; "Vumi"
+  [2]: &lt;http://praekeltfoundation.org/&gt; "Praekelt Foundation"
+  [3]: &lt;http://www.youtube.com/watch?v=0bXjgx4J0C4#t=20&gt; "Spotlight on Africa"
+  [4]: &lt;http://en.wikipedia.org/wiki/List_of_countries_by_number_of_mobile_phones_in_use&gt;
+  [5]: &lt;http://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users&gt;
+  [6]: &lt;http://en.wikipedia.org/wiki/Short_Message_Service&gt;
+  [7]: &lt;http://en.wikipedia.org/wiki/Unstructured_Supplementary_Service_Data
+  [8]: &lt;http://blog.praekeltfoundation.org/post/65981723628/wikipedia-zero-over-text-with-praekelt-foundation&gt;
+  [9]: &lt;http://blog.praekeltfoundation.org/post/65042080515/mama-launches-healthy-family-nutrition-programme&gt;
+  [10]: &lt;http://www.libyaherald.com/2014/01/01/over-one-million-register-for-constitutional-elections-on-final-sms-registration-day/#axzz2sroHcg00&gt;
+  [11]: &lt;http://blog.praekeltfoundation.org/post/51210616848/the-texting-will-never-be-done-peace-messages-in-kenya&gt;</description>
+<speakers>
+<speaker id='735'>
+<name>Simon Cross</name>
+<profile>PyConZA and CTPUG organizer. Vumi developer. Habitual Pyweek entrant. </profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+231 34
+<entry id='231'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Science</topic></topics>
+<start>1200</start>
+<duration>30</duration>
+<room id='room3'>B09</room>
+<title>How to become a software developer in science?</title>
+<description>**Goal**: give practical tools for improving skills and software quality to people with a background other than IT.
+
+Eight years ago, as a plant biologist, I knew almost nothing about programming. When I took a course in python programming, I found myself so fascinated that it altered my entire career. I became a scientific software developer. It was long and hard work to get from the level of 'Hello world' to the world of software development. The talk will cover how to embrace a non-IT education as a strength, how and why to atomize programming tasks and the importance of doing side projects.
+
+### 1. Embrace your background
+Having domain specific knowledge from a field other than IT helps you to communicate with the team, the users and the group leader. It prevents misunderstandings and helps to define features better. A key step you can take is systematically apply the precise domain specific language to the code e.g when naming objects, methods or functions. Another is to describe the underlying scientific process step by step as a Use Case and write it down in pseudocode.
+
+### 2. Atomisation
+Having a set of building block in your software helps to define responsibilities clearly. Smaller parts are easier to test, release and change. Modular design makes the software more flexible and avoids the Blob and Lava Flow Anti-Patterns. When using object oriented programming a rule of thumb is that an object (in Python also a method) does only one thing. You can express this Single Responsibility Principle as a short sentence for each module. Another practical action is to introduce Design Patterns that help to decouple data and its internal representation. As a result, your software becomes more flexible.
+ 
+### 3. Participating in side projects
+Learning from others is a great opportunity to grow. Through side projects you gain a fresh perspective and learn about best practices in project management. You gain new ideas for improvement and become aware of difficulties in your own project. You can easily participate in a scientific project by adding a small feature, writing a test suite or provide a code review on a part of a program.
+
+Summarizing, in scientific software development using domain-specific knowledge, atomisation of software, and participation in side projects are three things that help to create high quality software and to continuously improve as a developer.
+
+The talk will address challenges in areas where science differs from the business world. It will present general solution one might use for software developed in a scientific environment for research projects rather then discussing particular scientific packages. 
+
+### Qualifications
+During my PhD I developed a software on 3D RNA modeling (www.genesilico.pl/moderna/) that resulted in 7 published articles. I am coauthor on a paper on bioinformatic software development. Currently I am actively developing a system biology software in Python at the Humboldt University Berlin (www.rxncon.org).</description>
+<speakers>
+<speaker id='335'>
+<name>Magdalena Rother</name>
+<profile>During my PhD I developed a software on 3D RNA modeling (www.genesilico.pl/moderna/) that resulted in 7 published articles. I am coauthor on a paper on bioinformatic software development. Currently I am actively developing a system biology software in Python at the Humboldt University Berlin (www.rxncon.org).</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='233'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Science</topic></topics>
+<start>1100</start>
+<duration>45</duration>
+<room id='room4'>A08</room>
+<title>Probabilistic Programming in Python</title>
+<description>Probabilistic Programming allows flexible specification of statistical models to gain insight from data. Estimation of best fitting parameter values, as well as uncertainty in these estimations, can be automated by sampling algorithms like Markov chain Monte Carlo (MCMC). The high interpretability and flexibility of this approach has lead to a huge paradigm shift in scientific fields ranging from Cognitive Science to Data Science and Quantitative Finance.
+
+PyMC3 is a new Python module that features next generation sampling algorithms and an intuitive model specification syntax. The whole code base is written in pure Python and Just-in-time compiled via Theano for speed.
+
+In this talk I will provide an intuitive introduction to Bayesian statistics and how probabilistic models can be specified and estimated using PyMC3.</description>
+<speakers>
+<speaker id='742'>
+<name>Thomas Wiecki</name>
+<profile>I'm interested in the intersection of science (Quantitative Finance and Computational Psychiatry), technology (Python and HPC) and statistics (Bayesian Inference and Machine Learning).</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='235'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Web</topic></topics>
+<start>1400</start>
+<duration>30</duration>
+<room id='room0'>C01</room>
+<title>How to make a full fledged REST API with Django OAuth Toolkit</title>
+<description>The talk aims to explain how to create a RESTful API protected with OAuth2. The tools used are the popular web framework Django, Django Rest Framework app to create the REST enpoints and Django OAuth Toolkit, an app powered by the most known oauthlib that provides the OAuth2 authorization flow, token exchange and endpoint protection.</description>
+<speakers>
+<speaker id='109'>
+<name>Federico Frenguelli</name>
+<profile>None is better than Null</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+238 216
+<entry id='238'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Science</topic></topics>
+<start>1430</start>
+<duration>30</duration>
+<room id='room0'>C01</room>
+<title>Data Matching and Big Data Deduping in Python</title>
+<description>One of the widely postulated theory is “Most of the time spent working with real world data is not spent on the analysis, but in preparing the data”, I believe any Data guy would agree. There are numerous problems, which crop up while cleansing any dataset, and the prominent and recurring problem is duplicates (It is duplicate, so it has to be recurring). The problem of matching data and information from multiple databases or sources is also a prominent problem encountered in large decision support applications in large commercial and government organizations. This problems has many many different names deduplication, record linkage, entity resolution, coreference, reference reconciliation, record alignment.
+
+Accurate, Scalable and Fast entity resolution has huge practical implications in a wide variety of commercial, scientific and civic domains. Despite the long history of work on Data Matching, there is still a surprising diversity of approaches, and lack of guiding theory. Meanwhile, in the age of big data, the need for high quality entity resolution is growing, as we are inundated with more and more data, all of which needs to be integrated, aligned and matched, before further utility can be extracted.
+
+This talk will present the key ideas implemented behind “Dedupe” an open source python library that quickly deduplicates and matches records at the scale of millions of records on the laptop. The aim is to show how “Dedupe” achieves speed by “Blocking” records, to save from O(n2) comparisons, achieves accuracy, by using better string comparators and clustering algorithms suited for this problem etc. The attendees would also gain understanding of the tradeoffs between the speed and accuracy.
+
+But what about a billion records ? In such a scenario, it is imminent to parallelise the whole process, to achieve greater speed. So, enter MapReduce based Entity Resolution. Attendees would also walk away with the understanding of how the Deduplication procedure may be parallelised by distributing the task independently to the map and reduce stages. There would also be a demo of the same using “Dedoop” an open source Efficient Deduplication tool for Hadoop on Amazon EC2 Machines  
+
+
+The Presentation is multifaceted, its outline/timeline would be:
+
+*  Introduction
+*  Current Real World Data Problems
+*  Why the Problem is hard ?
+
+(5 mins)
+
+*  Current Industry Workflow
+*  What is Deduplication and Data Matching ?
+*  “Dedupe” - Scalable Library for Data Matching in Python
+
+(10 mins)
+
+*  Scale Data Matching on your Laptop - DEMO
+
+(5 mins)
+
+*  What about Billions of Records ?
+*  MapReduce based Entity Resolution
+*  “Dedoop” - Efficient Deduplication with Hadoop
+
+(8 mins)
+
+*  Demo of Deduplication of on a products dataset on Amazon EC2 Machine using dedoop
+
+(10 mins)
+
+*  The Road Ahead
+*  Any questions ?
+
+(5 mins)
+
+
+Key Takeaway from the Demos would be:
+
+* The kind of input files, that are most easily deduplicated.
+* Is preprocessing really needed ?
+* Explain the output, to show how the deduplication and data matching fits into the overall Data Cleansing pipeline.
+* How smart comparions are done, by comparing only those records which are similar enough (Blocking).
+* How the specification in Dedoop is tranformed to an executable MapReduce workflow and submitted for execution on Hadoop Cluster.
+* How to configure aribitary MapReduce workflows.
+* Discuss, whether GUI of dedoop necessary ?
+* Optimisation strategies to utilise all the nodes of the cluster.
+* Explain why reduandany=free pair-comparisons and Load Balacning are necessary in a Map-Reduce setting.
+
+
+\* Dedupe -https://github.com/datamade/dedupe - As a, contributor of dedupe,  my contribution involved Data Matching and Record Linkage components to the library.
+
+** Dedoop - http://dbs.uni-leipzig.de/dedoop - Dedoop is still an ongoing research project and is not licensed under MIT or any other Open source License. I am not involved in any way in the development of this project.</description>
+<speakers>
+<speaker id='206'>
+<name>Nikit Saraf</name>
+<profile>I am Computer Science Undergraduate and Machine Learning enthusiast. I just love lots and lots of data. I have worked and contributed to the open source project dedupe https://github.com/open-city/dedupe when I was selected for Google Summer of Code 2013. I worked for "Code for America" organization. The project involved developing data matching tools in python using machine learning algorithms. I have also published a paper in LNCS in the field of Natural Language Processing (again data). I have also attended PyData London this year. Since last year I have regularly been organizing local Scientific Python Meetup on weekends in my college. We hack on projects and work with libraries not limited to scikit-learn, pandas, nltk, scipy. I am very enthusiastic about Python in education.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+239 47
+<entry id='239'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Other</topic></topics>
+<start>1500</start>
+<duration>30</duration>
+<room id='room0'>C01</room>
+<title>Identifying Bugs Before Runtime With Jedi</title>
+<description>Jedi ([https://github.com/davidhalter/jedi][1]) is an autocompletion library for Python that has gained quite a following over the last year. There are a couple of plugins for the most popular editors (VIM, Sublime, Emacs, etc.) and mainstream IDEs like Spyder are switching to Jedi.
+
+Jedi basically tries to redefine the boundaries of autocompletion in dynamic languages. Most people still think that there's no hope for decent autocompletion in Python. This talk will try to argue the opposite, that decent autocompletion is very close.
+
+While the first part will be about Jedi, the second part of this talk will discuss the future of dynamic analysis. Dynamic Analysis is what I call the parts that static analysis doesn't cover. The hope is to generate a kind of "compiler" that doesn't execute code but reports additional bugs in your code (AttributeErrors and the like). 
+
+I still have to work out the details of the presentation. I also have to add that Jedi I'm currently working full-time on Jedi and that there's going to be some major improvements until the conference. Autocompletion and static/dynamic analysis as well as refactoring are hugely important tools for a dynamic language IMHO, because they can improve the only big disadvantage compared to static languages: Finding bugs before running your tool.
+
+BTW: I could also do a long talk if requested, to also discuss static analysis and refactoring in depth.
+
+[1]: https://github.com/davidhalter/jedi</description>
+<speakers>
+<speaker id='727'>
+<name>David Halter</name>
+<profile></profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='252'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Education</topic></topics>
+<start>1400</start>
+<duration>30</duration>
+<room id='room1'>B05/B06</room>
+<title>pymove3D - Python moves the world - Attractive programming for young people.</title>
+<description>A new concept based on learning programming using the Python API of Blender makes
+it very easy to get visible objects created. [Learning](http://pymove3d.pysv.org/python_course/stations/blender-basics/b_find_information/ba_search_api.html) of object oriented programming 
+is much easier that way. Objects you have created are visualized. 
+By methods you can interact with them and you get in time results shown.
+Backing to the contest we provide [course material](http://pymove3d.pysv.org/coursematerial). 
+The talk overall gives an overview what experience we got by these ideas and how we want to continue.
+</description>
+<speakers>
+<speaker id='5'>
+<name>Reimar Bauer</name>
+<profile>
+
+Reimar Bauer is a long-term MoinMoin Wiki developer.
+
+He likes FOSS projects and is a member of the pyCologne (http://pycologne.de) Usergroup. Since five years he organizes Python Barcamps (http://pythoncamp.de) in Cologne. Since 2012-11-01 he is a board member of the Python Software Verband e.V. (http://pysv.org) and become elected as PSF Fellow in 2013.
+
+Reimar Bauer (PySV) is responsible for the competition (http://pymove3d.pysv.org): Python moves the world - Attractive programming for young people . A short summary at speakerdeck.
+
+For living he works at the Forschungszentrum Jülich GmbH, IEK. His fields of work/research development of data acquisition and analysis software, and system administration.
+</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='257'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Web</topic></topics>
+<start>1430</start>
+<duration>30</duration>
+<room id='room1'>B05/B06</room>
+<title>The inner guts of Bitbucket</title>
+<description>This talk is about Bitbucket's architecture. Leaving no stone unturned, I'll be covering the entire infrastructure. Every component, from web servers to message brokers and load balancing to managing hundreds of terabytes of data.
+
+Since its inception in 2008, Bitbucket has grown from a standard, modest Django app into a large, complex stack that while still based around Django, has expanded into many more components.
+
+Today Bitbucket is more than 30 times bigger than at the time of acquisition almost 4 years ago and serves Git and Mercurial repos to over a million users and growing faster now than ever before.
+
+Our current architecture and infrastructure was shaped by rapid growth and has resulted in a large, mostly horizontally scalable system. What has not changed is that it's still nearly all Python based and could serve as inspiration or validation for other community members responsible for rapidly scaling their apps.
+
+This talk will layout the entire architecture and motivate our technology choices. From our Gunicorn to Celery and HA-Proxy to NFS.
+</description>
+<speakers>
+<speaker id='802'>
+<name>Erik van Zijst</name>
+<profile>Erik has been a passionate software professional for 15 years, who considers software to be a craft, not science.
+
+Launching his career in his native Amsterdam in 1999, he served as architect for a financial market data startup from its inception until acquisition. He then co-founded a not so successful Palo-Alto based online real-time video streaming startup. In a deliberate move back to more hands-on coding, Erik joined Atlassian in 2008 and relocated to Sydney, Australia. After having worked on various product teams, he joined the newly formed team to run Bitbucket after its acquisition since 2010.
+
+Currently based out of San Francisco Erik continues to work on Bitbucket.
+</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='276'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Security</topic></topics>
+<start>1500</start>
+<duration>30</duration>
+<room id='room1'>B05/B06</room>
+<title>Building a storage engine in Python for storing malware and malicious data</title>
+<description>This talk will present an overview of how to design and implement a storage system in Python using data deduplication and content hashing to intelligently deduplicate binary data as well as strings found in malware and malicious files. We will discuss the challenges and solutions encountered in the process of building a proof of concept capable of handling 70 Terabyte of binary and structured data from the engineering, the architectural and the security point of view, with some considerations on how various designs can impact performance and reliability of this kind of solutions.
+Finally we will discuss some of the challenges we faced and solutions adopted along the way. These include:
+
+    - Modification of core libraries to properly interact with file system
+    - Using of decorators, metaclasses and state machine for automatic flow control
+    - Creating a queue system to manage and optimize intensive I/O operations</description>
+<speakers>
+<speaker id='829'>
+<name></name>
+<profile></profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+277 99
+<entry id='277'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Python Core</topic></topics>
+<start>1400</start>
+<duration>30</duration>
+<room id='room2'>B07/B08</room>
+<title>Tweaking libraries as a step towards secure programming</title>
+<description>During the talk we will describe techniques and architectural approaches to better control and monitor the security of a Python application handling traffic from any kind of data sources and how to restructure the code to better handle the unexpected. 
+
+During the talk we will focus on how python libraries are working in LINUX systems.
+For interactions between python and the OS we will focus on libraries:
+
+-   os
+-   sys
+-   multiprocessing
+
+For interactions between python and the network we will focus on libraries:
+
+-   socket
+-   ftplib
+-   httplib / urllib / pycurl
+
+For data handling we will cover how to improve security of operations like:
+
+-   input/output sanitisation (files, strings, arguments)
+-   writing to files or file descriptors
+-   implicit and explicit object control using both "whitelist" and "blacklist" logics
+-   exception handling by using meta-classes and decorators
+
+For each library we will proceed as follows:
+
+-   Review of library internal logic and data flow
+-   Analysis of possible weaknesses in library code or logic
+-   Introduction of a modified library logic able to cope with unexpected data
+-   Description of modified functions to allow security checks and data validation 
+-   Examples of real problems and possible improvements to mitigate them
+
+We will explore how to make code able to react to improper imports, misuse of variables, insecure calls to functions by briefly covering some ways of using metaclasses, descriptors and decorators, method wrappers, traceback inspection and builtins. 
+
+Then we will explore the use of metaclasses and class decorators to intercept reads/writes and internal operations, implement automatic type checking over object attributes and how to use iterators and generators to respond to maliciously formatted strings or data streams.
+</description>
+<speakers>
+<speaker id='829'>
+<name></name>
+<profile></profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+288 144
+<entry id='288'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Other</topic></topics>
+<start>1430</start>
+<duration>30</duration>
+<room id='room2'>B07/B08</room>
+<title>Using asyncio (aka Tulip) for home automation</title>
+<description>This talk will cover the new asyncio library in Python 3.4 (also known as Tulip) and will use the area of home automation as a case study to explore its features. This talk will be based on code using Python 3.3+.
+
+Home automation is a growing area and the number of devices and potential applications is huge. From monitoring electricity usage to the temperature inside or outside your house to remote control of lights and other appliances the options are almost endless. However, managing and monitoring these devices is typically a problem that works best with event driven applications.
+
+This is where asnycio comes in, it was originally proposed in PEP 3156 by our BDFL, Guido van Rossum. Asyncio aims to bring a clear approach to the python ecosystem and borrows from a number of existing solutions to come up with something clean and modern for the Python stdlib.
+
+This talk will introduce asyncio and use it within the context of home automation and dealing with multiple event driven devices. Therefore we will cover asyncio and the lessions learned from using different devices in this context.
+
+Some of the devices that will be used include:
+
+ - Raspberry Pi
+ - RFXCom's RFXtrx, USB serial tranciever.
+ - Owl CM160 electricity tracker.
+ - Oregon scientific thermometers.
+ - Foscam IP cameras.
+
+This talk will also briefly cover the previous solution I used which was developed with Twisted and compare it briefly with my new code using asyncio.</description>
+<speakers>
+<speaker id='130'>
+<name>Dougal Matthews</name>
+<profile>Python enthusiast. Relishes hard problems. Loves skiing and organises @pythonglasgow. OpenStack Engineer at Red Hat.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+291 35
+<entry id='291'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Python Core</topic></topics>
+<start>1500</start>
+<duration>30</duration>
+<room id='room2'>B07/B08</room>
+<title>Fun with cPython memory allocator</title>
+<description>Working with Python does not usually involve debugging memory problems: the interpreter takes care of allocating and releasing system memory and you get to enjoy working on real problems. But what if you encounter such problems? What if your program never releases memory? How do you debug it?
+
+I will tell a story of one programmer discovering such problems. The talk will take listeners on a journey of issues they can encounter, tools they can use to debug the problems and possible solutions to seek out. There will also be a brief mention of general memory management principles.
+
+cPython uses a combination of its own allocator, `malloc`, and `mmap` pools to manage memory of Python programs. It usually is smart enough, but there are some darker corners that are not well known by an average Joe Programmer (read: me). 
+
+There are tools that can help debug memory problems, but those are also relatively unknown, and tend to have documentation that one might find lacking. I will describe one such tool, called `guppy`, which I have found particulary helpful.</description>
+<speakers>
+<speaker id='452'>
+<name>Tomasz Paczkowski</name>
+<profile></profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='299'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic>Other</topic></topics>
+<start>1145</start>
+<duration>45</duration>
+<room id='room4'>A08</room>
+<title>Green Celery and the Async Sweet Spot</title>
+<description>Celery is a distributed task orchestration framework for Python, with an amazing set of features and supported backends.
+
+Gevent is a non-blocking I/O library for Python which seems to magically turn your synchronous programs asynchronous, with the help of the greenlet library under the hood.
+
+Did you know you can easily combine the two, with inbuilt support for a Gevent event loop in Celery itself, you too can achieve distributed async tasks across thousands of nodes and not get lost in a see of callbacks.
+
+Follow me as I show you all the considerations, drawbacks, and tips for Celery+greenlet+Gevent bliss, from working with I/O vs CPU blocking tasks, to managing resource starvation and queue contention, and going beyond the Celery API to take advantage of the Gevent API.</description>
+<speakers>
+<speaker id='322'>
+<name>Wes Mason</name>
+<profile>Wes is a polyglot developer with over 15 years of experience programming large scale networked applications.
+
+Currently works as an engineer for Canonical, releases lots of open source goodness via the Internets, and lives in Yorkshire, England with wife and mischievous 3 year old son.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+</day>
+</schedule>
