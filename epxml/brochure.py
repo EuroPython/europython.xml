@@ -6,29 +6,11 @@ import plac
 import subprocess
 from datetime import timedelta
 from datetime import datetime
-import loremipsum
-import markdown2
 from jinja2 import Environment, PackageLoader
 import util
 
 
 env = Environment(loader=PackageLoader('epxml', 'templates'))
-
-class View(object):
-
-    def demo(self):
-        return (u'/'.join([p[2] for p in loremipsum.Generator().generate_paragraphs(1)]))
-
-    def time(self, entry):
-        hours_start = int(entry.start / 100 )
-        minutes_start = int(entry.start % 100)
-        duration = int(entry.duration)
-        start = datetime(2000, 1, 1, hours_start, minutes_start)
-        end = start + timedelta(minutes=duration)
-        return '{:02d}:{:02d} - {:02d}:{:02d}h'.format(start.hour, start.minute, end.hour, end.minute)
-
-    def markdown(self, text):
-        return markdown2.markdown(unicode(text))
 
 
 @plac.annotations(
@@ -36,7 +18,10 @@ class View(object):
     html_out=('Output HTML file', 'option', 'o'),
     pdf_converter=('Generate PDF output using prince or pdfreactor', 'option', 'p')
     )
-def conv(xml_in, html_out='brochure.html', pdf_converter=None):
+def conv(xml_in=None, html_out='brochure.html', pdf_converter=None):
+
+    if not xml_in:
+        raise ValueError('No XML input file specified (-i|--xml-in)')
 
     entries = list()
     for day in range(22, 25):
@@ -47,7 +32,7 @@ def conv(xml_in, html_out='brochure.html', pdf_converter=None):
     template = env.get_template('brochure.pt')
     html = template.render(
             day_entries=entries,
-            view=View())
+            view=util.JinjaView())
     with open(html_out, 'wb') as fp:
         print 'HTML output written to "{}"'.format(html_out)
         fp.write(html.encode('utf8'))

@@ -22,6 +22,10 @@ class View(object):
     xpath_filter=('XPath filter', 'option', 'x')
     )
 def conv(xml_in, html_out='out.html', template_name='html.pt', xpath_filter='//entry'):
+
+    if not xml_in:
+        raise ValueError('No XML input file specified (-i|--xml-in)')
+
     entries = util.get_entries(xml_in, xpath_filter)
     template = env.get_template(template_name)
     html = template.render(entries=entries,
