@@ -32,7 +32,7 @@ setup(name='europython.xml',
       tests_require=requires,
       entry_points="""\
       [console_scripts]
-      schedulexml2html=epxml.schedulexml2html:main
-      schedulexml2brochure=epxml.schedulexml2brochure:main
+      schedulexml2html=epxml.html:main
+      schedulexml2brochure=epxml.brochure:main
       """,
       )

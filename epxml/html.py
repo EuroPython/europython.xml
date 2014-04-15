@@ -21,7 +21,7 @@ class View(object):
     html_out=('Output filename', 'option', 'o'),
     xpath_filter=('XPath filter', 'option', 'x')
     )
-def conv(xml_in, html_out='out.html', template_name='standard.pt', xpath_filter='//entry'):
+def conv(xml_in, html_out='out.html', template_name='html.pt', xpath_filter='//entry'):
     entries = util.get_entries(xml_in, xpath_filter)
     template = env.get_template(template_name)
     html = template.render(entries=entries,
