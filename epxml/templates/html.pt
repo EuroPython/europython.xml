@@ -1,0 +1,30 @@
+<table border="1" class="schedule">
+
+    {% for entry in entries %}
+    <tr>
+        <td>
+            <div class="audience">{{ entry.audience }}</div>
+            <div class="category">{{ entry.category }}</div>
+            <div class="topics"> 
+                {% for topic in  entry.topics %} 
+                    <span class="topic">{{ topic.topic }}</span>
+                {% endfor %}
+            </div>
+        </td>
+        <td>
+            <div class="title">{{ entry.title }}</div>
+            <div class="text entry-text">
+                {{ view.markdown(entry.description) }}
+            </div>    
+        </td>
+        <td>
+          <div class="speakers">
+            {% for speaker in entry.speakers%}  
+              <div class="speaker">{{ speaker.speaker.name }}</div>
+              <div class="text speaker-profile">{{ view.markdown(speaker.speaker.profile) }}</div>
+            {% endfor %}
+          </div>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
