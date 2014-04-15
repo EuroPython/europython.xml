@@ -28,6 +28,7 @@ def conv(xml_in, html_out='out.html', template_name='standard.pt', xpath_filter=
             view=View())
     with open(html_out, 'wb') as fp:
         fp.write(html.encode('utf8'))
+    return html_out
 
 
 def main():
