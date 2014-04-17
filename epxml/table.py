@@ -50,6 +50,7 @@ class Table(object):
             self.cells[row + i][col]  = SpanCell(row + i, col)
         for i in range(0, colspan):
             self.cells[row][col +i]  = SpanCell(row, col + i)
+
         self.cells[row][col] = Cell(event, rowspan, colspan)
 
     def render(self):
@@ -77,7 +78,10 @@ class Table(object):
                 elif isinstance(cell, EmptyCell):
                     print >>io, u'<td width="100" class="empty"></td>'
                 elif isinstance(cell, Cell):
-                    print >>io, u'<td width="100" class="cell" rowspan="{}" colspan="{}">{}</td>'.format(cell.rowspan, cell.colspan, cell.event)
+                    try:
+                        print >>io, u'<td width="100" class="cell" rowspan="{}" colspan="{}">{}</td>'.format(cell.rowspan, cell.colspan, cell.event)
+                    except:
+                        print >>io, u'<td width="100" class="cell" rowspan="{}" colspan="{}">{}</td>'.format(cell.rowspan, cell.colspan, 'ERROR')
 
             print >>io, u'</tr>'
         print >>io, '</tbody>'

@@ -2,7 +2,7 @@
 
     {% for entry in entries %}
     <tr>
-        <td>
+        <td width="100" valign="top">
             <div class="audience">{{ entry.audience }}</div>
             <div class="category">{{ entry.category }}</div>
             <div class="topics"> 
@@ -11,13 +11,13 @@
                 {% endfor %}
             </div>
         </td>
-        <td>
+        <td width="300" valign="top">
             <div class="title">{{ entry.title }}</div>
             <div class="text entry-text">
                 {{ view.markdown(entry.description) }}
             </div>    
         </td>
-        <td>
+        <td valign="top">
           <div class="speakers">
             {% for speaker in entry.speakers%}  
               <div class="speaker">{{ speaker.speaker.name }}</div>
