@@ -30,24 +30,28 @@ if __name__ == '__main__':
     tb.col_headers = rooms
     tb.row_headers = row_headers
 
-
     for e in entries:
-        e_start = str(e.start)
+        e_start = e.start.text
         s_hour = int(e_start[:2])
         s_minute = int(e_start[2:])
-#        print e.room, s_hour, s_minute
         s_row = (s_hour - hour_start) * (60 / resolution) + s_minute / resolution
-        s_col = rooms.index(e.room)
+
+        if e.room == 'ALL':
+            s_col = 0
+            colspan = len(rooms)
+        else:
+            s_col = rooms.index(e.room)
+            colspan = 1
+
         s_duration = int(e.duration)
-        row_span = s_duration / resolution 
-#        print s_duration
-#        print s_row, s_col, row_span
-#        print type(e.title.text)
+        rowspan = s_duration / resolution 
 
         t = e.title.text
         if not isinstance(t, unicode):
             t = unicode(t, 'utf8', 'ignore')
-        tb.addCell(s_row, s_col, rowspan=row_span, event=t)
+        print s_row, s_col, rowspan, colspan            
+#        import pdb; pdb.set_trace() 
+        tb.addCell(s_row, s_col, rowspan=rowspan, colspan=colspan, event=t)
         
 
     print tb.render()

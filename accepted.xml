@@ -1,5 +1,19 @@
 <schedule created='2014-04-14T19:34:09.037588'>
 <day date='2014-07-22'>
+<entry id='xxx4'>
+<category>LUNCH</category>
+<audience>LUNCH</audience>
+<topics><topic>LUNCH</topic></topics>
+<start>0700</start>
+<duration>60</duration>
+<room id='room0'>ALL</room>
+<title>LUNCH</title>
+<description>LUNCH
+
+</description>
+<speakers>
+</speakers>
+</entry>
 <entry id='4'>
 <category>Talk</category>
 <audience>Advanced</audience>

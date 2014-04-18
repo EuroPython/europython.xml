@@ -36,6 +36,7 @@ class Table(object):
         self.rows = rows
         self.cols = cols
         self.cells = []
+        self.caption = None
         self.col_headers = list()
         self.row_headers = list()
 
@@ -47,15 +48,16 @@ class Table(object):
 
     def addCell(self, row, col, rowspan=1, colspan=1, event=None):
         for i in range(0, rowspan):
-            self.cells[row + i][col]  = SpanCell(row + i, col)
-        for i in range(0, colspan):
-            self.cells[row][col +i]  = SpanCell(row, col + i)
-
+            for j in range(0, colspan):
+                self.cells[row + i][col + j]  = SpanCell(row + i, col + j)
         self.cells[row][col] = Cell(event, rowspan, colspan)
 
     def render(self):
         io = cStringIO.StringIO()
         print >>io, u'<table border="1">'
+        if self.caption:
+            print >>io, u'<caption>{}</caption>'.format(self.caption)
+
         if self.col_headers:
             print >>io, u'<thead>'
             print >>io, u'<tr>'
