@@ -52,7 +52,7 @@ class Table(object):
                 self.cells[row + i][col + j]  = SpanCell(row + i, col + j)
         self.cells[row][col] = Cell(event, rowspan, colspan)
 
-    def render(self):
+    def render(self, event_renderer):
         out = list()
         out.append(u'<table border="1">')
         if self.caption:
@@ -68,7 +68,6 @@ class Table(object):
             out.append(u'</tr>')
             out.append(u'</thead>')
 
-
         out.append('<tbody>')
         for row_index, row in enumerate(self.cells):
             out.append(u'<tr>')
@@ -80,10 +79,7 @@ class Table(object):
                 elif isinstance(cell, EmptyCell):
                     out.append(u'<td width="100" class="empty"></td>')
                 elif isinstance(cell, Cell):
-                    try:
-                        out.append(u'<td width="100" class="cell" rowspan="{}" colspan="{}">{}</td>'.format(cell.rowspan, cell.colspan, cell.event))
-                    except:
-                        out.append(u'<td width="100" class="cell" rowspan="{}" colspan="{}">{}</td>'.format(cell.rowspan, cell.colspan, 'ERROR'))
+                    out.append(u'<td width="100" class="cell" rowspan="{}" colspan="{}">{}</td>'.format(cell.rowspan, cell.colspan, event_renderer(cell.event)))
 
             out.append(u'</tr>')
         out.append('</tbody>')

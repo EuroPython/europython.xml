@@ -9,8 +9,11 @@ from lxml.etree import Element
 def get_entries(xml_in, xpath_filter):
 
     entries = list()
-    with open(xml_in, 'rb') as fp:
-        xml = fp.read()
+    if xml_in.startswith('<'):
+        xml = xml_in
+    else:
+        with open(xml_in, 'rb') as fp:
+            xml = fp.read()
     root = fromstring(xml)
     for num, entry in enumerate(root.xpath(xpath_filter)):
         entry.tail = None
