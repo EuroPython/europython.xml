@@ -17,7 +17,15 @@ def event_renderer(event):
     return u''.join(result)
 
 
-def conv(schedule_xml, date_str, rooms, hour_start=0, hour_end=24, resolution=15, caption=None, event_renderer=None):
+def conv(schedule_xml, # schedule XML string or schedule XML filename
+        date_str,      # YYYY-MM-DD
+        rooms,         # list of rooms
+        hour_start=0,  # schedule starts
+        hour_end=24,   # schedule ends
+        resolution=15, # timeslot resolution in minutes
+        caption=None,  # caption of table
+        event_renderer=None):
+
     entries = util.get_entries(schedule_xml, '//day[@date="{}"]/entry'.format(date_str))
 
     row_headers = list()
