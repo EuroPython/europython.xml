@@ -53,42 +53,42 @@ class Table(object):
         self.cells[row][col] = Cell(event, rowspan, colspan)
 
     def render(self):
-        io = cStringIO.StringIO()
-        print >>io, u'<table border="1">'
+        out = list()
+        out.append(u'<table border="1">')
         if self.caption:
-            print >>io, u'<caption>{}</caption>'.format(self.caption)
+            out.append(u'<caption>{}</caption>'.format(self.caption))
 
         if self.col_headers:
-            print >>io, u'<thead>'
-            print >>io, u'<tr>'
+            out.append(u'<thead>')
+            out.append(u'<tr>')
             if self.row_headers:
-                print >>io, u'<th></th>'
+                out.append(u'<th></th>')
             for hd in self.col_headers:
-                print >>io, u'<th>{}</th>'.format(hd)
-            print >>io, u'</tr>'
-            print >>io, u'</thead>'
+                out.append(u'<th>{}</th>'.format(hd))
+            out.append(u'</tr>')
+            out.append(u'</thead>')
 
 
-        print >>io, '<tbody>'
+        out.append('<tbody>')
         for row_index, row in enumerate(self.cells):
-            print >>io, u'<tr>'
+            out.append(u'<tr>')
             if self.row_headers:
-                print >>io, u'<th>{}</th>'.format(self.row_headers[row_index])
+                out.append(u'<th>{}</th>'.format(self.row_headers[row_index]))
             for cell in row:
                 if isinstance(cell, SpanCell):
                     pass
                 elif isinstance(cell, EmptyCell):
-                    print >>io, u'<td width="100" class="empty"></td>'
+                    out.append(u'<td width="100" class="empty"></td>')
                 elif isinstance(cell, Cell):
                     try:
-                        print >>io, u'<td width="100" class="cell" rowspan="{}" colspan="{}">{}</td>'.format(cell.rowspan, cell.colspan, cell.event)
+                        out.append(u'<td width="100" class="cell" rowspan="{}" colspan="{}">{}</td>'.format(cell.rowspan, cell.colspan, cell.event))
                     except:
-                        print >>io, u'<td width="100" class="cell" rowspan="{}" colspan="{}">{}</td>'.format(cell.rowspan, cell.colspan, 'ERROR')
+                        out.append(u'<td width="100" class="cell" rowspan="{}" colspan="{}">{}</td>'.format(cell.rowspan, cell.colspan, 'ERROR'))
 
-            print >>io, u'</tr>'
-        print >>io, '</tbody>'
-        print >>io, u'</table>'
-        return io.getvalue()
+            out.append(u'</tr>')
+        out.append('</tbody>')
+        out.append(u'</table>')
+        return u'\n'.join(out).encode('utf-8')
 
 
 if __name__ == '__main__':
