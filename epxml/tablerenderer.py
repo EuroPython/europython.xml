@@ -8,6 +8,10 @@ import util
 
 
 def event_renderer(event):
+    """ Renders a single <event> as serialized
+        through lxml.objectify as cell content for
+        the schedule table.
+    """
     result = [u'<div class="title">{}</div>'.format(event.title)]
     result.append(u'<div class="speakers">')
     if event.speakers.getchildren():
@@ -38,11 +42,14 @@ def conv(schedule_xml, # schedule XML string or schedule XML filename
     tb.row_headers = row_headers
 
     for e in entries:
+
+        # determine starting row of event
         e_start = e.start.text      # format '0700'
         s_hour = int(e_start[:2])
         s_minute = int(e_start[2:])
         s_row = (s_hour - hour_start) * (60 / resolution) + s_minute / resolution
 
+        # determine col of event
         if e.room == 'ALL':
             # span over all columns
             s_col = 0
@@ -55,8 +62,8 @@ def conv(schedule_xml, # schedule XML string or schedule XML filename
             # unknown room, skip
             continue
 
-        s_duration = int(e.duration)
         # calculate row span over multiple time slots
+        s_duration = int(e.duration)
         rowspan = s_duration / resolution 
 
         tb.addCell(s_row, s_col, rowspan=rowspan, colspan=colspan, event=e)
