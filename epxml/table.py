@@ -47,17 +47,23 @@ class Table(object):
             self.cells.append(row)
 
     def addCell(self, row, col, rowspan=1, colspan=1, event=None):
+        # insert dummy span cell in case of a rowspan or colspan > 1
         for i in range(0, rowspan):
             for j in range(0, colspan):
                 self.cells[row + i][col + j]  = SpanCell(row + i, col + j)
+        # now insert content cell
         self.cells[row][col] = Cell(event, rowspan, colspan)
 
     def render(self, event_renderer):
+
         out = list()
         out.append(u'<table border="1">')
+
+        # table caption
         if self.caption:
             out.append(u'<caption>{}</caption>'.format(self.caption))
 
+        # column headers
         if self.col_headers:
             out.append(u'<thead>')
             out.append(u'<tr>')
