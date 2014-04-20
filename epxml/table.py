@@ -47,6 +47,10 @@ class Table(object):
             self.cells.append(row)
 
     def addCell(self, row, col, rowspan=1, colspan=1, event=None):
+
+        if not isinstance(self.cells[row][col], EmptyCell):
+            raise ValueError('Cell [{}][{}] seems to be already in use'.format(row, col))
+
         # insert dummy span cell in case of a rowspan or colspan > 1
         for i in range(0, rowspan):
             for j in range(0, colspan):
@@ -114,8 +118,12 @@ if __name__ == '__main__':
     table.row_headers = row_headers
     table.addCell(1, 1, event='Meeting1')
     table.addCell(2, 1, event='Meeting2')
+    table.addCell(2, 1, event='Meeting3')
     table.addCell(3, 2, rowspan=2, event='Long Meeting1')
     table.addCell(0, 2, colspan=2, event='Futter')
 
-    print table.render()
+    def event_renderer(s):
+        return '<div>{}</div>'.format(s)
+
+    print table.render(event_renderer)
     
