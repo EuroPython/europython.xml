@@ -78,6 +78,8 @@ def demo(xml_in, html_out='table.html'):
 
     rooms = [u'C01', u'B05/B06', u'B07/B08', u'B09', u'A08']
 
+    if not xml_in:
+        raise ValueError('Missing --xml-in|-i parameter')
     with open(xml_in, 'rb') as fp:
         schedule_xml = fp.read()
 
