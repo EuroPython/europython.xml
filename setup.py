@@ -34,5 +34,6 @@ setup(name='europython.xml',
       [console_scripts]
       schedulexml2html=epxml.html:main
       schedulexml2brochure=epxml.brochure:main
+      schedulexml2table=epxml.tablerenderer:main
       """,
       )
