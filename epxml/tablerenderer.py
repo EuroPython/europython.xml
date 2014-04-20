@@ -49,24 +49,23 @@ def conv(schedule_xml, # schedule XML string or schedule XML filename
         s_minute = int(e_start[2:])
         s_row = (s_hour - hour_start) * (60 / resolution) + s_minute / resolution
 
+        # calculate row span over multiple time slots
+        s_duration = int(e.duration)
+        rowspan = s_duration / resolution 
+
         # determine col of event
         if e.room == 'ALL':
             # span over all columns
             s_col = 0
             colspan = len(rooms)
-        elif e.room in rooms:
-            # one room
-            s_col = rooms.index(e.room)
-            colspan = 1
+            tb.addCell(s_row, s_col, rowspan=rowspan, colspan=colspan, event=e)
         else:
-            # unknown room, skip
-            continue
+            for room in e.room.text.split(','):
+                if room in rooms:
+                    s_col = rooms.index(room)
+                    colspan = 1
+                    tb.addCell(s_row, s_col, rowspan=rowspan, colspan=colspan, event=e)
 
-        # calculate row span over multiple time slots
-        s_duration = int(e.duration)
-        rowspan = s_duration / resolution 
-
-        tb.addCell(s_row, s_col, rowspan=rowspan, colspan=colspan, event=e)
 
     return tb.render(event_renderer=event_renderer)
 

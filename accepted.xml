@@ -14,6 +14,20 @@
 <speakers>
 </speakers>
 </entry>
+<entry id='xxx2'>
+<category>LUNCH2</category>
+<audience>LUNCH2</audience>
+<topics><topic>LUNCH2</topic></topics>
+<start>0800</start>
+<duration>60</duration>
+<room id='room0'>B09,A08</room>
+<title>LUNCH2</title>
+<description>LUNCH2
+
+</description>
+<speakers>
+</speakers>
+</entry>
 <entry id='4'>
 <category>Talk</category>
 <audience>Advanced</audience>
