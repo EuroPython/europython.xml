@@ -65,11 +65,8 @@ class Table(object):
         # now insert content cell
         self.cells[row][col] = Cell(event, rowspan, colspan)
 
-
     def merge_cells(self):
-        """ Merge vertical Cells representing the same event 
-            together
-        """
+        """ Merge vertical Cells representing the same event """
 
         for rownum, row in enumerate(self.cells):
             for colnum, cell in enumerate(row):
@@ -83,7 +80,6 @@ class Table(object):
                     cell.colspan = cols_to_merge + 1
                     for i in range(1, cols_to_merge + 1):
                         self.cells[rownum][colnum + i] = SpanCell(rownum, colnum + i)
-        
 
     def render(self, event_renderer, merge_cells=True):
         """ Render the abstract table to HTML """
