@@ -2,7 +2,7 @@
 import cStringIO
 
 class BaseCell(object):
-
+    """ Base table cell """
     def __init__(self, row, col):
         self.row = row
         self.col = col
@@ -10,11 +10,15 @@ class BaseCell(object):
     def __repr__(self):
         return '{}({},{})'.format(self.__class__.__name__, self.row, self.col)
 
+
 class EmptyCell(BaseCell):
-    pass
+    """ Default empty table cell """
 
 
 class Cell(BaseCell):
+    """ A table cell filled with content spanning one
+        or more rows or columns.
+    """
 
     def __init__(self, event, rowspan=1, colspan=1):
         self.event = event
@@ -26,7 +30,10 @@ class Cell(BaseCell):
 
 
 class SpanCell(EmptyCell):
-    pass
+    """ A dummy cell used in combination with a Cell
+        instance in order to represent the cells pre-allocated
+        for rowspan/colspan > 1 of a Cell.
+    """
 
 
 class Table(object):
@@ -48,10 +55,11 @@ class Table(object):
 
     def addCell(self, row, col, rowspan=1, colspan=1, event=None):
 
+        # Check if the current cell is not actually in use
         if not isinstance(self.cells[row][col], EmptyCell):
             raise ValueError('Cell [{}][{}] seems to be already in use'.format(row, col))
 
-        # insert dummy span cell in case of a rowspan or colspan > 1
+        # insert dummy span cells in case of a rowspan or colspan > 1
         for i in range(0, rowspan):
             for j in range(0, colspan):
                 self.cells[row + i][col + j]  = SpanCell(row + i, col + j)
@@ -59,6 +67,7 @@ class Table(object):
         self.cells[row][col] = Cell(event, rowspan, colspan)
 
     def render(self, event_renderer):
+        """ Render the abstract table to HTML """
 
         out = list()
         out.append(u'<table border="1">')
