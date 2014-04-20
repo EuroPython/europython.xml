@@ -35,7 +35,6 @@ class SpanCell(EmptyCell):
         for rowspan/colspan > 1 of a Cell.
     """
 
-
 class Table(object):
     """ Abstract HTML table model """
 
@@ -66,8 +65,31 @@ class Table(object):
         # now insert content cell
         self.cells[row][col] = Cell(event, rowspan, colspan)
 
-    def render(self, event_renderer):
+
+    def merge_cells(self):
+        """ Merge vertical Cells representing the same event 
+            together
+        """
+
+        for rownum, row in enumerate(self.cells):
+            for colnum, cell in enumerate(row):
+                if not isinstance(cell, Cell):
+                    continue
+                cols_to_merge = 0
+                for i in range(colnum+1, len(row)):
+                    if isinstance(self.cells[rownum][i], Cell) and self.cells[rownum][i].event == cell.event:
+                        cols_to_merge += 1
+                if cols_to_merge > 0:
+                    cell.colspan = cols_to_merge + 1
+                    for i in range(1, cols_to_merge + 1):
+                        self.cells[rownum][colnum + i] = SpanCell(rownum, colnum + i)
+        
+
+    def render(self, event_renderer, merge_cells=True):
         """ Render the abstract table to HTML """
+
+        if merge_cells:
+            self.merge_cells()
 
         out = list()
         out.append(u'<table border="1">')
