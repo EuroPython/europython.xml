@@ -13,7 +13,9 @@ def event_renderer(event):
         through lxml.objectify as cell content for
         the schedule table.
     """
-    result = [u'<div class="title">{}</div>'.format(event.title)]
+    result = list()
+    result.append(u'<div class="time">{}</div>'.format(event.attrib['start-end']))
+    result.append(u'<div class="title">{}</div>'.format(event.title))
     result.append(u'<div class="speakers">')
     if event.speakers.getchildren():
         for speaker in event.speakers:
