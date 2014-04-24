@@ -116,7 +116,7 @@ class Table(object):
                 elif isinstance(cell, EmptyCell):
                     out.append(u'<td width="100" class="empty"></td>')
                 elif isinstance(cell, Cell):
-                    out.append(u'<td width="100" class="cell" rowspan="{}" colspan="{}">{}</td>'.format(cell.rowspan, cell.colspan, event_renderer(cell.event)))
+                    out.append(u'<td width="100" class="cell" valign="top" rowspan="{}" colspan="{}">{}</td>'.format(cell.rowspan, cell.colspan, event_renderer(cell.event)))
 
             out.append(u'</tr>')
         out.append('</tbody>')

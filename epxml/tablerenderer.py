@@ -8,18 +8,26 @@ import table
 import util
 
 
+def normalize(s):
+    """ Normalize a string in order to be used as CSS class """
+    return s.lower().replace(u' ', u'-')
+
+
 def event_renderer(event):
     """ Renders a single <event> as serialized
         through lxml.objectify as cell content for
         the schedule table.
     """
     result = list()
+    css_outer = u' '.join(['topic-{}'.format(normalize(t.topic.text)) for t in event.topics])
+    result.append(u'<div class="entry {}">'.format(css_outer))
     result.append(u'<div class="time">{}</div>'.format(event.attrib['start-end']))
     result.append(u'<div class="title">{}</div>'.format(event.title))
     result.append(u'<div class="speakers">')
     if event.speakers.getchildren():
         for speaker in event.speakers:
             result.append(u'<div class="speaker">{}</div>'.format(speaker.speaker.name))
+    result.append(u'</div>')
     result.append(u'</div>')
     return u''.join(result)
 
