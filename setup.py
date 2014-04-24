@@ -9,6 +9,7 @@ requires = [
     'jinja2',
     'markdown2',
     'lxml',
+    'pp.client-python',
     'loremipsum',
     'plac',
 ]
