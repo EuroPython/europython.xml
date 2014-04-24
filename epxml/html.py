@@ -7,13 +7,13 @@ from jinja2 import Environment, PackageLoader
 import util
 
 
-
 env = Environment(loader=PackageLoader('epxml', 'templates'))
 
 class View(object):
 
     def markdown(self, text):
         return markdown2.markdown(unicode(text))
+
 
 @plac.annotations(
     xml_in=('Schedule XML file', 'option', 'i'),
