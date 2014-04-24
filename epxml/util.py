@@ -18,14 +18,19 @@ def entry2startend(entry):
 
 
 def get_entries(xml_in, xpath_filter):
+    """ Parse 'accepted.xml' file/string and return
+        all entries as list filtered using the given 
+        xpath filter.
+    """
 
-    entries = list()
     if xml_in.startswith('<'):
         xml = xml_in
     else:
         with open(xml_in, 'rb') as fp:
             xml = fp.read()
+
     root = fromstring(xml)
+    entries = list()
     for num, entry in enumerate(root.xpath(xpath_filter)):
         entry.tail = None
         entry_d = objectify.fromstring(tostring(entry))
