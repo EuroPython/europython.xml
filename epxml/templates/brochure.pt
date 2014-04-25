@@ -102,14 +102,16 @@
                       <div class="text entry-text">
                           {{ view.markdown(entry.description) }}
                       </div>    
-                      <div class="speakers">
-                        {% for speaker in entry.speakers%}  
-                          <div class="speaker">{{ speaker.speaker.name }}</div>
-                          <!--
-                          <div class="text speaker-profile">{{ view.markdown(speaker.speaker.profile) }}</div>
-                          -->
-                        {% endfor %}
-                      </div>
+                      {% if entry.speakers.getchildren() %}
+                          <div class="speakers">
+                            {% for speaker in entry.speakers%}  
+                              <div class="speaker">{{ speaker.speaker.name }}</div>
+                              <!--
+                              <div class="text speaker-profile">{{ view.markdown(speaker.speaker.profile) }}</div>
+                              -->
+                            {% endfor %}
+                          </div>
+                      {% endif %}
                   </div>
                 {% endfor %}
             </div>
