@@ -51,7 +51,7 @@ def conv(xml_in=None, html_out='brochure.html', pdf_converter=None):
         with open(html_filename, 'wb') as fp:
             fp.write(html.encode('utf-8'))
 
-        # copy over resources
+        # copy over conversion resources
         resources_dir = os.path.join(os.path.dirname(__file__), 'templates', 'resources')
         for dirname, dirnames, filenames in os.walk(resources_dir):
             for fname in filenames:
@@ -72,15 +72,11 @@ def conv(xml_in=None, html_out='brochure.html', pdf_converter=None):
             if status != 0:
                 raise RuntimeError('PDF generation failed')
             print 'PDF written to "{}"'.format(out_pdf)
+            return out_pdf
 
         elif pdf_converter in ('remote-princexml', 'remote-pdfreactor'):
             # remote pdf generation through PrinceXML or PDFreactor
             # through https://pp-server.zopyx.com
-
-            tmpd = tempfile.mkdtemp()
-            html_filename  = os.path.join(tmpd, 'index.html')
-            with open(html_filename, 'wb') as fp:
-                fp.write(html.encode('utf-8'))
 
             server_url = os.environ['PP_SERVER_URL']
             authorization_token = os.environ['PP_AUTHORIZATION_TOKEN']
