@@ -75,6 +75,8 @@ def conv(xml_in=None, html_out='brochure.html', pdf_converter=None):
 
         if result['status'] != 'OK':
             raise RuntimeError('Remote PDF generation failed')
+
+        print 'PDF written to "{}"'.format(result['output_filename'])
         return result['output_filename']
 
 
