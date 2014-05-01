@@ -1,6 +1,11 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" type="text/css" href="brochure.css" />
+        <style type="text/css">
+            body {
+                counter-reset: page {{ first_page_number }}
+            }
+        </style>
     </head>
     <body>
         <div class="schedule">

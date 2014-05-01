@@ -20,9 +20,10 @@ env = Environment(loader=PackageLoader('epxml', 'templates'))
 @plac.annotations(
     xml_in=('Schedule XML file', 'option', 'i'),
     html_out=('Output HTML file', 'option', 'o'),
+    first_page_number=('Start with page number XX', 'option', 'n'),
     pdf_converter=('Generate PDF output using prince or pdfreactor (princexml, remote-princexml, pdfreactor, remote-pdfreactor)', 'option', 'p')
     )
-def conv(xml_in=None, html_out='brochure.html', pdf_converter=None):
+def conv(xml_in=None, html_out='brochure.html', first_page_number=1, pdf_converter=None):
 
     if not xml_in:
         raise ValueError('No XML input file specified (-i|--xml-in)')
@@ -37,6 +38,7 @@ def conv(xml_in=None, html_out='brochure.html', pdf_converter=None):
 
     template = env.get_template('brochure.pt')
     html = template.render(
+            first_page_number=first_page_number,
             day_entries=entries,
             view=util.JinjaView())
     with open(html_out, 'wb') as fp:
