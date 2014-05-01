@@ -2,8 +2,9 @@
     <head>
         <link rel="stylesheet" type="text/css" href="brochure.css" />
         <style type="text/css">
-            body {
-                counter-reset: page {{ first_page_number }}
+            @page {
+                -ro-counter-set: page {{ first_page_number }};
+                counter-increment: page;
             }
         </style>
     </head>

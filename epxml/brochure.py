@@ -38,7 +38,7 @@ def conv(xml_in=None, html_out='brochure.html', first_page_number=1, pdf_convert
 
     template = env.get_template('brochure.pt')
     html = template.render(
-            first_page_number=first_page_number,
+            first_page_number=int(first_page_number) - 1,
             day_entries=entries,
             view=util.JinjaView())
     with open(html_out, 'wb') as fp:
