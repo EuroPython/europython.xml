@@ -1,11 +1,13 @@
 @page {
     size: a4;
-}
-
-@page {
+    counter-increment: page
     @bottom {
         content: "Page " counter(page);
     }
+}
+
+@page:first {
+    -ro-counter-set: page 1;
 }
 
 .schedule-heading {
