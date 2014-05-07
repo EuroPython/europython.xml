@@ -2,7 +2,6 @@
 
 import sys
 import plac
-import markdown2
 from jinja2 import Environment, PackageLoader
 import util
 
@@ -29,7 +28,7 @@ def conv(xml_in, html_out='out.html', template_name='html.pt', xpath_filter='//e
     entries = util.get_entries(xml_in, xpath_filter)
     template = env.get_template(template_name)
     html = template.render(entries=entries,
-            view=View())
+            view=util.JinjaView())
     with open(html_out, 'wb') as fp:
         fp.write(html.encode('utf8'))
     return html_out

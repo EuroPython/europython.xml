@@ -3,6 +3,7 @@ from datetime import datetime
 from datetime import timedelta
 import markdown2
 from lxml import objectify
+import lxml.html
 from lxml.etree import tostring
 from lxml.etree import fromstring
 from lxml.etree import Element
@@ -44,5 +45,13 @@ class JinjaView(object):
     def time(self, entry):
         return entry2startend(entry)
 
-    def markdown(self, text):
-        return markdown2.markdown(unicode(text))
+    def markdown(self, text, level_offset=3):
+        html = markdown2.markdown(unicode(text))
+        root = lxml.html.fromstring(html)
+        for node in root.xpath('//*'):
+            if node.tag in ('h1', 'h2', 'h3', 'h4', 'h5', 'h6'):
+                h_name = node.tag
+                h_level = int(h_name[1:])
+                node.tag = 'h{}'.format(h_level + level_offset)
+
+        return lxml.html.tostring(root, encoding=unicode)

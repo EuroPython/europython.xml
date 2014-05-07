@@ -1,0 +1,486 @@
+<schedule created='2014-05-07T11:12:45.081560'>
+<day date='2014-07-21'>
+<entry id='40'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic></topic></topics>
+<start>1400</start>
+<duration>180</duration>
+<room id='room5'>A03/A04</room>
+<title>PySide - Develop System GUI</title>
+<description>Well, when it comes to GUI programming, it is always considered to be hectic at least for the early language developers like C, C++.  Its because of the 100 lines of code that you end up writing to just create a button object. There comes a rescue for this, the GUI programming is made a little easier with the introduction of tool kits such as Tcl/Tk, Qt, wxwidgets etc. These libraries made our life a lot simpler by providing the wrapper framework in the native language.
+ 
+One such framework developed for Python by Qt is PySide. It is a cross-platform UI framework, meaning that you can run the same code in almost any operating systems, say, for example, Linux, Unix, Windows, Macintosh etc with no or little changes to the code. The best part of PySide is its licensing. PySide has been published as a response to the lack of suitably licensed Qt bindings for Python. PySide is licensed under the LGPL version 2.1 license, allowing both Free/Open source software and proprietary software development. The python wiki page gives more info about the various other GUI frameworks used by python segregated by their capabilities.
+
+
+</description>
+<speakers>
+<speaker id='270'>
+<name>Venkateshwaran Loganathan</name>
+<profile>Working as a Software Developer in an MNC. Have authored a book on PySide by the name "PySide GUI Application Development" by Packt Publishers. More of me at http://venkateshwaranloganathan.com
+
+Have involved myself in the development of projects in the open source page. Worked on  C, Python and Node.js extensively.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='41'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic></topic></topics>
+<start>1400</start>
+<duration>180</duration>
+<room id='room6'>A05/A06</room>
+<title>Topic Modeling For Fun and Profit</title>
+<description>Hands-on workshop for extracting and utilizing semantic topics from large collections of natural language texts.
+
+By the end, participants will have built an application for efficiently processing, indexing and querying the entire English Wikipedia, using wondrous Python tools.
+
+Workshop assumes knowledge of intermediate Python concepts (classes, generators, iterators).</description>
+<speakers>
+<speaker id='273'>
+<name>Radim Rehurek</name>
+<profile></profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+</day>
+<day date='2014-07-22'>
+<entry id='59'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic></topic></topics>
+<start>1000</start>
+<duration>180</duration>
+<room id='room5'>A03/A04</room>
+<title>Improving your automated testing with pytest</title>
+<description>Many people learn testing through the JUnit/PYUnit paradigm. Lately, py.test's new fixture mechanisms have gained traction among many Pythonistas. This tutorial explores pytest and discusses key strategies how to benefit from using pytest for your existing unittest/nose based code bases.  </description>
+<speakers>
+<speaker id='274'>
+<name>Holger Krekel</name>
+<profile>Founder of PyPy, main author  of pytest, tox, devpi and execnet projects.  Trainer and conference speaker. Likes playing Go, listening to DnB and Electro Swing and caring for his son. </profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='73'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic></topic></topics>
+<start>1000</start>
+<duration>180</duration>
+<room id='room6'>A05/A06</room>
+<title>RESTful services with pyramid and cornice</title>
+<description>The combination of python, pyramid and cornice gives you a very powerful and elegant means to write concise, well tested and well documented RESTful services.
+
+This training will get you up and running with a scaffold of best practices in no time!</description>
+<speakers>
+<speaker id='368'>
+<name>Tom Lazar</name>
+<profile></profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='110'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic></topic></topics>
+<start>1400</start>
+<duration>180</duration>
+<room id='room5'>A03/A04</room>
+<title>Einführung in Sphinx</title>
+<description>Sphinx ist ein leistungsfähiges Werkzeug zur Dokumentierung von Software, das reStructuredText Dateien in eine Reihe von Zielformaten wie HTML, PDF und ePub konvertiert. Damit ist Sphinx auch eine interessante Lösung für das Multi-Channel-Publishing. Sphinx hat herausragende Funktionen um Python-Code zu dokumentieren, und es unterstützt auch einige andere Sprachen. Sphinx integriert sich gut in den Entwicklungsprozess von Software und **bringt Programmierer dazu, Dokumentation schreiben zu wollen**. So jedenfalls wird ein Benutzer auf der Homepage von Sphinx zitiert. Das Tutorial ist eine Einführung in Sphinx und deckt die Hauptfunktionen sowie einige nützliche Erweiterungen ab. Die Teilnehmer sollten Sphinx im Vorfeld bereits installiert haben. Die Installation der software ist nicht Teil des Tutorial, da es sehr zeitaufwändig ist, mehrere Betriebssysteme abzudecken.</description>
+<speakers>
+<speaker id='179'>
+<name>Jan Ulrich Hasecke</name>
+<profile>Jan Ulrich Hasecke is a professional writer. He works as an advertising consultant for small and medium enterprises. He is currently writing a book about Sphinx.
+
+Jan Ulrich Hasecke is founding member of the Python Software Verband e.V.. He produced a bunch of German marketing materials for Python, Python web frameworks and the Python content management system Plone. He is member of the Plone foundation, translated the Plone UI into German and has written the German User Guide for Plone with Sphinx. 
+
+</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='120'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic></topic></topics>
+<start>1400</start>
+<duration>180</duration>
+<room id='room6'>A05/A06</room>
+<title>An intro to Blender modeling and scripting </title>
+<description>This training introduces you to the marvelous world of Blender, the popular opensource 3d computer graphics software. The goal is to create step by step some stunning 3d art by the end of the training giving you the knowledge to start having fun with Blender and python.</description>
+<speakers>
+<speaker id='109'>
+<name>Federico Frenguelli</name>
+<profile>None is better than Null</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+</day>
+<day date='2014-07-23'>
+<entry id='177'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Best Practices</topic></topics>
+<start>1000</start>
+<duration>180</duration>
+<room id='room5'>A03/A04</room>
+<title>Python for System Administrators</title>
+<description>The training is an excerpt from an 8-hour course I usually do to junior and internship colleagues.
+
+It's goal is to show how to use python and the Python Standard Library to replace a variegate set of administration tools like grep, sed, awk, perl and gnuplot.
+
+Students should type-in slide contents in their ipython console and share their results. Anyway script templates are provided via github to enable them to paste snippets and reduce idle times.
+
+At the end of the training the students will be able to:
+
+- gather system data on different platforms;
+- parse them efficiently;
+- make basic statistics like distribution, deviation, aggregation, correlation;
+- plot data;
+
+Bonus track (if the students finish all the slides before the end of the train):
+
+- use the  Python Standard Library to monitor services;
+- expose monitored data via http with flask;</description>
+<speakers>
+<speaker id='247'>
+<name>Roberto Polli</name>
+<profile>Roberto works at Babel, migrating big mail infrastructures to open solutions. Develops in Python, C and Java to foster communities around various FLOSS, trying to bring both social and IT innovation.
+
+He's a Red Hat Certified Engineer and Virtualization Administrator, but loves maintaining free software, including the caldav java library: caldav4j.
+
+A life ago he took a Math degree, and he's really proud of it.
+</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='182'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Science</topic></topics>
+<start>1000</start>
+<duration>180</duration>
+<room id='room6'>A05/A06</room>
+<title>Learn Test-Driven-Development and Django by building a simple web application from scratch.</title>
+<description>We'll cover unit testing, Django models, views and templates, as well as using Selenium to open up a real web browser for functional tests.
+This talk is intended for audiences new to TDD, new to Django, and even new to Python!
+
+The aim is to cover the basics of setting up a simple Django site, but using full, rigorous TDD at every step along the way.
+The material covered in this training is all available online as part of Harry Percival's great book ["Obey the testing goat"](http://chimera.labs.oreilly.com/books/1234000000754)
+
+
+We'll learn how to set up functional tests with Selenium, how to set up Django, how to run Django unit tests, how TDD actually works in practice, the unit test / code cycle where we re-run the tests after each tiny, incremental change to the code, as well as all the basics of Django.
+We'll talk about what to test, what not to test, what the point of all this testing is anyway, and I promise to make it all at least moderately entertaining.
+
+Plus it's all in Python 3!
+
+It is absolutely vital that you come with the required software pre-installed on your PC.
+
+So, make sure you have the following installed on your Mac/Linux machine:
+
+- Python  3.3
+- Git
+- Firefox
+- Selenium
+- Django &gt;= 1.6
+
+Have a look at the section of the book for the [required software installations](http://chimera.labs.oreilly.com/books/1234000000754/pr02.html#_required_software_installations) for more detailed instructions.
+</description>
+<speakers>
+<speaker id='250'>
+<name>Andrea Crotti</name>
+<profile>I'm currently working as Python/Django developer in London after other Python experiences in the aerospace and hardware industries.
+
+I started to use Python 7 years ago and it still does not stop to amaze me how much I can get done with so little elegant code.
+
+I've been attending Python conferences in the last few years and enjoyed giving talks about various topics, from decorators to TDD.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='204'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic>Other</topic></topics>
+<start>1400</start>
+<duration>180</duration>
+<room id='room5'>A03/A04</room>
+<title>Effective data visualisation in 2D with matplotlib</title>
+<description># Introduction
+
+In companies, institutes or at home we generate large amounts of data. A success of our business or research may depend on a proper handling of the data. We can extract 
+meaningful patterns by applying data reduction and analysis techniques, but eventually we must present the data graphically. Many software packages allow to create simple line plots or bar charts, but creating data-dense visualisations without distortions is still more of an art than science. The goal of the workshop is to arm you with practice-oriented tips that will help you to avoid clutter and increase the data density of your graphs.
+
+[matplotlib](http://matplotlib.org) is a de facto standard in 2D plotting with Python in active development since 2003. The large number of [visualisation types](http://matplotlib.org/gallery.html) is not matched by any other plotting library available for Python. It can be used to create interactive visualisations, hard copy plots or standalone applications.
+
+The tutorial will introduce the basic theory of data visualisation and put it in use through matplotlib. To unleash the full power of matplotlib, we will reach under the hood and discover some hidden gems in terms of customisation and working with visual primitives. The participants will be encouraged to practice their visualisations skills trough a series of examples. They will learn how to build complex data visualisations from ground up and spice them with a bit of interactivity. 
+
+Training objectives:
+
+- use matplotlib for exploratory data analysis,
+- create data-dense and accurate visualisations,
+- prepare your visualisation for presenting
+
+Prerequisites:
+
+- good knowledge of Python at procedural level, experience with object-oriented programming is recommended but not required
+- basic familiarity with [numpy](http://www.numpy.org/) is a plus
+- installed python and matplotlib (for versions and sources see above)
+Website: http://btel.github.io/matplotlib_2014
+
+# About the trainer
+
+Bartosz Telenczuk has a PhD in biophysics. He has been active Python user since 2005. He is creator of [svgutils](https://github.com/btel/svg_utils) and he  has contributed to many open source Python libraries including numpy and matplotlib.  He is also a Python advocate and an instructor at [advanced Python schools for scientists](https://python.g-node.org/python-summerschool-2013/). Currently he is a researcher in France, developing methods to interpret the electrical activity of the brain.
+
+Personal website: http://neuroscience.telenczuk.pl
+</description>
+<speakers>
+<speaker id='691'>
+<name>Bartosz Telenczuk</name>
+<profile>Bartosz Telenczuk has a PhD in biophysics. He has been active Python user since 2005. He is creator of [svgutils](https://github.com/btel/svg_utils) and he  has contributed to many open source Python libraries including numpy and matplotlib.  He is also a Python advocate and an instructor at [advanced Python schools for scientists](https://python.g-node.org/python-summerschool-2013/). Currently he is a researcher in France, developing methods to interpret the electrical activity of the brain.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='205'>
+<category>Talk</category>
+<audience>Novice</audience>
+<topics><topic></topic></topics>
+<start>1400</start>
+<duration>180</duration>
+<room id='room6'>A05/A06</room>
+<title>Einsteigertutorium Python</title>
+<description>Das Einsteigertutorium Python wendet sich an Tagungsteilnehmer, die keine oder
+nur sehr wenig Kenntnis der Programmiersprache Python besitzen. Es soll jedoch
+keine Einführung ins Programmieren sein; praktische Erfahrung mit einer
+anderen Programmiersprache wird vorausgesetzt. Am Ende der Veranstaltung
+werden die Teilnehmer die syntaktischen und einige konzeptionelle Merkmale von
+Python kennen und in der Lage sein, selbständig einfache Programme in dieser
+Sprache zu erstellen und auszuführen.
+
+Die Teilnehmer des Tutoriums bringen bitte ihren eigenen Rechner mit, auf dem
+eine aktuelle Version von Python (mindestens 3.3) installiert sein muß. Als
+Entwicklungsumgebung werden wir im Tutorium das mit Python ausgelieferte
+"idle" verwenden, was je nach Betriebssystem möglicherweise zusätzliche
+Bibliotheken benötigt oder als eigenes Programmpaket installiert werden muß.
+Teilnehmer, die mit der Kommandozeile und einem einfachen Texteditor vertraut
+sind, können auch gern diese Arbeitsumgebung verwenden. Im Tutorium wird
+jedoch keine Zeit sein, um auf damit verbundene Probleme einzugehen.</description>
+<speakers>
+<speaker id='530'>
+<name>Thomas Lotze</name>
+<profile></profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+</day>
+<day date='2014-07-24'>
+<entry id='212'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic></topic></topics>
+<start>1000</start>
+<duration>180</duration>
+<room id='room5'>A03/A04</room>
+<title>Making your first contribution to OpenStack</title>
+<description>Taking people from a DevStack install to a first contribution.
+
+Objectives
+----------
+By the end of the session, participants will:
+
+ * have all the necessary accounts and tools set up for contributing
+ * know how to submit a contribution to an OpenStack project
+ * understand the OpenStack contribution process
+ * have a first contribution completed or underway, and know what are the next steps
+
+The process for making both code and documentation contributions is the same in OpenStack. For this session, participants will be encouraged to choose a task of either type.
+
+Pre-requisites:
+---------------
+Participants should have:
+
+ * A basic knowledge of git (cloning a repository, committing)
+ * A SSH key pair (instructions on how to create one can be found online, for instance [https://unfuddle.com/support/docs/topics/ssh_keypair](https://unfuddle.com/support/docs/topics/ssh_keypair))
+ * A Virtual Machine (VM) with DevStack installed (see below for details)
+ * Be comfortable with Python
+
+Contributing to OpenStack requires signing a Contributor Licence Agreement (CLA). If your employment contract has a restrictive IP clause, you may want to check first with your company lawyers whether you can sign it. See [https://review.openstack.org/static/cla.html](https://review.openstack.org/static/cla.html) for the text of the licence.</description>
+<speakers>
+<speaker id='358'>
+<name>Julie Pichon</name>
+<profile></profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='217'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic></topic></topics>
+<start>1000</start>
+<duration>180</duration>
+<room id='room6'>A05/A06</room>
+<title>High Performance Python</title>
+<description>Python enables rapid prototyping but can be slow for the execution of CPU-bound and RAM-bound problems. This tutorial covers the state of the art for solving CPU-bound and RAM-bound problems on 1 computer with multiple CPUs.
+This tutorial is an updated version of material successfully taught at EuroPython 2011, PyCon 2012, PyCon 2013, EuroSciPy 2013. </description>
+<speakers>
+<speaker id='520'>
+<name>Ian Ozsvald</name>
+<profile>Teacher at PyCons, founder of ModelInsight (AI Consultancy in London, UK), longtime AI Pythonista, co-founder of ShowMeDo.com Python educational videos, co-founder of BrightonPython (UK)
+
+Author of the forthing coming High Performance Python book from O'Reilly: 
+http://shop.oreilly.com/product/0636920028963.do</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='227'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic></topic></topics>
+<start>1400</start>
+<duration>180</duration>
+<room id='room5'>A03/A04</room>
+<title>Interactive experiments in sound synthesis with Nsound, numpy and matplotlib</title>
+<description>Overview
+--------
+
+This training intends to teach how to experiment with generating sounds and digital signals in an interactive programming and exploration environment provided by [IPython](http://ipython.org/), [matplotlib](http://matplotlib.org/) and the [Nsound](http://nsound.sourceforge.net/) package.
+
+Participants will learn how to generate various waveforms, tones and noises and explore these by listening and easy plotting of various diagrams, all using simple Python code.
+
+
+Topics
+------
+
+* Sound sampling, digital signals and processing
+* Generating and plotting waveforms
+* Loading WAV files
+* Adding sine waves and combining waveforms
+* Producing audio output and WAV files
+* Frequency spectrum diagrams
+* Analyzing harmonic content
+* Mixing Signals
+* Filters
+* Modulation:
+  * Envelopes
+  * Low frequency oscillators (LFOs)
+  * Filter modulation
+* Subtractive synthesis structure
+
+
+Preparation
+-----------
+
+Participants should bring a laptop with Linux (preferred), Windows, or OS X and good headphones. An external audio interface may help with audio performance but is not essential.
+
+Install the following prerequisite software:
+
+* A C/C++ compiler
+  (under debian-like systems, install the 'build-essential' package)
+* Python* (2.7)
+* setuptools (2.x)
+* virtualenv (&gt;= 1.10)
+* Scons (2.3.0)
+* SWIG
+* portaudio*
+
+Any or all of:
+
+  - pygtk* (2.24)
+  - pyqt4*
+  - pyqt5*
+  - wxpython* (3.0)
+
+\* including development headers
+
+Create a virtual environment with Python 2.7 and install the following Python packages and their dependencies:
+
+* Cython (0.20)
+* IPython (1.1.x)
+* matplotlib (1.3.x)
+* numpy (1.8.x)
+* Nsound (0.9.0)
+
+All these, except Nsound, may be installed from PyPI via pip. For Nsound, download the distribution package from its website and follow the installation instructions in the user's guide.
+</description>
+<speakers>
+<speaker id='400'>
+<name>Christopher Arndt</name>
+<profile>Freelancing Python developer, trainer and Open Source consultant based in Cologne, Germany.
+
+Has worked with Python for over 15 years and was involved with setting up the Python User Group Cologne, pyCologne, in 2006 and has been an active member of the German Python community ever since. 
+
+He plays the guitar and keyboards as a hobby and devotes much of his spare time to synthesizers, sound design and all things related to music production.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+<entry id='270'>
+<category>Talk</category>
+<audience>Advanced</audience>
+<topics><topic></topic></topics>
+<start>1400</start>
+<duration>180</duration>
+<room id='room6'>A05/A06</room>
+<title>Iterators, Generators and Decorators</title>
+<description>This tutorial is a systematic introduction to the topics iterators, generators and decorators. It covers all relevant information with a focus on practical applications for common tasks.
+
+You will learn how iterators, generators and decorators work and how to write better and more efficient programs with them. If you are new to these topics or tried but got confused about functions that return functions that return functions, this tutorial will help you to understand the how and the why.
+
+It is a part of the advanced training I've been delivering over the last years in open and in-house courses as well as trainings at EuroPython, PyCon PL, PyCon DE and PyCon IE. The material has been continuously refined owing to participant feedback.  </description>
+<speakers>
+<speaker id='12'>
+<name>Mike Müller</name>
+<profile>EuroPython 2014 Chair based on experience charing PyCon DE 2011 and  2012 as well as originator and lead organizer of EuroSciPy 2008 and 2009. Chair Board Python Software Verband e.V. (1. Vorsitzender des Vorstands). Python Trainer and CEO of Python Academy GmbH &amp; Co. KG. I have been teaching Python for about ten years and thus introduced several thousand people to this fine language. Oh, and I like Python ;).</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+</day>
+<day date='2014-07-25'>
+<entry id='285'>
+<category>Talk</category>
+<audience>Expert</audience>
+<topics><topic></topic></topics>
+<start>1000</start>
+<duration>180</duration>
+<room id='room5'>A03/A04</room>
+<title>An introduction to Machine learning with Scikit-learn</title>
+<description>Machine Learning develops algorithms which can learn from previously-seen data in order to make predictions about future data. It undergoes fast progress and is the focus of many startup creation, leveraging the accumulation of user-centric data via Internet services.
+
+Scikit-learn is a Python module that builds upon the scientific-Python tools such as numpy and scipy to deliver machine learning tools for the non-specialist.
+
+Tutorial objective
+===============
+
+This tutorial will introduce the basics of machine learning, and how these learning tasks can be accomplished using Scikit-Learn. By the end of the tutorials, participants will be poised to take advantage of Scikit-learn's wide variety of machine learning algorithms to explore their own data sets.
+
+Intended Audience
+================
+
+Python programmers who would like build predictive engines from data.
+
+Audience level
+=============
+
+Programmers with good Python knowledge. No prior knowledge of machine learning, scikit-learn or scientific programming is needed.</description>
+<speakers>
+<speaker id='834'>
+<name>Gaël Varoquaux</name>
+<profile>Gaël Varoquaux is an INRIA faculty researcher working on computational science for brain imaging in the Neurospin brain research institute (Paris, France). His research focuses on modeling and mining brain activity in relation to cognition. Years before the NSA, he was hoping to make bleeding-edge data processing available across new fields, and he has been working on a mastermind plan building easy-to-use open-source software in Python. He is a core developer of scikit-learn, joblib, and Mayavi, a nominated member of the PSF, and often teaches scientific computing with Python using http://scipy-lectures.github.com.</profile>
+<image>https://media.ep14.org/site_media/</image>
+</speaker>
+</speakers>
+</entry>
+</day>
+</schedule>
