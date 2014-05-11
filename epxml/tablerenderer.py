@@ -99,7 +99,7 @@ def demo(xml_in, html_out='table.html'):
                hour_start=7,
                hour_end=21,
                resolution=15,
-               caption=u'üöä - 2014-07-22',
+               caption=u'2014-07-22',
                event_renderer=event_renderer
                )
 
