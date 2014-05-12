@@ -47,6 +47,9 @@ class JinjaView(object):
     def time(self, entry):
         return entry2startend(entry)
 
+    def lower(self, s):
+        return unicode(s).lower()
+
     def speaker_name(self, speaker):
         try:
             return speaker.speaker.name

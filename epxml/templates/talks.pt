@@ -2,10 +2,6 @@
 
     {% for entry in entries %}
     <tr>
-        <!--
-        <td width="100" valign="top">
-        </td>
-        -->
         <td width="40%" valign="top">
             <h3 class="title">{{ entry.title }}</h3>
             <div class="speakers">
@@ -23,10 +19,10 @@
               </h4>
               {% endfor %}
             </div>
-            <div class="category">{{ entry.category}}</div>
+            <div class="category category-{{ view.lower(entry.category) }}">{{ entry.category}}</div>
             <div class="topics"> 
                 {% for topic in  entry.topics %} 
-                    <span class="topic">{{ topic.topic }}</span>
+                    <span class="topic topic-{{ view.lower(topic.topic) }}">{{ topic.topic }}</span>
                 {% endfor %}
             </div>
         </td>
