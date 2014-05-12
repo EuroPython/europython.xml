@@ -21,9 +21,10 @@ env = Environment(loader=PackageLoader('epxml', 'templates'))
     xml_in=('Schedule XML file', 'option', 'i'),
     html_out=('Output HTML file', 'option', 'o'),
     first_page_number=('Start with page number XX', 'option', 'n'),
-    pdf_converter=('Generate PDF output using prince or pdfreactor (princexml, remote-princexml, pdfreactor, remote-pdfreactor)', 'option', 'p')
+    pdf_converter=('Generate PDF output using prince or pdfreactor (princexml, remote-princexml, pdfreactor, remote-pdfreactor)', 'option', 'p'),
+    pdf_filename=('Custom PDF output filename', 'option', 'f')
     )
-def conv(xml_in=None, html_out='brochure.html', first_page_number=1, pdf_converter=None):
+def conv(xml_in=None, html_out='brochure.html', first_page_number=1, pdf_converter=None, pdf_filename=None):
 
     if not xml_in:
         raise ValueError('No XML input file specified (-i|--xml-in)')
@@ -62,7 +63,10 @@ def conv(xml_in=None, html_out='brochure.html', first_page_number=1, pdf_convert
         if pdf_converter in ('princexml', 'pdfreactor'):
             # local pdf generation through PrinceXML or PDFreactor
 
-            out_pdf = '{}.pdf'.format(os.path.splitext(html_filename)[0])
+            if pdf_filename:
+                out_pdf = pdf_filename
+            else:
+                out_pdf = '{}.pdf'.format(os.path.splitext(html_filename)[0])
             if pdf_converter == 'princexml':
                 cmd = 'prince -v "{}" -o "{}"'.format(html_filename, out_pdf)
             elif pdf_converter == 'pdfreactor':
