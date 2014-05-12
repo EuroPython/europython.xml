@@ -4,39 +4,37 @@
     <tr>
         <!--
         <td width="100" valign="top">
-            <div class="category">Training</div>
+        </td>
+        -->
+        <td width="40%" valign="top">
+            <h3 class="title">{{ entry.title }}</h3>
+            <div class="speakers">
+              {% for speaker in entry.speakers %}  
+              <h4 class="speaker">
+                  <a href="{{ view.speaker_profile_url(speaker) }}">
+                      {{ view.speaker_name(speaker) }}
+                  </a>
+                  {% if view.speaker_image_url(speaker) %}
+                      <a href="{{ view.speaker_profile_url(speaker) }}">
+                        <img src="{{ view.speaker_image_url(speaker) }}" style="max-width: 200px">
+                      </a>
+                  {% endif %}
+
+              </h4>
+              {% endfor %}
+            </div>
+            <div class="category">{{ entry.category}}</div>
             <div class="topics"> 
                 {% for topic in  entry.topics %} 
                     <span class="topic">{{ topic.topic }}</span>
                 {% endfor %}
             </div>
         </td>
-        -->
-        <td width="40%" valign="top">
-            <div class="speakers">
-              {% for speaker in entry.speakers%}  
-                <h4 class="speaker">{{ speaker.speaker.name }}</h4>
-              {% endfor %}
-            </div>
-            <h3 class="title">{{ entry.title }}</h3>
-            <!--
-            -->
-        </td>
         <td width="60%" valign="top">
             <div class="text entry-text">
                 {{ view.markdown(entry.description) }}
             </div>    
         </td>
-        <!--
-        <td valign="top">
-          <div class="speakers">
-            {% for speaker in entry.speakers%}  
-              <div class="speaker">{{ speaker.speaker.name }}</div>
-              <div class="text speaker-profile">{{ view.markdown(speaker.speaker.profile) }}</div>
-            {% endfor %}
-          </div>
-        </td>
-        -->
     </tr>
     {% endfor %}
 </table>

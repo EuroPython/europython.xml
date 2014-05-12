@@ -1,4 +1,5 @@
 import csv
+import operator
 from datetime import datetime
 from datetime import timedelta
 import markdown2
@@ -37,13 +38,32 @@ def get_entries(xml_in, xpath_filter):
         entry_d = objectify.fromstring(tostring(entry))
         entry_d.attrib['start-end'] = entry2startend(entry_d)
         entries.append(entry_d)
-    return entries
+
+    return sorted(entries, key=operator.itemgetter('title'))
 
 
 class JinjaView(object):
 
     def time(self, entry):
         return entry2startend(entry)
+
+    def speaker_name(self, speaker):
+        try:
+            return speaker.speaker.name
+        except AttributeError:
+            return u''
+
+    def speaker_profile_url(self, speaker):
+        try:
+            return speaker.speaker.profile
+        except AttributeError:
+            return u''
+
+    def speaker_image_url(self, speaker):
+        try:
+            return speaker.speaker.image
+        except AttributeError:
+            return u''
 
     def markdown(self, text, level_offset=3):
         html = markdown2.markdown(unicode(text))
