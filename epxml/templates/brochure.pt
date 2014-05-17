@@ -20,6 +20,7 @@
                           <div class="category category-{{ view.lower(entry.category) }}">{{ entry.category }}</div>
                           <div class="room">{{ entry.room }}</div>
                           <div class="time">{{ view.time(entry) }}</div>
+                          <div class="time">{{ view.time_duration(entry) }}</div>
                           <div class="topics"> 
                                 {% for topic in  entry.topics %} 
                                     <span class="topic topic-{{ view.lower(topic.topic)}}">{{ topic.topic }}</span>

@@ -18,6 +18,20 @@ def entry2startend(entry):
     end = start + timedelta(minutes=duration)
     return '{:02d}:{:02d} - {:02d}:{:02d}h'.format(start.hour, start.minute, end.hour, end.minute)
 
+def entry2startduration(entry):
+    hours_start = int(entry.start / 100 )
+    minutes_start = int(entry.start % 100)
+    duration = int(entry.duration)
+    start = datetime(2000, 1, 1, hours_start, minutes_start)
+    if duration <= 60:
+        duration_s = u'{} min'.format(duration)
+    else:
+        hours = duration / 60
+        minutes = duration % 60
+        duration_s = u'{}h'.format(hours)
+        if minutes != 0:
+            duration_s += u'{}min'.format(minutes)
+    return '{:02d}:{:02d}  ({})'.format(start.hour, start.minute, duration_s)
 
 def get_entries(xml_in, xpath_filter):
     """ Parse 'accepted.xml' file/string and return
@@ -46,6 +60,9 @@ class JinjaView(object):
 
     def time(self, entry):
         return entry2startend(entry)
+
+    def time_duration(self, entry):
+        return entry2startduration(entry)
 
     def lower(self, s):
         return unicode(s).lower()
