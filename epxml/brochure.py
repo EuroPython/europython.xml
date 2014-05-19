@@ -30,11 +30,12 @@ def conv(xml_in=None, html_out='brochure.html', first_page_number=1, pdf_convert
         raise ValueError('No XML input file specified (-i|--xml-in)')
 
     entries = list()
-    for day in range(22, 25):
+    for day in range(21, 25):
         date_str = '2014-07-{}'.format(day)
         entries_d = util.get_entries(xml_in, '//day[@date="{}"]/entry'.format(date_str))
         entries_d = [e for e in entries_d if e.category not in ['LUNCH']]
         entries.append(dict(entries=entries_d,
+                            date_text=datetime.strptime(date_str, '%Y-%m-%d').strftime('%A'),
                             date_str=date_str))
 
     template = env.get_template('brochure.pt')

@@ -11,7 +11,10 @@
         <div class="schedule">
           {% for d in day_entries %}
             <div class="schedule-day">
-                <div class="schedule-heading">{{ d.date_str }}</div>
+                <div class="schedule-heading">
+                    <span class="date-iso">{{ d.date_str }}</span>
+                    <span class="date-text">{{ d.date_text }}</span>
+                </div>
                 {% for entry in d.entries %}
                 <div class="entry">
                       <div class="heading">
