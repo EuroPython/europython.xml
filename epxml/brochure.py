@@ -22,9 +22,10 @@ env = Environment(loader=PackageLoader('epxml', 'templates'))
     html_out=('Output HTML file', 'option', 'o'),
     first_page_number=('Start with page number XX', 'option', 'n'),
     pdf_converter=('Generate PDF output using prince or pdfreactor (princexml, remote-princexml, pdfreactor, remote-pdfreactor)', 'option', 'p'),
-    pdf_filename=('Custom PDF output filename', 'option', 'f')
+    pdf_filename=('Custom PDF output filename', 'option', 'f'),
+    template=('Rendering template (default: brochure_talks.pt)', 'option', 't')
     )
-def conv(xml_in=None, html_out='brochure.html', first_page_number=1, pdf_converter=None, pdf_filename=None):
+def conv(xml_in=None, html_out='brochure.html', first_page_number=1, pdf_converter=None, pdf_filename=None, template='brochure_talks.pt'):
 
     if not xml_in:
         raise ValueError('No XML input file specified (-i|--xml-in)')
@@ -38,7 +39,7 @@ def conv(xml_in=None, html_out='brochure.html', first_page_number=1, pdf_convert
                             date_text=datetime.strptime(date_str, '%Y-%m-%d').strftime('%A'),
                             date_str=date_str))
 
-    template = env.get_template('brochure.pt')
+    template = env.get_template(template)
     html = template.render(
             first_page_number=int(first_page_number) - 1,
             day_entries=entries,
