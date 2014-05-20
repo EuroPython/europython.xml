@@ -13,7 +13,7 @@
             <div class="schedule-day">
                 <div class="schedule-heading">
                     <span class="date-iso">{{ d.date_str }}</span>
-                    <span class="date-text">{{ d.date_text }}</span>
+                    <span class="datetext">{{ d.date_text }}</span>
                 </div>
                 {% for entry in d.entries %}
                 <div class="entry">
@@ -36,7 +36,8 @@
                       {% if entry.speakers.getchildren() %}
                           <div class="speakers">
                             {% for speaker in entry.speakers%}  
-                              <div class="speaker">{{ speaker.speaker.name }}</div>
+                              <div class="speaker-name">{{ speaker.speaker.name }}</div>
+                              <div class="speaker-description">{{ speaker.speaker.description }}</div>
                               <!--
                               <div class="text speaker-profile">{{ view.markdown(speaker.speaker.profile) }}</div>
                               -->

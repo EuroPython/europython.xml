@@ -1,14 +1,24 @@
+span {
+    string-set: datetext content();
+}
+
 @page {
     size: a4;
     counter-increment: page
+
     @bottom {
         content: "Page " counter(page);
+    }
+
+    @top-left {
+        content: string(datetext);
     }
 }
 
 @page:first {
     -ro-counter-set: page 1;
 }
+
 
 .schedule-heading {
     font-size: 1.6em;
@@ -18,8 +28,8 @@
 
 .schedule-day {
     page-break-after: always;
-    -ro-column-count: 3;
-    column-count: 3;
+    -ro-column-count: 1;
+    column-count: 1;
     -column-width: 4cm;
     column-width: 4cm;
     font-family: Arial; 
@@ -72,6 +82,10 @@
     hyphenate-after: 2;
     margin-bottom: 0.5em;
 }
-.entry .speaker {
+.entry .speaker-name {
     font-style: italic;
+    font-weight: bold;
+}
+
+.entry .speaker-description {
 }
