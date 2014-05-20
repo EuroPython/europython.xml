@@ -3,6 +3,7 @@
 import os
 import sys
 import plac
+import operator
 import subprocess
 import tempfile
 import pkg_resources
@@ -23,9 +24,16 @@ env = Environment(loader=PackageLoader('epxml', 'templates'))
     first_page_number=('Start with page number XX', 'option', 'n'),
     pdf_converter=('Generate PDF output using prince or pdfreactor (princexml, remote-princexml, pdfreactor, remote-pdfreactor)', 'option', 'p'),
     pdf_filename=('Custom PDF output filename', 'option', 'f'),
-    template=('Rendering template (default: brochure_talks.pt)', 'option', 't')
+    template=('Rendering template (default: brochure_talks.pt)', 'option', 't'),
+    imagedir=('Directory containing speaker images', 'option', 'z')
     )
-def conv(xml_in=None, html_out='brochure.html', first_page_number=1, pdf_converter=None, pdf_filename=None, template='brochure_talks.pt'):
+def conv(xml_in=None, 
+        html_out='brochure.html', 
+        first_page_number=1, 
+        pdf_converter=None, 
+        pdf_filename=None, 
+        imagedir=None,
+        template='brochure_talks.pt'):
 
     if not xml_in:
         raise ValueError('No XML input file specified (-i|--xml-in)')
@@ -39,11 +47,44 @@ def conv(xml_in=None, html_out='brochure.html', first_page_number=1, pdf_convert
                             date_text=datetime.strptime(date_str, '%Y-%m-%d').strftime('%A'),
                             date_str=date_str))
 
+
+    speakers = list()
+    speakers_seen = set()
+    for e in util.get_entries(xml_in, '//day/entry'):
+        for speaker in e.speakers:
+            speaker_name = speaker.speaker.name
+            speaker_description = speaker.speaker.description
+            speaker_image_url = speaker.speaker.image
+            speaker_image_file = ''
+            speaker_image_found = False
+            if imagedir:
+                speaker_image_file = os.path.join(os.path.abspath(imagedir), speaker.speaker.attrib['id'])
+                for ext in ('.png', '.jpg', '.gif'):
+                    if os.path.exists(speaker_image_file + ext):
+                        speaker_image_file += ext
+                        speaker_image_found = True
+                        break
+
+            if not speaker_image_found:
+                print 'No speaker image found for {} ({})'.format(speaker_name.text.encode('utf8'), speaker.speaker.attrib['id'])
+
+            if not speaker_name in speakers_seen:
+                speakers.append(dict(name=speaker_name,
+                                    description=speaker_description,
+                                    image_file=speaker_image_file,
+                                    image_url=speaker_image_url))
+                speakers_seen.add(speaker_name)
+
+    speakers = sorted(speakers, key=operator.itemgetter('name'))
+    print '{} speakers found'.format(len(speakers))
+
     template = env.get_template(template)
     html = template.render(
             first_page_number=int(first_page_number) - 1,
             day_entries=entries,
+            speakers=speakers,
             view=util.JinjaView())
+
     with open(html_out, 'wb') as fp:
         print 'HTML output written to "{}"'.format(html_out)
         fp.write(html.encode('utf8'))

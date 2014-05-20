@@ -89,3 +89,18 @@ span {
 
 .entry .speaker-description {
 }
+
+
+/* Speakers Overview page */
+
+.speakers-overview .speaker {
+    border: 1px solid blue;
+    margin-bottom: 1em;
+}
+
+.speakers-overview .speaker-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid grey;
+}

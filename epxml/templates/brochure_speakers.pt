@@ -1,0 +1,23 @@
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="brochure.css" />
+        <style type="text/css">
+            @page:first {
+                -ro-counter-set: page {{ first_page_number }};
+            }
+        </style>
+    </head>
+    <body>
+        <div class="speakers-overview">
+          {% for s in speakers %}
+              <div class="speaker">
+                <span class="speaker-name">{{ s.name }}</span>
+                <img class="speaker-image" src="{{ s.image_file }}" />
+                <div class="speaker-description">
+                    {{ s.description }}
+                </div>
+              </div>
+          {% endfor %}
+        </div>
+    </body>
+</html>
