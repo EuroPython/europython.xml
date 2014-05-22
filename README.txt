@@ -15,7 +15,7 @@ Templates
 -> epxml/templates/
 
 Styles
--------
+------
 
 -> epxml/templates/resources/
 
