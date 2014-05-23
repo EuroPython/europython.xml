@@ -49,7 +49,6 @@ def conv(xml_in=None,
                             date_text=datetime.strptime(date_str, '%Y-%m-%d').strftime('%A'),
                             date_str=date_str))
 
-
     speakers = list()
     speakers_seen = set()
     for e in util.get_entries(xml_in, '//day/entry'):
