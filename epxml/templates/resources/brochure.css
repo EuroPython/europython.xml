@@ -2,6 +2,12 @@ span {
     string-set: datetext content();
 }
 
+@font-face
+{
+    font-family: TestFont;
+    src: url(mexico.ttf);
+}
+
 @page {
     size: a4;
     counter-increment: page
@@ -39,6 +45,7 @@ span {
 .entry {
     border: 1px solid blue;
     margin-bottom: 1em;
+    font-family: TestFont;
 }    
 
 .entry .heading {

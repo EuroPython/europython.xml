@@ -25,7 +25,8 @@ env = Environment(loader=PackageLoader('epxml', 'templates'))
     pdf_converter=('Generate PDF output using prince or pdfreactor (princexml, remote-princexml, pdfreactor, remote-pdfreactor)', 'option', 'p'),
     pdf_filename=('Custom PDF output filename', 'option', 'f'),
     template=('Rendering template (default: brochure_talks.pt)', 'option', 't'),
-    imagedir=('Directory containing speaker images', 'option', 'z')
+    imagedir=('Directory containing speaker images', 'option', 'z'),
+    fontpath=('Directory containing fonts', 'option', 'y')
     )
 def conv(xml_in=None, 
         html_out='brochure.html', 
@@ -33,6 +34,7 @@ def conv(xml_in=None,
         pdf_converter=None, 
         pdf_filename=None, 
         imagedir=None,
+        fontpath='fonts',
         template='brochure_talks.pt'):
 
     if not xml_in:
@@ -102,6 +104,10 @@ def conv(xml_in=None,
         for dirname, dirnames, filenames in os.walk(resources_dir):
             for fname in filenames:
                 shutil.copy(os.path.join(dirname, fname), tmpd)
+
+        if fontpath and os.path.exists(fontpath):
+            for filename in os.listdir(fontpath):
+                shutil.copy(os.path.join(fontpath, filename), tmpd)
 
         if pdf_converter in ('princexml', 'pdfreactor'):
             # local pdf generation through PrinceXML or PDFreactor
