@@ -43,7 +43,6 @@ span {
 }
 
 .entry {
-    border: 1px solid blue;
     margin-bottom: 1em;
     font-family: TestFont;
 }    

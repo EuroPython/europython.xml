@@ -7,6 +7,10 @@ import plac
 import table
 import util
 
+from jinja2 import Environment, PackageLoader
+
+env = Environment(loader=PackageLoader('epxml', 'templates'))
+
 
 def normalize(s):
     """ Normalize a string in order to be used as CSS class """
@@ -83,8 +87,9 @@ def conv(schedule_xml, # schedule XML string or schedule XML filename
 @plac.annotations(
     xml_in=('Schedule XML file', 'option', 'i'),
     html_out=('Output HTML file', 'option', 'o'),
+    template=('Rendering template', 'option', 't')
     )
-def demo(xml_in, html_out='table.html'):
+def demo(xml_in, html_out='table.html', template='brochure_schedule.pt'):
 
     rooms = [u'C01', u'B05/B06', u'B07/B08', u'B09', u'A08']
 
@@ -93,20 +98,27 @@ def demo(xml_in, html_out='table.html'):
     with open(xml_in, 'rb') as fp:
         schedule_xml = fp.read()
 
-    html = conv(schedule_xml,
-               '2014-07-22',
-               rooms,
-               hour_start=7,
-               hour_end=21,
-               resolution=15,
-               caption=u'2014-07-22',
-               event_renderer=event_renderer
-               )
+    days_html = []
+    for i in range(21, 26):
+        html = conv(schedule_xml,
+                   '2014-07-{}'.format(i),
+                   rooms,
+                   hour_start=9,
+                   hour_end=18,
+                   resolution=15,
+                   caption=u'2014-07-{}'.format(i),
+                   event_renderer=event_renderer
+                   )
+        days_html.append(unicode(html, 'utf8'))
+
+    template = env.get_template(template)
+    html = template.render(
+            days=days_html,
+            view=util.JinjaView())
 
     with open(html_out, 'wb') as fp:
-        fp.write(html)
+        fp.write(html.encode('utf8'))
         print 'HTML output written to {}'.format(html_out)
-
 
 def main():
     plac.call(demo)

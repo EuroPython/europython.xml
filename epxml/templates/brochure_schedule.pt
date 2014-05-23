@@ -1,0 +1,18 @@
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="brochure.css" />
+        <link rel="stylesheet" type="text/css" href="brochure_schedule.css" />
+        <style type="text/css">
+            @page:first {
+                -ro-counter-set: page {{ first_page_number }};
+            }
+        </style>
+    </head>
+    <body>
+        <div class="schedule-matrix">
+          {% for day in days %}
+              <div class="day">{{ day }}</div>
+          {% endfor %}
+        </div>
+    </body>
+</html>
