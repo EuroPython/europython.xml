@@ -2,6 +2,9 @@
 
 import os
 import sys
+import tempfile
+import shutil
+import subprocess
 
 import plac
 import table
@@ -87,9 +90,11 @@ def conv(schedule_xml, # schedule XML string or schedule XML filename
 @plac.annotations(
     xml_in=('Schedule XML file', 'option', 'i'),
     html_out=('Output HTML file', 'option', 'o'),
-    template=('Rendering template', 'option', 't')
+    template=('Rendering template', 'option', 't'),
+    pdf_filename=('Custom PDF output filename', 'option', 'f'),
+    fontpath=('Directory containing fonts', 'option', 'y')
     )
-def demo(xml_in, html_out='table.html', template='brochure_schedule.pt'):
+def demo(xml_in, html_out='table.html', template='brochure_schedule.pt', fontpath=None, pdf_filename=None):
 
     rooms = [u'C01', u'B05/B06', u'B07/B08', u'B09', u'A08']
 
@@ -119,6 +124,37 @@ def demo(xml_in, html_out='table.html', template='brochure_schedule.pt'):
     with open(html_out, 'wb') as fp:
         fp.write(html.encode('utf8'))
         print 'HTML output written to {}'.format(html_out)
+
+    # write HTML file to a dedicated scratch directory
+    tmpd = tempfile.mkdtemp()
+    html_filename  = os.path.join(tmpd, 'index.html')
+    with open(html_filename, 'wb') as fp:
+        fp.write(html.encode('utf-8'))
+
+    # copy over conversion resources
+    resources_dir = os.path.join(os.path.dirname(__file__), 'templates', 'resources')
+    for dirname, dirnames, filenames in os.walk(resources_dir):
+        for fname in filenames:
+            shutil.copy(os.path.join(dirname, fname), tmpd)
+
+    if fontpath and os.path.exists(fontpath):
+        for filename in os.listdir(fontpath):
+            shutil.copy(os.path.join(fontpath, filename), tmpd)
+
+    if pdf_filename:
+        out_pdf = pdf_filename
+    else:
+        out_pdf = '{}.pdf'.format(os.path.splitext(html_filename)[0])
+    cmd = 'pdfreactor "{}" "{}"'.format(html_filename, out_pdf)
+    print 'Running: {}'.format(cmd)
+    proc = subprocess.Popen(cmd, shell=True)
+    status = proc.wait()
+    print 'Exit code: {}'.format(status)
+    if status != 0:
+        raise RuntimeError('PDF generation failed')
+    print 'PDF written to "{}"'.format(out_pdf)
+    return out_pdf
+
 
 def main():
     plac.call(demo)

@@ -27,19 +27,12 @@ span {
 
 
 .schedule-heading {
-    font-size: 1.6em;
     font-weight: bold;
-    column-span: 2;
 }
 
 .schedule-day {
     page-break-after: always;
-    -ro-column-count: 1;
-    column-count: 1;
-    -column-width: 4cm;
-    column-width: 4cm;
     font-family: Arial; 
-    font-size: 10px;
 }
 
 .entry {
@@ -62,15 +55,12 @@ span {
 }
 
 .entry .text h1 {
-    font-size: 1em;
 }
 
 .entry .text h2 {
-    font-size: 0.9em;
 }
 
 .entry .text h3 {
-    font-size: 0.8em;
 }
 
 .audience {
@@ -78,7 +68,6 @@ span {
 }
 
 .title {
-    font-size: 1.2em;
     font-weight: bold;
 }
 .text {  
