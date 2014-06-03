@@ -71,13 +71,14 @@ def conv(xml_in=None,
 
             if not speaker_name in speakers_seen:
                 speakers.append(dict(name=speaker_name,
+                                    name_lower=unicode(speaker_name).lower(),
                                     description=speaker_description,
                                     image_file=speaker_image_file,
                                     has_image=speaker_image_found,
                                     image_url=speaker_image_url))
                 speakers_seen.add(speaker_name)
 
-    speakers = sorted(speakers, key=operator.itemgetter('name'))
+    speakers = sorted(speakers, key=operator.itemgetter('name_lower'))
     print '{} speakers found'.format(len(speakers))
 
     template = env.get_template(template)
