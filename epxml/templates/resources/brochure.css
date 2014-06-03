@@ -1,5 +1,5 @@
-span {
-    string-set: datetext content();
+span.datetext {
+    string-set: datetext self;
 }
 
 @font-face
@@ -16,13 +16,34 @@ span {
         content: "Page " counter(page);
     }
 
-    @top-left {
-        content: string(datetext);
+    @top-center{
     }
 }
 
 @page:first {
     -ro-counter-set: page 1;
+}
+
+@page:left {
+    @left-middle {
+        content: string(datetext);
+        color: green;
+        font-weight: bold;
+        font-family: Arial;
+        font-size: 30px;
+        -ro-transform: rotate(-90deg) ;
+    }    
+}
+
+@page:right {
+    @right-middle {
+        content: string(datetext);
+        color: green;
+        font-weight: bold;
+        font-family: Arial;
+        font-size: 30px;
+        -ro-transform: rotate(90deg) ;
+    }    
 }
 
 
