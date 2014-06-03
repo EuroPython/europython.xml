@@ -73,6 +73,7 @@ def conv(xml_in=None,
                 speakers.append(dict(name=speaker_name,
                                     description=speaker_description,
                                     image_file=speaker_image_file,
+                                    has_image=speaker_image_found,
                                     image_url=speaker_image_url))
                 speakers_seen.add(speaker_name)
 

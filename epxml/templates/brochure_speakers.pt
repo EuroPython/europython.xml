@@ -10,13 +10,15 @@
     <body>
         <div class="speakers-overview">
           {% for s in speakers %}
-              <div class="speaker">
+              <p class="speaker">
+                {% if s.has_image %}
+                    <img class="speaker-image" src="{{ s.image_file }}" />
+                {% endif %}
                 <span class="speaker-name">{{ s.name }}</span>
-                <img class="speaker-image" src="{{ s.image_file }}" />
-                <div class="speaker-description">
+                <span class="speaker-description">
                     {{ s.description }}
-                </div>
-              </div>
+                </span>
+              </p>
           {% endfor %}
         </div>
     </body>

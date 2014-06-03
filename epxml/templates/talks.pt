@@ -6,17 +6,19 @@
             <h3 class="title">{{ entry.title }}</h3>
             <div class="speakers">
               {% for speaker in entry.speakers %}  
-              <h4 class="speaker">
-                  <a href="{{ view.speaker_profile_url(speaker) }}">
-                      {{ view.speaker_name(speaker) }}
-                  </a>
+              <div class="speaker">
+                  <h4>
+                      <a href="{{ view.speaker_profile_url(speaker) }}">
+                          {{ view.speaker_name(speaker) }}
+                      </a>
+                  </h4>
                   {% if view.speaker_image_url(speaker) %}
                       <a href="{{ view.speaker_profile_url(speaker) }}">
-                        <img src="{{ view.speaker_image_url(speaker) }}" style="max-width: 200px">
+                        <img src="{{ view.speaker_image_url(speaker) }}" style="max-width: 125px">
                       </a>
                   {% endif %}
 
-              </h4>
+              </div>
               {% endfor %}
             </div>
             <div class="category category-{{ view.lower(entry.category) }}">{{ entry.category}}</div>
