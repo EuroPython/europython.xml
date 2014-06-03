@@ -1,3 +1,14 @@
+Installation
+------------
+
+> git clone https://github.com/EuroPython/europython.xml.git
+> cd europython.xml
+> virtualenv-2.7 .
+> bin/python setup.py develop
+
+
+
+
 Generate brochure (talks)
 -------------------------
 
@@ -21,4 +32,14 @@ Styles
 
 ! Free fonts can be stored within the epxml/templates/resources directory and pushed to Github.
 ! Non-free fonts must kept separated and configured using the '-y' or '--fontpath' option.
+
+
+Remote conversion
+-----------------
+If ``PDFreactor`` is not installed locally then use ``-p remote-pdfreactor`` instead of ``-p pdfreactor``.
+In this case you need to set the following environment variables::
+
+    export PP_SERVER_URL=<ask info@zopyx.com>
+    export PP_AUTHORIZATION_TOKEN=<ask info@zopyx.com>
+
 
