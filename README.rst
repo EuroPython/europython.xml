@@ -1,12 +1,9 @@
-Installation
-------------
+Installation::
 
-> git clone https://github.com/EuroPython/europython.xml.git
-> cd europython.xml
-> virtualenv-2.7 .
-> bin/python setup.py develop
-
-
+    > git clone https://github.com/EuroPython/europython.xml.git
+    > cd europython.xml
+    > virtualenv-2.7 .
+    > bin/python setup.py develop
 
 
 Generate brochure (talks)

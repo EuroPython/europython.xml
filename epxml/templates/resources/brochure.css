@@ -37,7 +37,7 @@ span {
 
 .entry {
     margin-bottom: 1em;
-    font-family: TestFont;
+    /*font-family: TestFont;*/
 }    
 
 .entry .heading {
