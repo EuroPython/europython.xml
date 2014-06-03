@@ -1,6 +1,7 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" type="text/css" href="brochure.css" />
+        <link rel="stylesheet" type="text/css" href="brochure_speakers.css" />
         <style type="text/css">
             @page:first {
                 -ro-counter-set: page {{ first_page_number }};
@@ -9,6 +10,7 @@
     </head>
     <body>
         <div class="speakers-overview">
+          <h1 id="headline">Speakers</h1>  
           {% for s in speakers %}
               <p class="speaker">
                 {% if s.has_image %}
