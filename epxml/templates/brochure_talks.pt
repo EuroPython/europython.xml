@@ -8,6 +8,15 @@
         </style>
     </head>
     <body>
+
+        {% if emptypage %}
+            <div class="empty-page">
+                Empty
+                <br/>
+                page
+            </div>
+        {% endif %}
+
         <div class="schedule">
           {% for d in day_entries %}
             <div class="schedule-day">

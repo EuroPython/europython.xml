@@ -46,6 +46,13 @@ span.datetext {
     }    
 }
 
+.empty-page {
+    page-break-after: always;
+    text-align: center;
+    font-size: 50px;
+    color: #ddd;
+}
+
 
 .schedule-heading {
     font-weight: bold;

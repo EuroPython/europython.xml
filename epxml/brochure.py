@@ -27,7 +27,8 @@ env = Environment(loader=PackageLoader('epxml', 'templates'))
     pdf_filename=('Custom PDF output filename', 'option', 'f'),
     template=('Rendering template (default: brochure_talks.pt)', 'option', 't'),
     imagedir=('Directory containing speaker images', 'option', 'z'),
-    fontpath=('Directory containing fonts', 'option', 'y')
+    fontpath=('Directory containing fonts', 'option', 'y'),
+    emptypage=('Insert empty first page', 'flag', 'e')
     )
 def conv(xml_in=None, 
         html_out='brochure.html', 
@@ -35,6 +36,7 @@ def conv(xml_in=None,
         pdf_converter=None, 
         pdf_filename=None, 
         imagedir=None,
+        emptypage=False,
         fontpath='fonts',
         template='brochure_talks.pt'):
 
@@ -98,6 +100,7 @@ def conv(xml_in=None,
             first_page_number=int(first_page_number) - 1,
             day_entries=entries,
             speakers=speakers,
+            emptypage=emptypage,
             view=util.JinjaView())
 
     with open(html_out, 'wb') as fp:

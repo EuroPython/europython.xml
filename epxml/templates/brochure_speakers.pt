@@ -9,6 +9,15 @@
         </style>
     </head>
     <body>
+
+        {% if emptypage %}
+            <div class="empty-page">
+                Empty
+                <br/>
+                page
+            </div>
+        {% endif %}
+
         <div class="speakers-overview">
           <h1 id="headline">Speakers</h1>  
           {% for s in speakers %}
