@@ -31,10 +31,10 @@
 }
 
 .speakers-overview .speaker-image {
-    width: 100px;
-    height: 100px;
+    width: 1.75cm;
+    height: 1.75cm;
     border-radius: 50%;
-    border: solid 5px grey;
+/*    border: solid 5px grey;*/
     margin-right: 1em;
     float: left;
 }
