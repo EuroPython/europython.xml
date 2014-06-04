@@ -11,6 +11,7 @@ requires = [
     'lxml',
     'pp.client-python',
     'loremipsum',
+    'Pillow',
     'plac',
 ]
 
