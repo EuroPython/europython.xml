@@ -9,7 +9,7 @@ span.datetext {
 }
 
 @page {
-    size: a4;
+    size: a5;
     counter-increment: page
 
     @bottom-center {

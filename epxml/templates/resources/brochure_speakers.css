@@ -7,9 +7,11 @@
 }
 
 .speakers-overview {
+    /*
     -ro-column-count: 2; 
     -ro-column-fill: balance;
     -ro-column-gap: 1in;
+    */
     text-align: justify;
     font-size: 10px;
     hyphens: auto;
