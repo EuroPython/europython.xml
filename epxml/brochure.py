@@ -52,7 +52,7 @@ def conv(xml_in=None,
     speakers = list()
     speakers_seen = set()
     for e in util.get_entries(xml_in, '//day/entry'):
-        for speaker in e.speakers:
+        for speaker in e.speakers or []:
             speaker_name = speaker.speaker.name
             speaker_description = speaker.speaker.description
             speaker_image_url = speaker.speaker.image
