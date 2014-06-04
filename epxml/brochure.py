@@ -2,6 +2,7 @@
 
 import os
 import sys
+import PIL.Image
 import plac
 import operator
 import subprocess
@@ -39,6 +40,17 @@ def conv(xml_in=None,
 
     if not xml_in:
         raise ValueError('No XML input file specified (-i|--xml-in)')
+
+    if imagedir:
+        for name in os.listdir(imagedir):
+            filename  = os.path.join(imagedir, name)
+            img = PIL.Image.open(filename)
+            target_size = min(img.size)
+            if img.size != (target_size, target_size):
+                print 'Cropping {}'.format(filename)
+                img2 = img.crop((0, 0, target_size, target_size))
+                img2.save(filename)
+
 
     entries = list()
     for day in range(21, 25):
