@@ -37,8 +37,8 @@
                           <div class="speakers">
                             {% for speaker in entry.speakers%}  
                               <div class="speaker-name">{{ speaker.speaker.name }}</div>
-                              <div class="speaker-description">{{ speaker.speaker.description }}</div>
                               <!--
+                              <div class="speaker-description">{{ speaker.speaker.description }}</div>
                               <div class="text speaker-profile">{{ view.markdown(speaker.speaker.profile) }}</div>
                               -->
                             {% endfor %}

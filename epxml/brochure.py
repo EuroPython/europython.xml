@@ -53,7 +53,7 @@ def conv(xml_in=None,
 
 
     entries = list()
-    for day in range(21, 25):
+    for day in range(21, 28):
         date_str = '2014-07-{}'.format(day)
         entries_d = util.get_entries(xml_in, '//day[@date="{}"]/entry'.format(date_str))
         entries_d = [e for e in entries_d if e.category not in ['LUNCH']]

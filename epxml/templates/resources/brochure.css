@@ -52,12 +52,13 @@ span.datetext {
 }
 
 .schedule-day {
-    page-break-after: always;
+/*    page-break-after: always; */
     font-family: Arial; 
 }
 
 .entry {
     margin-bottom: 1em;
+    font-size: 10px;
     /*font-family: TestFont;*/
 }    
 
