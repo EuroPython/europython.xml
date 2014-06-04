@@ -1,6 +1,7 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" type="text/css" href="brochure.css" />
+        <link rel="stylesheet" type="text/css" href="brochure_talks.css" />
         <style type="text/css">
             @page:first {
                 -ro-counter-set: page {{ first_page_number }};
