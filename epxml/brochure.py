@@ -135,7 +135,7 @@ def conv(xml_in=None,
             if pdf_converter == 'princexml':
                 cmd = 'prince -v "{}" -o "{}"'.format(html_filename, out_pdf)
             elif pdf_converter == 'pdfreactor':
-                cmd = 'pdfreactor "{}" "{}"'.format(html_filename, out_pdf)
+                cmd = 'pdfreactor --disablefontembedding "{}" "{}"'.format(html_filename, out_pdf)
             print 'Running: {}'.format(cmd)
             proc = subprocess.Popen(cmd, shell=True)
             status = proc.wait()
