@@ -45,6 +45,10 @@ def get_entries(xml_in, xpath_filter):
         with open(xml_in, 'rb') as fp:
             xml = fp.read()
 
+    # lame transliteration with one speaker name causing
+    # font embedding problems during PDF generation
+    xml = xml.replace('&#263;', 'c')
+
     root = fromstring(xml)
     entries = list()
     for num, entry in enumerate(root.xpath(xpath_filter)):
