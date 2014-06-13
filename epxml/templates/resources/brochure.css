@@ -54,13 +54,13 @@ span.datetext {
 }
 
 
-a {
-        float: footnote
+
+/* Footnotes */
+.link-text a {
+    float: footnote
 }
 
-a { counter-increment: footnote }
-
-.chapter { counter-reset: footnote }
+.link-text a { counter-increment: footnote }
 
 .a::footnote-call {
     content: counter(footnote);
