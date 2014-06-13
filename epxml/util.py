@@ -1,3 +1,4 @@
+import re
 import csv
 import operator
 from datetime import datetime
@@ -97,5 +98,19 @@ class JinjaView(object):
                 h_name = node.tag
                 h_level = int(h_name[1:])
                 node.tag = 'h{}'.format(h_level + level_offset)
+
+        # change anchor markup
+        for node in root.xpath('//a'):
+            href = node.attrib['href']
+            node.tag = 'span'
+            del node.attrib['href']
+            node.attrib['class'] = 'link-text'
+            new_link = Element('a')
+            new_link.text = href
+            new_link.attrib['href'] = href
+            node.insert(0, new_link)
+
+
+
 
         return lxml.html.tostring(root, encoding=unicode)

@@ -53,3 +53,18 @@ span.datetext {
     color: #ddd;
 }
 
+
+a {
+        float: footnote
+}
+
+a { counter-increment: footnote }
+
+.chapter { counter-reset: footnote }
+
+.a::footnote-call {
+    content: counter(footnote);
+    font-size: 83%;
+    vertical-align: super;
+    line-height: none
+}
