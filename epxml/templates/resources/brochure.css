@@ -2,14 +2,13 @@ span.datetext {
     string-set: datetext self;
 }
 
-@font-face
-{
-    font-family: TestFont;
-    src: url(mexico.ttf);
+@font-face {
+  font-family: MarkCompPro;
+  src: url(MarkCompPro.ttf);
 }
 
 @page {
-    size: a5;
+    size: 135mm 228mm;
     counter-increment: page
 
     @bottom-center {
@@ -27,9 +26,10 @@ span.datetext {
 @page:left {
     @left-middle {
         content: string(datetext);
-        color: green;
-        font-weight: bold;
+        color:white;
+        background: cmyk(0%,68%,72%,0%);
         font-family: Arial;
+        text-transform:capitalize;
         font-size: 30px;
         -ro-transform: rotate(-90deg) ;
     }    
@@ -38,14 +38,31 @@ span.datetext {
 @page:right {
     @right-middle {
         content: string(datetext);
-        color: green;
-        font-weight: bold;
+        color:white;
+        background: cmyk(0%,68%,72%,0%);
         font-family: Arial;
+        text-transform:capitalize;
         font-size: 30px;
         -ro-transform: rotate(90deg) ;
     }    
 }
 
+@page:right {
+    background:url('ornament-rechts.png')-2% 10% no-repeat;
+    background-size:123mm 234mm;
+}
+@page:left {
+    background:url('ornament-link.png') -2% 10% no-repeat;
+    background-size:123mm 234mm;
+}
+    .schedule 
+        {padding:17mm 16mm 20mm 12mm;}
+
+      .schedule {padding:17mm 12mm 20mm 16mm;}
+body {
+  font-family: 'MarkCompPro', sans-serif;
+    font-weight: normal;
+}
 .empty-page {
     page-break-after: always;
     text-align: center;
