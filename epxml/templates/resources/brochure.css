@@ -70,3 +70,18 @@ body {
     color: #ddd;
 }
 
+
+
+/* Footnotes */
+.link-text a {
+    float: footnote
+}
+
+.link-text a { counter-increment: footnote }
+
+.a::footnote-call {
+    content: counter(footnote);
+    font-size: 83%;
+    vertical-align: super;
+    line-height: none
+}
