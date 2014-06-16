@@ -29,7 +29,7 @@
                 <div class="entry">
                       <div class="heading">
                           <div class="title">{{ entry.title }}</div>
-                          <div class="audience">{{ entry.audience }}</div>
+                          <div class="audience audience-{{view.lower(entry.audience) }}">{{ entry.audience }}</div>
                           <div class="category category-{{ view.lower(entry.category) }}">{{ entry.category }}</div>
                           <div class="room">{{ entry.room }}</div>
                           <div class="time">{{ view.time(entry) }}</div>
