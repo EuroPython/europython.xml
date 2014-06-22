@@ -107,7 +107,7 @@ def conv(xml_in=None,
         print 'HTML output written to "{}"'.format(html_out)
         fp.write(html.encode('utf8'))
 
-    if pdf_converter in ('princexml', 'pdfreactor', 'remote-princexml', 'remote-pdfreactor'):
+    if pdf_converter in ('princexml', 'pdfreactor', 'pdfreactor7', 'remote-princexml', 'remote-pdfreactor'):
 
         # write HTML file to a dedicated scratch directory
         tmpd = tempfile.mkdtemp()
@@ -125,7 +125,7 @@ def conv(xml_in=None,
             for filename in os.listdir(fontpath):
                 shutil.copy(os.path.join(fontpath, filename), tmpd)
 
-        if pdf_converter in ('princexml', 'pdfreactor'):
+        if pdf_converter in ('princexml', 'pdfreactor', 'pdfreactor7'):
             # local pdf generation through PrinceXML or PDFreactor
 
             if pdf_filename:
@@ -136,6 +136,8 @@ def conv(xml_in=None,
                 cmd = 'prince -v "{}" -o "{}"'.format(html_filename, out_pdf)
             elif pdf_converter == 'pdfreactor':
                 cmd = 'pdfreactor --disablefontembedding "{}" "{}"'.format(html_filename, out_pdf)
+            elif pdf_converter == 'pdfreactor7':
+                cmd = 'pdfreactor7 --disablefontembedding "{}" "{}"'.format(html_filename, out_pdf)
             print 'Running: {}'.format(cmd)
             proc = subprocess.Popen(cmd, shell=True)
             status = proc.wait()
