@@ -137,7 +137,7 @@ def conv(xml_in=None,
             elif pdf_converter == 'pdfreactor':
                 cmd = 'pdfreactor --disablefontembedding "{}" "{}"'.format(html_filename, out_pdf)
             elif pdf_converter == 'pdfreactor7':
-                cmd = 'pdfreactor7 --disablefontembedding "{}" "{}"'.format(html_filename, out_pdf)
+                cmd = '/opt/PDFreactor/bin/pdfreactor --disablefontembedding "{}" "{}"'.format(html_filename, out_pdf)
             print 'Running: {}'.format(cmd)
             proc = subprocess.Popen(cmd, shell=True)
             status = proc.wait()
