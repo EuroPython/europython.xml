@@ -25,24 +25,28 @@
                     <span class="date-iso">{{ d.date_str }}</span>
                     <span class="datetext">{{ d.date_text }}</span>
                 </div>
+                <div class="clearfix"></div>
                 {% for entry in d.entries %}
                 <div class="entry">
                       <div class="heading">
-                          <div class="title">{{ entry.title }}</div>
-                          <div class="audience">{{ entry.audience }}</div>
+                          <div class="col-button">
                           <div class="category category-{{ view.lower(entry.category) }}">{{ entry.category }}</div>
-                          <div class="room">{{ entry.room }}</div>
-                          <div class="time">{{ view.time(entry) }}</div>
-                          <div class="time">{{ view.time_duration(entry) }}</div>
                           <div class="topics"> 
                                 {% for topic in  entry.topics %} 
                                     <span class="topic topic-{{ view.lower(topic.topic)}}">{{ topic.topic }}</span>
                                 {% endfor %}
                           </div>
-                      </div>
-                      <div class="text entry-text">
-                          {{ view.markdown(entry.description) }}
-                      </div>    
+                          <div class="audience">{{ entry.audience }}</div>
+                          </div>
+                          <div class="clearfix"></div>
+                          <div class="col-left">
+                          <!--div class="time">{{ view.time(entry) }}</div-->
+                          <div class="time">{{ view.time_duration(entry) }}</div>
+                          <div class="room">{{ entry.room }}</div>
+                          </div>
+                          <div class="col-right">
+                          <div class="h1">
+                          <h1 class="title">{{ entry.title }}</h1>
                       {% if entry.speakers.getchildren() %}
                           <div class="speakers">
                             {% for speaker in entry.speakers%}  
@@ -54,6 +58,13 @@
                             {% endfor %}
                           </div>
                       {% endif %}
+                          </div>
+                          </div>
+                          <div class="clearfix"></div>
+                      </div>
+                      <div class="text entry-text">
+                         <p> {{ view.markdown(entry.description) }}</p>
+                      </div>    
                   </div>
                 {% endfor %}
             </div>
