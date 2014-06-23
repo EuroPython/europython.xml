@@ -1,19 +1,141 @@
-
-.schedule-heading {
-    font-weight: bold;
+@font-face {
+  font-family: DejaWeb;
+  src: url(DejaWeb.ttf);
+  font-weight: normal;
+  font-style:  normal;
+}
+@font-face {
+  font-family: DejaWeb-Bold;
+  src: url(DejaWeb-Bold.ttf);
+  font-weight: bold;
+  font-style:  normal;
+}
+@font-face {
+  font-family: DejaWeb-Italic;
+  src: url(DejaWeb-Italic.ttf);
+  font-weight: normal;
+  font-style:  italic;
+}
+@font-face {
+  font-family: DejaWeb-BoldItalic;
+  src: url(DejaWeb-BoldItalic.ttf);
+  font-weight: bold;
+  font-style:  italic;
+}
+@font-face {
+  font-family: MarkScCompProLight;
+  src: url(MarkScCompProLight.ttf);
+  font-weight: normal;
+  font-style:  normal;
+}
+@font-face {
+  font-family: MarkCompPro;
+  src: url(MarkCompPro.ttf);
+  font-weight: normal;
+  font-style:  normal;
 }
 
+@font-face {
+  font-family: MarkCompProLight;
+  src: url(MarkCompProLight.ttf);
+  font-style:  normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: MarkCompProMedium;
+  src: url(MarkCompProMedium.ttf);
+  font-weight: 400;
+  font-style:  normal;
+}
+@font-face {
+  font-family: MarkCompProBold;
+  src: url(MarkCompProBold.ttf);
+  font-weight: bold;
+  font-style:  normal;
+}
+@font-face {
+  font-family: MarkCompPro;
+  src: url(MarkCompPro.ttf);
+  font-weight: normal;
+  font-style:  normal;
+}
+.clearfix:before,
+.clearfix:after  {
+  display: table;
+  content: " ";
+}
+.clearfix:after {
+    clear:both;
+}
+.speaker-name,
+.title, 
+.room {color: cmyk(98%,25%,32%,0);
+}
+.time {color: cmyk(0%,68%,72%,0);
+}
+.category {
+background: cmyk(18%,0%,80%,0%);
+color: cmyk(98%,25%,32%,0%);
+    border-radius:3mm;
+    font-family:MarkCompProBold;
+    font-size:9pt;
+    padding-left:1mm;
+    padding-right:1mm;
+}
+.topics,
+.audience {
+    font-size:9pt;
+    background: cmyk(0%,68%,72%,0);
+    color:white;
+    border-radius:3mm;
+    font-family:MarkCompProBold;
+    padding-left:1mm;
+    padding-right:1mm;
+}
 .schedule-day {
 /*    page-break-after: always; */
-    font-family: Arial; 
 }
-
-.entry {
-    margin-bottom: 1em;
-    font-size: 10px;
-    /*font-family: TestFont;*/
-}    
-
+.col-button {
+    display:block;
+    margin-bottom:0;
+    }
+.col-left {
+    display:block;
+    float:left;
+    width:30mm;
+    margin-left:0;
+    margin-top:0;
+}
+.col-right {
+    display:block;
+    width:64mm;
+    margin-left: 32mm;
+    margin-top:0;
+}
+.category {
+    float:left;
+    width:27mm;
+    margin-left:0;
+}
+.topics {
+    width:40mm;
+    margin-bottom:0;
+    margin-left:32mm;
+}
+.audience {
+    width:24mm;
+    margin-left: 32mm;
+    margin-bottom:0;
+    }
+h1.title {
+font-size:12pt;
+margin-top:-1mm !important;
+font-family:"MarkCompProLight", Arial sans serif;
+}
+.speaker-name {
+    font-size:9pt;
+    font-family:"MarkCompProLight", Arial sans serif;
+ }
 .entry .heading {
     page-break-inside: never;
     column-break-before: auto;
@@ -28,28 +150,17 @@
     margin: 0;
 }
 
-.entry .text h1 {
-}
-
-.entry .text h2 {
-}
-
-.entry .text h3 {
-}
-
-.audience {
-    color: blue;
-}
-
-.title {
-    font-weight: bold;
-}
 .text {  
     text-align: justify;
     hyphens: auto;
     hyphenate-before: 2;
     hyphenate-after: 2;
     margin-bottom: 0.5em;
+    font-family: DejaWeb;
+    font-size:9pt;
+}
+div.text > p:nth-child(2n+0) {
+    text-indent:20mm;
 }
 .entry .speaker-name {
     font-style: italic;
