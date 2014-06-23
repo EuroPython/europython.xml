@@ -48,17 +48,17 @@ span.datetext {
 }
 
 @page:right {
-    background:url('ornament-rechts.png')-2% 10% no-repeat;
-    background-size:123mm 234mm;
+    margin:0;
+    background:url('ornament_rechts.png')0 0 no-repeat;
+    background-size:135mm 228mm;
+    padding:17mm 22mm 22mm 16mm !important;
 }
 @page:left {
-    background:url('ornament-link.png') -2% 10% no-repeat;
-    background-size:123mm 234mm;
+    margin:0;
+    background:url('ornament_link.png') 0 0 no-repeat;
+    background-size:135mm 228mm;
+    padding:17mm 16mm 22mm 22mm;
 }
-    .schedule 
-        {padding:17mm 16mm 20mm 12mm;}
-
-      .schedule {padding:17mm 12mm 20mm 16mm;}
 body {
   font-family: 'MarkCompPro', sans-serif;
     font-weight: normal;
@@ -69,8 +69,6 @@ body {
     font-size: 50px;
     color: #ddd;
 }
-
-
 
 /* Footnotes */
 .link-text a {
