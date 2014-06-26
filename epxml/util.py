@@ -48,7 +48,7 @@ def get_entries(xml_in, xpath_filter):
 
     # lame transliteration with one speaker name causing
     # font embedding problems during PDF generation
-    xml = xml.replace('&#263;', 'c')
+#    xml = xml.replace('&#263;', 'c')
 
     root = fromstring(xml)
     entries = list()
