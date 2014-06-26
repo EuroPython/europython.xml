@@ -98,6 +98,7 @@ def conv(xml_in=None,
     template = env.get_template(template)
     html = template.render(
             first_page_number=int(first_page_number) - 1,
+            second_page_number=int(first_page_number) +3,
             day_entries=entries,
             speakers=speakers,
             emptypage=emptypage,
@@ -170,7 +171,6 @@ def conv(xml_in=None,
 
 def main():
     plac.call(conv)
-
 
 if __name__ == '__main__':
     main()

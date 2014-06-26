@@ -57,14 +57,12 @@ def conv(schedule_xml, # schedule XML string or schedule XML filename
     for hour in range(hour_start, hour_end + 1):
         for minute in range(0, 60, resolution):
             row_headers.append('{:02}:{:02}h'.format(hour, minute))
-    tb= table.Table(60/resolution * (hour_end - hour_start) , len(rooms))
+    tb = table.Table(60/resolution * (hour_end - hour_start) , len(rooms))
     tb.caption = caption
     tb.col_headers = rooms
     tb.row_headers = row_headers
 
     for e in entries:
-        import pprint
-        pprint.pprint(e.__dict__)
         # determine starting row of event
         e_start = e.start.text      # format '0700'
         s_hour = int(e_start[:2])
@@ -95,12 +93,13 @@ def conv(schedule_xml, # schedule XML string or schedule XML filename
     xml_in=('Schedule XML file', 'option', 'i'),
     html_out=('Output HTML file', 'option', 'o'),
     template=('Rendering template', 'option', 't'),
+    first_page_number=('Start with page number XX', 'option', 'n'),
     pdf_filename=('Custom PDF output filename', 'option', 'f'),
     fontpath=('Directory containing fonts', 'option', 'y')
     )
-def demo(xml_in, html_out='table.html', template='brochure_schedule.pt', fontpath=None, pdf_filename=None):
+def render_schedule(xml_in, html_out='table.html', template='brochure_schedule.pt', fontpath=None, pdf_filename=None, first_page_number=1):
 
-    rooms = [u'C01', u'B05/B06', u'B07/B08', u'B09', u'A08']
+    rooms = [u'C01', u'B05/B06', u'B07/B08', u'B09', u'A08', 'A03/A04', 'A05/A06']
 
     if not xml_in:
         raise ValueError('Missing --xml-in|-i parameter')
@@ -113,7 +112,7 @@ def demo(xml_in, html_out='table.html', template='brochure_schedule.pt', fontpat
                    '2014-07-{}'.format(i),
                    rooms,
                    hour_start=9,
-                   hour_end=23,
+                   hour_end=22,
                    resolution=15,
                    caption=u'2014-07-{}'.format(i),
                    event_renderer=event_renderer
@@ -123,6 +122,8 @@ def demo(xml_in, html_out='table.html', template='brochure_schedule.pt', fontpat
     template = env.get_template(template)
     html = template.render(
             days=days_html,
+            first_page_number=first_page_number - 2,
+            second_page_number=first_page_number - 1,
             view=util.JinjaView())
 
     with open(html_out, 'wb') as fp:
@@ -161,7 +162,7 @@ def demo(xml_in, html_out='table.html', template='brochure_schedule.pt', fontpat
 
 
 def main():
-    plac.call(demo)
+    plac.call(render_schedule)
 
 
 if __name__ == '__main__':
