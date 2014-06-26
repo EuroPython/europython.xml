@@ -26,7 +26,10 @@ def event_renderer(event):
         the schedule table.
     """
     result = list()
-    css_outer = u' '.join(['topic-{}'.format(normalize(t.topic.text)) for t in event.topics])
+    try:
+        css_outer = u' '.join(['topic-{}'.format(normalize(t.topic.text)) for t in event.topics])
+    except AttributeError:
+        css_outer = u''
     result.append(u'<div class="entry {}">'.format(css_outer))
     result.append(u'<div class="time">{}</div>'.format(event.attrib['start-end']))
     result.append(u'<div class="title">{}</div>'.format(event.title))
@@ -60,7 +63,8 @@ def conv(schedule_xml, # schedule XML string or schedule XML filename
     tb.row_headers = row_headers
 
     for e in entries:
-
+        import pprint
+        pprint.pprint(e.__dict__)
         # determine starting row of event
         e_start = e.start.text      # format '0700'
         s_hour = int(e_start[:2])
@@ -109,7 +113,7 @@ def demo(xml_in, html_out='table.html', template='brochure_schedule.pt', fontpat
                    '2014-07-{}'.format(i),
                    rooms,
                    hour_start=9,
-                   hour_end=18,
+                   hour_end=23,
                    resolution=15,
                    caption=u'2014-07-{}'.format(i),
                    event_renderer=event_renderer
@@ -145,7 +149,7 @@ def demo(xml_in, html_out='table.html', template='brochure_schedule.pt', fontpat
         out_pdf = pdf_filename
     else:
         out_pdf = '{}.pdf'.format(os.path.splitext(html_filename)[0])
-    cmd = 'pdfreactor "{}" "{}"'.format(html_filename, out_pdf)
+    cmd = '/opt/PDFreactor7/bin/pdfreactor "{}" "{}"'.format(html_filename, out_pdf)
     print 'Running: {}'.format(cmd)
     proc = subprocess.Popen(cmd, shell=True)
     status = proc.wait()

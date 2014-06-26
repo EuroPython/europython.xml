@@ -56,6 +56,7 @@ class Table(object):
 
         # Check if the current cell is not actually in use
         if not isinstance(self.cells[row][col], EmptyCell):
+            import pdb; pdb.set_trace() 
             raise ValueError('Cell [{}][{}] seems to be already in use'.format(row, col))
 
         # insert dummy span cells in case of a rowspan or colspan > 1
