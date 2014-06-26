@@ -41,7 +41,7 @@
                           </div>
                       </div>
                       <div class="text entry-text">
-                          {{ view.markdown(entry.description) }}
+                          {{ view.markdown(entry.abstract ) }}
                       </div>    
                       {% if entry.speakers.getchildren() %}
                           <div class="speakers">
