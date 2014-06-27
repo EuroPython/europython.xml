@@ -56,6 +56,7 @@ class Table(object):
 
         # Check if the current cell is not actually in use
         if not isinstance(self.cells[row][col], EmptyCell):
+            import pdb; pdb.set_trace() 
             raise ValueError('Cell [{}][{}] seems to be already in use'.format(row, col))
 
         # insert dummy span cells in case of a rowspan or colspan > 1
@@ -102,6 +103,8 @@ class Table(object):
                 out.append(u'<th></th>')
             for hd in self.col_headers:
                 out.append(u'<th>{}</th>'.format(hd))
+#            if self.row_headers:
+#                out.append(u'<th></th>')
             out.append(u'</tr>')
             out.append(u'</thead>')
 
@@ -109,14 +112,16 @@ class Table(object):
         for row_index, row in enumerate(self.cells):
             out.append(u'<tr>')
             if self.row_headers:
-                out.append(u'<th>{}</th>'.format(self.row_headers[row_index]))
-            for cell in row:
+                out.append(u'<th class="time">{}</th>'.format(self.row_headers[row_index]))
+            for col, cell in enumerate(row):
                 if isinstance(cell, SpanCell):
                     pass
                 elif isinstance(cell, EmptyCell):
-                    out.append(u'<td width="100" class="empty"></td>')
+                    out.append(u'<td class="cell col-{} empty"></td>'.format(col))
                 elif isinstance(cell, Cell):
-                    out.append(u'<td width="100" class="cell" valign="top" rowspan="{}" colspan="{}">{}</td>'.format(cell.rowspan, cell.colspan, event_renderer(cell.event)))
+                    out.append(u'<td class="cell col-{} non-empty" rowspan="{}" colspan="{}">{}</td>'.format(col, cell.rowspan, cell.colspan, event_renderer(cell.event)))
+#            if self.row_headers:
+##                out.append(u'<th class="time">{}</th>'.format(self.row_headers[row_index]))
 
             out.append(u'</tr>')
         out.append('</tbody>')

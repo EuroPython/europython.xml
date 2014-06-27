@@ -4,7 +4,7 @@
         <link rel="stylesheet" type="text/css" href="brochure_schedule.css" />
         <style type="text/css">
             @page:first {
-                -ro-counter-set: page {{ first_page_number }};
+                -ro-counter-set: page1 {{ first_page_number }} page2 {{ second_page_number }};
             }
         </style>
     </head>

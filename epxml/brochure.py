@@ -55,10 +55,10 @@ def conv(xml_in=None,
 
 
     entries = list()
-    for day in range(21, 28):
+    for day in range(21, 26):
         date_str = '2014-07-{}'.format(day)
         entries_d = util.get_entries(xml_in, '//day[@date="{}"]/entry'.format(date_str))
-        entries_d = [e for e in entries_d if e.category not in ['LUNCH']]
+        entries_d = [e for e in entries_d if e.category]
         entries.append(dict(entries=entries_d,
                             date_text=datetime.strptime(date_str, '%Y-%m-%d').strftime('%A'),
                             date_str=date_str))
@@ -98,6 +98,7 @@ def conv(xml_in=None,
     template = env.get_template(template)
     html = template.render(
             first_page_number=int(first_page_number) - 1,
+            second_page_number=int(first_page_number) +3,
             day_entries=entries,
             speakers=speakers,
             emptypage=emptypage,
@@ -137,7 +138,7 @@ def conv(xml_in=None,
             elif pdf_converter == 'pdfreactor':
                 cmd = 'pdfreactor --disablefontembedding "{}" "{}"'.format(html_filename, out_pdf)
             elif pdf_converter == 'pdfreactor7':
-                cmd = 'pdfreactor7 --disablefontembedding "{}" "{}"'.format(html_filename, out_pdf)
+                cmd = '/opt/PDFreactor7/bin/pdfreactor --disablefontembedding "{}" "{}"'.format(html_filename, out_pdf)
             print 'Running: {}'.format(cmd)
             proc = subprocess.Popen(cmd, shell=True)
             status = proc.wait()
@@ -170,7 +171,6 @@ def conv(xml_in=None,
 
 def main():
     plac.call(conv)
-
 
 if __name__ == '__main__':
     main()

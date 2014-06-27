@@ -49,6 +49,10 @@
                           <div class="col-right">
                           <div class="h1">
                           <h1 class="title">{{ entry.title }}</h1>
+                      </div>
+                      <div class="text entry-text">
+                          {{ view.markdown(entry.abstract ) }}
+                      </div>    
                       {% if entry.speakers.getchildren() %}
                           <div class="speakers">
                             {% for speaker in entry.speakers%}  

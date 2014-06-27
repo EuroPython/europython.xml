@@ -30,7 +30,7 @@
         </td>
         <td width="60%" valign="top">
             <div class="text entry-text">
-                {{ view.markdown(entry.description) }}
+                {{ view.markdown(entry.abstract) }}
             </div>    
         </td>
     </tr>
