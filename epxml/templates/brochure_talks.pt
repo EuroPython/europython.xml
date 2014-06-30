@@ -31,14 +31,15 @@
                       <div class="heading">
                           <div class="col-button">
                           <div class="title">{{ entry.title }}</div>
-                          <div class="audience audience-{{view.lower(entry.audience) }}">{{ entry.audience }}</div>
+                          <div class="audience audience-{{view.lower(entry.audience) }}">
+                              {{ view.audience2stars(entry.audience) }}
+                          </div>
                           <div class="category category-{{ view.lower(entry.category) }}">{{ entry.category }}</div>
                           <div class="topics"> 
                                 {% for topic in  entry.topics %} 
                                     <span class="topic topic-{{ view.lower(topic.topic)}}">{{ topic.topic }}</span>
                                 {% endfor %}
                           </div>
-                          <div class="audience">{{ entry.audience }}</div>
                           </div>
                           <div class="clearfix"></div>
                           <div class="col-left">
