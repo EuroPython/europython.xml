@@ -29,34 +29,44 @@
                 {% for entry in d.entries %}
                 <div class="entry">
                       <div class="heading">
-                          <div class="col-button">
-                          <div class="title">{{ entry.title }}</div>
-                          <div class="audience audience-{{view.lower(entry.audience) }}">{{ entry.audience }}</div>
-                          <div class="category category-{{ view.lower(entry.category) }}">{{ entry.category }}</div>
-                          <div class="topics"> 
+                            <ul class="col-button">
+                            <li>
+                            <div class="block block-head">
+
+                            <div class="topics"> 
+                            <span class="category category-{{ view.lower(entry.category) }}">{{ entry.category }}</span>
+                          </div>
+
+                            <ul style="clear:both;" class="b-text">
                                 {% for topic in  entry.topics %} 
-                                    <span class="topic topic-{{ view.lower(topic.topic)}}">{{ topic.topic }}</span>
+                             <li style="float:left;" class="topic topic-{{ view.lower(topic.topic)}}"><span>{{ topic.topic }}</span></li>
                                 {% endfor %}
-                          </div>
-                          <div class="audience">{{ entry.audience }}</div>
-                          </div>
+                             <li class="audience audience-{{view.lower(entry.audience) }}"><span>{{ entry.audience }}</span></li>
+                            </ul>
+
+                        </div>
+                        </li>
+                        </ul> <!-- col-button: ENDE -->
+
+                          <!--div class="audience">{{ entry.audience }}</div-->
+
                           <div class="clearfix"></div>
                           <div class="col-left">
                           <!--div class="time">{{ view.time(entry) }}</div-->
                           <div class="time">{{ view.time_duration(entry) }}</div>
                           <div class="room">{{ entry.room }}</div>
-                          </div>
+                          </div> <!-- col-left: ENDE -->
                           <div class="col-right">
                           <div class="h1">
-                          <h1 class="title">{{ entry.title }}</h1>
-                      </div>
+                          <div class="title">{{ entry.title }}</div>
+                            </div>
                       <div class="text entry-text">
                           {{ view.markdown(entry.abstract ) }}
                       </div>    
                       {% if entry.speakers.getchildren() %}
                           <div class="speakers">
                             {% for speaker in entry.speakers%}  
-                              <div class="speaker-name">{{ speaker.speaker.name }}</div>
+                             <div>by <span class="speaker-name">{{ speaker.speaker.name }}</span></div>
                               <!--
                               <div class="speaker-description">{{ speaker.speaker.description }}</div>
                               <div class="text speaker-profile">{{ view.markdown(speaker.speaker.profile) }}</div>
@@ -64,17 +74,16 @@
                             {% endfor %}
                           </div>
                       {% endif %}
-                          </div>
-                          </div>
-                          <div class="clearfix"></div>
-                      </div>
+                          </div> <!-- col-right: ENDE -->
+                          </div> <!-- col-heading: ENDE -->
                       <div class="text entry-text">
                          <p> {{ view.markdown(entry.description) }}</p>
                       </div>    
-                  </div>
+                          <div class="clearfix"></div>
+                      </div><!-- entry: ENDE -->
                 {% endfor %}
-            </div>
+            </div><!-- schedule-day: ENDE -->
           {% endfor %}
-        </div>
+        </div><!-- schedule: ENDE -->
     </body>
 </html>
