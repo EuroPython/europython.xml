@@ -3,10 +3,16 @@ span.datetext {
 }
 
 @font-face {
-  font-family: MarkCompPro;
-  src: url(MarkCompPro.ttf);
+  font-family: MarkPro;
+  src: url(MarkPro.otf);
 }
 
+@font-face {
+  font-family: DejaWeb-Bold;
+  src: url(DejaWeb-Bold.ttf);
+  font-weight: bold;
+  font-style:  normal;
+}
 @page {
     size: 135mm 228mm;
     counter-increment: page
@@ -26,11 +32,11 @@ span.datetext {
 @page:left {
     @left-middle {
         content: string(datetext);
-        color:white;
+        color:red;
         background: cmyk(0%,68%,72%,0%);
-        font-family: Arial;
+        font-family: DejaWeb-Bold;
         text-transform:capitalize;
-        font-size: 30px;
+        font-size: 12pt;
         -ro-transform: rotate(-90deg) ;
     }    
 }
@@ -38,11 +44,11 @@ span.datetext {
 @page:right {
     @right-middle {
         content: string(datetext);
-        color:white;
+        color:red;
         background: cmyk(0%,68%,72%,0%);
-        font-family: Arial;
+        font-family: DejaWeb-Bold;
         text-transform:capitalize;
-        font-size: 30px;
+        font-size: 12pt;
         -ro-transform: rotate(90deg) ;
     }    
 }
@@ -51,16 +57,16 @@ span.datetext {
     margin:0;
     background:url('ornament_rechts.png')0 0 no-repeat;
     background-size:135mm 228mm;
-    padding:17mm 22mm 22mm 16mm !important;
+    padding:17mm 16mm 20mm 14mm !important;
 }
 @page:left {
     margin:0;
     background:url('ornament_link.png') 0 0 no-repeat;
     background-size:135mm 228mm;
-    padding:17mm 16mm 22mm 22mm;
+    padding:17mm 14mm 20mm 16mm;
 }
 body {
-  font-family: 'MarkCompPro', sans-serif;
+  font-family: 'MarkPro', sans-serif;
     font-weight: normal;
 }
 .empty-page {
@@ -72,7 +78,9 @@ body {
 
 /* Footnotes */
 .link-text a {
-    float: footnote
+color:black;
+font-size:8pt;    
+float: footnote
 }
 
 .link-text a { counter-increment: footnote }
