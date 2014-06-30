@@ -23,39 +23,63 @@
   font-style:  italic;
 }
 @font-face {
-  font-family: MarkScCompProLight;
-  src: url(MarkScCompProLight.ttf);
+  font-family: MarkPro;
+  src: url(MarkPro.otf);
   font-weight: normal;
   font-style:  normal;
 }
 @font-face {
-  font-family: MarkCompPro;
-  src: url(MarkCompPro.ttf);
-  font-weight: normal;
+  font-family: MarkPro-Light;
+  src: url(MarkPro-Light.otf);
+  font-weight: 100;
   font-style:  normal;
 }
 
 @font-face {
-  font-family: MarkCompProLight;
-  src: url(MarkCompProLight.ttf);
-  font-style:  normal;
-  font-weight: normal;
-}
-@font-face {
-  font-family: MarkCompProMedium;
-  src: url(MarkCompProMedium.ttf);
+  font-family: MarkPro-Medium;
+  src: url(MarkPro-Medium.otf);
   font-weight: 400;
   font-style:  normal;
 }
 @font-face {
-  font-family: MarkCompProBold;
-  src: url(MarkCompProBold.ttf);
+  font-family: MarkPro-Bold;
+  src: url(MarkPro-Bold.otf);
   font-weight: bold;
   font-style:  normal;
 }
 @font-face {
-  font-family: MarkCompPro;
-  src: url(MarkCompPro.ttf);
+  font-family: MarkPro-Italic;
+  src: url(MarkPro-Italic.otf);
+  font-weight: normal;
+  font-style:  normal;
+}
+@font-face {
+  font-family: MarkPro-LightItalic;
+  src: url(MarkPro-LightItalic.otf);
+  font-weight: 100;
+  font-style:  italic;
+}
+@font-face {
+  font-family: MarkPro-MediumItalic;
+  src: url(MarkPro-MediumItalic.otf);
+  font-weight: normal;
+  font-style:  italic;
+}
+@font-face {
+  font-family: MarkPro-BoldItalic;
+  src: url(MarkPro-BoldItalic.otf);
+  font-weight: bold;
+  font-style:  italic;
+}
+@font-face {
+  font-family: MarkScCompProBold;
+  src: url(MarkScCompProBold.ttf);
+  font-weight: bold;
+  font-style:  normal;
+}
+@font-face {
+  font-family: SourceCodePro-Regular;
+  src: url(SourceCodePro-Regular.otf);
   font-weight: normal;
   font-style:  normal;
 }
@@ -67,89 +91,151 @@
 .clearfix:after {
     clear:both;
 }
+h7,
+h6,
+h5,
+h4 {
+color: cmyk(98%,25%,32%,0%);/*petrol*/
+font-size:9pt;
+font-family:"MarkPro-Light", Arial sans serif;
+text-transform:uppercase;
+}
+
+.schedule-day {
+    page-break-after: always;
+}
 .speaker-name,
 .title, 
 .room {color: cmyk(98%,25%,32%,0);
 }
 .time {color: cmyk(0%,68%,72%,0);
 }
-.category {
-background: cmyk(18%,0%,80%,0%);
-color: cmyk(98%,25%,32%,0%);
-    border-radius:3mm;
-    font-family:MarkCompProBold;
-    font-size:9pt;
-    padding-left:1mm;
-    padding-right:1mm;
-}
 .topics,
-.audience {
+.b-text {
+    font-family: MarkScCompProBold !important;
     font-size:9pt;
-    background: cmyk(0%,68%,72%,0);
-    color:white;
-    border-radius:3mm;
-    font-family:MarkCompProBold;
-    padding-left:1mm;
-    padding-right:1mm;
+    text-transform:uppercase;
 }
-.schedule-day {
-/*    page-break-after: always; */
+.topics {margin:0; padding:0;}
+.topics span {
+background: cmyk(18%,0%,80%,0%); /*yellow*/
+color: cmyk(98%,25%,32%,0%);/*petrol*/
+border-radius: 6pt;
+padding:1mm 1mm 0mm 1mm;
 }
-.col-button {
-    display:block;
+.topic,
+.audience {
     margin-bottom:0;
+}
+.topic span {
+background: cmyk(0%,68%,72%,0);/*orange*/
+color:white;
+border-top-left-radius: 6pt;
+border-bottom-left-radius: 6pt;
+white-space:nowrap;
+padding:1mm 1mm 0mm 1mm;
+}
+.audience span {
+background: cmyk(0%,68%,72%,0);/*orange*/
+color:white;
+border-top-right-radius: 6pt;
+border-bottom-right-radius: 6pt;
+padding:1mm 1mm 0mm 1mm;
+}
+ul.col-button {
+list-style-type: none;  
+padding:0pt;    
+}
+ul.col-button ul{
+list-style-type: none;  
     }
+
+.block {
+  overflow: hidden; 
+}
+.block-head {
+  display: table;
+  width: 100%;
+  border-collapse: collapse; 
+}
+.block-head .topics {
+display: table-cell;
+vertical-align: top;
+width: 34mm;
+ }
+.block-head .b-text {
+display: table-cell;
+width: 66mm;
+padding: 0;
+}
+.b-text li {margin-right:1.4mm;} 
 .col-left {
     display:block;
     float:left;
-    width:30mm;
+    width:34mm;
     margin-left:0;
     margin-top:0;
 }
 .col-right {
     display:block;
-    width:64mm;
-    margin-left: 32mm;
+    width:67mm;
+    margin-left: 34mm;
     margin-top:0;
 }
-.category {
-    float:left;
-    width:27mm;
-    margin-left:0;
-}
-.topics {
-    width:40mm;
-    margin-bottom:0;
-    margin-left:32mm;
-}
-.audience {
-    width:24mm;
-    margin-left: 32mm;
-    margin-bottom:0;
-    }
-h1.title {
+div.title {
 font-size:12pt;
-margin-top:-1mm !important;
-font-family:"MarkCompProLight", Arial sans serif;
+font-family:"MarkPro-Light", Arial sans serif;
 }
-.speaker-name {
+.speakers {
     font-size:9pt;
-    font-family:"MarkCompProLight", Arial sans serif;
+    font-family:"MarkPro-Light", Arial sans serif;
+ }
+span.speaker-name {
+    font-family:"MarkPro-LightItalic" !important;
  }
 .entry .heading {
     page-break-inside: never;
     column-break-before: auto;
 }    
-
-.entry .text li {
-    margin-left: -4em;
-}
-
-.entry .text li p {
+.text ol p,
+.text li p {
     padding: 0;
+    color:black !important;
     margin: 0;
 }
-
+.texl ol,
+.text li {
+color: cmyk(98%,25%,32%,0%);/*petrol*/
+    }
+.text div ul {margin-left:0 !important;}
+.text div h7,
+.text div h7:nth-of-type(n),
+.text div h5,
+.text div h5:nth-of-type(n),
+.text div h6,
+.text div h6:nth-of-type(n),
+.text div h4,
+.text div h4:nth-of-type(n),
+.text h7,
+.text h7:nth-of-type(n),
+.text h5,
+.text h5:nth-of-type(n),
+.text h6,
+.text h6:nth-of-type(n),
+.text ul,
+.text h4,
+.text h4:nth-of-type(n) {
+    margin-left:16mm;
+}
+.text div ul ul,
+.text ul ul {
+    margin-left:18mm !important;
+}
+.text div ul ul ul ul,
+.text div ul ul ul,
+.text ul ul ul {
+    margin-left:22mm !important;
+}
 .text {  
     text-align: justify;
     hyphens: auto;
@@ -159,8 +245,14 @@ font-family:"MarkCompProLight", Arial sans serif;
     font-family: DejaWeb;
     font-size:9pt;
 }
+code {
+    font-size:9pt;
+    font-family:"SourceCodePro-Regular" !important;
+    line-height:12pt;
+    
+}
 div.text > p:nth-child(2n+0) {
-    text-indent:20mm;
+   /* text-indent:20mm;*/
 }
 .entry .speaker-name {
     font-style: italic;
