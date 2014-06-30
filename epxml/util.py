@@ -110,7 +110,9 @@ class JinjaView(object):
             new_link.attrib['href'] = href
             node.insert(0, new_link)
 
-
-
-
         return lxml.html.tostring(root, encoding=unicode)
+
+    def audience2stars(self, audience):
+        return {'Novice': '*',
+                'Advanced': '**',
+                'Expert': '***'}.get(audience)
