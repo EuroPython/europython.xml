@@ -65,6 +65,34 @@ span.datetext {
     background-size:135mm 228mm;
     padding:17mm 14mm 20mm 16mm;
 }
+
+.day-monday {
+    page: monday;
+}
+.day-tuesday {
+    page: tuesday;
+}
+
+.day-wednesday {
+    page: wednesday;
+}
+
+.day-thursday {
+    page: thursday;
+}
+
+.day-friday {
+    page: thursday;
+}
+
+.day-saturday {
+    page: saturday;
+}
+
+.day-sunday {
+    page: sunday;
+}
+
 body {
   font-family: 'MarkPro', sans-serif;
     font-weight: normal;
@@ -91,3 +119,4 @@ float: footnote
     vertical-align: super;
     line-height: none
 }
+
