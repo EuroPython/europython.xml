@@ -69,9 +69,6 @@
                           </div>
                           <div class="clearfix"></div>
                       </div>
-                      <div class="text entry-text">
-                         <p> {{ view.markdown(entry.description) }}</p>
-                      </div>    
                   </div>
                 {% endfor %}
             </div>
