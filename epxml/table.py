@@ -3,6 +3,9 @@ import cStringIO
 
 class BaseCell(object):
     """ Base table cell """
+
+    type = 'base'
+
     def __init__(self, row, col):
         self.row = row
         self.col = col
@@ -13,12 +16,15 @@ class BaseCell(object):
 
 class EmptyCell(BaseCell):
     """ Default empty table cell """
+    type = 'empty'
 
 
 class Cell(BaseCell):
     """ A table cell filled with content spanning one
         or more rows or columns.
     """
+
+    type = 'cell'
 
     def __init__(self, event, rowspan=1, colspan=1):
         self.event = event
@@ -34,6 +40,8 @@ class SpanCell(EmptyCell):
         instance in order to represent the cells pre-allocated
         for rowspan/colspan > 1 of a Cell.
     """
+
+    type = 'span'
 
 class Table(object):
     """ Abstract HTML table model """
@@ -56,7 +64,6 @@ class Table(object):
 
         # Check if the current cell is not actually in use
         if not isinstance(self.cells[row][col], EmptyCell):
-            import pdb; pdb.set_trace() 
             raise ValueError('Cell [{}][{}] seems to be already in use'.format(row, col))
 
         # insert dummy span cells in case of a rowspan or colspan > 1
@@ -65,6 +72,25 @@ class Table(object):
                 self.cells[row + i][col + j]  = SpanCell(row + i, col + j)
         # now insert content cell
         self.cells[row][col] = Cell(event, rowspan, colspan)
+
+    def strip_trailing_rows(self):
+        """ Remove trailing rows without attached events from
+            end of the day.
+        """
+
+        rows = list()
+        strip_mode = True
+        for rownum, row in enumerate(reversed(self.cells)):
+            len_row = len(row)
+            num_empty = len([cell for cell in row if cell.type == 'empty'])
+            if num_empty != len_row:
+                strip_mode = False
+
+            if num_empty == len_row and strip_mode:
+                continue
+            rows.append(row)
+
+        self.cells = list(reversed(rows))
 
     def merge_cells(self):
         """ Merge vertical Cells representing the same event """
@@ -82,11 +108,15 @@ class Table(object):
                     for i in range(1, cols_to_merge + 1):
                         self.cells[rownum][colnum + i] = SpanCell(rownum, colnum + i)
 
-    def render(self, event_renderer, merge_cells=True):
+    def render(self, event_renderer, merge_cells=True, strip_trailing_rows=True):
         """ Render the abstract table to HTML """
 
+        if strip_trailing_rows:
+            self.strip_trailing_rows()
+        
         if merge_cells:
             self.merge_cells()
+
 
         out = list()
         out.append(u'<table border="1">')

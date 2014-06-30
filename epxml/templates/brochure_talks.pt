@@ -38,6 +38,13 @@
                           </div>
 
                             <ul style="clear:both;" class="b-text">
+                          <div class="col-button">
+                          <div class="title">{{ entry.title }}</div>
+                          <div class="audience audience-{{view.lower(entry.audience) }}">
+                              {{ view.audience2stars(entry.audience) }}
+                          </div>
+                          <div class="category category-{{ view.lower(entry.category) }}">{{ entry.category }}</div>
+                          <div class="topics"> 
                                 {% for topic in  entry.topics %} 
                              <li style="float:left;" class="topic topic-{{ view.lower(topic.topic)}}"><span>{{ topic.topic }}</span></li>
                                 {% endfor %}
@@ -50,6 +57,8 @@
 
                           <!--div class="audience">{{ entry.audience }}</div-->
 
+                          </div>
+                          </div>
                           <div class="clearfix"></div>
                           <div class="col-left">
                           <!--div class="time">{{ view.time(entry) }}</div-->
@@ -74,13 +83,17 @@
                             {% endfor %}
                           </div>
                       {% endif %}
-                          </div> <!-- col-right: ENDE -->
                           </div> <!-- col-heading: ENDE -->
                       <div class="text entry-text">
                          <p> {{ view.markdown(entry.description) }}</p>
                       </div>    
                           <div class="clearfix"></div>
                       </div><!-- entry: ENDE -->
+                          </div>
+                          </div>
+                          <div class="clearfix"></div>
+                      </div>
+                  </div>
                 {% endfor %}
             </div><!-- schedule-day: ENDE -->
           {% endfor %}
