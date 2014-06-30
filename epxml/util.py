@@ -32,7 +32,7 @@ def entry2startduration(entry):
         duration_s = u'{}h'.format(hours)
         if minutes != 0:
             duration_s += u'{}min'.format(minutes)
-    return '{:02d}:{:02d}  ({})'.format(start.hour, start.minute, duration_s)
+    return '<span class="start-time">{:02d}:{:02d}</span><span class="duration">({})</span>'.format(start.hour, start.minute, duration_s)
 
 def get_entries(xml_in, xpath_filter):
     """ Parse 'accepted.xml' file/string and return
