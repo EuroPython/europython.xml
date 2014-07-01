@@ -38,30 +38,19 @@
                           </div>
 
                             <ul style="clear:both;" class="b-text">
-                          <div class="col-button">
-                          <div class="title">{{ entry.title }}</div>
-                          <div class="audience audience-{{view.lower(entry.audience) }}">
-                              {{ view.audience2stars(entry.audience) }}
-                          </div>
-                          <div class="category category-{{ view.lower(entry.category) }}">{{ entry.category }}</div>
-                          <div class="topics"> 
                                 {% for topic in  entry.topics %} 
                              <li style="float:left;" class="topic topic-{{ view.lower(topic.topic)}}"><span>{{ topic.topic }}</span></li>
                                 {% endfor %}
-                             <li class="audience audience-{{view.lower(entry.audience) }}"><span>{{ entry.audience }}</span></li>
+                             <li class="audience audience-{{view.lower(entry.audience) }}"><span>{{ view.audience2stars(entry.audience) }}</span></li>
                             </ul>
 
                         </div>
                         </li>
                         </ul> <!-- col-button: ENDE -->
-
-                          <!--div class="audience">{{ entry.audience }}</div-->
-
                           </div>
                           </div>
                           <div class="clearfix"></div>
                           <div class="col-left">
-                          <!--div class="time">{{ view.time(entry) }}</div-->
                           <div class="time">{{ view.time_duration(entry) }}</div>
                           <div class="room">{{ entry.room }}</div>
                           </div> <!-- col-left: ENDE -->
@@ -69,23 +58,16 @@
                           <div class="h1">
                           <div class="title">{{ entry.title }}</div>
                             </div>
-                      <div class="text entry-text">
-                          {{ view.markdown(entry.abstract ) }}
-                      </div>    
                       {% if entry.speakers.getchildren() %}
                           <div class="speakers">
                             {% for speaker in entry.speakers%}  
                              <div>by <span class="speaker-name">{{ speaker.speaker.name }}</span></div>
-                              <!--
-                              <div class="speaker-description">{{ speaker.speaker.description }}</div>
-                              <div class="text speaker-profile">{{ view.markdown(speaker.speaker.profile) }}</div>
-                              -->
                             {% endfor %}
                           </div>
                       {% endif %}
                           </div> <!-- col-heading: ENDE -->
                       <div class="text entry-text">
-                         <p> {{ view.markdown(entry.description) }}</p>
+                          {{ view.markdown(entry.abstract ) }}
                       </div>    
                           <div class="clearfix"></div>
                       </div><!-- entry: ENDE -->
