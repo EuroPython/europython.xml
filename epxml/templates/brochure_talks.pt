@@ -22,7 +22,7 @@
           {% for d in day_entries %}
           <div class="schedule-day day-{{ d.date_text.lower() }}">
                 <div class="schedule-heading">
-                    <span class="date-iso">{{ d.date_str }}</span>
+                    <!--span class="date-iso">{{ d.date_str }}</span-->
                     <span class="datetext">{{ d.date_text }}</span>
                 </div>
                 <div class="clearfix"></div>
