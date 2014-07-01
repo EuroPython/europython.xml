@@ -29,20 +29,28 @@ span.datetext {
     -ro-counter-set: page 1;
 }
 
+@page:right {
+        z-index:1;
+    margin:0;
+    background:url('ornament_rechts.png') 0 0 no-repeat;
+    background-size:135mm 228mm;
+    padding:17mm 16mm 20mm 14mm !important;
+}
+@page:left {
+        z-index:1;
+    margin:0;
+    background:url('ornament_link.png') 0 0 no-repeat;
+    background-size:135mm 228mm;
+    padding:17mm 14mm 20mm 16mm;
+}
 @page:left {
     @left-middle {
-        content: string(datetext);
-        color:red;
-        /*background: cmyk(0%,68%,72%,0%);*/
-        font-family: DejaWeb-Bold;
-        text-transform:capitalize;
-        font-size: 12pt;
-        -ro-transform: rotate(-90deg) ;
     }    
 }
 
 @page:right {
     @right-middle {
+        z-index:10;
         content: string(datetext);
         color:red;
         background: cmyk(0%,68%,72%,0%);
@@ -53,21 +61,22 @@ span.datetext {
     }    
 }
 
-
-@page:right {
-    margin:0;
-    background:url('ornament_rechts.png') 0 0 no-repeat;
-    background-size:135mm 228mm;
-    padding:17mm 16mm 20mm 14mm !important;
-}
-@page:left {
-    margin:0;
-    background:url('ornament_link.png') 0 0 no-repeat;
-    background-size:135mm 228mm;
-    padding:17mm 14mm 20mm 16mm;
-}
 .day-monday {
     page: monday;
+}
+@page monday {
+        z-index:10;
+        /*content: string(datetext);
+        color:red;*/
+        /*background: cmyk(0%,68%,72%,0%);*/
+        /*font-family: DejaWeb-Bold;
+        text-transform:capitalize;
+        font-size: 12pt;
+        -ro-transform: rotate(-90deg) ;
+        border:4pt solid blue;*/
+        position:absolute;
+        background:url('monday-left.png') -3mm 11mm no-repeat;
+        background-size:12mm 30mm;
 }
 .day-tuesday {
     page: tuesday;
