@@ -33,7 +33,7 @@ span.datetext {
     @left-middle {
         content: string(datetext);
         color:red;
-        background: cmyk(0%,68%,72%,0%);
+        /*background: cmyk(0%,68%,72%,0%);*/
         font-family: DejaWeb-Bold;
         text-transform:capitalize;
         font-size: 12pt;
@@ -53,9 +53,10 @@ span.datetext {
     }    
 }
 
+
 @page:right {
     margin:0;
-    background:url('ornament_rechts.png')0 0 no-repeat;
+    background:url('ornament_rechts.png') 0 0 no-repeat;
     background-size:135mm 228mm;
     padding:17mm 16mm 20mm 14mm !important;
 }
@@ -65,7 +66,6 @@ span.datetext {
     background-size:135mm 228mm;
     padding:17mm 14mm 20mm 16mm;
 }
-
 .day-monday {
     page: monday;
 }
