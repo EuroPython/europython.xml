@@ -100,7 +100,7 @@ font-size:9pt;
 font-family:"MarkPro-Light", Arial sans serif;
 text-transform:uppercase;
 }
-
+.duration {font-size:9pt;padding-left:4pt;}
 .schedule-day {
     page-break-after: always;
 }
@@ -183,10 +183,12 @@ padding: 0;
     margin-top:0;
 }
 div.title {
+line-height:13pt;
 font-size:12pt;
 font-family:"MarkPro-Light", Arial sans serif;
 }
 .speakers {
+    margin-top:3pt;
     font-size:9pt;
     font-family:"MarkPro-Light", Arial sans serif;
  }
@@ -196,46 +198,16 @@ span.speaker-name {
 .entry .heading {
     page-break-inside: never;
     column-break-before: auto;
-}    
-.text ol p,
-.text li p {
-    padding: 0;
-    color:black !important;
-    margin: 0;
 }
 .texl ol,
 .text li {
 color: cmyk(98%,25%,32%,0%);/*petrol*/
     }
-.text div ul {margin-left:0 !important;}
-.text div h7,
-.text div h7:nth-of-type(n),
-.text div h5,
-.text div h5:nth-of-type(n),
-.text div h6,
-.text div h6:nth-of-type(n),
-.text div h4,
-.text div h4:nth-of-type(n),
-.text h7,
-.text h7:nth-of-type(n),
-.text h5,
-.text h5:nth-of-type(n),
-.text h6,
-.text h6:nth-of-type(n),
-.text ul,
-.text h4,
-.text h4:nth-of-type(n) {
-    margin-left:16mm;
-}
-.text div ul ul,
-.text ul ul {
-    margin-left:18mm !important;
-}
-.text div ul ul ul ul,
-.text div ul ul ul,
-.text ul ul ul {
-    margin-left:22mm !important;
-}
+.text ol span,
+.text li span {color:black;}
+.text div ol, ol, ul,
+.text div ul {margin-left:28mm;}
+.heading ul {margin-left:0;}
 .text {  
     text-align: justify;
     hyphens: auto;
@@ -251,8 +223,8 @@ code {
     line-height:12pt;
     
 }
-div.text > p:nth-child(2n+0) {
-   /* text-indent:20mm;*/
+div.text p:nth-of-type(2n+2) {
+   text-indent:34mm;
 }
 .entry .speaker-name {
     font-style: italic;
