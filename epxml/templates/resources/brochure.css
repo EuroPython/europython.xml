@@ -45,6 +45,13 @@ span.datetext {
 }
 @page:left {
     @left-middle {
+        content: string(datetext);
+        color:red;
+        background: cmyk(0%,68%,72%,0%);
+        font-family: DejaWeb-Bold;
+        text-transform:capitalize;
+        font-size: 12pt;
+        -ro-transform: rotate(90deg) ;
     }    
 }
 
@@ -57,26 +64,18 @@ span.datetext {
         font-family: DejaWeb-Bold;
         text-transform:capitalize;
         font-size: 12pt;
-        -ro-transform: rotate(90deg) ;
+        -ro-transform: rotate(-90deg) ;
     }    
 }
 
 .day-monday {
     page: monday;
 }
-@page monday {
-        z-index:10;
-        /*content: string(datetext);
-        color:red;*/
-        /*background: cmyk(0%,68%,72%,0%);*/
-        /*font-family: DejaWeb-Bold;
-        text-transform:capitalize;
-        font-size: 12pt;
-        -ro-transform: rotate(-90deg) ;
-        border:4pt solid blue;*/
-        position:absolute;
-        background:url('monday-left.png') -3mm 11mm no-repeat;
-        background-size:12mm 30mm;
+.day-monday {
+        z-index:999;
+    position:relative;
+    background:url('monday.png')1mm 1mm no-repeat;
+    background-size:12mm 31mm;
 }
 .day-tuesday {
     page: tuesday;
