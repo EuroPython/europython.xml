@@ -19,7 +19,7 @@
         {% endif %}
 
         <div class="speakers-overview">
-          <h1 id="headline">Speakers</h1>  
+          <div id="headline">Speakers</div>  
           {% for s in speakers %}
               <p class="speaker">
                 {% if s.has_image %}
