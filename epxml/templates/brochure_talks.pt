@@ -44,11 +44,9 @@
                              <li class="audience audience-{{view.lower(entry.audience) }}"><span>{{ view.audience2stars(entry.audience) }}</span></li>
                             </ul>
 
-                        </div>
+                        </div> <!--ende: block-head-->
                         </li>
                         </ul> <!-- col-button: ENDE -->
-                          </div>
-                          </div>
                           <div class="clearfix"></div>
                           <div class="col-left">
                           <div class="time">{{ view.time_duration(entry) }}</div>
@@ -65,17 +63,13 @@
                             {% endfor %}
                           </div>
                       {% endif %}
+                          </div>
                           </div> <!-- col-heading: ENDE -->
                       <div class="text entry-text">
                           {{ view.markdown(entry.abstract ) }}
                       </div>    
                           <div class="clearfix"></div>
                       </div><!-- entry: ENDE -->
-                          </div>
-                          </div>
-                          <div class="clearfix"></div>
-                      </div>
-                  </div>
                 {% endfor %}
             </div><!-- schedule-day: ENDE -->
           {% endfor %}
