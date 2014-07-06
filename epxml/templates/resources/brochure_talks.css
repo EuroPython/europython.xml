@@ -83,6 +83,132 @@
   font-weight: normal;
   font-style:  normal;
 }
+/* ornamente */
+.day-monday {
+    page: monday;
+}
+.day-tuesday {
+    page: tuesday;
+}
+
+.day-wednesday {
+    page: wednesday;
+}
+
+.day-thursday {
+    page: thursday;
+}
+
+.day-friday {
+    page: friday;
+}
+
+.day-saturday {
+    page: saturday;
+}
+
+.day-sunday {
+    page: sunday;
+}
+
+@page monday:left {
+    background:url('monday-left.png') -3mm -6mm no-repeat;
+    z-index:999;
+    position:relative;
+    background-size:138.5mm 243.7mm;
+    padding:17mm 14mm 20mm 16mm;
+}
+@page monday:right {
+    background:url('monday-right.png') 0mm -6mm no-repeat;
+    z-index:999;
+    position:relative;
+    background-size:137.5 243.7mm;
+    padding:17mm 16mm 20mm 14mm;
+}
+@page tuesday:left {
+    background:url('tuesday-left.png') -3mm -6mm no-repeat;
+    z-index:999;
+    position:relative;
+    background-size:138.5mm 243.7mm;
+    padding:17mm 14mm 20mm 16mm;
+}
+@page tuesday:right {
+    background:url('tuesday-right.png') 0mm -6mm no-repeat;
+    z-index:999;
+    position:relative;
+    background-size:137.5 243.7mm;
+    padding:17mm 16mm 20mm 14mm;
+}
+@page wednesday:left {
+    background:url('wednesday-left.png') -3mm -6mm no-repeat;
+    z-index:999;
+    position:relative;
+    background-size:138.5mm 243.7mm;
+    padding:17mm 14mm 20mm 16mm;
+}
+@page wednesday:right {
+    background:url('wednesday-right.png') 0mm -6mm no-repeat;
+    z-index:999;
+    position:relative;
+    background-size:137.5 243.7mm;
+    padding:17mm 16mm 20mm 14mm;
+}
+@page thursday:left {
+    background:url('thursday-left.png') -3mm -6mm no-repeat;
+    z-index:999;
+    position:relative;
+    background-size:138.5mm 243.7mm;
+    padding:17mm 14mm 20mm 16mm;
+}
+@page thursday:right {
+    background:url('thursday-right.png') 0mm -6mm no-repeat;
+    z-index:999;
+    position:relative;
+    background-size:137.5 243.7mm;
+    padding:17mm 16mm 20mm 14mm;
+}
+@page friday:left {
+    background:url('friday-left.png') -3mm -6mm no-repeat;
+    z-index:999;
+    position:relative;
+    background-size:138.5mm 243.7mm;
+    padding:17mm 14mm 20mm 16mm;
+}
+@page friday:right {
+    background:url('friday-right.png') 0mm -6mm no-repeat;
+    z-index:999;
+    position:relative;
+    background-size:137.5 243.7mm;
+    padding:17mm 16mm 20mm 14mm;
+}
+@page saturday:left {
+    background:url('saturday-left.png') -3mm -6mm no-repeat;
+    z-index:999;
+    position:relative;
+    background-size:138.5mm 243.7mm;
+    padding:17mm 14mm 20mm 16mm;
+}
+@page saturday:right {
+    background:url('saturday-right.png') 0mm -6mm no-repeat;
+    z-index:999;
+    position:relative;
+    background-size:137.5 243.7mm;
+    padding:17mm 16mm 20mm 14mm;
+}
+@page sunday:left {
+    background:url('sunday-left.png') -3mm -6mm no-repeat;
+    z-index:999;
+    position:relative;
+    background-size:138.5mm 243.7mm;
+    padding:17mm 14mm 20mm 16mm;
+}
+@page sunday:right {
+    background:url('sunday-right.png') 0mm -6mm no-repeat;
+    z-index:999;
+    position:relative;
+    background-size:137.5 243.7mm;
+    padding:17mm 16mm 20mm 14mm;
+}
 .clearfix:before,
 .clearfix:after  {
   display: table;
