@@ -360,3 +360,6 @@ div.text p:nth-of-type(2n+2) {
 .entry .speaker-description {
 }
 
+.empty {
+    page: empty;
+}
