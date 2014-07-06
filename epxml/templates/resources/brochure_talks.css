@@ -110,104 +110,111 @@
 .day-sunday {
     page: sunday;
 }
-
+@page {
+    @top-center {
+        content: 'program';
+        font-family: DejaWeb;
+        font-size:9pt;
+        margin-top:5.5mm;
+    }
+}
 @page monday:left {
     background:url('monday-left.png') -3mm -6mm no-repeat;
     z-index:999;
     position:relative;
     background-size:138.5mm 243.7mm;
-    padding:17mm 14mm 20mm 16mm;
+    padding:19mm 14mm 20mm 16mm;
 }
 @page monday:right {
     background:url('monday-right.png') 0mm -6mm no-repeat;
     z-index:999;
     position:relative;
     background-size:137.5 243.7mm;
-    padding:17mm 16mm 20mm 14mm;
+    padding:19mm 16mm 20mm 14mm;
 }
 @page tuesday:left {
     background:url('tuesday-left.png') -3mm -6mm no-repeat;
     z-index:999;
     position:relative;
     background-size:138.5mm 243.7mm;
-    padding:17mm 14mm 20mm 16mm;
+    padding:19mm 14mm 20mm 16mm;
 }
 @page tuesday:right {
     background:url('tuesday-right.png') 0mm -6mm no-repeat;
     z-index:999;
     position:relative;
     background-size:137.5 243.7mm;
-    padding:17mm 16mm 20mm 14mm;
+    padding:19mm 16mm 20mm 14mm;
 }
 @page wednesday:left {
     background:url('wednesday-left.png') -3mm -6mm no-repeat;
     z-index:999;
     position:relative;
     background-size:138.5mm 243.7mm;
-    padding:17mm 14mm 20mm 16mm;
+    padding:19mm 14mm 20mm 16mm;
 }
 @page wednesday:right {
     background:url('wednesday-right.png') 0mm -6mm no-repeat;
     z-index:999;
     position:relative;
     background-size:137.5 243.7mm;
-    padding:17mm 16mm 20mm 14mm;
+    padding:19mm 16mm 20mm 14mm;
 }
 @page thursday:left {
     background:url('thursday-left.png') -3mm -6mm no-repeat;
     z-index:999;
     position:relative;
     background-size:138.5mm 243.7mm;
-    padding:17mm 14mm 20mm 16mm;
+    padding:19mm 14mm 20mm 16mm;
 }
 @page thursday:right {
     background:url('thursday-right.png') 0mm -6mm no-repeat;
     z-index:999;
     position:relative;
     background-size:137.5 243.7mm;
-    padding:17mm 16mm 20mm 14mm;
+    padding:19mm 16mm 20mm 14mm;
 }
 @page friday:left {
     background:url('friday-left.png') -3mm -6mm no-repeat;
     z-index:999;
     position:relative;
     background-size:138.5mm 243.7mm;
-    padding:17mm 14mm 20mm 16mm;
+    padding:19mm 14mm 20mm 16mm;
 }
 @page friday:right {
     background:url('friday-right.png') 0mm -6mm no-repeat;
     z-index:999;
     position:relative;
     background-size:137.5 243.7mm;
-    padding:17mm 16mm 20mm 14mm;
+    padding:19mm 16mm 20mm 14mm;
 }
 @page saturday:left {
     background:url('saturday-left.png') -3mm -6mm no-repeat;
     z-index:999;
     position:relative;
     background-size:138.5mm 243.7mm;
-    padding:17mm 14mm 20mm 16mm;
+    padding:19mm 14mm 20mm 16mm;
 }
 @page saturday:right {
     background:url('saturday-right.png') 0mm -6mm no-repeat;
     z-index:999;
     position:relative;
     background-size:137.5 243.7mm;
-    padding:17mm 16mm 20mm 14mm;
+    padding:19mm 16mm 20mm 14mm;
 }
 @page sunday:left {
     background:url('sunday-left.png') -3mm -6mm no-repeat;
     z-index:999;
     position:relative;
     background-size:138.5mm 243.7mm;
-    padding:17mm 14mm 20mm 16mm;
+    padding:19mm 14mm 20mm 16mm;
 }
 @page sunday:right {
     background:url('sunday-right.png') 0mm -6mm no-repeat;
     z-index:999;
     position:relative;
     background-size:137.5 243.7mm;
-    padding:17mm 16mm 20mm 14mm;
+    padding:19mm 16mm 20mm 14mm;
 }
 .clearfix:before,
 .clearfix:after  {
@@ -221,7 +228,7 @@ h7,
 h6,
 h5,
 h4 {
-color: cmyk(98%,25%,32%,0%);/*petrol*/
+/*color: cmyk(98%,25%,32%,0%);/*petrol*/
 font-size:9pt;
 font-family:"MarkPro-Light", Arial sans serif;
 text-transform:uppercase;
@@ -238,8 +245,9 @@ text-transform:uppercase;
 }
 .topics,
 .b-text {
-    font-family: MarkScCompProBold !important;
+    font-family:MarkPro-Bold !important;
     font-size:9pt;
+    line-height:12pt;
     text-transform:uppercase;
 }
 .topics {margin:0; padding:0;}
@@ -247,7 +255,7 @@ text-transform:uppercase;
 background: cmyk(18%,0%,80%,0%); /*yellow*/
 color: cmyk(98%,25%,32%,0%);/*petrol*/
 border-radius: 6pt;
-padding:1mm 1mm 0mm 1mm;
+padding:0.5mm 1mm 0.8mm 1mm;
 }
 .topic,
 .audience {
@@ -259,14 +267,14 @@ color:white;
 border-top-left-radius: 6pt;
 border-bottom-left-radius: 6pt;
 white-space:nowrap;
-padding:1mm 1mm 0mm 1mm;
+padding:0.5mm 1mm 0.8mm 1mm;
 }
 .audience span {
 background: cmyk(0%,68%,72%,0);/*orange*/
 color:white;
 border-top-right-radius: 6pt;
 border-bottom-right-radius: 6pt;
-padding:1mm 1mm 0mm 1mm;
+padding:0.5mm 1mm 0.8mm 1mm;
 }
 ul.col-button {
 list-style-type: none;  
@@ -322,12 +330,12 @@ span.speaker-name {
     font-family:"MarkPro-LightItalic" !important;
  }
 .entry .heading {
-    page-break-inside: never;
+    page-break-inside: avoid;
     column-break-before: auto;
 }
 .texl ol,
 .text li {
-color: cmyk(98%,25%,32%,0%);/*petrol*/
+/*color: cmyk(98%,25%,32%,0%);/*petrol*/
     }
 .text ol span,
 .text li span {color:black;}
@@ -342,6 +350,7 @@ color: cmyk(98%,25%,32%,0%);/*petrol*/
     margin-bottom: 0.5em;
     font-family: DejaWeb;
     font-size:9pt;
+    line-height:12pt;
 }
 code {
     font-size:9pt;
@@ -351,6 +360,14 @@ code {
 }
 div.text p:nth-of-type(2n+2) {
    text-indent:34mm;
+}
+h7,
+h6,
+h5,
+h4 {
+   margin-top:0;
+    margin-bottom:0;
+    margin-left:34mm;
 }
 .entry .speaker-name {
     font-style: italic;

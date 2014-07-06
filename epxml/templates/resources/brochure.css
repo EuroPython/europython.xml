@@ -20,7 +20,12 @@ span.datetext {
     counter-increment: page
 
     @bottom-center {
-        content: "Page " counter(page);
+        z-index:999;
+        content: "" counter(page);
+        font-family: DejaWeb;
+        font-size:9pt;
+        position:absolute;
+        top:222.5mm;
     }
 
     @top-center{

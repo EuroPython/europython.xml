@@ -1,25 +1,5 @@
 /* Speakers Overview page */
 
-@page {
-    @top-center {
-        content: 'speakers';
-    }
-}
-
-@page:left {
-    background:url('speaker-left.png') -3mm -6mm no-repeat;
-    z-index:999;
-    position:relative;
-    background-size:138.5mm 243.7mm;
-    padding:17mm 14mm 20mm 16mm;
-}
-@page:right {
-    background:url('speaker-right.png') 0mm -6mm no-repeat;
-    z-index:999;
-    position:relative;
-    background-size:137.5 243.7mm;
-    padding:17mm 16mm 20mm 14mm;
-}
 @font-face {
   font-family: DejaWeb;
   src: url(DejaWeb.ttf);
@@ -32,6 +12,29 @@
   font-weight: normal;
   font-style:  normal;
 }
+@page {
+    @top-center {
+        content: 'speakers';
+        font-family: DejaWeb;
+        font-size:9pt;
+        margin-top:5.5mm;
+    }
+}
+
+@page:left {
+    background:url('speaker-left.png') -3mm -6mm no-repeat;
+    z-index:999;
+    position:relative;
+    background-size:138.5mm 243.7mm;
+    padding:19mm 14mm 20mm 16mm;
+}
+@page:right {
+    background:url('speaker-right.png') 0mm -6mm no-repeat;
+    z-index:999;
+    position:relative;
+    background-size:137.5 243.7mm;
+    padding:19mm 16mm 20mm 14mm;
+}
 .speakers-overview {
     /*
     -ro-column-count: 2; 
@@ -39,19 +42,16 @@
     -ro-column-gap: 1in;
     */
     text-align: justify;
-    font-size: 10px;
     hyphens: auto;
     hyphenate-before: 3;
     hyphenate-after: 3;
+    margin-bottom:3mm;
 }
 
 #headline {
     text-align: center;
     font-size:24pt;
     font-family:"MarkPro-Light";
-   text-shadow:none !important;
-     outline:none !important;
-    outline-color:transparent;
     line-height:36pt;
     color: cmyk(98%,25%,32%,0%);/*petrol*/ 
 }
@@ -65,14 +65,19 @@
 }
 
 .speakers-overview .speaker-image {
-    width: 1.75cm;
-    height: 1.75cm;
+    width: 24mm;
+    height: 24mm;
+    margin-top:2mm;
+    margin-right:4.5mm;
+    margin-bottom:2.5mm;
     border-radius: 50%;
 /*    border: solid 5px grey;*/
-    margin-right: 1em;
     float: left;
 }
 
 .speakers-overview .speaker-name {
     color: cmyk(98%,25%,32%,0%);/*petrol*/ 
+}
+.speaker-description:nth-of-type(2n+2) {
+   text-indent:34mm;
 }
