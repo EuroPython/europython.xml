@@ -72,7 +72,7 @@
                       </div><!-- entry: ENDE -->
                 {% endfor %}
             </div><!-- schedule-day: ENDE -->
-            <div class="empty">empty</div>
+            <div class="empty">Werbung goes here</div>
           {% endfor %}
         </div><!-- schedule: ENDE -->
     </body>
