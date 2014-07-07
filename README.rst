@@ -9,12 +9,12 @@ Installation::
 Generate brochure (talks)
 -------------------------
 
-bin/schedulexml2brochure -i session-export-20140623.2200.xml -p pdfreactor -f out.pdf -t brochure_talks.pt -y /path/to/fonts
+bin/schedulexml2brochure -i session-export-20140707.0800.xml -p pdfreactor -f out.pdf -t brochure_talks.pt -y /path/to/fonts
 
 Generate brochure (speakers)
 ----------------------------
 
-bin/schedulexml2brochure -i session-export-20140623.2200.xml -p pdfreactor -f out.pdf -t brochure_speakers.pt -z session-export-20140623.2200 -y /path/to/fonts
+bin/schedulexml2brochure -i session-export-20140707.0800.xml -p pdfreactor -f out.pdf -t brochure_speakers.pt -z session-export-20140707.0800 -y /path/to/fonts
 
 
 Templates
