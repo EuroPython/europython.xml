@@ -120,7 +120,7 @@ class Table(object):
 
 
         out = list()
-        out.append(u'<table border="1">')
+        out.append(u'<table class=schedule-table">')
 
         # table caption
         if self.caption:
