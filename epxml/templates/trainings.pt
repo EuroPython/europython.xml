@@ -1,4 +1,4 @@
-<table border="1" class="schedule">
+<table class="schedule">
 
     {% for entry in entries %}
     <tr>
