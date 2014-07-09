@@ -1,0 +1,132 @@
+@font-face {
+  font-family: DejaRip;
+  src: url(DejaRip.otf);
+  font-weight: normal;
+  font-style:  normal;
+}
+@font-face {
+  font-family: DejaRip-Bold;
+  src: url(DejaRip-Bold.otf);
+  font-weight: normal;
+  font-style:  normal;
+}
+@font-face {
+  font-family: MarkPro;
+  src: url(MarkPro.otf);
+  font-weight: normal;
+  font-style:  normal;
+}
+@font-face {
+  font-family: MarkPro-Bold;
+  src: url(MarkPro-Bold.otf);
+  font-weight: bold;
+  font-style:  normal;
+}
+@page {
+    margin:0;
+    -ro-crop-size: 276mm 234mm;
+    -ro-bleed-width: 3mm;
+    size: 270mm 228mm;
+    background:url('monday-table.png') -3mm -6mm no-repeat;
+    z-index:999;
+    position:relative;
+    background-size:276 244mm;
+    padding:19mm 16mm 20mm 16mm;
+
+    @top-center {
+        content: 'schedule';
+        font-family: DejaWeb;
+        font-size:9pt;
+        margin-top:5.5mm;
+    }
+    @bottom-center {
+        z-index:999;
+        content: "" counter(schedule);
+        font-family: DejaWeb;
+        font-size:9pt;
+        position:absolute;
+        top:222.5mm;
+    }
+
+    @top-center{
+    }
+}
+
+.schedule-table th.time {
+}
+
+/* Table schedule */
+div.day table{
+    width: 100%;
+    border-collapse: collapse;
+}
+div.day thead th {
+    font-family:"MarkPro-Bold";
+    font-size:9pt;
+    text-align:center;
+    color: cmyk(98%,25%,32%,0%);/*petrol*/
+}
+div.day tbody th.time {
+    font-family:"DejaRip";
+    font-size:9Pt;
+    padding:2mm 0mm;
+    line-height:12pt;
+    text-align:center;
+    color: cmyk(98%,25%,32%,0%);/*petrol*/
+    width:24mm;
+    border-right:0.25pt solid cmyk(98%,25%,32%,0%);
+    border-bottom:0.25pt solid cmyk(98%,25%,32%,0%);
+}
+td {
+    border-bottom:0.25pt solid cmyk(98%,25%,32%,0%);
+    }
+td:last-child {
+    }
+div.title {
+    font-family:"DejaRip";
+    color: cmyk(98%,25%,32%,0%);/*petrol*/
+    font-size:7Pt;
+    line-height:8.4pt;
+    text-align:left;
+    vertical-align:center;
+}
+
+div.speaker {
+    font-family:"DejaRip";
+    color: cmyk(0%,68%,72%,0);/*orange*/
+    font-size:7Pt;
+    line-height:8.4pt;
+    text-align:left;
+    vertical-align:center;
+}
+tbody td.empty {
+}
+td.col-0 {
+    width:24mm;
+    border-right:0.25pt solid cmyk(98%,25%,32%,0%);
+    }
+td.col-1 {
+    width:24mm;
+    border-right:0.25pt solid cmyk(98%,25%,32%,0%);
+    }
+td.col-2 {
+    width:60mm;
+    border-right:0 solid cmyk(98%,25%,32%,0%);
+    }
+td.col-3 {
+    width:24mm;
+    border-right:0.25pt solid cmyk(98%,25%,32%,0%);
+    }
+td.col-4 {
+    width:24mm;
+    border-right:0.25pt solid cmyk(98%,25%,32%,0%);
+    }
+
+td.col-5 {
+    width:24mm;
+    border-right:0.25pt solid cmyk(98%,25%,32%,0%);
+    }
+td.col-6 {
+    width:24mm;
+    border-right:0 solid cmyk(98%,25%,32%,0%);
+    }
