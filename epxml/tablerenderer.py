@@ -26,10 +26,14 @@ def event_renderer(event):
         the schedule table.
     """
     result = list()
+
     try:
-        css_outer = u' '.join(['topic-{}'.format(normalize(t.topic.text)) for t in event.topics])
+        css_outer = u' '.join(['topic-{}'.format(normalize(topic.topic.text)) for topic in event.topics])
     except AttributeError:
         css_outer = u''
+
+    if event.category:
+        css_outer += u' category-{}'.format(normalize(event.category.text))
     result.append(u'<div class="entry {}">'.format(css_outer))
 #    result.append(u'<div class="time">{}</div>'.format(event.attrib['start-end']))
     result.append(u'<div class="title">{}</div>'.format(event.title))

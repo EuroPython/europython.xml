@@ -1,4 +1,5 @@
 
+import string
 import cStringIO
 
 class BaseCell(object):
@@ -42,6 +43,14 @@ class SpanCell(EmptyCell):
     """
 
     type = 'span'
+
+
+def normalize(s):
+    """ Normalize a string in order to be used as CSS class """
+    s = s.lower().replace(u' ', u'-')
+    s = u''.join([c for c in s if c in string.letters + string.digits])
+    return s
+
 
 class Table(object):
     """ Abstract HTML table model """
@@ -150,7 +159,7 @@ class Table(object):
                 elif isinstance(cell, EmptyCell):
                     out.append(u'<td class="cell col-{} empty"></td>'.format(col))
                 elif isinstance(cell, Cell):
-                    out.append(u'<td class="cell col-{} non-empty" rowspan="{}" colspan="{}">{}</td>'.format(col, cell.rowspan, cell.colspan, event_renderer(cell.event)))
+                    out.append(u'<td class="cell title-{} col-{} non-empty" rowspan="{}" colspan="{}">{}</td>'.format(normalize(cell.event.title.text), col, cell.rowspan, cell.colspan, event_renderer(cell.event)))
 #            if self.row_headers:
 ##                out.append(u'<th class="time">{}</th>'.format(self.row_headers[row_index]))
 
