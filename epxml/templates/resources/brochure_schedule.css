@@ -52,6 +52,33 @@
     }
 }
 
+.day-monday {
+    page: monday;
+}
+.day-tuesday {
+    page: tuesday;
+}
+
+.day-wednesday {
+    page: wednesday;
+}
+
+.day-thursday {
+    page: thursday;
+}
+
+.day-friday {
+    page: friday;
+}
+
+.day-saturday {
+    page: saturday;
+}
+
+.day-sunday {
+    page: sunday;
+}
+
 .schedule-table th.time {
 }
 

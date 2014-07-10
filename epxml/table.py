@@ -120,7 +120,7 @@ class Table(object):
 
 
         out = list()
-        out.append(u'<table class=schedule-table">')
+        out.append(u'<table class="schedule-table day-{}">'.format(self.weekday))
 
         # table caption
         if self.caption:

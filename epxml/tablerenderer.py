@@ -31,7 +31,7 @@ def event_renderer(event):
     except AttributeError:
         css_outer = u''
     result.append(u'<div class="entry {}">'.format(css_outer))
-    result.append(u'<div class="time">{}</div>'.format(event.attrib['start-end']))
+#    result.append(u'<div class="time">{}</div>'.format(event.attrib['start-end']))
     result.append(u'<div class="title">{}</div>'.format(event.title))
     result.append(u'<div class="speakers">')
     if event.speakers.getchildren():
@@ -49,6 +49,7 @@ def conv(schedule_xml, # schedule XML string or schedule XML filename
         hour_end=24,   # schedule ends
         resolution=15, # timeslot resolution in minutes
         caption=None,  # caption of table
+        weekday=None,  # weekday name
         event_renderer=None):
 
     entries = util.get_entries(schedule_xml, '//day[@date="{}"]/entry'.format(date_str))
@@ -61,6 +62,7 @@ def conv(schedule_xml, # schedule XML string or schedule XML filename
     tb.caption = caption
     tb.col_headers = rooms
     tb.row_headers = row_headers
+    tb.weekday = weekday
 
     for e in entries:
         # determine starting row of event
@@ -99,22 +101,25 @@ def conv(schedule_xml, # schedule XML string or schedule XML filename
     )
 def render_schedule(xml_in, html_out='table.html', template='brochure_schedule.pt', fontpath=None, pdf_filename=None, first_page_number=1):
 
-    rooms = [u'C01', u'B05/B06', u'B07/B08', u'B09', u'A08', 'A03/A04', 'A05/A06']
+    rooms = [u'C01', u'B05/B06', u'B07/B08', u'empty',  u'B09', u'A08', 'A03/A04', 'A05/A06']
 
     if not xml_in:
         raise ValueError('Missing --xml-in|-i parameter')
     with open(xml_in, 'rb') as fp:
         schedule_xml = fp.read()
 
+    days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
     days_html = []
-    for i in range(21, 26):
+    for count, i in enumerate(range(21, 26)):
         html = conv(schedule_xml,
                    '2014-07-{}'.format(i),
                    rooms,
                    hour_start=9,
                    hour_end=22,
                    resolution=15,
-                   caption=u'2014-07-{}'.format(i),
+#                   caption=u'2014-07-{}'.format(i),
+                   caption=days[count],
+                   weekday=days[count],
                    event_renderer=event_renderer
                    )
         days_html.append(unicode(html, 'utf8'))
