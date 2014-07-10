@@ -21,9 +21,12 @@
         <div class="speakers-overview">
           <div id="headline">Speakers</div>  
           {% for s in speakers %}
-              <p class="speaker">
+          <p class="speaker {{ s.has_content }}">
                 {% if s.has_image %}
                     <img class="speaker-image" src="{{ s.image_file }}" />
+                {% endif %}
+                {% if not s.has_image %}
+                    <div class="no-speaker-image"></div>
                 {% endif %}
                 <span class="speaker-name">{{ s.name }}</span>
                 <span class="speaker-description">

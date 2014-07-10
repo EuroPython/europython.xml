@@ -70,6 +70,7 @@ def conv(xml_in=None,
             speaker_name = speaker.speaker.name
             speaker_description = speaker.speaker.description
             speaker_image_url = speaker.speaker.image
+            speaker_has_content = 'has-content' if len(speaker_description.text or '')> 0 else 'has-no-content'
             speaker_image_file = ''
             speaker_image_found = False
             if imagedir:
@@ -83,11 +84,13 @@ def conv(xml_in=None,
             if not speaker_image_found:
                 print 'No speaker image found for {} ({})'.format(speaker_name.text.encode('utf8'), speaker.speaker.attrib['id'])
 
+
             if not speaker_name in speakers_seen:
                 speakers.append(dict(name=speaker_name,
                                     name_lower=unicode(speaker_name).lower(),
                                     description=speaker_description,
                                     image_file=speaker_image_file,
+                                    has_content=speaker_has_content,
                                     has_image=speaker_image_found,
                                     image_url=speaker_image_url))
                 speakers_seen.add(speaker_name)
