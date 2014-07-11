@@ -27,11 +27,6 @@
     -ro-crop-size: 276mm 234mm;
     -ro-bleed-width: 3mm;
     size: 270mm 228mm;
-    background:url('monday-table.png') -3mm -6mm no-repeat;
-    z-index:999;
-    position:relative;
-    background-size:276 244mm;
-    padding:19mm 16mm 20mm 16mm;
 
     @top-center {
         content: 'schedule';
@@ -46,9 +41,6 @@
         font-size:9pt;
         position:absolute;
         top:222.5mm;
-    }
-
-    @top-center{
     }
 }
 
@@ -78,8 +70,54 @@
 .day-sunday {
     page: sunday;
 }
-
-.schedule-table th.time {
+@page monday {
+    background:url('monday-table.png') -3mm -6mm no-repeat;
+    z-index:999;
+    position:relative;
+    background-size:276 244mm;
+    padding:19mm 16mm 20mm 16mm;
+}
+@page tuesday {
+    background:url('tuesday-table.png') -3mm -6mm no-repeat;
+    z-index:999;
+    position:relative;
+    background-size:276 244mm;
+    padding:19mm 16mm 20mm 16mm;
+}
+@page wednesday {
+    background:url('wednesday-table.png') -3mm -6mm no-repeat;
+    z-index:999;
+    position:relative;
+    background-size:276 244mm;
+    padding:19mm 16mm 20mm 16mm;
+}
+@page thursday {
+    background:url('thursday-table.png') -3mm -6mm no-repeat;
+    z-index:999;
+    position:relative;
+    background-size:276 244mm;
+    padding:19mm 16mm 20mm 16mm;
+}
+@page friday {
+    background:url('friday-table.png') -3mm -6mm no-repeat;
+    z-index:999;
+    position:relative;
+    background-size:276 244mm;
+    padding:19mm 16mm 20mm 16mm;
+}
+@page saturday {
+    background:url('saturday-table.png') -3mm -6mm no-repeat;
+    z-index:999;
+    position:relative;
+    background-size:276 244mm;
+    padding:19mm 16mm 20mm 16mm;
+}
+@page sunday {
+    background:url('sunday-table.png') -3mm -6mm no-repeat;
+    z-index:999;
+    position:relative;
+    background-size:276 244mm;
+    padding:19mm 16mm 20mm 16mm;
 }
 
 /* Table schedule */
@@ -101,14 +139,9 @@ div.day tbody th.time {
     text-align:center;
     color: cmyk(98%,25%,32%,0%);/*petrol*/
     width:24mm;
-    border-right:0.25pt solid cmyk(98%,25%,32%,0%);
-    border-bottom:0.25pt solid cmyk(98%,25%,32%,0%);
+    border-right:0.25pt solid cmyk(29%,11%,16%,0%);
+    border-bottom:0.25pt solid cmyk(29%,11%,16%,0%);
 }
-td {
-    border-bottom:0.25pt solid cmyk(98%,25%,32%,0%);
-    }
-td:last-child {
-    }
 div.title {
     font-family:"DejaRip";
     color: cmyk(98%,25%,32%,0%);/*petrol*/
@@ -126,34 +159,69 @@ div.speaker {
     text-align:left;
     vertical-align:center;
 }
-tbody td.empty {
+tbody td.title-breakfast,
+tbody td.title-welcome,
+tbody td.title-europythondinner,
+tbody td.title-sponsoredeventrhodecode,
+tbody td.title-sponsoredeventelasticsearchmeetup,
+tbody td.title-lunch,
+tbody td.title-coffeebreak {
+        background:cmyk(29%,11%,16%,0%);
+}
+td.title-breakfast .title,
+td.title-welcome .title,
+td.title-europythondinner .title,
+td.title-sponsoredeventrhodecode .title,
+td.title-sponsoredeventelasticsearchmeetup .title,
+td.title-lunch .title,
+td.title-coffeebreak .title {
+        text-align:center;
+        color:cmyk(0%,0%,0%,0%) !important;
 }
 td.col-0 {
     width:24mm;
-    border-right:0.25pt solid cmyk(98%,25%,32%,0%);
+    border-right:0.25pt solid cmyk(29%,11%,16%,0%);
+    border-bottom:0.25pt solid cmyk(29%,11%,16%,0%);
+    padding:2mm 2mm;
     }
 td.col-1 {
     width:24mm;
-    border-right:0.25pt solid cmyk(98%,25%,32%,0%);
+    border-right:0.25pt solid cmyk(29%,11%,16%,0%);
+    border-bottom:0.25pt solid cmyk(29%,11%,16%,0%);
+    padding:2mm 2mm;
     }
 td.col-2 {
-    width:60mm;
-    border-right:0 solid cmyk(98%,25%,32%,0%);
+    width:24mm;
+    border-right:0pt;
+    border-bottom:0.25pt solid cmyk(29%,11%,16%,0%);
+    padding:2mm 2mm;
     }
 td.col-3 {
-    width:24mm;
-    border-right:0.25pt solid cmyk(98%,25%,32%,0%);
+    width:50mm;
+    border-right:0pt;
     }
 td.col-4 {
     width:24mm;
-    border-right:0.25pt solid cmyk(98%,25%,32%,0%);
+    border-right:0.25pt solid cmyk(29%,11%,16%,0%);
+    border-bottom:0.25pt solid cmyk(29%,11%,16%,0%);
+    padding:2mm 2mm;
     }
 
 td.col-5 {
     width:24mm;
-    border-right:0.25pt solid cmyk(98%,25%,32%,0%);
+    border-right:0.25pt solid cmyk(29%,11%,16%,0%);
+    border-bottom:0.25pt solid cmyk(29%,11%,16%,0%);
+    padding:2mm 2mm;
     }
 td.col-6 {
     width:24mm;
-    border-right:0 solid cmyk(98%,25%,32%,0%);
+    border-right:0.25pt solid cmyk(29%,11%,16%,0%);
+    border-bottom:0.25pt solid cmyk(29%,11%,16%,0%);
+    padding:2mm 2mm;
+    }
+td.col-7 {
+    width:24mm;
+    border-right:0pt;
+    border-bottom:0.25pt solid cmyk(29%,11%,16%,0%);
+    padding:2mm 2mm;
     }
