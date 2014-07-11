@@ -56,7 +56,7 @@
 @font-face {
   font-family: MarkPro-LightItalic;
   src: url(MarkPro-LightItalic.otf);
-  font-weight: 100;
+  font-weight: normal;
   font-style:  italic;
 }
 @font-face {
@@ -116,6 +116,9 @@
         font-family: DejaWeb;
         font-size:9pt;
         margin-top:5.5mm;
+        background-color:cmyk(0%,0%,0%,0%) !important;
+        z-index: 10;
+        position: relative;
     }
 }
 @page monday:left {
@@ -216,6 +219,14 @@
     background-size:137.5 243.7mm;
     padding:19mm 16mm 20mm 14mm;
 }
+p,
+p:before,
+p:after {
+    margin:0;
+}
+p:nth-of-type(1) {
+    margin-top:12pt;
+}
 .clearfix:before,
 .clearfix:after  {
   display: table;
@@ -237,6 +248,7 @@ text-transform:uppercase;
 .schedule-day {
     page-break-after: always;
 }
+.speakers,
 .speaker-name,
 .title, 
 .room {color: cmyk(98%,25%,32%,0);
@@ -288,6 +300,7 @@ list-style-type: none;
   overflow: hidden; 
 }
 .block-head {
+  margin-bottom: -4mm;
   display: table;
   width: 100%;
   border-collapse: collapse; 
@@ -322,9 +335,9 @@ font-size:12pt;
 font-family:"MarkPro-Light", Arial sans serif;
 }
 .speakers {
-    margin-top:3pt;
+    margin-top:1pt;
     font-size:9pt;
-    font-family:"MarkPro-Light", Arial sans serif;
+    font-family:"MarkPro-Light";
  }
 span.speaker-name {
     font-family:"MarkPro-LightItalic" !important;
@@ -340,7 +353,7 @@ span.speaker-name {
 .text ol span,
 .text li span {color:black;}
 .text div ol, ol, ul,
-.text div ul {margin-left:28mm;}
+.text div ul {margin-left:14mm;}
 .heading ul {margin-left:0;}
 .text {  
     text-align: justify;
@@ -359,22 +372,25 @@ code {
     
 }
 div.text p:nth-of-type(2n+2) {
-   text-indent:34mm;
+   text-indent:20mm;
 }
 h7,
 h6,
 h5,
 h4 {
-   margin-top:0;
+    color: cmyk(98%,25%,32%,0%);/*petrol*/
+    margin-top:4mm;
     margin-bottom:0;
-    margin-left:34mm;
+    margin-left:20mm;
 }
+div > h4:not(:first-child),
+div > h5:not(:first-child),
+div > h6:not(:first-child),
+div > h7:not(:first-child) {
+    margin-top:0mm;
+    }
 .entry .speaker-name {
     font-style: italic;
-    font-weight: bold;
-}
-
-.entry .speaker-description {
 }
 
 .empty {

@@ -81,7 +81,7 @@ body {
 /* Footnotes */
 .link-text a {
 color:black;
-font-size:8pt;    
+font-size:7pt;    
 float: footnote
 }
 
@@ -89,8 +89,11 @@ float: footnote
 
 .a::footnote-call {
     content: counter(footnote);
-    font-size: 83%;
-    vertical-align: super;
-    line-height: none
+    font-size: 7pt;
+    vertical-align: baseline;
+    line-height: none;
+    padding-right:10mm;
+    padding-left:10mm;
 }
-
+.footnote::footnote-marker {
+}
