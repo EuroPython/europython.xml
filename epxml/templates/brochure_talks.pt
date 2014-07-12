@@ -39,7 +39,7 @@
 
                             <ul style="clear:both;" class="b-text">
                                 {% for topic in  entry.topics %} 
-                             <li style="float:left;" class="topic topic-{{ view.lower(topic.topic)}}"><span>{{ topic.topic }}</span></li>
+                             <li style="float:left;" class="topic topic-{{ view.lower(topic.topic or 'python')}}"><span>{{ topic.topic or 'Python' }}</span></li>
                                 {% endfor %}
                              <li class="audience audience-{{view.lower(entry.audience) }}"><span>{{ view.audience2stars(entry.audience) }}</span></li>
                             </ul>
