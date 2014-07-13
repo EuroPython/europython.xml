@@ -1,8 +1,8 @@
 /* Speakers Overview page */
 
 @font-face {
-  font-family: DejaWeb;
-  src: url(DejaWeb.ttf);
+  font-family: DejaRip;
+  src: url(DejaRip.otf);
   font-weight: normal;
   font-style:  normal;
 }
@@ -15,25 +15,25 @@
 @page {
     @top-center {
         content: 'speakers';
-        font-family: DejaWeb;
+        font-family: DejaRip;
         font-size:9pt;
         margin-top:5.5mm;
     }
 }
 
 @page:left {
-    background:url('speaker-left.png') -3mm -6mm no-repeat;
+    background:url('speaker-left.png') -3mm -9mm no-repeat;
     z-index:999;
     position:relative;
     background-size:138.5mm 243.7mm;
-    padding:19mm 14mm 20mm 16mm;
+    padding:17.6mm 16.5mm 20mm 18.5mm;
 }
 @page:right {
-    background:url('speaker-right.png') 0mm -6mm no-repeat;
+    background:url('speaker-right.png') 0mm -9mm no-repeat;
     z-index:999;
     position:relative;
     background-size:137.5 243.7mm;
-    padding:19mm 16mm 20mm 14mm;
+    padding:17.6mm 18.5mm 20mm 16.5mm;
 }
 .speakers-overview {
     /*
@@ -57,7 +57,7 @@
 }
 
 .speakers-overview .speaker {
-    font-family: DejaWeb;
+    font-family: DejaRip;
     font-size:9pt;
     line-height:12pt;
      margin-top: 4.233mm;

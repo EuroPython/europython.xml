@@ -83,6 +83,7 @@ body {
 color:black;
 font-size:7pt;    
 float: footnote;
+text-align: left;
 }
 
 .link-text a { counter-increment: footnote }
@@ -92,9 +93,13 @@ a::footnote-call {
     font-size: 7pt;
     vertical-align: super;
     line-height: none;
+    text-align: left;
 }
 a::footnote-marker {
     font-size: 7pt;
     padding-right:1mm;
     vertical-align: baseline;
+    text-align: left;
+    padding-left: 0;
+    margin-left: 0;
 }
