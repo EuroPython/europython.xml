@@ -2368,6 +2368,7 @@ For building PySide please refer to the following:&#xD;
 * [Windows](http://qt-project.org/wiki/Building_PySide_on_Windows)&#xD;
 &#xD;
 Alternatively, you can read my book on PySide if you like to know what would be covered in the session.&#xD;
+</description>
       <speakers>
         <speaker id="271">
           <name>Venkateshwaran Loganathan</name>
