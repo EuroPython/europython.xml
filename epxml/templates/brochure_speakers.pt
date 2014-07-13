@@ -26,7 +26,7 @@
                     <img class="speaker-image" src="{{ s.image_file }}" />
                 {% endif %}
                 {% if not s.has_image %}
-                    <div class="no-speaker-image"></div>
+                    <span class="no-speaker-image"></span>
                 {% endif %}
                 <span class="speaker-name">{{ s.name }}</span>
                 <span class="speaker-description">
