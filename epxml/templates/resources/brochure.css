@@ -8,9 +8,9 @@ span.datetext {
 }
 
 @font-face {
-  font-family: DejaWeb-Bold;
-  src: url(DejaWeb-Bold.ttf);
-  font-weight: bold;
+  font-family: DejaRip;
+  src: url(DejaRip.otf);
+  font-weight: normal;
   font-style:  normal;
 }
 @page {
@@ -22,13 +22,10 @@ span.datetext {
     @bottom-center {
         z-index:999;
         content: "" counter(page);
-        font-family: DejaWeb;
+        font-family: DejaRip;
         font-size:9pt;
         position:absolute;
         top:222.5mm;
-    }
-
-    @top-center{
     }
 }
 

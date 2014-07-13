@@ -243,6 +243,7 @@ h5,
 h4 {
 /*color: cmyk(98%,25%,32%,0%);/*petrol*/
 font-size:9pt;
+line-height:12pt;
 font-family:"MarkPro-Light", Arial sans serif;
 text-transform:uppercase;
 }
@@ -268,14 +269,15 @@ font-family:"MarkPro-Light", Arial sans serif;
     font-size:9pt;
     line-height:9pt;
     vertical-align:center;
-    text-transform:uppercase;
+    text-transform:lowercase;
+    font-variant:small-caps;
 }
 .topics {margin:0; padding:0;}
 .topics span {
 background: cmyk(18%,0%,80%,0%); /*yellow*/
 color: cmyk(98%,25%,32%,0%);/*petrol*/
 border-radius: 6pt;
-padding:0mm 1mm 0.4mm 1mm;
+padding:-0.4mm 1mm 0.5mm 1mm;
 }
 .topic,
 .audience {
@@ -284,17 +286,19 @@ padding:0mm 1mm 0.4mm 1mm;
 .topic span {
 background: cmyk(0%,68%,72%,0);/*orange*/
 color:white;
+    line-height:0pt;
 border-top-left-radius: 6pt;
 border-bottom-left-radius: 6pt;
 white-space:nowrap;
-padding:0mm 1mm 0.4mm 1mm;
+padding:-0.4mm 1mm 0.5mm 1mm;
 }
 .audience span {
 background: cmyk(0%,68%,72%,0);/*orange*/
 color:white;
+    line-height:0pt;
 border-top-right-radius: 6pt;
 border-bottom-right-radius: 6pt;
-padding:0mm 1mm 0.4mm 1mm;
+padding:-0.4mm 1mm 0.5mm 1mm;
 }
 ul.col-button {
 list-style-type: none;  
@@ -316,11 +320,11 @@ list-style-type: none;
 .block-head .topics {
 display: table-cell;
 vertical-align: top;
-width: 36mm;
+width: 34mm;
  }
 .block-head .b-text {
 display: table-cell;
-width: 64mm;
+margin-left:34.1pt;
 padding: 0;
 }
 .b-text li {margin-right:1.4mm;} 
@@ -333,7 +337,7 @@ padding: 0;
 }
 .col-right {
     display:block;
-    width:62mm;
+    width:60mm;
     margin-left: 34mm;
     margin-top:0;
 }
@@ -382,6 +386,9 @@ code {
 }
 div.text p:nth-of-type(2n+2) {
    text-indent:20mm;
+}
+div.text p a {
+text-indent: 0mm !important;
 }
 h7,
 h6,

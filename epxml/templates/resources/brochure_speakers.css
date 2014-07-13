@@ -74,7 +74,7 @@
 /*    border: solid 5px grey;*/
     float: left;
 }
-
+p.has-no-content {display:none;}
 .speakers-overview .speaker-name {
     color: cmyk(98%,25%,32%,0%);/*petrol*/ 
 }
