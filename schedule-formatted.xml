@@ -2368,16 +2368,6 @@ For building PySide please refer to the following:&#xD;
 * [Windows](http://qt-project.org/wiki/Building_PySide_on_Windows)&#xD;
 &#xD;
 Alternatively, you can read my book on PySide if you like to know what would be covered in the session.&#xD;
-&#xD;
-[PySide GUI Application Development](http://www.packtpub.com/pyside-gui-application-development/book)&#xD;
---------------------------------------------&#xD;
-&#xD;
-If you have some difficulties in installing please feel free to contact me anytime.&#xD;
-&#xD;
-* [My Web Page](http://venkateshwaranloganathan.com)&#xD;
-* [My FB Page](http://www.packtpub.com/pyside-gui-application-development/book)&#xD;
-* [My Twitter Profile](https://twitter.com/anandvenkat4)&#xD;
-####Looking forward to connect with you all, See you at the conference.</description>
       <speakers>
         <speaker id="271">
           <name>Venkateshwaran Loganathan</name>
@@ -2887,7 +2877,7 @@ on improving PySide.</description>
       <title>Compress Me, Stupid!</title>
       <abstract>Compression is a general technique for reducing the size of datasets that normally lie on disk or that should be sent remotely.  But time has come to use it as a means to accelerate applications that uses in-memory data too.&#xD;
 &#xD;
-[Blosc](http://www.blosc.org) is a high-performance meta-compressor that is meant to do that.</abstract>
+Blosc is a high-performance meta-compressor that is meant to do that.</abstract>
       <description>Compression is a technique to reduce the number of bits needed to&#xD;
 represent a given dataset. A very common use-case in the distributed&#xD;
 digital age is to reduce the size of files in order to reduce the time&#xD;
@@ -5574,7 +5564,7 @@ As part of a collaboration the GR framework has been integrated into [NICOS][7] 
       <title>Combining the powerful worlds of Python and R</title>
       <abstract>Although maybe not very well known in the Python community there exists a powerful statistical open-source ecosystem called R. Mostly used in scientific contexts it provides lots of functionality for doing statistical analysis, generation of various kinds of plots and graphs, and much, much more.&#xD;
 &#xD;
-The triplet [R](http://www.r-project.org "R"), [Rserve](https://rforge.net/Rserve/ "Rserve"), and [pyRserve](https://pypi.python.org/pypi/pyRserve/ "pyRserve") allows the building up of a network bridge from Python to R: Now R-functions can be called from Python as if they were implemented in Python, and even complete R scripts can be executed through this connection.</abstract>
+The triplet R, Rserve, and pyRserve allows the building up of a network bridge from Python to R: Now R-functions can be called from Python as if they were implemented in Python, and even complete R scripts can be executed through this connection.</abstract>
       <description>pyRserve is a small open source project originally developed to fulfill the needs of a German biotech company to do statistical analysis in a large Python-based Lab Information Management System (LIMS). In contrast to other R-related libraries like RPy where Python and R run on the same host, pyRserve allows the distribution of complex operations and calculations over multiple R servers across the network. &#xD;
 &#xD;
 The aim of this talk is to show how easily Python can be connected to R, and to present a number of selected (simple) code examples which demonstrate the power of this setup.</description>
