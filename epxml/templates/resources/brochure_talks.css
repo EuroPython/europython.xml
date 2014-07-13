@@ -1,24 +1,24 @@
 @font-face {
-  font-family: DejaWeb;
-  src: url(DejaWeb.ttf);
+  font-family: DejaRip;
+  src: url(DejaRip.otf);
   font-weight: normal;
   font-style:  normal;
 }
 @font-face {
-  font-family: DejaWeb-Bold;
-  src: url(DejaWeb-Bold.ttf);
+  font-family: DejaRip-Bold;
+  src: url(DejaRip-Bold.otf);
   font-weight: bold;
   font-style:  normal;
 }
 @font-face {
-  font-family: DejaWeb-Italic;
-  src: url(DejaWeb-Italic.ttf);
+  font-family: DejaRip-Italic;
+  src: url(DejaRip-Italic.otf);
   font-weight: normal;
   font-style:  italic;
 }
 @font-face {
-  font-family: DejaWeb-BoldItalic;
-  src: url(DejaWeb-BoldItalic.ttf);
+  font-family: DejaRip-Bold-Italic;
+  src: url(DejaRip-Bold-Italic.otf);
   font-weight: bold;
   font-style:  italic;
 }
@@ -113,7 +113,7 @@
 @page {
     @top-center {
         content: 'program';
-        font-family: DejaWeb;
+        font-family: DejaRip;
         font-size:9pt;
         margin-top:5.5mm;
         background-color:cmyk(0%,0%,0%,0%) !important;
@@ -122,103 +122,105 @@
     }
 }
 @page monday:left {
-    background:url('monday-left.png') -3mm -6mm no-repeat;
+    background:url('monday-left.png') -3mm -9mm no-repeat;
     z-index:999;
     position:relative;
     background-size:138.5mm 243.7mm;
-    padding:19mm 14mm 20mm 16mm;
+    padding:17.6mm 16.5mm 20mm 18.5mm;
 }
 @page monday:right {
-    background:url('monday-right.png') 0mm -6mm no-repeat;
+    background:url('monday-right.png') 0mm -9mm no-repeat;
     z-index:999;
     position:relative;
     background-size:137.5 243.7mm;
-    padding:19mm 16mm 20mm 14mm;
+    padding:17.6mm 18.5mm 20mm 16.5mm;
 }
 @page tuesday:left {
-    background:url('tuesday-left.png') -3mm -6mm no-repeat;
+    background:url('tuesday-left.png') -3mm -9mm no-repeat;
     z-index:999;
     position:relative;
     background-size:138.5mm 243.7mm;
-    padding:19mm 14mm 20mm 16mm;
+    padding:17.6mm 16.5mm 20mm 18.5mm;
 }
 @page tuesday:right {
-    background:url('tuesday-right.png') 0mm -6mm no-repeat;
+    background:url('tuesday-right.png') 0mm -9mm no-repeat;
     z-index:999;
     position:relative;
     background-size:137.5 243.7mm;
-    padding:19mm 16mm 20mm 14mm;
+    padding:17.6mm 18.5mm 20mm 16.5mm;
 }
 @page wednesday:left {
-    background:url('wednesday-left.png') -3mm -6mm no-repeat;
+    background:url('wednesday-left.png') -3mm -9mm no-repeat;
     z-index:999;
     position:relative;
     background-size:138.5mm 243.7mm;
-    padding:19mm 14mm 20mm 16mm;
+    padding:17.6mm 16.5mm 20mm 18.5mm;
 }
 @page wednesday:right {
-    background:url('wednesday-right.png') 0mm -6mm no-repeat;
+    background:url('wednesday-right.png') 0mm -9mm no-repeat;
     z-index:999;
     position:relative;
     background-size:137.5 243.7mm;
-    padding:19mm 16mm 20mm 14mm;
+    padding:17.6mm 18.5mm 20mm 16.5mm;
 }
 @page thursday:left {
-    background:url('thursday-left.png') -3mm -6mm no-repeat;
+    background:url('thursday-left.png') -3mm -9mm no-repeat;
     z-index:999;
     position:relative;
     background-size:138.5mm 243.7mm;
-    padding:19mm 14mm 20mm 16mm;
+    padding:17.6mm 16.5mm 20mm 18.5mm;
 }
 @page thursday:right {
-    background:url('thursday-right.png') 0mm -6mm no-repeat;
+    background:url('thursday-right.png') 0mm -9mm no-repeat;
     z-index:999;
     position:relative;
     background-size:137.5 243.7mm;
-    padding:19mm 16mm 20mm 14mm;
+    padding:17.6mm 18.5mm 20mm 16.5mm;
 }
 @page friday:left {
-    background:url('friday-left.png') -3mm -6mm no-repeat;
+    background:url('friday-left.png') -3mm -9mm no-repeat;
     z-index:999;
     position:relative;
     background-size:138.5mm 243.7mm;
-    padding:19mm 14mm 20mm 16mm;
+    padding:17.6mm 16.5mm 20mm 18.5mm;
 }
 @page friday:right {
-    background:url('friday-right.png') 0mm -6mm no-repeat;
+    background:url('friday-right.png') 0mm -9mm no-repeat;
     z-index:999;
     position:relative;
     background-size:137.5 243.7mm;
-    padding:19mm 16mm 20mm 14mm;
+    padding:17.6mm 18.5mm 20mm 16.5mm;
 }
 @page saturday:left {
-    background:url('saturday-left.png') -3mm -6mm no-repeat;
+    background:url('saturday-left.png') -3mm -9mm no-repeat;
     z-index:999;
     position:relative;
     background-size:138.5mm 243.7mm;
-    padding:19mm 14mm 20mm 16mm;
+    padding:17.6mm 16.5mm 20mm 18.5mm;
 }
 @page saturday:right {
-    background:url('saturday-right.png') 0mm -6mm no-repeat;
+    background:url('saturday-right.png') 0mm -9mm no-repeat;
     z-index:999;
     position:relative;
     background-size:137.5 243.7mm;
-    padding:19mm 16mm 20mm 14mm;
+    padding:17.6mm 18.5mm 20mm 16.5mm;
 }
 @page sunday:left {
-    background:url('sunday-left.png') -3mm -6mm no-repeat;
+    background:url('sunday-left.png') -3mm -9mm no-repeat;
     z-index:999;
     position:relative;
     background-size:138.5mm 243.7mm;
-    padding:19mm 14mm 20mm 16mm;
+    padding:17.6mm 16.5mm 20mm 18.5mm;
 }
 @page sunday:right {
-    background:url('sunday-right.png') 0mm -6mm no-repeat;
+    background:url('sunday-right.png') 0mm -9mm no-repeat;
     z-index:999;
     position:relative;
     background-size:137.5 243.7mm;
-    padding:19mm 16mm 20mm 14mm;
+    padding:17.6mm 18.5mm 20mm 16.5mm;
 }
+/* content styles */
+.schedule-heading {display:none;}
 p,
 p:before,
 p:after {
@@ -253,13 +255,19 @@ text-transform:uppercase;
 .title, 
 .room {color: cmyk(98%,25%,32%,0);
 }
-.time {color: cmyk(0%,68%,72%,0);
+.time {
+font-family:"MarkPro-Light", Arial sans serif;
+color: cmyk(0%,68%,72%,0);
+}
+.room {
+font-family:"MarkPro-Light", Arial sans serif;
 }
 .topics,
 .b-text {
     font-family:MarkPro-Bold !important;
     font-size:9pt;
-    line-height:12pt;
+    line-height:9pt;
+    vertical-align:center;
     text-transform:uppercase;
 }
 .topics {margin:0; padding:0;}
@@ -267,7 +275,7 @@ text-transform:uppercase;
 background: cmyk(18%,0%,80%,0%); /*yellow*/
 color: cmyk(98%,25%,32%,0%);/*petrol*/
 border-radius: 6pt;
-padding:0.5mm 1mm 0.8mm 1mm;
+padding:0mm 1mm 0.4mm 1mm;
 }
 .topic,
 .audience {
@@ -279,14 +287,14 @@ color:white;
 border-top-left-radius: 6pt;
 border-bottom-left-radius: 6pt;
 white-space:nowrap;
-padding:0.5mm 1mm 0.8mm 1mm;
+padding:0mm 1mm 0.4mm 1mm;
 }
 .audience span {
 background: cmyk(0%,68%,72%,0);/*orange*/
 color:white;
 border-top-right-radius: 6pt;
 border-bottom-right-radius: 6pt;
-padding:0.5mm 1mm 0.8mm 1mm;
+padding:0mm 1mm 0.4mm 1mm;
 }
 ul.col-button {
 list-style-type: none;  
@@ -308,11 +316,11 @@ list-style-type: none;
 .block-head .topics {
 display: table-cell;
 vertical-align: top;
-width: 34mm;
+width: 36mm;
  }
 .block-head .b-text {
 display: table-cell;
-width: 66mm;
+width: 64mm;
 padding: 0;
 }
 .b-text li {margin-right:1.4mm;} 
@@ -325,7 +333,7 @@ padding: 0;
 }
 .col-right {
     display:block;
-    width:67mm;
+    width:62mm;
     margin-left: 34mm;
     margin-top:0;
 }
@@ -335,7 +343,8 @@ font-size:12pt;
 font-family:"MarkPro-Light", Arial sans serif;
 }
 .speakers {
-    margin-top:1pt;
+    margin-top:3pt !important;
+    margin-bottom:0.4pt !important;
     font-size:9pt;
     font-family:"MarkPro-Light";
  }
@@ -358,10 +367,10 @@ span.speaker-name {
 .text {  
     text-align: justify;
     hyphens: auto;
-    hyphenate-before: 2;
-    hyphenate-after: 2;
+    hyphenate-before: 3;
+    hyphenate-after: 3;
     margin-bottom: 0.5em;
-    font-family: DejaWeb;
+    font-family: DejaRip;
     font-size:9pt;
     line-height:12pt;
 }
