@@ -913,7 +913,7 @@ Abstract:&#xD;
         <speaker id="710">
           <name>Bartosz Telenczuk</name>
           <profile>https://ep2014.europython.eu/en/accounts/profile/710/</profile>
-          <description>Bartosz Telenczuk has a PhD in biophysics. He has been active Python user since 2005. He is creator of [svgutils](https://github.com/btel/svg_utils) and he  has contributed to many open source Python libraries including numpy and matplotlib.  He is also a Python advocate and an instructor at [advanced Python schools for scientists](https://python.g-node.org/python-summerschool-2013/). Currently he is a researcher in France, developing methods to interpret the electrical activity of the brain.</description>
+          <description>Bartosz Telenczuk has a PhD in biophysics. He has been active Python user since 2005. He is creator of [svgutils](https://github.com/btel/svg_utils) and he  has contributed to many open source Python libraries including numpy and matplotlib.  He is also a Python advocate and an instructor at advanced Python schools for scientists]. Currently he is a researcher in France, developing methods to interpret the electrical activity of the brain.</description>
           <image/>
         </speaker>
       </speakers>
@@ -1907,7 +1907,7 @@ The talk overall gives an overview what experience we got by these ideas and how
 &#xD;
 He likes FOSS projects and is a member of the [pyCologne Usergroup](http://pycologne.de). Since five years he organizes [Python Barcamps](http://pythoncamp.de) in Cologne. Since 2012-11-01 he is a board member of the Python Software Verband e.V. (2. Vorsitzender des Vorstands) and became elected as PSF Fellow in 2013.&#xD;
 &#xD;
-Reimar Bauer (PySV) is responsible for the competition: [Python moves the world](http://pymove3d.pysv.org) - Attractive programming for young people .&#xD;
+Reimar Bauer (PySV) is responsible for the competition: Python moves the world - Attractive programming for young people .&#xD;
 &#xD;
 For living he works at the Forschungszentrum J&#xFC;lich GmbH, IEK. His fields of work/research development of data acquisition and analysis software, and system administration.&#xD;
 </description>
@@ -2044,7 +2044,7 @@ Do you want to manipulate the data coming from a device, but you've lend it to s
           <profile>https://ep2014.europython.eu/en/accounts/profile/702/</profile>
           <description>Stefano is a Software Engineer with several years of experience in embedded software solutions, hw/sw integration and hardware monitor systems. &#xD;
 &#xD;
-Always interested in the Open Source world, Stefano is one of the main GNU/Linux developer for the [openmamba](http://www.openmamba.org "openmamba") distribution and he leads from the beginning the laboratories for the [GNU/Linux course](http://netstudent.polito.it/wiki/index.php/Corso "GNU/Linux course") at the Polytechnic University of Turin.</description>
+Always interested in the Open Source world, Stefano is one of the main GNU/Linux developer for the openmamba distribution and he leads from the beginning the laboratories for the GNU/Linux course at the Polytechnic University of Turin.</description>
           <image>https://ep2014.europython.euhttps://media.ep14.org/site_media/avatars/stefano_cotta_ramusino.jpg</image>
         </speaker>
       </speakers>
@@ -2373,7 +2373,7 @@ Alternatively, you can read my book on PySide if you like to know what would be 
         <speaker id="271">
           <name>Venkateshwaran Loganathan</name>
           <profile>https://ep2014.europython.eu/en/accounts/profile/271/</profile>
-          <description>Working as a Software Developer in an MNC. Have authored a book on PySide by the name "PySide GUI Application Development" by Packt Publishers. More of me at http://venkateshwaranloganathan.com&#xD;
+          <description>Working as a Software Developer in an MNC. Have authored a book on PySide by the name "PySide GUI Application Development" by Packt Publishers. &#xD;
 &#xD;
 Have involved myself in the development of projects in the open source page. Worked on  C, Python and Node.js extensively.</description>
           <image>https://ep2014.europython.euhttps://media.ep14.org/site_media/avatars/Swimming_Pic.jpg</image>
@@ -2698,7 +2698,7 @@ See http://blog.schlomo.schapiro.org/2013/12/test-driven-infrastructure.html for
 &#xD;
 The ImmobilienScout24 web platform is based on Linux, Apache, Tomcat and open standards. We are currently creating a new deployment and management solution for our data center based on RPM packages. The solution is written in Python and Bash and published at http://yadt-project.org.&#xD;
 &#xD;
-Schlomo maintains several successful open source projects and is a regular speaker at various conferences. Schlomo is a strong DevOps and web operations advocate and writes regularly for German IT magazines and his BLOG (http://blog.schlomo.schapiro.org). See the homepage on http://www.schapiro.org/schlomo or the profile on http://go.schapiro.org/schlomo for more information.&#xD;
+Schlomo maintains several successful open source projects and is a regular speaker at various conferences. Schlomo is a strong DevOps and web operations advocate and writes regularly for German IT magazines and his BLOG. &#xD;
 </description>
           <image>https://ep2014.europython.euhttps://media.ep14.org/site_media/avatars/Schlomo_Schapiro_Large.jpg</image>
         </speaker>
@@ -4120,9 +4120,7 @@ Finally, the talk will mention some helpful resources on the web.</description>
           <name>Stefan Schwarzer</name>
           <profile>https://ep2014.europython.eu/en/accounts/profile/673/</profile>
           <description>Stefan Schwarzer uses Python since 1999. He's written articles and a book on Python and given talks at several Python and Linux conferences. Although Stefan studied chemical engineering and has a doctor's degree in it, he's been working in software development since 2000. Nowadays Stefan is a freelancer in software development [1], mostly with Python. He's also the maintainer of the FTP client library ftputil [2].&#xD;
-&#xD;
-[1] http://sschwarzer.com&#xD;
-[2] http://ftputil.sschwarzer.net</description>
+</description>
           <image>https://ep2014.europython.euhttps://media.ep14.org/site_media/avatars/StefanSchwarzer.jpg</image>
         </speaker>
       </speakers>
