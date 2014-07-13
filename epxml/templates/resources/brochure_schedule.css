@@ -1,4 +1,11 @@
 @font-face {
+  font-family: FontAwesome;
+  src: url(FontAwesome.otf);
+  font-weight: normal;
+  font-style:  normal;
+}
+
+@font-face {
   font-family: DejaRip;
   src: url(DejaRip.otf);
   font-weight: normal;
@@ -28,19 +35,28 @@
     -ro-bleed-width: 3mm;
     size: 270mm 228mm;
 
-    @top-center {
+    @top-right {
         content: 'schedule';
-        font-family: DejaWeb;
+        font-family: DejaRip;
         font-size:9pt;
         margin-top:5.5mm;
+        padding-right:22mm;
     }
-    @bottom-center {
+    @top-left {
+        content: 'schedule';
+        font-family: DejaRip;
+        font-size:9pt;
+        margin-top:5.5mm;
+        padding-left:22mm;
+    }
+    @bottom-left {
         z-index:999;
         content: "" counter(schedule);
-        font-family: DejaWeb;
+        font-family: DejaRip;
         font-size:9pt;
         position:absolute;
         top:222.5mm;
+        padding-left:22mm;
     }
 }
 
@@ -71,56 +87,57 @@
     page: sunday;
 }
 @page monday {
-    background:url('monday-table.png') -3mm -6mm no-repeat;
+    background:url('monday-table.png') -3mm -9mm no-repeat;
     z-index:999;
     position:relative;
     background-size:276 244mm;
-    padding:19mm 16mm 20mm 16mm;
+    padding:17.6mm 16.5mm 20mm 17.5mm;
 }
 @page tuesday {
-    background:url('tuesday-table.png') -3mm -6mm no-repeat;
+    background:url('tuesday-table.png') -3mm -9mm no-repeat;
     z-index:999;
     position:relative;
     background-size:276 244mm;
-    padding:19mm 16mm 20mm 16mm;
+    padding:17.6mm 16.5mm 20mm 17.5mm;
 }
 @page wednesday {
-    background:url('wednesday-table.png') -3mm -6mm no-repeat;
+    background:url('wednesday-table.png') -3mm -9mm no-repeat;
     z-index:999;
     position:relative;
     background-size:276 244mm;
-    padding:19mm 16mm 20mm 16mm;
+    padding:17.6mm 16.5mm 20mm 17.5mm;
 }
 @page thursday {
-    background:url('thursday-table.png') -3mm -6mm no-repeat;
+    background:url('thursday-table.png') -3mm -9mm no-repeat;
     z-index:999;
     position:relative;
     background-size:276 244mm;
-    padding:19mm 16mm 20mm 16mm;
+    padding:17.6mm 16.5mm 20mm 17.5mm;
 }
 @page friday {
-    background:url('friday-table.png') -3mm -6mm no-repeat;
+    background:url('friday-table.png') -3mm -9mm no-repeat;
     z-index:999;
     position:relative;
     background-size:276 244mm;
-    padding:19mm 16mm 20mm 16mm;
+    padding:17.6mm 16.5mm 20mm 17.5mm;
 }
 @page saturday {
-    background:url('saturday-table.png') -3mm -6mm no-repeat;
+    background:url('saturday-table.png') -3mm -9mm no-repeat;
     z-index:999;
     position:relative;
     background-size:276 244mm;
-    padding:19mm 16mm 20mm 16mm;
+    padding:17.6mm 16.5mm 20mm 17.5mm;
 }
 @page sunday {
-    background:url('sunday-table.png') -3mm -6mm no-repeat;
+    background:url('sunday-table.png') -3mm -9mm no-repeat;
     z-index:999;
     position:relative;
     background-size:276 244mm;
-    padding:19mm 16mm 20mm 16mm;
+    padding:17.6mm 16.5mm 20mm 17.5mm;
 }
 
 /* Table schedule */
+caption {display:none;}
 div.day table{
     width: 100%;
     border-collapse: collapse;
@@ -177,6 +194,44 @@ td.title-lunch .title,
 td.title-coffeebreak .title {
         text-align:center;
         color:cmyk(0%,0%,0%,0%) !important;
+}
+td.title-coffeebreak .title:before,
+td.title-breakfast .title:before {
+    content:':';
+    color:white;
+    font-family:FontAwesome;
+    font-size:4pt;
+   padding-right:2mm;
+}
+td.title-welcome .title:before {
+    content:'';
+    color:white;
+    font-family:FontAwesome;
+    font-size:4pt;
+   padding-right:2mm;
+}
+td.title-lunch .title:before {
+    content:'';
+    color:white;
+    font-family:FontAwesome;
+    font-size:4pt;
+   padding-right:2mm;
+}
+td.title-sponsoredeventelasticsearchmeetup .title:before {
+    color:white;
+    content:"";
+    font-family:FontAwesome;
+    font-size:4pt;
+   padding-right:2mm;
+}
+td.title-sponsoredeventletstalkpythonandelasticsearch .title:before,
+td.title-sponsoredeventrhodecode .title:before,
+td.title-europythondinner .title:before {
+    color:white;
+    font-family:FontAwesome;
+    content:"";
+    font-size:4pt;
+   padding-right:2mm;
 }
 td.col-0 {
     width:24mm;
