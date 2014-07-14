@@ -34,6 +34,7 @@
     -ro-crop-size: 276mm 234mm;
     -ro-bleed-width: 3mm;
     size: 270mm 228mm;
+    counter-increment: page1 2 page2 2;
 
     @top-right {
         content: 'schedule';
@@ -51,12 +52,21 @@
     }
     @bottom-left {
         z-index:999;
-        content: "" counter(schedule);
+        content: "" counter(page1);
         font-family: DejaRip;
         font-size:9pt;
         position:absolute;
         top:222.5mm;
         padding-left:22mm;
+    }
+    @bottom-right {
+        z-index:999;
+        content: "" counter(page2);
+        font-family: DejaRip;
+        font-size:9pt;
+        position:absolute;
+        top:222.5mm;
+        padding-left:252mm;
     }
 }
 
@@ -176,6 +186,7 @@ div.speaker {
     text-align:left;
     vertical-align:center;
 }
+tbody td.title-sponsoredeventletstalkpythonandelasticsearch,
 tbody td.title-breakfast,
 tbody td.title-welcome,
 tbody td.title-europythondinner,
@@ -185,6 +196,7 @@ tbody td.title-lunch,
 tbody td.title-coffeebreak {
         background:cmyk(29%,11%,16%,0%);
 }
+td.title-sponsoredeventletstalkpythonandelasticsearch .title,
 td.title-breakfast .title,
 td.title-welcome .title,
 td.title-europythondinner .title,
