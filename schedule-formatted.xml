@@ -1947,8 +1947,8 @@ It will focus on useful patterns and show the benefits from structured logging. 
       <start>1430</start>
       <duration>30</duration>
       <room id="3">B07/B08</room>
-      <title>Sponsored Talk</title>
-      <description/>
+      <title>Sponsored Talk: twoub</title>
+      <description>Sponsored talk: twoub</description>
       <speakers/>
     </entry>
     <entry id="52">
@@ -2088,8 +2088,8 @@ This is a high level overview intended for developers who are new to Python web 
       <start>1500</start>
       <duration>30</duration>
       <room id="3">B07/B08</room>
-      <title>Sponsored Talk</title>
-      <description/>
+      <title>Sponsored Talk: HP</title>
+      <description>Sponsored Talk: HP</description>
       <speakers/>
     </entry>
     <entry id="14">
@@ -4936,8 +4936,8 @@ Currently based out of San Francisco Erik continues to work on Bitbucket.&#xD;
       <start>1430</start>
       <duration>30</duration>
       <room id="3">B07/B08</room>
-      <title>Sponsored Talk</title>
-      <description/>
+      <title>Sponsored Talk: Redhat</title>
+      <description>Redhat loves Python</description>
       <speakers/>
     </entry>
     <entry id="71">
