@@ -247,10 +247,6 @@ line-height:12pt;
 font-family:"MarkPro-Light", Arial sans serif;
 text-transform:uppercase;
 }
-h6 {
-margin-top: 12pt;
-line-height: 0;
-}
 .duration {font-size:9pt;padding-left:4pt;}
 .schedule-day {
     page-break-after: always;
@@ -400,7 +396,6 @@ h6,
 h5,
 h4 {
     color: cmyk(98%,25%,32%,0%);/*petrol*/
-    margin-top:4mm;
     margin-bottom:0;
     margin-left:20mm;
 }
@@ -408,7 +403,6 @@ div > h4:not(:first-child),
 div > h5:not(:first-child),
 div > h6:not(:first-child),
 div > h7:not(:first-child) {
-    margin-top:0mm;
     }
 .entry .speaker-name {
     font-style: italic;
