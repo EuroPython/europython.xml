@@ -34,39 +34,39 @@
     -ro-crop-size: 276mm 234mm;
     -ro-bleed-width: 3mm;
     size: 270mm 228mm;
-    counter-increment: page1 2 page2 2;
+   /* counter-increment: page1 2 page2 2;*/
 
     @top-right {
-        content: 'schedule';
+       /* content: 'schedule';
         font-family: DejaRip;
         font-size:9pt;
         margin-top:5.5mm;
-        padding-right:22mm;
+        padding-right:22mm;*/
     }
     @top-left {
-        content: 'schedule';
+       /* content: 'schedule';
         font-family: DejaRip;
         font-size:9pt;
         margin-top:5.5mm;
-        padding-left:22mm;
+        padding-left:22mm;*/
     }
     @bottom-left {
-        z-index:999;
+        /*z-index:999;
         content: "" counter(page1);
         font-family: DejaRip;
         font-size:9pt;
         position:absolute;
         top:222.5mm;
-        padding-left:22mm;
+        padding-left:22mm;*/
     }
     @bottom-right {
-        z-index:999;
+       /* z-index:999;
         content: "" counter(page2);
         font-family: DejaRip;
         font-size:9pt;
         position:absolute;
         top:222.5mm;
-        padding-left:252mm;
+        padding-left:252mm;*/
     }
 }
 
