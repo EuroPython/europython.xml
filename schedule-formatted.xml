@@ -6630,6 +6630,17 @@ He works on [YADT](http://yadt-project.org) which is a huge part of their data c
       <description>Annual General Meeting of the Python Software Verband e.V.</description>
       <speakers/>
     </entry>
+    <entry id="99999">
+      <category/>
+      <audience/>
+      <topics/>
+      <start>1400</start>
+      <duration>180</duration>
+      <room id="5">B05/06,B07/08,B09,A08</room>
+      <title>Satelitte Event: PyData (Tutorials)</title>
+      <description>Annual General Meeting of the Python Software Verband e.V.</description>
+      <speakers/>
+    </entry>
   </day>
   <day date="2014-07-26">
     <entry id="20">
