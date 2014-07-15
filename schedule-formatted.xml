@@ -674,7 +674,7 @@ He is currently based in London and lived in The Netherlands, France and Canada 
       <duration>30</duration>
       <room id="5">A08</room>
       <title>Mobile Games to the Cloud With Python</title>
-      <abstract>When a mobile game development company decides to switch to a more cloud based development it is faced with obstacles different from those it&#x2019;s used to on mobile devices. This talk explains how Python provided us with most of the infrastructure for this task and how a Python game backend was built as a result.</abstract>
+      <abstract>When a mobile game development company decides to switch to a more cloud based development it is faced with obstacles different from those its used to on mobile devices. This talk explains how Python provided us with most of the infrastructure for this task and how a Python game backend was built as a result.</abstract>
       <description>#### The Talk&#xD;
 &#xD;
 This talk has two goals. Showing the audience the lessons we learned during a project which moved a simple mobile game to a server backend is our first intention. In addition to that we want to describe how such a system works in a real life example, to show which problems and which requirements arise in its creation. When the audience leaves the talk they will know how a real-life mobile game uses Python for powering the backend servers.&#xD;
