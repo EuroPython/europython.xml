@@ -217,7 +217,7 @@ Physics simulation! Smoke, fluids, particles, rigid and soft bodies will all be 
       <topics/>
       <start>1900</start>
       <duration>180</duration>
-      <room>ALL</room>
+      <room>B09</room>
       <title>Sponsored Event: RhodeCode</title>
       <description>## RESERVE YOUR PLACE AT THE RHODECODE HIRING EVENT&#xD;
 &#xD;
@@ -1707,17 +1707,6 @@ The talk will cover:&#xD;
           <image>https://ep2014.europython.euhttps://media.ep14.org/site_media/avatars/Photo_29-10-2013_11_46_31.jpg</image>
         </speaker>
       </speakers>
-    </entry>
-    <entry id="68">
-      <category/>
-      <audience/>
-      <topics/>
-      <start>1400</start>
-      <duration>30</duration>
-      <room id="3">B07/B08</room>
-      <title>Sponsored Talk</title>
-      <description/>
-      <speakers/>
     </entry>
     <entry id="87">
       <category>Training</category>
@@ -4690,17 +4679,6 @@ behind it in 2013 to work on the Python drivers.</description>
           <image>https://ep2014.europython.euhttps://media.ep14.org/site_media/avatars/cb.jpg</image>
         </speaker>
       </speakers>
-    </entry>
-    <entry id="71">
-      <category/>
-      <audience/>
-      <topics/>
-      <start>1400</start>
-      <duration>30</duration>
-      <room id="3">B07/B08</room>
-      <title>Sponsored Talk</title>
-      <description/>
-      <speakers/>
     </entry>
     <entry id="77">
       <category>Training</category>
