@@ -14,7 +14,7 @@ bin/schedulexml2brochure -i session-export-20140707.0800.xml -p pdfreactor -f ou
 Generate brochure (speakers)
 ----------------------------
 
-bin/schedulexml2brochure -i session-export-20140707.0800.xml -p pdfreactor -f out.pdf -t brochure_speakers.pt -z session-export-20140707.0800 -y /path/to/fonts
+bin/schedulexml2brochure -i session.xml -p pdfreactor -f out.pdf -t brochure_speakers.pt -z session -y /path/to/fonts
 
 
 Templates

@@ -105,7 +105,7 @@ def conv(schedule_xml, # schedule XML string or schedule XML filename
     )
 def render_schedule(xml_in, html_out='table.html', template='brochure_schedule.pt', fontpath=None, pdf_filename=None, first_page_number=1):
 
-    rooms = [u'C01', u'B05/B06', u'B07/B08', u'empty',  u'B09', u'A08', 'A03/A04', 'A05/A06']
+    rooms = [u'C01', u'B05/B06', u'B07/B08', u' ',  u'B09', u'A08', 'A03/A04', 'A05/A06']
 
     if not xml_in:
         raise ValueError('Missing --xml-in|-i parameter')
@@ -131,8 +131,8 @@ def render_schedule(xml_in, html_out='table.html', template='brochure_schedule.p
     template = env.get_template(template)
     html = template.render(
             days=days_html,
-            first_page_number=first_page_number - 2,
-            second_page_number=first_page_number - 1,
+            first_page_number=int(first_page_number) - 2,
+            second_page_number=int(first_page_number) - 1,
             view=util.JinjaView())
 
     with open(html_out, 'wb') as fp:
