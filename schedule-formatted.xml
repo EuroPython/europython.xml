@@ -5249,7 +5249,7 @@ Today Marc-Andre spends most of his time managing large-scale customer projects 
       <topics/>
       <start>1800</start>
       <duration>120</duration>
-      <room>ALL</room>
+      <room>A08</room>
       <title>Sponsored Event: Let's talk Python and Elasticsearch</title>
       <description>[Honza Kral](https://ep2014.europython.eu/en/accounts/profile/152/) will show a brief demo of our new high-level Python library elasticsearch-dsl. Its goal is to provide a convenient way to write and manipulate queries without the need to write them manually while sacrificing none of the flexibility and power of Elasticseach's query DSL.&#xD;
 &#xD;
