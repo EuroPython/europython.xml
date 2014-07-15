@@ -12,6 +12,7 @@
   font-weight: normal;
   font-style:  normal;
 }
+/*
 @page {
     @top-center {
         content: 'speakers';
@@ -20,6 +21,7 @@
         margin-top:5.5mm;
     }
 }
+*/
 
 @page:left {
     background:url('speaker-left.png') -3mm -9mm no-repeat;
