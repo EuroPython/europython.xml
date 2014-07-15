@@ -217,7 +217,7 @@ Physics simulation! Smoke, fluids, particles, rigid and soft bodies will all be 
       <topics/>
       <start>1900</start>
       <duration>180</duration>
-      <room>ALL</room>
+      <room>B09</room>
       <title>Sponsored Event: RhodeCode</title>
       <description>## RESERVE YOUR PLACE AT THE RHODECODE HIRING EVENT&#xD;
 &#xD;
@@ -1708,17 +1708,6 @@ The talk will cover:&#xD;
         </speaker>
       </speakers>
     </entry>
-    <entry id="68">
-      <category/>
-      <audience/>
-      <topics/>
-      <start>1400</start>
-      <duration>30</duration>
-      <room id="3">B07/B08</room>
-      <title>Sponsored Talk</title>
-      <description/>
-      <speakers/>
-    </entry>
     <entry id="87">
       <category>Training</category>
       <audience>Novice</audience>
@@ -1947,8 +1936,8 @@ It will focus on useful patterns and show the benefits from structured logging. 
       <start>1430</start>
       <duration>30</duration>
       <room id="3">B07/B08</room>
-      <title>Sponsored Talk</title>
-      <description/>
+      <title>Sponsored Talk: twoub</title>
+      <description>Sponsored talk: twoub</description>
       <speakers/>
     </entry>
     <entry id="52">
@@ -2088,8 +2077,8 @@ This is a high level overview intended for developers who are new to Python web 
       <start>1500</start>
       <duration>30</duration>
       <room id="3">B07/B08</room>
-      <title>Sponsored Talk</title>
-      <description/>
+      <title>Sponsored Talk: HP</title>
+      <description>Sponsored Talk: HP</description>
       <speakers/>
     </entry>
     <entry id="14">
@@ -4691,17 +4680,6 @@ behind it in 2013 to work on the Python drivers.</description>
         </speaker>
       </speakers>
     </entry>
-    <entry id="71">
-      <category/>
-      <audience/>
-      <topics/>
-      <start>1400</start>
-      <duration>30</duration>
-      <room id="3">B07/B08</room>
-      <title>Sponsored Talk</title>
-      <description/>
-      <speakers/>
-    </entry>
     <entry id="77">
       <category>Training</category>
       <audience>Novice</audience>
@@ -4936,8 +4914,8 @@ Currently based out of San Francisco Erik continues to work on Bitbucket.&#xD;
       <start>1430</start>
       <duration>30</duration>
       <room id="3">B07/B08</room>
-      <title>Sponsored Talk</title>
-      <description/>
+      <title>Sponsored Talk: Redhat</title>
+      <description>Redhat loves Python</description>
       <speakers/>
     </entry>
     <entry id="71">
@@ -5271,7 +5249,7 @@ Today Marc-Andre spends most of his time managing large-scale customer projects 
       <topics/>
       <start>1800</start>
       <duration>120</duration>
-      <room>ALL</room>
+      <room>A08</room>
       <title>Sponsored Event: Let's talk Python and Elasticsearch</title>
       <description>[Honza Kral](https://ep2014.europython.eu/en/accounts/profile/152/) will show a brief demo of our new high-level Python library elasticsearch-dsl. Its goal is to provide a convenient way to write and manipulate queries without the need to write them manually while sacrificing none of the flexibility and power of Elasticseach's query DSL.&#xD;
 &#xD;
@@ -6627,6 +6605,17 @@ He works on [YADT](http://yadt-project.org) which is a huge part of their data c
       <duration>30</duration>
       <room id="5">A08</room>
       <title>PySV AGM</title>
+      <description>Annual General Meeting of the Python Software Verband e.V.</description>
+      <speakers/>
+    </entry>
+    <entry id="99999">
+      <category/>
+      <audience/>
+      <topics/>
+      <start>1400</start>
+      <duration>180</duration>
+      <room id="5">B05/06,B07/08,B09,A08</room>
+      <title>Satelitte Event: PyData (Tutorials)</title>
       <description>Annual General Meeting of the Python Software Verband e.V.</description>
       <speakers/>
     </entry>
