@@ -112,13 +112,13 @@
 }
 @page {
     @top-center {
-        content: 'program';
+        /*content: 'program';
         font-family: DejaRip;
         font-size:9pt;
         margin-top:5.5mm;
         background-color:cmyk(0%,0%,0%,0%) !important;
         z-index: 10;
-        position: relative;
+        position: relative;*/
     }
 }
 @page monday:left {
@@ -247,10 +247,15 @@ line-height:12pt;
 font-family:"MarkPro-Light", Arial sans serif;
 text-transform:uppercase;
 }
+h6 {
+margin-top: 12pt;
+line-height: 0;
+}
 .duration {font-size:9pt;padding-left:4pt;}
 .schedule-day {
     page-break-after: always;
 }
+.heading { page-break-after: avoid; }
 .speakers,
 .speaker-name,
 .title, 
@@ -342,7 +347,7 @@ padding: 0;
     margin-top:0;
 }
 div.title {
-line-height:13pt;
+line-height:12pt;
 font-size:12pt;
 font-family:"MarkPro-Light", Arial sans serif;
 }
