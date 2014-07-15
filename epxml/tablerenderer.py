@@ -114,7 +114,7 @@ def render_schedule(xml_in, html_out='table.html', template='brochure_schedule.p
 
     days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
     days_html = []
-    for count, i in enumerate(range(21, 26)):
+    for count, i in enumerate(range(21, 28)):
         html = conv(schedule_xml,
                    '2014-07-{}'.format(i),
                    rooms,
